@@ -1,6 +1,6 @@
 #include "jppatientDef.fshegg"
 
-$Patient(sample01)  
+$JPPatient(sample01,example)  
 $患者ID(12345)
 $漢字氏名(0,田中,太郎)
 $カナ氏名(+,タナカ,タロウ)

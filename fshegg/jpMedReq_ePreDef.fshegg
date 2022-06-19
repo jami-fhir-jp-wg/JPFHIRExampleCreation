@@ -1,0 +1,79 @@
+// MedicationResourceリース宣言
+#bigdef $JPMedicationRequest_ePrescriptionData(ARGinstancename,ARGusage)  
+Instance: ARGinstancename
+InstanceOf: JP_MedicationRequest_ePrescriptionData
+Usage: #ARGusage
+#endbigdef
+
+#bigdef $処方番号
+// 例　$処方薬(1029,01)
+* identifier[0].system = "urn:oid:1.2.392.100495.20.3.81"
+* identifier[=].value = "ARGshohono"
+* identifier[+].system = "urn:oid:1.2.392.100495.20.3.82"
+* identifier[=].value = "ARGrpno"
+* status = #active
+* intent = #order
+#endbigdef
+
+#bigdef $処方薬(ARGhot9,ARGhotname)
+// 例　$処方薬(102094601,チモプトール点眼薬０．２５％　５ｍＬ)
+* medicationCodeableConcept = urn:oid:1.2.392.200119.4.403.1#ARGhot9 "ARGhotname"
+* medicationCodeableConcept.text = "ARGhotname"
+#endbigdef
+
+#bigdef $患者(ARGpatient)
+// 例 $患者(JP-Patient-ePreData-Example)
+* subject = Reference(ARGpatient)
+#endbigdef
+
+#bigdef $処方日時(ARGdatetime)
+// 例　$処方日時(2020-08-21T12:28:17+09:00)
+* authoredOn = "ARGdatetime"
+#endbigdef
+
+#bigdef $用法テキスト(ARGtext)
+* dosageInstruction[0].text = "ARGtext"
+#endbigdef
+
+#bigdef $用法メイン(ARGtimingusagecode,ARGtimingusagename)
+// 例　$用法メイン(2H73000000000000,外用・点眼・１日３回)
+* dosageInstruction[=].timing.code = urn:oid:1.2.392.200250.2.2.20.20#2H73000000000000 "外用・点眼・１日３回"
+#endbigdef
+
+#bigdef $用法部位(ARGsitecode,ARGsite)
+//例　$用法部位(26R,右眼)
+* dosageInstruction[=].site = urn:oid:1.2.392.200250.2.2.20.32#ARGsitecode "ARGsite"
+#endbigdef
+
+#bigdef $製剤タイプ(ARGdosetype)
+// 　ARGdosetype=1:製剤量（通常）, 2:成分量
+#if ARGdosetype = 1
+* dosageInstruction[=].doseAndRate.type = urn:oid:1.2.392.100495.20.2.22#ARGdosetype "製剤量"
+#else
+* dosageInstruction[=].doseAndRate.type = urn:oid:1.2.392.100495.20.2.22#ARGdosetype "成分量"
+#endif
+#endbigdef
+
+#bigdef $用法1回用量(ARGdoseqty,ARGdoseunitcode,ARGdoseunitname)
+//例　$用法1回量(1,DROP,滴)
+* dosageInstruction[=].doseAndRate.doseQuantity = ARGdoseqty urn:oid:1.2.392.100495.20.2.101#ARGdoseunitcode "ARGdoseunitname"
+#endbigdef
+
+#bigdef $用法1日用量(ARGdoseqty,ARGdoseunitcode,ARGdoseunitname)
+//例　$用法1日用量(1,DROP,滴)
+* dosageInstruction.doseAndRate.rateRatio.numerator = ARGdoseqty urn:oid:1.2.392.100495.20.2.101#KO "個"
+* dosageInstruction.doseAndRate.rateRatio.denominator = 1 'd' "日"
+#endbigdef
+
+#bigdef $外用用法(ARGmethodcode,ARGmethodname)
+//例　$外用用法(2B,塗布)
+* dosageInstruction[=].route = $route-codes#AP "外用"
+* dosageInstruction[=].method = urn:oid:1.2.392.200250.2.2.20.40#ARGmethodcode "ARGmethodname"
+#endbigdef
+
+#bigdef $処方全量(ARGqtycode,ARGqtyname)
+//例　$処方全量(HON,本)
+* dispenseRequest.quantity = 2 urn:oid:1.2.392.100495.20.2.101#ARGqtycode "ARGqtyname"
+#endbigdef
+
+

@@ -1,7 +1,9 @@
 // Patientリース宣言
-#bigdef $Patient(ARGinstancename)  
+#bigdef $JPPatient(ARGinstancename,ARGusage)  
 Instance: ARGinstancename
 InstanceOf: JP_Patient
+Usage: #ARGusage
+* meta.profile = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Patient"
 #endbigdef
 
 #bigdef  $患者ID(ARG)
