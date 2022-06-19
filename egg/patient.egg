@@ -1,0 +1,78 @@
+#bigdef $Patient(ARGinstancename)  
+Instance: ARGinstancename
+InstanceOf: JP_Patient_eMunicipalCheckup
+#define INITIALSTATUS
+#endbigdef
+
+#bigdef  $患者ID(ARG)
+* identifier.system = "urn:oid:1.2.392.200119.6.102.11234567890"
+* identifier.value = "ARG"
+#endbigdef
+
+#bigdef  $漢字氏名(ARGfirstname,ARGgivenname)
+#ifdef  INITIALSTATUS
+#define $index  0
+#else
+#define $index  +
+#undef  INITIALSTATUS
+#endif
+* name[$index].extension.url = "http://hl7.org/fhir/StructureDefinition/iso21090-EN-representation"
+* name[=].extension.valueCode = #IDE
+* name[=].use = #official
+* name[=].text = "ARGfirstname　ARGgivenname"
+* name[=].family = "ARGfirstname"
+* name[=].given = "ARGgivenname"
+#endbigdef
+
+#bigdef  $カナ氏名(ARGfirstnamekana,ARGgivennamekana)
+#ifdef  INITIALSTATUS
+#define $index  0
+#else
+#define $index  +
+#undef  INITIALSTATUS
+#endif
+* name[$index].extension.url = "http://hl7.org/fhir/StructureDefinition/iso21090-EN-representation"
+* name[=].extension.valueCode = #SYL
+* name[=].use = #official
+* name[=].text = "ARGfirstnamekana　ARGgivennamekana"
+* name[=].family = "ARGfirstnamekana"
+* name[=].given = "ARGgivennamekana"
+#endbigdef
+
+#bigdef $電話番号(ARG)
+* telecom.system = #phone
+* telecom.value = "ARG"
+* telecom.use = #home
+#endbigdef
+
+#define $性別(ARG)    * gender = #ARG
+#define $生年月日(ARG)    * birthDate = "ARG"
+#define $郵便番号(ARG)    * address.postalCode = "ARG"
+
+#bigdef $住所(ARG)
+* address.text = "ARG"
+* address.country = "JP"
+#endbigdef
+
+
+/*
+$Patient(ARGinstanceName)  
+$患者ID(ARGptif)
+$漢字氏名(ARGfamilyname,ARGgivenname)
+$カナ氏名(ARGfamilynamekana,ARGgivennamekana)
+$電話番号(ARGphonenumber)
+$性別(ARG)
+$生年月日(ARG)
+$郵便番号(ARG) 
+$住所(ARG)
+*/
+
+$Patient(sample01)  
+$患者ID(12345)
+$漢字氏名(田中,太郎)
+$カナ氏名(タナカ,タロウ)
+$電話番号(03-1234-5678)
+$性別(male)
+$生年月日(1955-05-04)
+$郵便番号(123-4567) 
+$住所(神奈川県横浜市港区１－２－３)
