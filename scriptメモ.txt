@@ -1,1 +1,5 @@
-while read -r f; do echo "converting $f to $f.fsh"; filepp -b -M/usr/local/share/filepp/modules -m bigdef.pm $f >./fsh/$f.fsh; done < <(find ./egg -name *.egg -mindepth 1);
+while read -r f;
+do echo "converting $f to $f.fsh";
+  filepp -b -M/usr/local/share/filepp/modules -m bigdef.pm $f >./fsh/$f.fsh;
+done < <(find ./egg -name *.egg -mindepth 1);
+sushi .

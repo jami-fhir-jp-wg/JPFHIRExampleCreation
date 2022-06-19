@@ -3,22 +3,22 @@
 # │  used properties are included. For a list of all supported properties and their functions,     │
 # │  see: https://fshschool.org/docs/sushi/configuration/.                                 │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
-id: deftest
-canonical: http://jpfhir.jp/fhir/eMunicipalCheckup
+id: JPFHIRExampleCreation
+canonical: http://jpfhir.jp/fhir/JPFHIRExampleCreation
 name: "eMunicipalCheckupImplementationGuide"
-#title: "eMunicipal Checkup ImplementationGuide"
-#description: "Implementation Guide for eMunicipal Checkup"
+#title: "JPFHIRExampleCreation"
+#description: "JPFHIRExampleCreation"
 status: draft # draft | active | retired | unknown
-#version: 0.9.0
+version: 0.9.0
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html 
 copyrightYear: 2022+
 releaseLabel: ci-build # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
 # license: CC0-1.0 # https://www.hl7.org/fhir/valueset-spdx-license.html
 # jurisdiction: urn:iso:std:iso:3166#US "United States of America" # https://www.hl7.org/fhir/valueset-jurisdiction.html
-#publisher:
-#  name: KOhe
-#  url: http://jpfhir.jp
-#  # email: test@example.org
+publisher:
+  name: Kazuhiko Ohe
+  url: http://jpfhir.jp
+  # email: test@example.org
 dependencies:
   jp-core.draft1:
 # to avoid warning message "The canonical URL for an Implementation Guide must point directly to the implementation guide resource, not to the Implementation Guide as a whole"
