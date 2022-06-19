@@ -1,10 +1,23 @@
 {
   "resourceType": "ImplementationGuide",
-  "id": "deftest",
-  "url": "http://jpfhir.jp/fhir/eMunicipalCheckup/ImplementationGuide/deftest",
+  "id": "JPFHIRExampleCreation",
+  "url": "http://jpfhir.jp/fhir/JPFHIRExampleCreation/ImplementationGuide/JPFHIRExampleCreation",
+  "version": "0.9.0",
   "name": "eMunicipalCheckupImplementationGuide",
   "status": "draft",
-  "packageId": "deftest",
+  "publisher": "Kazuhiko Ohe",
+  "contact": [
+    {
+      "name": "Kazuhiko Ohe",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://jpfhir.jp"
+        }
+      ]
+    }
+  ],
+  "packageId": "JPFHIRExampleCreation",
   "fhirVersion": [
     "4.0.1"
   ],
