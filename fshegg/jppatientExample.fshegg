@@ -1,11 +1,28 @@
 #include "jppatientDef.fshegg"
+/*
+#bigdef $00mn_JPPatient(ARGinstancename,ARGusage)  
+#bigdef $01mn_患者ID(ARG)
+#bigdef $02or_漢字氏名(ARGnmidx,ARGfirstname,ARGgivenname)
+#bigdef $03or_カナ氏名(ARGnmidx,ARGfirstnamekana,ARGgivennamekana)
+#bigdef $04or_電話番号(ARGnmidx,ARG)
+#bigdef $04or_自宅電話番号(ARGnmidx,ARG)
+#bigdef $04or_携帯番号(ARGnmidx,ARG)
+#bigdef $04or_職場電話番号(ARGnmidx,ARG)
+#define $05on_性別(ARG)    * gender = #ARG
+#define $06on_生年月日(ARG)    * birthDate = "ARG"
+#bigdef $07or_住所(ARGnmidx,ARGpostal,ARGtext)
+#bigdef $07or_自宅住所(ARGnmidx,ARGpostal,ARGtext)
+#bigdef $07or_職場住所(ARGnmidx,ARGpostal,ARGtext)
+#bigdef $07or_住所分割(ARGnmidx,ARGpostal,ARGtext,ARGstate,ARGcity,ARGline)
+#bigdef $07or_自宅住所分割(ARGnmidx,ARGpostal,ARGtext,ARGstate,ARGcity,ARGline)
+#bigdef $07or_職場住所分割(ARGnmidx,ARGpostal,ARGtext,ARGstate,ARGcity,ARGline)
+*/
 
-$JPPatient(sample01,example)  
-$患者ID(12345)
-$漢字氏名(0,田中,太郎)
-$カナ氏名(+,タナカ,タロウ)
-$電話番号(03-1234-5678)
-$性別(male)
-$生年月日(1955-05-04)
-$郵便番号(123-4567) 
-$住所(神奈川県横浜市港区１－２－３)
+$00mn_JPPatient(sample01,example)  
+$01mn_患者ID(12345)
+$02or_漢字氏名(0,田中,太郎)
+$03or_カナ氏名(1,タナカ,タロウ)
+$04or_電話番号(0,03-1234-5678)
+$05on_性別(male)
+$06on_生年月日(1955-05-04)
+$07or_住所(0,123-4567,神奈川県横浜市港区１－２－３)

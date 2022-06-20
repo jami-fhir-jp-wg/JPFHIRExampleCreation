@@ -1,17 +1,17 @@
 // Patientリース宣言
-#bigdef $JPPatient(ARGinstancename,ARGusage)  
+#bigdef $00mn_JPPatient(ARGinstancename,ARGusage)  
 Instance: ARGinstancename
 InstanceOf: JP_Patient
 Usage: #ARGusage
 * meta.profile = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Patient"
 #endbigdef
 
-#bigdef  $患者ID(ARG)
+#bigdef  $01mn_患者ID(ARG)
 * identifier.system = "urn:oid:1.2.392.200119.6.102.11234567890"
 * identifier.value = "ARG"
 #endbigdef
 
-#bigdef  $漢字氏名(ARGnmidx,ARGfirstname,ARGgivenname)
+#bigdef  $02or_漢字氏名(ARGnmidx,ARGfirstname,ARGgivenname)
 * name[ARGnmidx].extension.url = "http://hl7.org/fhir/StructureDefinition/iso21090-EN-representation"
 * name[=].extension.valueCode = #IDE
 * name[=].use = #official
@@ -20,9 +20,7 @@ Usage: #ARGusage
 * name[=].given = "ARGgivenname"
 #endbigdef
 
-#define $path漢字氏名   "$.name[*].text"
-
-#bigdef  $カナ氏名(ARGnmidx,ARGfirstnamekana,ARGgivennamekana)
+#bigdef  $03or_カナ氏名(ARGnmidx,ARGfirstnamekana,ARGgivennamekana)
 * name[ARGnmidx].extension.url = "http://hl7.org/fhir/StructureDefinition/iso21090-EN-representation"
 * name[=].extension.valueCode = #SYL
 * name[=].use = #official
@@ -31,21 +29,82 @@ Usage: #ARGusage
 * name[=].given = "ARGgivennamekana"
 #endbigdef
 
-#bigdef $電話番号(ARG)
+#bigdef $04or_電話番号(ARGnmidx,ARG)
+// 自宅電話番号と同じ処理
 * telecom.system = #phone
 * telecom.value = "ARG"
 * telecom.use = #home
 #endbigdef
 
-#define $性別(ARG)    * gender = #ARG
-#define $生年月日(ARG)    * birthDate = "ARG"
-#define $郵便番号(ARG)    * address.postalCode = "ARG"
-
-#bigdef $住所(ARG)
-* address.text = "ARG"
-* address.country = "JP"
+#bigdef $04or_自宅電話番号(ARGnmidx,ARG)
+* telecom.system = #phone
+* telecom.value = "ARG"
+* telecom.use = #home
 #endbigdef
 
+#bigdef $04or_携帯番号(ARGnmidx,ARG)
+* telecom.system = #phone
+* telecom.value = "ARG"
+* telecom.use = #mobile
+#endbigdef
+
+#bigdef $04or_職場電話番号(ARGnmidx,ARG)
+* telecom.system = #phone
+* telecom.value = "ARG"
+* telecom.use = #work
+#endbigdef
+
+#define $05on_性別(ARG)    * gender = #ARG
+#define $06on_生年月日(ARG)    * birthDate = "ARG"
+
+#bigdef $07or_住所(ARGnmidx,ARGpostal,ARGtext)
+* address[ARGnmidx].text = "ARGtext"
+* address[ARGnmidx].postalCode = "ARGpostal"
+* address[ARGnmidx].country = "JP"
+#endbigdef
+
+#bigdef $07or_自宅住所(ARGnmidx,ARGpostal,ARGtext)
+* address[ARGnmidx].use = #home
+* address[ARGnmidx].postalCode = "ARGpostal"
+* address[ARGnmidx].text = "ARGtext"
+* address[ARGnmidx].country = "JP"
+#endbigdef
+
+#bigdef $07or_職場住所(ARGnmidx,ARGpostal,ARGtext)
+* address[ARGnmidx].use = #work
+* address[ARGnmidx].postalCode = "ARGpostal"
+* address[ARGnmidx].text = "ARGtext"
+* address[ARGnmidx].country = "JP"
+#endbigdef
+
+#bigdef $07or_住所分割(ARGnmidx,ARGpostal,ARGtext,ARGstate,ARGcity,ARGline)
+* address[ARGnmidx].text = "ARGtext"
+* address[ARGnmidx].line = "ARGline"
+* address[ARGnmidx].city = "ARGcity"
+* address[ARGnmidx].state = "ARGstate"
+* address[ARGnmidx].postalCode = "ARGpostal"
+* address[ARGnmidx].country = "JP"
+#endbigdef
+
+#bigdef $07or_自宅住所分割(ARGnmidx,ARGpostal,ARGtext,ARGstate,ARGcity,ARGline)
+* address[ARGnmidx].use = #home
+* address[ARGnmidx].text = "ARGtext"
+* address[ARGnmidx].line = "ARGline"
+* address[ARGnmidx].city = "ARGcity"
+* address[ARGnmidx].state = "ARGstate"
+* address[ARGnmidx].postalCode = "ARGpostal"
+* address[ARGnmidx].country = "JP"
+#endbigdef
+
+#bigdef $07or_職場住所分割(ARGnmidx,ARGpostal,ARGtext,ARGstate,ARGcity,ARGline)
+* address[ARGnmidx].use = #work
+* address[ARGnmidx].text = "ARGtext"
+* address[ARGnmidx].line = "ARGline"
+* address[ARGnmidx].city = "ARGcity"
+* address[ARGnmidx].state = "ARGstate"
+* address[ARGnmidx].postalCode = "ARGpostal"
+* address[ARGnmidx].country = "JP"
+#endbigdef
 
 /*
 Patient(ARGinstanceName)  
