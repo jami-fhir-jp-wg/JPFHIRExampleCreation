@@ -6,6 +6,13 @@ Usage: #ARGusage
 * meta.profile = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Patient"
 #endbigdef
 
+#ifndef $00mn_Description(ARGtxt) 
+#bigdef $00mn_Description(ARGtxt)  
+Description: "ARGtxt"
+#endbigdef
+#endif
+
+
 #bigdef  $01mn_患者ID(ARG)
 * identifier.system = "urn:oid:1.2.392.200119.6.102.11234567890"
 * identifier.value = "ARG"
@@ -54,8 +61,13 @@ Usage: #ARGusage
 * telecom.use = #work
 #endbigdef
 
-#define $05on_性別(ARG)    * gender = #ARG
-#define $06on_生年月日(ARG)    * birthDate = "ARG"
+#bigdef $05on_性別(ARG)    
+* gender = #ARG
+#endbigdef
+
+#bigdef $06on_生年月日(ARG)    
+* birthDate = "ARG"
+#endbigdef
 
 #bigdef $07or_住所(ARGnmidx,ARGpostal,ARGtext)
 * address[ARGnmidx].text = "ARGtext"

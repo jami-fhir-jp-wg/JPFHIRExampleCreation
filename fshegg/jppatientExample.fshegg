@@ -1,22 +1,21 @@
 #include "jppatientDef.fshegg"
-/*
-#bigdef $00mn_JPPatient(ARGinstancename,ARGusage)  
-#bigdef $01mn_患者ID(ARG)
-#bigdef $02or_漢字氏名(ARGnmidx,ARGfirstname,ARGgivenname)
-#bigdef $03or_カナ氏名(ARGnmidx,ARGfirstnamekana,ARGgivennamekana)
-#bigdef $04or_電話番号(ARGnmidx,ARG)
-#bigdef $04or_自宅電話番号(ARGnmidx,ARG)
-#bigdef $04or_携帯番号(ARGnmidx,ARG)
-#bigdef $04or_職場電話番号(ARGnmidx,ARG)
-#define $05on_性別(ARG)    * gender = #ARG
-#define $06on_生年月日(ARG)    * birthDate = "ARG"
-#bigdef $07or_住所(ARGnmidx,ARGpostal,ARGtext)
-#bigdef $07or_自宅住所(ARGnmidx,ARGpostal,ARGtext)
-#bigdef $07or_職場住所(ARGnmidx,ARGpostal,ARGtext)
-#bigdef $07or_住所分割(ARGnmidx,ARGpostal,ARGtext,ARGstate,ARGcity,ARGline)
-#bigdef $07or_自宅住所分割(ARGnmidx,ARGpostal,ARGtext,ARGstate,ARGcity,ARGline)
-#bigdef $07or_職場住所分割(ARGnmidx,ARGpostal,ARGtext,ARGstate,ARGcity,ARGline)
-*/
+
+// 00mn_JPPatient(ARGinstancename,ARGusage)  
+// 01mn_患者ID(ARG)
+// 02or_漢字氏名(ARGnmidx,ARGfirstname,ARGgivenname)
+// 03or_カナ氏名(ARGnmidx,ARGfirstnamekana,ARGgivennamekana)
+// 04or_電話番号(ARGnmidx,ARG)
+// 04or_自宅電話番号(ARGnmidx,ARG)
+// 04or_携帯番号(ARGnmidx,ARG)
+// 04or_職場電話番号(ARGnmidx,ARG)
+// 05on_性別(ARG)    * gender = #ARG
+// 06on_生年月日(ARG)    * birthDate = "ARG"
+// 07or_住所(ARGnmidx,ARGpostal,ARGtext)
+// 07or_自宅住所(ARGnmidx,ARGpostal,ARGtext)
+// 07or_職場住所(ARGnmidx,ARGpostal,ARGtext)
+// 07or_住所分割(ARGnmidx,ARGpostal,ARGtext,ARGstate,ARGcity,ARGline)
+// 07or_自宅住所分割(ARGnmidx,ARGpostal,ARGtext,ARGstate,ARGcity,ARGline)
+// 07or_職場住所分割(ARGnmidx,ARGpostal,ARGtext,ARGstate,ARGcity,ARGline)
 
 $00mn_JPPatient(sample01,example)  
 $01mn_患者ID(12345)

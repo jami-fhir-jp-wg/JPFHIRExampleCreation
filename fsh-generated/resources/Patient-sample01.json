@@ -53,8 +53,8 @@
   "birthDate": "1955-05-04",
   "address": [
     {
-      "postalCode": "123-4567",
       "text": "神奈川県横浜市港区１－２－３",
+      "postalCode": "123-4567",
       "country": "JP"
     }
   ]
