@@ -1,38 +1,43 @@
 // MedicationResourceリース宣言
-//#define $INSINDEX 0...
 
 // MedicationResourceリース宣言
-//00mn_JPMedicationRequest_ePrescriptionData(ARGinstancename,ARGusage,ARGtxt) 
-//01mn_処方番号(ARGshohono,ARGrpno)
-//02mr_処方薬HOT9(ARGindex,ARGcode,ARGname)
-//02mr_処方薬YJ(ARGindex,ARGcode,ARGname)
-//02mr_処方薬LOCAL(ARGindex,ARGcode,ARGname,ARGlocalsystem)
-//03mn_処方薬TEXT(ARGname)
-//04mn_患者(ARGpatient)
-//05mn_処方日時(ARGdate,ARGtime)
-//051on_薬剤メモ(ARGtext)
-//06on_処方開始日(ARGdate)
-//07on_処方実日数(ARGdays)
-//08mn_用法テキスト(ARGtext)
-//09or_処方補足用法(ARGusageauxcode,ARGusageauxname)
-//10or_服用全期間日数(ARGduration)
-//11mn_用法メイン(ARGtimingusagecode,ARGtimingusagename)
-//12on_用法部位(ARGsitecode,ARGsite)
-//13on_内服用法()
-//13on_外用用法(ARGmethodcode,ARGmethodname)
-//14mn_製剤タイプ(ARGdosetype)
-//15on_用法1回用量(ARGdoseqty,ARGdoseunitcode,ARGdoseunitname)
-//16on_用法1日用量(ARGdoseqty,ARGdoseunitcode,ARGdoseunitname)
-//20mn_調剤全量(ARGqty,ARGqtycode,ARGqtyname)
-//21on_調剤全日数(ARGdays)
-//30on_後発変更可()
+//000mn_JPMedicationRequest_ePrescriptionData(ARGinstancename,ARGusage) 
+//001mn_Description(ARGtxt) 
+//002or_ValidationProfile(ARGmetaprofile) 
+//010mn_処方番号(ARGshohono,ARGrpno)
+//020mr_処方薬HOT9(ARGindex,ARGcode,ARGname)
+//020mr_処方薬YJ(ARGindex,ARGcode,ARGname)
+//020mr_処方薬LOCAL(ARGindex,ARGcode,ARGname,ARGlocalsystem)
+//030mn_処方薬TEXT(ARGname)
+//040mn_処方患者(ARGpatient)
+//050mn_処方日時(ARGdate,ARGtime)
+//060on_処方薬剤メモ(ARGtext)
+//070mn_処方用法テキスト(ARGtext)
+//080on_処方開始日(ARGdate)
+//090on_処方実日数(ARGdays)
+//100or_処方補足用法(ARGusageauxcode,ARGusageauxname)
+//110or_処方服用全期間日数(ARGduration)
+//120mn_処方用法メイン(ARGtimingusagecode,ARGtimingusagename)
+//130on_処方用法部位(ARGsitecode,ARGsite)
+//140on_処方内服用法()
+//150on_処方外用用法(ARGmethodcode,ARGmethodname)
+//160mn_処方製剤タイプ(ARGdosetype)
+//170on_処方用法1回量(ARGdoseqty,ARGdoseunitcode,ARGdoseunitname)
+//180on_処方用法1日量(ARGdoseqty,ARGdoseunitcode,ARGdoseunitname)
+//200mn_処方調剤全量(ARGqty,ARGqtycode,ARGqtyname)
+//210on_処方調剤全日数(ARGdays)
+//300on_処方後発変更可()
+//300on_処方後発変更不可(ARGnote)
 
+$000mn_
 Instance: MedicationRequestExample01
 InstanceOf: JP_MedicationRequest
 Usage: #example
-Description: "内服　処方例１件　MedicationRequestリソースのインスタンス例"
-* meta.profile = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationRequest"
   
+Description: "内服　処方例１件　MedicationRequestリソースのインスタンス例"
+ 
+* meta.profile[+] = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationRequest"
+ 
 * identifier[RpNumber].system = "urn:oid:1.2.392.100495.20.3.81"
 * identifier[RpNumber].value = "1"
 * identifier[OrderInRp].system = "urn:oid:1.2.392.100495.20.3.82"
@@ -50,40 +55,38 @@ Description: "内服　処方例１件　MedicationRequestリソースのイン�
 
 * subject = Reference(JP-Patient-ePreData-Example)
 
-
 * authoredOn = "2020-08-21T12:28:17+09:00"
 
-//051on_薬剤メモ(ARGtext)
-//06on_処方開始日(ARGdate) // extension
-* dosageInstruction[0].extension[+].url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DosageInstruction_UsageDuration"
-* dosageInstruction[0].extension[=].valueDuration = 7 'd' "日"
- // extension
-* dosageInstruction[0].text = "内服・経口・１日３回朝昼夕食後　１回１錠　７日分"
+//060on_処方薬剤メモ(ARGtext)
+* dosageInstruction[+].text = "内服・経口・１日３回朝昼夕食後"
 
-//09or_処方補足用法(ARGusageauxcode,ARGusageauxname)
-* dosageInstruction[0].timing.repeat.boundsDuration = 7 'd' "日"
+//080on_処方開始日(ARGdate)
+* dosageInstruction[=].extension[+].url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DosageInstruction_UsageDuration"
+* dosageInstruction[=].extension[=].valueDuration = 7 'd' "日"
 
-* dosageInstruction[0].timing.code = urn:oid:1.2.392.200250.2.2.20.20#1013044400000000 "内服・経口・１日３回朝昼夕食後"
+//100or_処方補足用法(ARGusageauxcode,ARGusageauxname)
+* dosageInstruction[=].timing.repeat.boundsDuration = 7 'd' "日"
 
-//12on_用法部位(ARGsitecode,ARGsite)
-* dosageInstruction[0].route = http://jpfhir.jp/fhir/ePrescription/CodeSystem/route-codes#PO "口"
-* dosageInstruction[0].method = urn:oid:1.2.392.200250.2.2.20.30#1 "内服"
+* dosageInstruction[=].timing.code = urn:oid:1.2.392.200250.2.2.20.20#1013044400000000 "内服・経口・１日３回朝昼夕食後"
 
-//13on_外用用法(ARGmethodcode,ARGmethodname)
-// 　2=1:製剤量（通常）, 2:原薬量
-* dosageInstruction[0].doseAndRate.type = urn:oid:1.2.392.100495.20.2.22#2 "原薬量"
+//130on_処方用法部位(ARGsitecode,ARGsite)
+* dosageInstruction[=].route = http://jpfhir.jp/fhir/ePrescription/CodeSystem/route-codes#PO "口"
+* dosageInstruction[=].method = urn:oid:1.2.392.200250.2.2.20.30#1 "内服"
 
-* dosageInstruction[0].doseAndRate.doseQuantity = 1 urn:oid:1.2.392.100495.20.2.101#TAB "錠"
+//150on_処方外用用法(ARGmethodcode,ARGmethodname)
+* dosageInstruction[=].doseAndRate.type = urn:oid:1.2.392.100495.20.2.22#1 "製剤量"
 
-* dosageInstruction[0].doseAndRate.rateRatio.numerator = 3 urn:oid:1.2.392.100495.20.2.101#KO "個"
-* dosageInstruction[0].doseAndRate.rateRatio.denominator = 1 'd' "日"
+* dosageInstruction[=].doseAndRate.doseQuantity = 1 urn:oid:1.2.392.100495.20.2.101#TAB "錠"
+
+* dosageInstruction[=].doseAndRate.rateRatio.numerator = 3 urn:oid:1.2.392.100495.20.2.101#KO "個"
+* dosageInstruction[=].doseAndRate.rateRatio.denominator = 1 'd' "日"
 
 * dispenseRequest.quantity = 21 urn:oid:1.2.392.100495.20.2.101#21code "21name"
 
 * dispenseRequest.expectedSupplyDuration = 7 'd' "日"
 
-//30on_後発変更可()
+//300on_処方後発変更可()
 * substitution.allowedCodeableConcept = urn:oid:1.2.392.100495.20.2.41#1 "変更不可"
-* substitution.reason.text = "患者からの強い要望により"
+* substitution.reason.text = ""
 
 

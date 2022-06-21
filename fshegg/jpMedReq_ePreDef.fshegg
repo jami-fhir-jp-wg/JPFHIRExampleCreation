@@ -1,13 +1,24 @@
+
 // MedicationResourceリース宣言
-#bigdef $00mn_JPMedicationRequest_ePrescriptionData(ARGinstancename,ARGusage,ARGtxt)  
+#bigdef $000mn_JPMedicationRequest_ePrescriptionData(ARGinstancename,ARGusage)
 Instance: ARGinstancename
 InstanceOf: JP_MedicationRequest
 Usage: #ARGusage
-Description: "ARGtxt"
-* meta.profile = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationRequest"
 #endbigdef
 
-#bigdef $01mn_処方番号(ARGshohono,ARGrpno)
+#ifndef $001mn_Description(ARGtxt)
+#bigdef $001mn_Description(ARGtxt)
+Description: "ARGtxt"
+#endbigdef
+#endif
+
+#ifndef $002or_ValidationProfile(ARGmetaprofile)
+#bigdef $002or_ValidationProfile(ARGmetaprofile) 
+* meta.profile[+] = "ARGmetaprofile"
+#endbigdef
+#endif
+
+#bigdef $010mn_処方番号(ARGshohono,ARGrpno)
 #comment  // 例　$01mn_処方番号(1029,01)
 * identifier[RpNumber].system = "urn:oid:1.2.392.100495.20.3.81"
 * identifier[RpNumber].value = "ARGshohono"
@@ -17,125 +28,123 @@ Description: "ARGtxt"
 * intent = #order
 #endbigdef
 
-#bigdef $02mr_処方薬HOT9(ARGindex,ARGcode,ARGname)
+#bigdef $020mr_処方薬HOT9(ARGindex,ARGcode,ARGname)
 #comment  // 例　$02mn_処方薬(102094601,チモプトール点眼薬０．２５％　５ｍＬ)
 * medicationCodeableConcept.coding[+] = urn:oid:1.2.392.200119.4.403.1#ARGcode "ARGname"
 #endbigdef
 
-#bigdef $02mr_処方薬YJ(ARGindex,ARGcode,ARGname)
+#bigdef $020mr_処方薬YJ(ARGindex,ARGcode,ARGname)
 #comment  // 例　$02mn_処方薬(102094601,チモプトール点眼薬０．２５％　５ｍＬ)
 * medicationCodeableConcept.coding[+] = urn:oid:1.2.392.100495.20.1.73#ARGcode "ARGname"
 #endbigdef
 
-#bigdef $02mr_処方薬LOCAL(ARGindex,ARGcode,ARGname,ARGlocalsystem)
+#bigdef $020mr_処方薬LOCAL(ARGindex,ARGcode,ARGname,ARGlocalsystem)
 #comment  // 例　$02mn_処方薬(102094601,チモプトール点眼薬０．２５％　５ｍＬ)
 * medicationCodeableConcept.coding[+] = ARGlocalsystem#ARGcode "ARGname"
 #endbigdef
 
-#bigdef $03mn_処方薬TEXT(ARGname)
+#bigdef $030mn_処方薬TEXT(ARGname)
 * medicationCodeableConcept.text = "ARGname"
 #endbigdef
 
-#bigdef $04mn_患者(ARGpatient)
-#comment  // 例 $04mn_患者(JP-Patient-ePreData-Example)
+#bigdef $040mn_処方患者(ARGpatient)
+#comment  // 例 $04mn_処方患者(JP-Patient-ePreData-Example)
 * subject = Reference(ARGpatient)
 #endbigdef
 
-#bigdef $05mn_処方日時(ARGdate,ARGtime)
+#bigdef $050mn_処方日時(ARGdate,ARGtime)
 #comment  // 例　$05mn_処方日時(2020-08-21,12:28:17)
 * authoredOn = "ARGdateTARGtime+09:00"
 #endbigdef
 
-#bigdef $051on_薬剤メモ(ARGtext)
-#comment  // 例　$05on_薬剤メモ(薬剤単位の備考)
+#bigdef $060on_処方薬剤メモ(ARGtext)
+#comment  // 例　$05on_処方薬剤メモ(薬剤単位の備考)
 * note.text = "ARGtext"
 #endbigdef
 
-//#define $INSINDEX 0...
-#bigdef $06on_処方開始日(ARGdate)
+#bigdef $070mn_処方用法テキスト(ARGtext)
+* dosageInstruction[+].text = "ARGtext"
+#endbigdef
+
+#bigdef $080on_処方開始日(ARGdate)
 #comment  // 例　$06on_処方開始日(2020-08-21)
-* dosageInstruction[$INSINDEX].extension[+1].url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DosageInstruction_PeriodOfUse"
-* dosageInstruction[$INSINDEX].extension[=].valuePeriod.start = "ARGdate"
+* dosageInstruction[=].extension[+].url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DosageInstruction_PeriodOfUse"
+* dosageInstruction[=].extension[=].valuePeriod.start = "ARGdate"
 #endbigdef
 
-#bigdef $07on_処方実日数(ARGdays)
-#comment  // 例　$07on_処方実日数(7) 実投与日数
-* dosageInstruction[$INSINDEX].extension[+].url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DosageInstruction_UsageDuration"
-* dosageInstruction[$INSINDEX].extension[=].valueDuration = ARGdays 'd' "日"
+#bigdef $090on_処方実日数(ARGdays)
+#comment  // 例　$処方実日数(7) 実投与日数
+* dosageInstruction[=].extension[+].url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DosageInstruction_UsageDuration"
+* dosageInstruction[=].extension[=].valueDuration = ARGdays 'd' "日"
 #endbigdef
 
-#bigdef $08mn_用法テキスト(ARGtext)
-* dosageInstruction[$INSINDEX].text = "ARGtext"
-#endbigdef
-
-#bigdef $09or_処方補足用法(ARGusageauxcode,ARGusageauxname)
+#bigdef $100or_処方補足用法(ARGusageauxcode,ARGusageauxname)
 #define $JAMI_codeSystem_ePreOrderUsageAuxCode  urn:oid:1.2.392.200250.2.2.20.22
-* dosageInstruction[$INSINDEX].additionalInstruction[+] = $JAMI_codeSystem_ePreOrderUsageAuxCode#ARGusageauxcode "ARGusageauxname"
+* dosageInstruction[=].additionalInstruction[+] = $JAMI_codeSystem_ePreOrderUsageAuxCode#ARGusageauxcode "ARGusageauxname"
 #endbigdef
 
-#bigdef $10or_服用全期間日数(ARGduration)
-* dosageInstruction[$INSINDEX].timing.repeat.boundsDuration = ARGduration 'd' "日"
+#bigdef $110or_処方服用全期間日数(ARGduration)
+* dosageInstruction[=].timing.repeat.boundsDuration = ARGduration 'd' "日"
 #endbigdef
 
-#bigdef $11mn_用法メイン(ARGtimingusagecode,ARGtimingusagename)
-#comment  // 例　$用法メイン(2H73000000000000,外用・点眼・１日３回)
-* dosageInstruction[$INSINDEX].timing.code = urn:oid:1.2.392.200250.2.2.20.20#ARGtimingusagecode "ARGtimingusagename"
+#bigdef $120mn_処方用法メイン(ARGtimingusagecode,ARGtimingusagename)
+#comment  // 例　$処方用法メイン(2H73000000000000,外用・点眼・１日３回)
+* dosageInstruction[=].timing.code = urn:oid:1.2.392.200250.2.2.20.20#ARGtimingusagecode "ARGtimingusagename"
 #endbigdef
 
-#bigdef $12on_用法部位(ARGsitecode,ARGsite)
-#comment  // 例　$用法部位(26R,右眼)
-* dosageInstruction[$INSINDEX].site = urn:oid:1.2.392.200250.2.2.20.32#ARGsitecode "ARGsite"
+#bigdef $130on_処方用法部位(ARGsitecode,ARGsite)
+#comment  // 例　$処方用法部位(26R,右眼)
+* dosageInstruction[=].site = urn:oid:1.2.392.200250.2.2.20.32#ARGsitecode "ARGsite"
 #endbigdef
 
-#bigdef $13on_内服用法()
-#comment  // 例　$内服用法()
+#bigdef $140on_処方内服用法()
+#comment  // 例　$処方内服用法()
 #define $route-codes    http://jpfhir.jp/fhir/ePrescription/CodeSystem/route-codes
-* dosageInstruction[$INSINDEX].route = $route-codes#PO "口"
-* dosageInstruction[$INSINDEX].method = urn:oid:1.2.392.200250.2.2.20.30#1 "内服"
+* dosageInstruction[=].route = $route-codes#PO "口"
+* dosageInstruction[=].method = urn:oid:1.2.392.200250.2.2.20.30#1 "内服"
 #endbigdef
 
-#bigdef $13on_外用用法(ARGmethodcode,ARGmethodname)
-#comment  // 例　$外用用法(2B,塗布)
-* dosageInstruction[$INSINDEX].route = $route-codes#AP "外用"
-* dosageInstruction[$INSINDEX].method = urn:oid:1.2.392.200250.2.2.20.40#ARGmethodcode "ARGmethodname"
+#bigdef $150on_処方外用用法(ARGmethodcode,ARGmethodname)
+#comment  // 例　$処方外用用法(2B,塗布)
+* dosageInstruction[=].route = $route-codes#AP "外用"
+* dosageInstruction[=].method = urn:oid:1.2.392.200250.2.2.20.40#ARGmethodcode "ARGmethodname"
 #endbigdef
 
-#bigdef $14mn_製剤タイプ(ARGdosetype)
-// 　ARGdosetype=1:製剤量（通常）, 2:原薬量
-#if ARGdosetype == 1
-* dosageInstruction[$INSINDEX].doseAndRate.type = urn:oid:1.2.392.100495.20.2.22#ARGdosetype "製剤量"
-#else
-* dosageInstruction[$INSINDEX].doseAndRate.type = urn:oid:1.2.392.100495.20.2.22#ARGdosetype "原薬量"
-#endif
+#bigdef $160mn_処方製剤量指定()
+* dosageInstruction[=].doseAndRate.type = urn:oid:1.2.392.100495.20.2.22#1 "製剤量"
 #endbigdef
 
-#bigdef $15on_用法1回用量(ARGdoseqty,ARGdoseunitcode,ARGdoseunitname)
-#comment  // 例　$用法1回量(1,DROP,滴)
-* dosageInstruction[$INSINDEX].doseAndRate.doseQuantity = ARGdoseqty urn:oid:1.2.392.100495.20.2.101#ARGdoseunitcode "ARGdoseunitname"
+#bigdef $160mn_処方原薬量指定()
+* dosageInstruction[=].doseAndRate.type = urn:oid:1.2.392.100495.20.2.22#2 "原薬量"
 #endbigdef
 
-#bigdef $16on_用法1日用量(ARGdoseqty,ARGdoseunitcode,ARGdoseunitname)
-#comment  // 例　$用法1日用量(1,DROP,滴)
-* dosageInstruction[$INSINDEX].doseAndRate.rateRatio.numerator = ARGdoseqty urn:oid:1.2.392.100495.20.2.101#KO "個"
-* dosageInstruction[$INSINDEX].doseAndRate.rateRatio.denominator = 1 'd' "日"
+#bigdef $170on_処方用法1回量(ARGdoseqty,ARGdoseunitcode,ARGdoseunitname)
+#comment  // 例　$処方用法1量(1,DROP,滴)
+* dosageInstruction[=].doseAndRate.doseQuantity = ARGdoseqty urn:oid:1.2.392.100495.20.2.101#ARGdoseunitcode "ARGdoseunitname"
 #endbigdef
 
-#bigdef $20mn_調剤全量(ARGqty,ARGqtycode,ARGqtyname)
-#comment  // 例　$調剤全量(HON,本)
-#comment  // 例　$調剤全量(TAB,錠)
+#bigdef $180on_処方用法1日量(ARGdoseqty,ARGdoseunitcode,ARGdoseunitname)
+#comment  // 例　$処方用法1日量(1,DROP,滴)
+* dosageInstruction[=].doseAndRate.rateRatio.numerator = ARGdoseqty urn:oid:1.2.392.100495.20.2.101#KO "個"
+* dosageInstruction[=].doseAndRate.rateRatio.denominator = 1 'd' "日"
+#endbigdef
+
+#bigdef $200mn_処方調剤全量(ARGqty,ARGqtycode,ARGqtyname)
+#comment  // 例　$処方調剤全量(HON,本)
+#comment  // 例　$処方調剤全量(TAB,錠)
 * dispenseRequest.quantity = ARGqty urn:oid:1.2.392.100495.20.2.101#ARGqtycode "ARGqtyname"
 #endbigdef
 
-#bigdef $21on_調剤全日数(ARGdays)
+#bigdef $210on_処方調剤全日数(ARGdays)
 #comment  // 例　$調剤全日数(28)
 * dispenseRequest.expectedSupplyDuration = ARGdays 'd' "日"
 #endbigdef
 
-#bigdef $30on_後発変更可()
+#bigdef $300on_処方後発変更可()
 * substitution.allowedCodeableConcept = urn:oid:1.2.392.100495.20.2.41#0 "変更可"
 #endbigdef
 
-#bigdef $30on_後発変更不可(ARGnote)
+#bigdef $300on_処方後発変更不可(ARGnote)
 * substitution.allowedCodeableConcept = urn:oid:1.2.392.100495.20.2.41#1 "変更不可"
 * substitution.reason.text = "ARGnote"
 #endbigdef
