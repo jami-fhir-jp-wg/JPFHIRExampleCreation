@@ -1,0 +1,84 @@
+{
+  "resourceType": "ImplementationGuide",
+  "id": "JPFHIRExampleCreation",
+  "url": "http://jpfhir.jp/fhir/JPFHIRExampleCreation/ImplementationGuide/JPFHIRExampleCreation",
+  "version": "0.9.0",
+  "name": "eMunicipalCheckupImplementationGuide",
+  "status": "draft",
+  "publisher": "Kazuhiko Ohe",
+  "contact": [
+    {
+      "name": "Kazuhiko Ohe",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://jpfhir.jp"
+        }
+      ]
+    }
+  ],
+  "packageId": "JPFHIRExampleCreation",
+  "fhirVersion": [
+    "4.0.1"
+  ],
+  "dependsOn": [
+    {
+      "packageId": "jp-core.draft1",
+      "uri": "http://jpfhir.jp/fhir/core/ImplementationGuide/jp-core.draft1",
+      "version": "1.1.0-beta",
+      "id": "jp_core_draft1"
+    }
+  ],
+  "definition": {
+    "resource": [
+      {
+        "reference": {
+          "reference": "MedicationRequest/JP-MedReq-ePreData-Example-fukintouByDay"
+        },
+        "name": "JP-MedReq-ePreData-Example-fukintouByDay",
+        "description": "不均等投与1日用法の医薬品処方１件　MedicationRequestリソースのインスタンス例（プレドニン錠５ｍｇ１日３回　毎食後　７錠（４錠－２錠－１錠））",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "MedicationRequest/MedicationRequestExample01"
+        },
+        "name": "MedicationRequestExample01",
+        "description": "内服　処方例１件　MedicationRequestリソースのインスタンス例",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Patient/example01"
+        },
+        "name": "example01",
+        "description": "JPPatient患者FHIR　例",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Patient/example02"
+        },
+        "name": "example02",
+        "description": "JPPatient患者FHIR　例",
+        "exampleBoolean": true
+      }
+    ],
+    "page": {
+      "nameUrl": "toc.html",
+      "title": "Table of Contents",
+      "generation": "html",
+      "page": []
+    },
+    "parameter": [
+      {
+        "code": "copyrightyear",
+        "value": "2022+"
+      },
+      {
+        "code": "releaselabel",
+        "value": "ci-build"
+      }
+    ]
+  }
+}
