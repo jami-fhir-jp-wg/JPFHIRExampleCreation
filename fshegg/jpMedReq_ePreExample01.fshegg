@@ -1,5 +1,4 @@
 #include "fshDef/jpMedReq_ePreDef.fshegg"
-
 // MedicationResourceリース宣言
 //000mn_JPMedicationRequest_ePrescriptionData(ARGinstancename,ARGusage) 
 //001mn_Description(ARGtxt) 
@@ -29,7 +28,7 @@
 //300on_処方後発変更可()
 //300on_処方後発変更不可(ARGnote)
 
-$000mn_
+
 $000mn_JPMedicationRequest_ePrescriptionData(MedicationRequestExample01,example)  
 $001mn_Description(内服　処方例１件　MedicationRequestリソースのインスタンス例) 
 $002or_ValidationProfile(http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationRequest) 
