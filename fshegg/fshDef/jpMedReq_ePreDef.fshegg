@@ -1,4 +1,3 @@
-
 // MedicationResourceリース宣言
 #bigdef $000mn_JPMedicationRequest_ePrescriptionData(ARGinstancename,ARGusage)
 Instance: ARGinstancename
