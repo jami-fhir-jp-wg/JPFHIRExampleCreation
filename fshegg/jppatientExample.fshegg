@@ -1,4 +1,4 @@
-#include "jppatientDef.fshegg"
+#include "fshDef/jppatientDef.fshegg"
 
 // 00mn_JPPatient(ARGinstancename,ARGusage)  
 // 01mn_患者ID(ARG)

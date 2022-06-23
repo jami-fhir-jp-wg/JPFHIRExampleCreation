@@ -1,4 +1,4 @@
-#include "jpMedReq_ePreDef.fshegg"
+#include "fshDef/jpMedReq_ePreDef.fshegg"
 
 // MedicationResourceリース宣言
 //000mn_JPMedicationRequest_ePrescriptionData(ARGinstancename,ARGusage) 
