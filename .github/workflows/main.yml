@@ -51,4 +51,16 @@ jobs:
 
     - name: Run sushi
       run: | 
-        sushi .
+        sushi . -o ./output-json
+
+    - name: git setting 
+      run: |
+        git config --local user.email "kohe@m.u-tokyo.ac.jp"
+        git config --local user.name "jami-fhir-jp-wg"
+
+    - name: push files of directory output-json
+      run: |
+        git rm -r output-json
+        git add ./output-json
+        git commit -m "output-json”
+        git push origin develop1.0
