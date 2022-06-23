@@ -31,6 +31,8 @@ jobs:
         sudo npm install -g fsh-sushi
 
     - name: Setup jp-core package
+      env:
+        PACKAGE: jp-core.draft1#1.1.0-beta
       run: |
         mkdir -p /home/runner/.fhir
         mkdir -p /home/runner/.fhir/packages
