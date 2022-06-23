@@ -62,5 +62,5 @@ jobs:
       run: |
         git rm -r output-json
         git add ./output-json
-        git commit -m "output-json”
+        git commit -m "output-json"
         git push origin develop1.0
