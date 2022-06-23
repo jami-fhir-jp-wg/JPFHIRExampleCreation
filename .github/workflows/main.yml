@@ -28,6 +28,15 @@ jobs:
       run: |
         sudo npm install -g fsh-sushi
 
+    - name: Setup jp-core package
+      run: |
+        mkdir -p /home/runner/.fhir
+        mkdir -p /home/runner/.fhir/packages
+        mkdir -p /home/runner/.fhir/packages/$PACKAGE
+        : # local cache にpackage をcopyして展開する
+        cp ./packages_snapshot/$PACKAGE.tgz /home/runner/.fhir/packages/$PACKAGE/$PACKAGE.tgz
+        tar xzf /home/runner/.fhir/packages/$PACKAGE/$PACKAGE.tgz -C /home/runner/.fhir/packages/$PACKAGE/
+
     - name: Download filepp
       run: |
         sudo apt-get install filepp
