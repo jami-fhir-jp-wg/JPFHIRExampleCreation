@@ -1,8 +1,38 @@
-// MedicationResourceリース宣言
-#bigdef $000mn_JPMedicationRequest_ePrescriptionData(ARGinstancename,ARGusage)
+// MedicationResourceリース
+
+//000mn_ExampleJPMedicationRequest_ePrescriptionData(ARGinstancename) 
+//001mn_Description(ARGtxt) 
+//002or_ValidationProfile_JPMedicationRequest_ePrescriptionData() 
+//010mn_処方番号(ARGshohono,ARGrpno)
+//020mr_処方薬HOT9(ARGindex,ARGcode,ARGname)
+//020mr_処方薬YJ(ARGindex,ARGcode,ARGname)
+//020mr_処方薬LOCAL(ARGindex,ARGcode,ARGname,ARGlocalsystem)
+//030mn_処方薬TEXT(ARGname)
+//040mn_処方患者(ARGpatient)
+//050mn_処方日時(ARGdate,ARGtime)
+//060on_処方薬剤メモ(ARGtext)
+//070mn_処方用法テキスト(ARGtext)
+//080on_処方開始日(ARGdate)
+//090on_処方実日数(ARGdays)
+//100or_処方補足用法(ARGusageauxcode,ARGusageauxname)
+//110or_処方服用全期間日数(ARGduration)
+//120mn_処方用法メイン(ARGtimingusagecode,ARGtimingusagename)
+//130on_処方用法部位(ARGsitecode,ARGsite)
+//140on_処方内服用法()
+//150on_処方外用用法(ARGmethodcode,ARGmethodname)
+//160mn_処方製剤量指定()
+//160mn_処方原薬量指定()
+//170on_処方用法1回量(ARGdoseqty,ARGdoseunitcode,ARGdoseunitname)
+//180on_処方用法1日量(ARGdoseqty,ARGdoseunitcode,ARGdoseunitname)
+//200mn_処方調剤全量(ARGqty,ARGqtycode,ARGqtyname)
+//210on_処方調剤全日数(ARGdays)
+//300on_処方後発変更可()
+//300on_処方後発変更不可(ARGnote)
+
+#bigdef $000mn_ExampleJPMedicationRequest_ePrescriptionData(ARGinstancename)
 Instance: ARGinstancename
 InstanceOf: JP_MedicationRequest
-Usage: #ARGusage
+Usage: #example
 #endbigdef
 
 #ifndef $001mn_Description(ARGtxt)
@@ -16,6 +46,14 @@ Description: "ARGtxt"
 * meta.profile[+] = "ARGmetaprofile"
 #endbigdef
 #endif
+
+
+#ifndef $002or_ValidationProfile_JPMedicationRequest_ePrescriptionData()
+#bigdef $002or_ValidationProfile_JPMedicationRequest_ePrescriptionData() 
+* meta.profile[+] = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationRequest"
+#endbigdef
+#endif
+
 
 #bigdef $010mn_処方番号(ARGshohono,ARGrpno)
 #comment  // 例　$01mn_処方番号(1029,01)
