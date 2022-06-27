@@ -156,13 +156,13 @@ Description: "ARGtxt"
 #endbigdef
 
 #bigdef $170on_処方用法1回量(ARGdoseqty,ARGdoseunitcode,ARGdoseunitname)
-#comment  // 例　$処方用法1量(1,DROP,滴)
+#comment  // 例　$処方用法1回量(1,DROP,滴)
 * dosageInstruction[=].doseAndRate.doseQuantity = ARGdoseqty urn:oid:1.2.392.100495.20.2.101#ARGdoseunitcode "ARGdoseunitname"
 #endbigdef
 
 #bigdef $180on_処方用法1日量(ARGdoseqty,ARGdoseunitcode,ARGdoseunitname)
 #comment  // 例　$処方用法1日量(1,DROP,滴)
-* dosageInstruction[=].doseAndRate.rateRatio.numerator = ARGdoseqty urn:oid:1.2.392.100495.20.2.101#KO "個"
+* dosageInstruction[=].doseAndRate.rateRatio.numerator = ARGdoseqty urn:oid:1.2.392.100495.20.2.101#ARGdoseunitcode "ARGdoseunitname"
 * dosageInstruction[=].doseAndRate.rateRatio.denominator = 1 'd' "日"
 #endbigdef
 
