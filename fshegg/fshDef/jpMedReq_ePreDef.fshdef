@@ -4,9 +4,9 @@
 //001mn_Description(ARGtxt) 
 //002or_ValidationProfile_JPMedicationRequest_ePrescriptionData() 
 //010mn_処方番号(ARGshohono,ARGrpno)
-//020mr_処方薬HOT9(ARGindex,ARGcode,ARGname)
-//020mr_処方薬YJ(ARGindex,ARGcode,ARGname)
-//020mr_処方薬LOCAL(ARGindex,ARGcode,ARGname,ARGlocalsystem)
+//020mr_処方薬HOT9(ARGcode,ARGname)
+//020mr_処方薬YJ(ARGcode,ARGname)
+//020mr_処方薬LOCAL(ARGcode,ARGname,ARGlocalsystem)
 //030mn_処方薬TEXT(ARGname)
 //040mn_処方患者(ARGpatient)
 //050mn_処方日時(ARGdate,ARGtime)
@@ -65,17 +65,17 @@ Description: "ARGtxt"
 * intent = #order
 #endbigdef
 
-#bigdef $020mr_処方薬HOT9(ARGindex,ARGcode,ARGname)
+#bigdef $020mr_処方薬HOT9(ARGcode,ARGname)
 #comment  // 例　$02mn_処方薬(102094601,チモプトール点眼薬０．２５％　５ｍＬ)
 * medicationCodeableConcept.coding[+] = urn:oid:1.2.392.200119.4.403.1#ARGcode "ARGname"
 #endbigdef
 
-#bigdef $020mr_処方薬YJ(ARGindex,ARGcode,ARGname)
+#bigdef $020mr_処方薬YJ(ARGcode,ARGname)
 #comment  // 例　$02mn_処方薬(102094601,チモプトール点眼薬０．２５％　５ｍＬ)
 * medicationCodeableConcept.coding[+] = urn:oid:1.2.392.100495.20.1.73#ARGcode "ARGname"
 #endbigdef
 
-#bigdef $020mr_処方薬LOCAL(ARGindex,ARGcode,ARGname,ARGlocalsystem)
+#bigdef $020mr_処方薬LOCAL(ARGcode,ARGname,ARGlocalsystem)
 #comment  // 例　$02mn_処方薬(102094601,チモプトール点眼薬０．２５％　５ｍＬ)
 * medicationCodeableConcept.coding[+] = ARGlocalsystem#ARGcode "ARGname"
 #endbigdef
