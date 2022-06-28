@@ -1,4 +1,5 @@
 // MedicationResourceリース
+
 //000mn_ExampleJPMedicationRequest_ePrescriptionData(ARGinstancename) 
 //001mn_Description(ARGtxt) 
 //002or_ValidationProfile_JPMedicationRequest_ePrescriptionData() 
