@@ -1,8 +1,7 @@
 // MedicationResourceリース
-// JP_JPMedicationRequest
-// ePrescriptionData 派生
+// JP_MedicationRequest
 
-//000mn_ExampleJPMedicationRequest_ePrescriptionData(ARGinstancename) 
+//000mn_ExampleJPMedicationRequest(ARGinstancename) 
 //001mn_Description(ARGtxt) 
 //002or_ValidationProfile_JPMedicationRequest_ePrescriptionData() 
 
@@ -32,9 +31,9 @@
 //300on_処方後発変更可()
 //300on_処方後発変更不可(ARGnote)
 
-#bigdef $000mn_ExampleJPMedicationRequest_ePrescriptionData(ARGinstancename)
+#bigdef $000mn_ExampleJPMedicationRequest(ARGinstancename)
 Instance: ARGinstancename
-InstanceOf: JP_MedicationRequest
+InstanceOf: MedicationRequest
 Usage: #example
 #endbigdef
 
@@ -51,8 +50,8 @@ Description: "ARGtxt"
 #endif
 
 
-#ifndef $002or_ValidationProfile_JPMedicationRequest_ePrescriptionData()
-#bigdef $002or_ValidationProfile_JPMedicationRequest_ePrescriptionData() 
+#ifndef $002or_ValidationProfile_JPMedicationRequest()
+#bigdef $002or_ValidationProfile_JPMedicationRequest() 
 * meta.profile[+] = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationRequest"
 #endbigdef
 #endif

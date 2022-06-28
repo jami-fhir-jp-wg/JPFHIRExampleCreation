@@ -1,11 +1,37 @@
-// MedicationResourceリース
-// JP_JPMedicationRequest
-// ePrescriptionData 派生
+// CovarageResourceリース
+// JP_Coverage
 
-//000mn_ExampleJPMedicationRequest_ePrescriptionData(ARGinstancename) 
+//000mn_ExampleJPCoverage() 
 //001mn_Description(ARGtxt) 
-//002or_ValidationProfile_JPMedicationRequest_ePrescriptionData() 
+//002or_ValidationProfile_JPCoverage()
 
+// 0E1or_保険被保険者証記号 InsuredPersonSymbol	I	0..*	Extension(string)
+// 0E1or_保険被保険者証番号 InsuredPersonNumber	I	0..*	Extension(string)
+// 0E1or_保険被保険者証番号枝番InsuredPersonSubNumber	I	0..*	Extension(string)
+
+#bigdef  $0E1or_保険被保険者証記号(ARGcode)
+// 保険被保険者証記号：文字列
+* extension[+].url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Coverage_InsuredPersonSymbol" (exactly)
+* extension[=].valueString = "ARGtext"
+#endbigdef
+
+
+#bigdef  $0E1or_保険被保険者証番号(ARGcode)
+// 保険被保険者証番号：半角数字数字だけの文字列
+* extension[+].url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Coverage_InsuredPersonNumber" (exactly)
+* extension[=].valueString = "ARGtext"
+#endbigdef
+
+
+#bigdef  $0E1or_保険被保険者証番号枝番(ARGcode)
+// 保険被保険者証番号枝番：半角数字2桁 00,0
+* extension[+].url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Coverage_InsuredPersonSubNumber" (exactly)
+* extension[=].valueString = "ARGtext"
+#endbigdef
+
+
+
+//000mn_ExampleJPMedicatioJPMedicationRequest_ePrescriptionData() 
 //010mn_処方番号(ARGshohono,ARGrpno)
 //020mr_処方薬HOT9(ARGindex,ARGcode,ARGname)
 //020mr_処方薬YJ(ARGindex,ARGcode,ARGname)
