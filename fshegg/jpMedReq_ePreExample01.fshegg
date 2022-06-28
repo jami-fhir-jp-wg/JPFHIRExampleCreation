@@ -1,3 +1,5 @@
+//MedicationRequestExample01
+
 #include "fshDef/jpMedReq_ePreDef.fshdef"
 
 $000mn_ExampleJPMedicationRequest_ePrescriptionData(MedicationRequestExample01)  
@@ -5,9 +7,9 @@ $001mn_Description(内服　処方例１件　MedicationRequestリソースの�
 $002or_ValidationProfile_JPMedicationRequest_ePrescriptionData() 
 
 $010mn_処方番号(1,1)
-$020mr_処方薬HOT9(0,103831601,カルボシステイン錠２５０ｍｇ)
-$020mr_処方薬YJ(1,2233002F1280,カルボシステイン錠２５０ｍｇ)
-//$020mr_処方薬LOCAL(ARGindex,ARGcode,ARGname,ARGlocalsystem)
+$020mr_処方薬HOT9(103831601,カルボシステイン錠２５０ｍｇ)
+$020mr_処方薬YJ(2233002F1280,カルボシステイン錠２５０ｍｇ)
+//$020mr_処方薬LOCAL(ARGcode,ARGname,ARGlocalsystem)
 $030mn_処方薬TEXT(カルボシステイン２５０ｍｇ錠)
 $040mn_処方患者(JP-Patient-ePreData-Example)
 $050mn_処方日時(2020-08-21,12:28:17)
