@@ -1,0 +1,179 @@
+{
+  "resourceType": "Composition",
+  "id": "JP-Composition-eReferralBundleExample01",
+  "meta": {
+    "profile": [
+      "http://jpfhir.jp/fhir/eReferral/StructureDefinition/JP_Composition_eReferral"
+    ]
+  },
+  "language": "ja",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/composition-clinicaldocument-versionNumber",
+      "valueString": "1"
+    }
+  ],
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"ja\" xml:lang=\"ja\"><p>診療情報提供書</p></div>"
+  },
+  "identifier": {
+    "system": "http://jpfhir.jp/fhir/Common/IdSystem/resourceInstance-identifier",
+    "value": "34875506"
+  },
+  "status": "final",
+  "type": {
+    "coding": [
+      {
+        "code": "57133-1",
+        "system": "http://jpfhir.jp/fhir/Common/CodeSystem/doc-typecodes",
+        "display": "診療情報提供書"
+      }
+    ]
+  },
+  "category": [
+    {
+      "coding": [
+        {
+          "code": "57133-1",
+          "system": "http://jpfhir.jp/fhir/Common/CodeSystem/doc-typecodes",
+          "display": "診療情報提供書"
+        }
+      ]
+    }
+  ],
+  "subject": {
+    "reference": "urn:uuid:e22017ff-4c65-649c-2dfe-c6676b654be5",
+    "display": "患者リソースPatient"
+  },
+  "encounter": {
+    "reference": "urn:uuid:d151a740-d8a1-9c19-29f0-f52476e619d7",
+    "display": "受診Encounterリソース"
+  },
+  "date": "2020-08-21T12:12:20+09:00",
+  "author": [
+    {
+      "reference": "urn:uuid:2e61a47b-a7fa-1d23-ebbf-eade736e9b00",
+      "display": "紹介状作成者PractitionerRoleリソース"
+    },
+    {
+      "reference": "urn:uuid:51c6333d-92ff-0113-56cd-a1f566f43a09",
+      "display": "紹介状作成機関Organaizationリソース"
+    }
+  ],
+  "title": "診療情報提供書",
+  "custodian": {
+    "reference": "urn:uuid:51c6333d-92ff-0113-56cd-a1f566f43a09",
+    "display": "紹介状交付責任機関Organaizationリソース"
+  },
+  "event": [
+    {
+      "code": [
+        {
+          "text": "診療情報提供書発行"
+        }
+      ],
+      "period": {
+        "start": "2020-08-21"
+      }
+    }
+  ],
+  "section": [
+    {
+      "title": "構造情報",
+      "code": {
+        "coding": [
+          {
+            "code": "300",
+            "system": "http://jpfhir.jp/fhir/eReferral/CodeSystem/document-section",
+            "display": "構造情報セクション"
+          }
+        ]
+      },
+      "text": {
+        "status": "additional",
+        "div": "<div>港区第一診療所　内科　中森あきこ</div>"
+      },
+      "entry": [
+        {
+          "reference": "urn:uuid:9b4e6a12-7bb3-5d46-a126-31b33410f796",
+          "display": "紹介先医療機関 JP_Organization"
+        },
+        {
+          "reference": "urn:uuid:9b4e6a12-7bb3-5d46-a126-31b33410f796",
+          "display": "紹介先診療科 JP_Organization"
+        },
+        {
+          "reference": "urn:uuid:a871437d-03eb-edfb-9ac7-f3313c54f31a",
+          "display": "紹介先医師 JP_Practitioner"
+        },
+        {
+          "reference": "urn:uuid:9b4e6a12-7bb3-5d46-a126-31b33410f796",
+          "display": "紹介元医療機関 JP_Organization"
+        },
+        {
+          "reference": "urn:uuid:9b4e6a12-7bb3-5d46-a126-31b33410f796",
+          "display": "紹介元診療科 JP_Organization"
+        },
+        {
+          "reference": "urn:uuid:a871437d-03eb-edfb-9ac7-f3313c54f31a",
+          "display": "紹介元医師 JP_Practitioner"
+        }
+      ],
+      "section": [
+        {
+          "title": "感染症情報",
+          "code": {
+            "coding": [
+              {
+                "code": "370",
+                "system": "http://jpfhir.jp/fhir/eReferral/CodeSystem/document-section",
+                "display": "感染症情報セクション"
+              }
+            ]
+          },
+          "text": {
+            "status": "additional",
+            "div": "<div>特になし</div>"
+          },
+          "entry": [
+            {
+              "reference": "dddd"
+            },
+            {
+              "reference": "dddd"
+            },
+            {
+              "reference": "dddd"
+            },
+            {
+              "reference": "dddd"
+            },
+            {
+              "reference": "dddd"
+            },
+            {
+              "reference": "dddd"
+            },
+            {
+              "reference": "dddd"
+            },
+            {
+              "reference": "dddd"
+            },
+            {
+              "reference": "dddd"
+            }
+          ],
+          "emptyReason": {
+            "coding": [
+              {
+                "code": "nilknown"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
