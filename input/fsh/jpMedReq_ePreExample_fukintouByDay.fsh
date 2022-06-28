@@ -1,11 +1,13 @@
 // MedicationResourceリース
+// JP_JPMedicationRequest
+// ePrescriptionData 派生
 //000mn_ExampleJPMedicationRequest_ePrescriptionData(ARGinstancename) 
 //001mn_Description(ARGtxt) 
 //002or_ValidationProfile_JPMedicationRequest_ePrescriptionData() 
 //010mn_処方番号(ARGshohono,ARGrpno)
-//020mr_処方薬HOT9(ARGindex,ARGcode,ARGname)
-//020mr_処方薬YJ(ARGindex,ARGcode,ARGname)
-//020mr_処方薬LOCAL(ARGindex,ARGcode,ARGname,ARGlocalsystem)
+//020mr_処方薬HOT9(ARGcode,ARGname)
+//020mr_処方薬YJ(ARGcode,ARGname)
+//020mr_処方薬LOCAL(ARGcode,ARGname,ARGlocalsystem)
 //030mn_処方薬TEXT(ARGname)
 //040mn_処方患者(ARGpatient)
 //050mn_処方日時(ARGdate,ARGtime)
@@ -88,7 +90,7 @@ Description: "不均等投与1日用法の医薬品処方１件　MedicationRequ
 //160mn_処方原薬量指定()
 //170on_処方用法1回量(ARGdoseqty,ARGdoseunitcode,ARGdoseunitname)
 
-* dosageInstruction[=].doseAndRate.rateRatio.numerator = 7 urn:oid:1.2.392.100495.20.2.101#KO "個"
+* dosageInstruction[=].doseAndRate.rateRatio.numerator = 7 urn:oid:1.2.392.100495.20.2.101#TAB "錠"
 * dosageInstruction[=].doseAndRate.rateRatio.denominator = 1 'd' "日"
 
 * dispenseRequest.quantity = 49 urn:oid:1.2.392.100495.20.2.101#49code "49name"

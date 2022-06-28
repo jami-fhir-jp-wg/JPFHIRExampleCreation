@@ -1,4 +1,7 @@
-// 一般処方サンプル０１
+Alias: $doc-typecodes = http://jpfhir.jp/fhir/Common/CodeSystem/doc-typecodes
+Alias: $referral-section = http://jpfhir.jp/fhir/eReferral/CodeSystem/document-section
+
+// 診療情報提供書サンプル０１
 Instance: JP-Composition-eReferralBundleExample01
 InstanceOf: Composition
 Usage: #example
@@ -14,7 +17,7 @@ Description:  "診療情報提供書のComposition Example01"
 * identifier.value = "34875506"
 * status = #final
 * type = $doc-typecodes#57133-1 "診療情報提供書"
-* category = $doc-typecodes#57133-1 "診療情報提供+書"
+* category = $doc-typecodes#57133-1 "診療情報提供書"
 
 * subject.reference = "urn:uuid:e22017ff-4c65-649c-2dfe-c6676b654be5"
 * subject.display = "患者リソースPatient"
@@ -37,7 +40,7 @@ Description:  "診療情報提供書のComposition Example01"
 * section.title = "紹介先情報"
 * section.code = $referral-section#910 "紹介先情報セクション"
 * section.text.status = #additional
-* section.text = "東京第一病院　消化器内科　田中ひろみ先生"
+* section.text.div = "<div>東京第一病院　消化器内科　田中ひろみ先生</div>"
 * section.entry[+].reference = "urn:uuid:9b4e6a12-7bb3-5d46-a126-31b33410f796"
 * section.entry[=].display = "紹介先医療機関 JP_Organization"
 * section.entry[+].reference = "urn:uuid:9b4e6a12-7bb3-5d46-a126-31b33410f796"
@@ -48,7 +51,7 @@ Description:  "診療情報提供書のComposition Example01"
 * section.title = "紹介元情報"
 * section.code = $referral-section#920 "紹介元情報セクション"
 * section.text.status = #additional
-* section.text = "港区第一診療所　内科　中森あきこ"
+* section.text.div = "<div>港区第一診療所　内科　中森あきこ</div>"
 * section.entry[+].reference = "urn:uuid:9b4e6a12-7bb3-5d46-a126-31b33410f796"
 * section.entry[=].display = "紹介元医療機関 JP_Organization"
 * section.entry[+].reference = "urn:uuid:9b4e6a12-7bb3-5d46-a126-31b33410f796"
@@ -62,28 +65,28 @@ Description:  "診療情報提供書のComposition Example01"
 * section.section.title = "紹介目的"
 * section.section.code = $referral-section#950 "紹介目的セクション"
 * section.section.text.status = #additional
-* section.section.text = "腹痛精査お願いします。"
+* section.section.text.div = "<div>腹痛精査お願いします。</div>"
 //  Reference(JP_Ecounter) 紹介目的
 * section.section.entry[+].reference = "dddd"
 
 * section.section.title = "傷病名・主訴"
 * section.section.code = $referral-section#340 "傷病名・主訴セクション"
 * section.section.text.status = #additional
-* section.section.text = "上腹部痛、腰痛"
+* section.section.text.div = "<div>上腹部痛、腰痛</div>"
 //  Reference(JP_Condition) 傷病名・主訴
 * section.section.entry[+].reference = "dddd"
 
 * section.section.title = "現病歴"
 * section.section.code = $referral-section#360 "現病歴セクション"
 * section.section.text.status = #additional
-* section.section.text = "２０２２年６月上旬から夜食後に時々上腹部痛があり、だんだんひどくなっている。他に目立った症状なし。"
+* section.section.text.div = "<div>２０２２年６月上旬から夜食後に時々上腹部痛があり、だんだんひどくなっている。他に目立った症状なし。</div>"
 //  Reference(JP_Condition) 現病歴
 * section.section.entry[+].reference = "dddd"
 
 * section.section.title = "既往歴"
 * section.section.code = $referral-section#370 "既往歴セクション"
 * section.section.text.status = #additional
-* section.section.text = "2018年　狭心症　２ヶ月治療で軽快。2019年　交通事故で左前腕骨折　３ヶ月ギプス固定。"
+* section.section.text.div = "<div>2018年　狭心症　２ヶ月治療で軽快。2019年　交通事故で左前腕骨折　３ヶ月ギプス固定。</div>"
 //  Reference(JP_Condition) 既往歴
 * section.section.entry[+].reference = "dddd"
 * section.section.entry[+].reference = "dddd"
@@ -91,7 +94,7 @@ Description:  "診療情報提供書のComposition Example01"
 * section.section.title = "アレルギー・不耐性反応"
 * section.section.code = $referral-section#370 "アレルギー・不耐性反応セクション"
 * section.section.text.status = #additional
-* section.section.text = "サバ　キーウイ"
+* section.section.text.div = "<div>サバ　キーウイ</div>"
 //  Reference(JP_Condition) アレルギー
 * section.section.entry[+].reference = "dddd"
 * section.section.entry[+].reference = "dddd"
@@ -99,21 +102,21 @@ Description:  "診療情報提供書のComposition Example01"
 * section.section.title = "家族歴"
 * section.section.code = $referral-section#370 "家族歴セクション"
 * section.section.text.status = #additional
-* section.section.text = "母　胃がん"
+* section.section.text.div = "<div>母　胃がん</div>"
 //  Reference(JP_FamilyMemberHistory) 家族歴
 * section.section.entry[+].reference = "dddd"
 
 * section.section.title = "身体所見"
 * section.section.code = $referral-section#370 "身体所見セクション"
 * section.section.text.status = #additional
-* section.section.text = "上腹部圧痛あり、その他特に所見なし。"
+* section.section.text.div = "<div>腹部所見：上腹部圧痛あり、その他特に所見なし。</div>"
 //  Reference(JP_Observation_Common) 身体所見
 * section.section.entry[+].reference = "dddd"
 
 * section.section.title = "感染症情報"
 * section.section.code = $referral-section#370 "感染症情報セクション"
 * section.section.text.status = #additional
-* section.section.text = "特になし"
+* section.section.text.div = "<div>特になし</div>"
 //  Reference(JP_Observation_Common) 感染症情報
 * section.section.emptyReason = #nilknown
 

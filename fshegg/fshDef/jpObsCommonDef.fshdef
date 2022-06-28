@@ -18,6 +18,11 @@ Description: "ARGtxt"
 #endbigdef
 #endif
 
+#ifndef $002or_ValidationProfile_JPObservationCommon()
+#bigdef $002or_ValidationProfile_JPObservationCommon() 
+* meta.profile[+] = "JP_Observation_Common"
+#endbigdef
+#endif
 
 #ifndef $002or_ValidationProfile_JPObservationCommon()
 #bigdef $002or_ValidationProfile_JPObservationCommon() 
@@ -27,13 +32,13 @@ Description: "ARGtxt"
 
 
 #bigdef $010on_共通検査報告ID(ARGnumber)
-* identifier.system = "http://jpfhir.jp/fhir/Common/CodeSystem/resourceInstance-identifier1"
+* identifier.system = "http://jpfhir.jp/fhir/Common/CodeSystem/resourceInstance-identifier"
 * identifier.value = "ARGnumber"
 * status = #final
 #endbigdef
 
 #bigdef $030or_共通検査区分(ARGkubun)
-* category[+] = "http://terminology.hl7.org/CodeSystem/observation-category#ARGkubun"
+* category[+] = http://terminology.hl7.org/CodeSystem/observation-category#ARGkubun
 // ARGkubun: ocial-history:社会生活歴
 // vital-signs：バイタルサイン
 // imaging：画像検査
@@ -43,6 +48,10 @@ Description: "ARGtxt"
 // exam：身体検査・観察
 // therapy：非介入治療による観察結果
 // activity：身体活動記録
+#endbigdef
+
+#bigdef $030or_共通検査区分名称(ARGkubun,ARGname)
+* category[+] = http://terminology.hl7.org/CodeSystem/observation-category#ARGkubun "ARGname"
 #endbigdef
 
 #bigdef $040mn_共通検査コード(ARGsystem,ARGcode)

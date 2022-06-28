@@ -1,0 +1,13 @@
+#bigfunc test(AA...)
+#foreach ARG AA
+* section.section.entry[+].reference = "ARG"
+#endforeach
+#endbigfunc
+
+#bigdef  TRYTEST(ARGref...)
+* section.section.text.div = "<div>ARGref...</div>"
+test(ARGref)
+#endbigdef
+
+TRYTEST(あ,み,む,め)
+

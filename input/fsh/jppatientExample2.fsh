@@ -1,4 +1,5 @@
 // Patientリース
+// JP_Patient
 // 000mn_ExampleJPPatient(ARGinstancename)  
 // 001mn_Description(ARGtxt)
 // 002or_ValidationProfile(ARGmetaprofile)
@@ -24,7 +25,7 @@
 // 080or_患者自宅構造化住所(ARGpostal,ARGtext,ARGstate,ARGcity,ARGline)
 // 080or_患者職場構造化住所(ARGpostal,ARGtext,ARGstate,ARGcity,ARGline)
 
-Instance: sample02
+Instance: example02
 InstanceOf: JP_Patient
 Usage: #example
   
