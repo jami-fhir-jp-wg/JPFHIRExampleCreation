@@ -47,7 +47,7 @@ jobs:
 
     - name: Run filepp by file pre proccessor converting egg to egg.fsh
       run: | 
-        while read -r f;do outfname=`basename $f .fshegg`;echo "converting $f to ./input/fsh/$outfname.fsh";filepp -b -M/usr/local/share/filepp/modules -m bigdef.pm $f >./input/fsh/$outfname.fsh;done < <(find ./fshegg -name *.fshegg -mindepth 1);
+        while read -r f;do outfname=`basename $f .fshegg`;echo "converting $f to ./input/fsh/$outfname.fsh";filepp -b -M/usr/local/share/filepp/modules -m bigdef.pm -m bigfunc.pm -m foreach.pm $f >./input/fsh/$outfname.fsh;done < <(find ./fshegg -name *.fshegg -mindepth 1);
 
     - name: Run sushi
       run: | 
