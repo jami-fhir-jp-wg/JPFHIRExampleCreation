@@ -1,0 +1,100 @@
+// Condition_eClinicalSummary
+
+#bigdef $000mn_ExampleJPCondition_eCS(ARGinstancename)
+Instance: ARGinstancename
+InstanceOf: JP_Condition
+Usage: #example
+#endbigdef
+
+#ifndef $001mn_Description(ARGtxt)
+#bigdef $001mn_Description(ARGtxt)
+Description: "ARGtxt"
+#endbigdef
+#endif
+
+#ifndef $002or_ValidationProfile(ARGmetaprofile)
+#bigdef $002or_ValidationProfile(ARGmetaprofile) 
+* meta.profile[+] = "ARGmetaprofile"
+#endbigdef
+#endif
+
+#ifndef $002or_ValidationProfile_JPCondition_eCS()
+#bigdef $002or_ValidationProfile_JPCondition_eCS()
+* meta.profile[+] = "http://jpfhir.jp/fhir/eReferral/StructureDefinition/JPCondition_eClinicalSummary"
+#endbigdef
+#endif
+
+#bigdef $010on_症病管理番号(ARGnumber)
+* identifier.system = "http://jpfhir.jp/fhir/Common/CodeSystem/resourceInstance-identifier"
+* identifier.value = "ARGnumber"
+* clinicalStatus = http://terminology.hl7.org/CodeSystem/condition-clinical#active
+ // active | recurrence | relapse | inactive | remission | resolved
+* category = http://terminology.hl7.org/CodeSystem/condition-category#problem-list-item
+#endbigdef
+
+// 030 verificationStatus
+
+#bigdef $040mn_症病状態コード名称(ARGsystem,ARGcode,ARGname)
+* code[+] = ARGsystem#ARGcode "ARGname"
+#endbigdef
+
+#bigdef $040mn_症病状態MEDISコード名称(ARGcode,ARGname)
+* code[+] = urn:oid:1.2.392.200119.4.201.5#ARGcode "ARGname"
+#endbigdef
+
+#bigdef $040mn_症病状態コード名称TEXT(ARGsystem,ARGcode,ARGname,ARGtext)
+* code[+] = ARGsystem#ARGcode "ARGname"
+* code[=].text = "ARGtext"
+#endbigdef
+
+#bigdef $040mn_症病状態TEXT(ARGtext)
+* code[+].text = "ARGtext"
+#endbigdef
+
+#bigdef $040or_症病部位コード名称(ARGsystem,ARGcode,ARGname)
+* bodySite[+] = ARGsystem#ARGcode "ARGname"
+#endbigdef
+
+#bigdef $040or_症病部位MEDISコード名称(ARGcode,ARGname)
+* bodySite[+] = urn:oid:1.2.392.200119.4.201.5#ARGcode "ARGname"
+#endbigdef
+
+#bigdef $040or_症病部位コード名称TEXT(ARGsystem,ARGcode,ARGname,ARGtext)
+* bodySite[+] = ARGsystem#ARGcode "ARGname"
+* bodySite[=].text = "ARGtext"
+#endbigdef
+
+#bigdef $040or_症病部位TEXT(ARGtext)
+* bodySite[+].text = "ARGtext"
+#endbigdef
+
+#bigdef $050mn_症病患者(ARGpatient)
+* subject = Reference(ARGpatient)
+#endbigdef
+
+#bigdef $060on_症病受診(ARGencounter)
+* encounter = Reference(ARGencounter)
+#endbigdef
+
+#bigdef $070on_症病時期日時((ARGdate,ARGtime)
+// ARGdate 2020-08-21
+// ATGtime 12:12:20
+* onsetDateTime = "ARGdateTARGtime+09:00"
+#endbigdef
+
+#bigdef $070on_症病時期日((ARGdate)
+// ARGdate 2020-08-21
+// ATGtime 12:12:20
+* onsetDateTime = "ARGdate"
+#endbigdef
+
+#bigdef $070on_症病時期年齢(ARGage)
+* onsetAge.value = "ARGage"
+#endbigdef
+
+//当面中略（診療情報提供書）
+
+#bigdef $150or_傷病追加TEXT(ARGtext)
+* note.text = "ARGtext"
+#endbigdef
+

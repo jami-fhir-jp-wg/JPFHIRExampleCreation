@@ -1,196 +1,139 @@
 // Compositionリース
+// Compositionリース
 Alias: $doc-typecodes = http://jpfhir.jp/fhir/Common/CodeSystem/doc-typecodes
 Alias: $referral-section = http://jpfhir.jp/fhir/eReferral/CodeSystem/document-section
 
-#bigdef $000mn_ExampleJPComposition_eReferral(ARGinstancename)
-Instance: ARGinstancename
+
+Instance: compositionReferralExample01
 InstanceOf: Composition
 Usage: #example
-#endbigdef
 
-#ifndef $001mn_Description(ARGtxt)
-#bigdef $001mn_Description(ARGtxt)
-Description: "ARGtxt"
-#endbigdef
-#endif
+Description: "構成情報サンプル　composition"
 
-#ifndef $002or_ValidationProfile(ARGmetaprofile)
-#bigdef $002or_ValidationProfile(ARGmetaprofile) 
-* meta.profile[+] = "ARGmetaprofile"
-* language = #ja
-#endbigdef
-#endif
-
-
-#ifndef $002or_ValidationProfile_JPComposition_eCS()
-#bigdef $002or_ValidationProfile_JPComposition_eCS()
 * meta.profile[+] = "http://jpfhir.jp/fhir/eReferral/StructureDefinition/JP_Composition_eReferral"
-#endbigdef
-#endif
 
-
-#bigdef  $0E1mn_紹介状文書バージョン(ARGtext)
 * extension.url = "http://hl7.org/fhir/StructureDefinition/composition-clinicaldocument-versionNumber"
 * extension.valueString = "ARGcode"
-#endbigdef
-
-#bigdef  $010mn_紹介状文書ID(ARGtext)
+ 
 * identifier.system = "http://jpfhir.jp/fhir/Common/IdSystem/resourceInstance-identifier"
 * identifier.value = "ARGcode"
 * status = #final
 * type = $doc-typecodes#57133-1 "診療情報提供書"
 * category = $doc-typecodes#57133-1 "診療情報提供書"
-#endbigdef
-
-#bigdef  $020mn_紹介状患者情報(ARGresourceRef)
-* subject.reference = "ARGresourceRef"
+ 
+* subject.reference = "jppatientExample01"
 * subject.display = "患者リソースPatient"
-#endbigdef
-
-#bigdef  $030on_紹介状受診(ARGresourceRef)
-* encounter.reference = "ARGresourceRef"
+ 
+* encounter.reference = "encounterReferralExample01"
 * encounter.display = "受診Encounterリソース"
-#endbigdef
-
-#bigdef  $040mn_紹介状作成日時(ARGdate, ARGtime)
-// ARGdate 2020-08-21
+ 
+// 2020-08-21 2020-08-21
 // ATGtime 12:12:20
-* date = "ARGdateTARGtime+09:00"
-#endbigdef
-
-#bigdef  $050mn_紹介状作成者(ARGresourceRefauthor, ARGresourceReforg)
-* author[0].reference = "ARGresourceRefauthor"
+* date = "2020-08-21T12:12:20+09:00"
+ 
+* author[0].reference = "紹介状作成者Practitionerリソース"
 * author[=].display = "紹介状作成者PractitionerRoleリソース"
-* author[+].reference = "ARGresourceReforg9"
+* author[+].reference = "紹介状作成機関Organaizationリソース9"
 * author[=].display = "紹介状作成機関Organaizationリソース"
 * title = "診療情報提供書"
-* custodian.reference = "ARGresourceReforg"
+* custodian.reference = "紹介状作成機関Organaizationリソース"
 * custodian.display = "紹介状交付責任機関Organaizationリソース"
-#endbigdef
-
-#bigdef  $060mn_紹介状発行日(ARGdate)
+ 
 * event.code.text = "診療情報提供書発行"
-* event.period.start = "ARGdate"
-#endbigdef
-
-#bigdef  $060mn_紹介状先機関(ARGorgname, ARGorgref)
+* event.period.start = "2020-08-21"
+ 
 * section[+].title = "紹介先情報"
 * section[=].code = $referral-section#910 "紹介先情報セクション"
 * section[=].text.status = #additional
-* section[=].text.div = "<div>ARGorgname</div>"
-* section[=].entry[+].reference = "ARGorgref"
+* section[=].text.div = "<div>東京第一病院</div>"
+* section[=].entry[+].reference = "urn:uuid:9b4e6a12-7bb3-5d46-a126-31b33410f796"
 * section[=].entry[=].display = "紹介先医療機関 JP_Organization"
-#endbigdef
-
-#bigdef  $060on_紹介状先科(ARGorgref)
-* section[=].entry[+].reference = "ARGorgref"
+ 
+* section[=].entry[+].reference = "urn:uuid:9b4e6a12-7bb3-5d46-a126-31b33410f796"
 * section[=].entry[=].display = "紹介先診療科 JP_Organization"
-#endbigdef
-
-#bigdef  $060on_紹介状先医師(ARGpersonref)
-* section[=].entry[+].reference = "ARGpersonref"
+ 
+* section[=].entry[+].reference = "urn:uuid:a871437d-03eb-edfb-9ac7-f3313c54f31a"
 * section[=].entry[=].display = "紹介先医師 JP_Practitioner"
-#endbigdef
-
-#bigdef  $060mn_紹介状元機関(ARGorgname, ARGorgref)
+ 
 * section[+].title = "紹介元情報"
 * section[=].code = $referral-section#910 "紹介元情報セクション"
 * section[=].text.status = #additional
-* section[=].text.div = "<div>ARGorgname</div>"
-* section[=].entry[+].reference = "ARGorgref"
+* section[=].text.div = "<div>港区第一診療所</div>"
+* section[=].entry[+].reference = "urn:uuid:9b4e6a12-7bb3-5d46-a126-31b33410f796"
 * section[=].entry[=].display = "紹介元医療機関 JP_Organization"
-#endbigdef
-
-#bigdef  $060on_紹介状元科(ARGorgref)
-* section[=].entry[+].reference = "ARGorgref"
+ 
+* section[=].entry[+].reference = "urn:uuid:9b4e6a12-7bb3-5d46-a126-31b33410f796"
 * section[=].entry[=].display = "紹介元診療科 JP_Organization"
-#endbigdef
-
-#bigdef  $060on_紹介状元医師(ARGpersonref)
-* section[=].entry[+].reference = "ARGpersonref"
+ 
+* section[=].entry[+].reference = "urn:uuid:a871437d-03eb-edfb-9ac7-f3313c54f31a"
 * section[=].entry[=].display = "紹介元医師 JP_Practitioner"
-#endbigdef
-
-#bigdef  $070mn_紹介状目的Ecounter(ARGtext,ARGref)
+ 
 * section[+].title = "構造情報"
 * section[=].code = $referral-section#300 "構造情報セクション"
 * section[=].section[+].title = "紹介目的"
 * section[=].section[=].code = $referral-section#950 "紹介目的セクション"
 * section[=].section[=].text.status = #additional
-* section[=].section[=].text.div = "<div>ARGtext</div>"
+* section[=].section[=].text.div = "<div>腹痛精査お願いします。</div>"
 //  Reference(JP_Ecounter) 紹介目的
-* section[=].section[=].entry[+].reference = "ARGref"
-#endbigdef
-
-#comment 可変個の引数を与えて、その引数ごとにsection.entry[+]=...を展開する実行時展開関数を定義
-#bigfunc $multiEntryRef(AAAref...)
-#foreach ARGoneref AAAref
-* section[=].section[=].entry[+].reference = "ARGoneref"
-#endforeach
-#endbigfunc
-
-#bigdef  $070mn_紹介状傷病名Condition(ARGtext,ARGref...)
+* section[=].section[=].entry[+].reference = "purposeReferralExample01"
+ 
 * section[=].section[+].title = "傷病名・主訴"
 * section[=].section[=].code = $referral-section#340 "傷病名・主訴セクション"
 * section[=].section[=].text.status = #additional
-* section[=].section[=].text.div = "<div>ARGtext</div>"
+* section[=].section[=].text.div = "<div>上腹部痛、腰痛</div>"
 //  Reference(JP_Condition) 傷病名・主訴
-$multiEntryRef(ARGref)
-#endbigdef
+* section[=].section[=].entry[+].reference = "cc1ReferralExample01"
+* section[=].section[=].entry[+].reference = "cc2ReferralExample01"
 
-#bigdef  $070mn_紹介状現病歴Condition(ARGtext,ARGref...)
+ 
 * section[=].section[+].title = "現病歴"
 * section[=].section[=].code = $referral-section#360 "現病歴セクション"
 * section[=].section[=].text.status = #additional
-* section[=].section[=].text.div = "<div>ARGtext</div>"
+* section[=].section[=].text.div = "<div>２０２２年６月上旬から夜食後に時々上腹部痛があり、だんだんひどくなっている。他に目立った症状なし。</div>"
 //  Reference(JP_Condition) 
-$multiEntryRef(ARGref)
-#endbigdef
+* section[=].section[=].entry[+].reference = "piReferralExample01"
 
-#bigdef  $070mn_紹介状既往歴Condition(ARGtext,ARGref...)
+ 
 * section[=].section[+].title = "既往歴"
 * section[=].section[=].code = $referral-section#370 "既往歴セクション"
 * section[=].section[=].text.status = #additional
 * section[=].section[=].text.div = "<div>2018年　狭心症　２ヶ月治療で軽快。2019年　交通事故で左前腕骨折　３ヶ月ギプス固定。</div>"
 //  Reference(JP_Condition) 既往歴
-$multiEntryRef(ARGref)
-#endbigdef
+* section[=].section[=].entry[+].reference = "ph1ReferralExample01"
+* section[=].section[=].entry[+].reference = "ph2ReferralExample01"
 
-#bigdef  $070mn_紹介状アレルギーAllergy(ARGtext,ARGref...)
+ 
 * section[=].section[+].title = "アレルギー・不耐性反応"
 * section[=].section[=].code = $referral-section#370 "アレルギー・不耐性反応セクション"
 * section[=].section[=].text.status = #additional
-* section[=].section[=].text.div = "<div>ARGtext</div>"
+* section[=].section[=].text.div = "<div>サバ　キーウイ</div>"
 //  Reference(JP_Condition) アレルギー
-$multiEntryRef(ARGref)
-#endbigdef
+* section[=].section[=].entry[+].reference = "alg1ReferralExample01"
+* section[=].section[=].entry[+].reference = "alg1ReferralExample02"
 
-#bigdef  $070mn_紹介状家族歴Family(ARGtext,ARGref...)
+ 
 * section[=].section[+].title = "家族歴"
 * section[=].section[=].code = $referral-section#370 "家族歴セクション"
 * section[=].section[=].text.status = #additional
-* section[=].section[=].text.div = "<div>ARGtext</div>"
+* section[=].section[=].text.div = "<div>母　胃がん</div>"
 //  Reference(JP_FamilyMemberHistory) 家族歴
-$multiEntryRef(ARGref)
-#endbigdef
+* section[=].section[=].entry[+].reference = "ARGref..."
 
-#bigdef  $070mn_紹介状身体所見0bsCommon(ARGtext,ARGref...)
+ 
 * section[=].section[+].title = "身体所見"
 * section[=].section[=].code = $referral-section#370 "身体所見セクション"
 * section[=].section[=].text.status = #additional
-* section[=].section[=].text.div = "<div>ARGtext</div>"
+* section[=].section[=].text.div = "<div>腹部所見：上腹部圧痛あり、その他特に所見なし。</div>"
 //  Reference(JP_Observation_Common) 身体所見
-$multiEntryRef(ARGref)
-#endbigdef
+* section[=].section[=].entry[+].reference = "psobsCommonExample01"
 
-#bigdef  $070mn_紹介状感染症0bsCommon(ARGtext,ARGref...)
+ 
 * section[=].section[+].title = "感染症情報"
 * section[=].section[=].code = $referral-section#370 "感染症情報セクション"
 * section[=].section[=].text.status = #additional
-* section[=].section[=].text.div = "<div>ARGtext</div>"
+* section[=].section[=].text.div = "<div>特になし</div>"
 //  Reference(JP_Observation_Common) 感染症情報
-$multiEntryRef(ARGref)
-#endbigdef
+
 
 
 

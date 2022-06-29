@@ -1,25 +1,20 @@
 {
   "resourceType": "Composition",
-  "id": "JP-Composition-eReferralBundleExample01",
+  "id": "compositionReferralExample01",
   "meta": {
     "profile": [
       "http://jpfhir.jp/fhir/eReferral/StructureDefinition/JP_Composition_eReferral"
     ]
   },
-  "language": "ja",
   "extension": [
     {
       "url": "http://hl7.org/fhir/StructureDefinition/composition-clinicaldocument-versionNumber",
-      "valueString": "1"
+      "valueString": "ARGcode"
     }
   ],
-  "text": {
-    "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"ja\" xml:lang=\"ja\"><p>診療情報提供書</p></div>"
-  },
   "identifier": {
     "system": "http://jpfhir.jp/fhir/Common/IdSystem/resourceInstance-identifier",
-    "value": "34875506"
+    "value": "ARGcode"
   },
   "status": "final",
   "type": {
@@ -43,27 +38,27 @@
     }
   ],
   "subject": {
-    "reference": "urn:uuid:e22017ff-4c65-649c-2dfe-c6676b654be5",
+    "reference": "jppatientExample01",
     "display": "患者リソースPatient"
   },
   "encounter": {
-    "reference": "urn:uuid:d151a740-d8a1-9c19-29f0-f52476e619d7",
+    "reference": "encounterReferralExample01",
     "display": "受診Encounterリソース"
   },
   "date": "2020-08-21T12:12:20+09:00",
   "author": [
     {
-      "reference": "urn:uuid:2e61a47b-a7fa-1d23-ebbf-eade736e9b00",
+      "reference": "紹介状作成者Practitionerリソース",
       "display": "紹介状作成者PractitionerRoleリソース"
     },
     {
-      "reference": "urn:uuid:51c6333d-92ff-0113-56cd-a1f566f43a09",
+      "reference": "紹介状作成機関Organaizationリソース9",
       "display": "紹介状作成機関Organaizationリソース"
     }
   ],
   "title": "診療情報提供書",
   "custodian": {
-    "reference": "urn:uuid:51c6333d-92ff-0113-56cd-a1f566f43a09",
+    "reference": "紹介状作成機関Organaizationリソース",
     "display": "紹介状交付責任機関Organaizationリソース"
   },
   "event": [
@@ -92,7 +87,7 @@
       },
       "text": {
         "status": "additional",
-        "div": "<div>東京第一病院　消化器内科　田中ひろみ先生</div>"
+        "div": "<div>東京第一病院</div>"
       },
       "entry": [
         {
@@ -114,7 +109,7 @@
       "code": {
         "coding": [
           {
-            "code": "920",
+            "code": "910",
             "system": "http://jpfhir.jp/fhir/eReferral/CodeSystem/document-section",
             "display": "紹介元情報セクション"
           }
@@ -122,7 +117,7 @@
       },
       "text": {
         "status": "additional",
-        "div": "<div>港区第一診療所　内科　中森あきこ</div>"
+        "div": "<div>港区第一診療所</div>"
       },
       "entry": [
         {
@@ -168,7 +163,7 @@
           },
           "entry": [
             {
-              "reference": "dddd"
+              "reference": "purposeReferralExample01"
             }
           ]
         },
@@ -189,7 +184,10 @@
           },
           "entry": [
             {
-              "reference": "dddd"
+              "reference": "cc1ReferralExample01"
+            },
+            {
+              "reference": "cc2ReferralExample01"
             }
           ]
         },
@@ -210,7 +208,7 @@
           },
           "entry": [
             {
-              "reference": "dddd"
+              "reference": "piReferralExample01"
             }
           ]
         },
@@ -231,10 +229,10 @@
           },
           "entry": [
             {
-              "reference": "dddd"
+              "reference": "ph1ReferralExample01"
             },
             {
-              "reference": "dddd"
+              "reference": "ph2ReferralExample01"
             }
           ]
         },
@@ -255,10 +253,10 @@
           },
           "entry": [
             {
-              "reference": "dddd"
+              "reference": "alg1ReferralExample01"
             },
             {
-              "reference": "dddd"
+              "reference": "alg1ReferralExample02"
             }
           ]
         },
@@ -279,7 +277,7 @@
           },
           "entry": [
             {
-              "reference": "dddd"
+              "reference": "ARGref..."
             }
           ]
         },
@@ -300,7 +298,7 @@
           },
           "entry": [
             {
-              "reference": "dddd"
+              "reference": "psobsCommonExample01"
             }
           ]
         },
@@ -318,13 +316,6 @@
           "text": {
             "status": "additional",
             "div": "<div>特になし</div>"
-          },
-          "emptyReason": {
-            "coding": [
-              {
-                "code": "nilknown"
-              }
-            ]
           }
         }
       ]

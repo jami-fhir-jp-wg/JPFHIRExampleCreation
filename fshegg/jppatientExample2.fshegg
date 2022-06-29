@@ -1,6 +1,6 @@
 #include "fshDef/jppatientDef.fshdef"
 
-$000mn_ExampleJPPatient(example02)  
+$000mn_ExampleJPPatient(jppatientExample02)  
 $001mn_Description(JPPatient患者FHIR　例)
 $002or_ValidationProfile_JPPatient()
 $010mn_患者ID(12345778)

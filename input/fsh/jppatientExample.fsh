@@ -25,7 +25,7 @@
 // 080or_患者自宅構造化住所(ARGpostal,ARGtext,ARGstate,ARGcity,ARGline)
 // 080or_患者職場構造化住所(ARGpostal,ARGtext,ARGstate,ARGcity,ARGline)
 
-Instance: example01
+Instance: jppatientExample01
 InstanceOf: JP_Patient
 Usage: #example
   

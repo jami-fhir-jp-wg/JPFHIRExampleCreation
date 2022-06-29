@@ -33,14 +33,6 @@
     "resource": [
       {
         "reference": {
-          "reference": "Composition/JP-Composition-eReferralBundleExample01"
-        },
-        "name": "JP-Composition-eReferralBundleExample01",
-        "description": "診療情報提供書のComposition Example01",
-        "exampleBoolean": true
-      },
-      {
-        "reference": {
           "reference": "MedicationRequest/JP-MedReq-ePreData-Example-fukintouByDay"
         },
         "name": "JP-MedReq-ePreData-Example-fukintouByDay",
@@ -57,25 +49,65 @@
       },
       {
         "reference": {
-          "reference": "Encounter/encounterReferralExample01"
+          "reference": "AllergyIntolerance/alg1ReferralExample01"
         },
-        "name": "encounterReferralExample01",
-        "description": "encounterReferralExample01 診療情報提供書での紹介目的　例",
+        "name": "alg1ReferralExample01",
+        "description": "allergyeferralExample01 診療情報提供書　アレルギー例1",
         "exampleBoolean": true
       },
       {
         "reference": {
-          "reference": "Patient/example01"
+          "reference": "AllergyIntolerance/alg1ReferralExample02"
         },
-        "name": "example01",
+        "name": "alg1ReferralExample02",
+        "description": "allergyeferralExample01 診療情報提供書　アレルギー例1",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Condition/cc1ReferralExample01"
+        },
+        "name": "cc1ReferralExample01",
+        "description": "conditionReferralExample01 診療情報提供書　主訴例",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Condition/cc2ReferralExample01"
+        },
+        "name": "cc2ReferralExample01",
+        "description": "conditionReferralExample01 診療情報提供書　主訴例",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Composition/compositionReferralExample01"
+        },
+        "name": "compositionReferralExample01",
+        "description": "構成情報サンプル　composition",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Encounter/encounterReferralExample01"
+        },
+        "name": "encounterReferralExample01",
+        "description": "encounterReferralExample01 外来受診　例",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Patient/jppatientExample01"
+        },
+        "name": "jppatientExample01",
         "description": "JPPatient患者FHIR　例",
         "exampleBoolean": true
       },
       {
         "reference": {
-          "reference": "Patient/example02"
+          "reference": "Patient/jppatientExample02"
         },
-        "name": "example02",
+        "name": "jppatientExample02",
         "description": "JPPatient患者FHIR　例",
         "exampleBoolean": true
       },
@@ -85,6 +117,38 @@
         },
         "name": "obsCommonExample01",
         "description": "ObservationCommon検査結果　例",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Condition/ph1ReferralExample01"
+        },
+        "name": "ph1ReferralExample01",
+        "description": "conditionReferralExample01 診療情報提供書　既往歴例1",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Condition/ph2ReferralExample01"
+        },
+        "name": "ph2ReferralExample01",
+        "description": "conditionReferralExample01 診療情報提供書　既往歴例2",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Condition/piReferralExample01"
+        },
+        "name": "piReferralExample01",
+        "description": "conditionReferralExample01 診療情報提供書　現病歴例",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Encounter/purposeReferralExample01"
+        },
+        "name": "purposeReferralExample01",
+        "description": "encounterReferralExample01 診療情報提供書での紹介目的　例",
         "exampleBoolean": true
       }
     ],

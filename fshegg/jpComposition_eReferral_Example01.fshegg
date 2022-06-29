@@ -1,0 +1,32 @@
+// Compositionリース
+#include "fshDef/jpComposition_eReferralDef.fshdef"
+
+
+$000mn_ExampleJPComposition_eReferral(compositionReferralExample01)
+$001mn_Description(構成情報サンプル　composition)
+$002or_ValidationProfile_JPComposition_eCS()
+$0E1mn_紹介状文書バージョン(1) 
+$010mn_紹介状文書ID(34875506) 
+$020mn_紹介状患者情報(jppatientExample01) 
+$030on_紹介状受診(encounterReferralExample01) 
+$040mn_紹介状作成日時(2020-08-21, 12:12:20) 
+$050mn_紹介状作成者(紹介状作成者Practitionerリソース, 紹介状作成機関Organaizationリソース) 
+$060mn_紹介状発行日(2020-08-21) 
+$060mn_紹介状先機関(東京第一病院, urn:uuid:9b4e6a12-7bb3-5d46-a126-31b33410f796) 
+$060on_紹介状先科(urn:uuid:9b4e6a12-7bb3-5d46-a126-31b33410f796) 
+$060on_紹介状先医師(urn:uuid:a871437d-03eb-edfb-9ac7-f3313c54f31a) 
+$060mn_紹介状元機関(港区第一診療所, urn:uuid:9b4e6a12-7bb3-5d46-a126-31b33410f796) 
+$060on_紹介状元科(urn:uuid:9b4e6a12-7bb3-5d46-a126-31b33410f796) 
+$060on_紹介状元医師(urn:uuid:a871437d-03eb-edfb-9ac7-f3313c54f31a) 
+$070mn_紹介状目的Ecounter(腹痛精査お願いします。,purposeReferralExample01) 
+$070mn_紹介状傷病名Condition(上腹部痛、腰痛,cc1ReferralExample01,cc2ReferralExample01) 
+$070mn_紹介状現病歴Condition(２０２２年６月上旬から夜食後に時々上腹部痛があり、だんだんひどくなっている。他に目立った症状なし。,piReferralExample01) 
+$070mn_紹介状既往歴Condition(2018年　狭心症　２ヶ月治療で軽快。2019年　交通事故で左前腕骨折　３ヶ月ギプス固定。,ph1ReferralExample01,ph2ReferralExample01) 
+$070mn_紹介状アレルギーAllergy(サバ　キーウイ,alg1ReferralExample01,alg1ReferralExample02) 
+$070mn_紹介状家族歴Family(母　胃がん,ARGref...) 
+$070mn_紹介状身体所見0bsCommon(腹部所見：上腹部圧痛あり、その他特に所見なし。,psobsCommonExample01) 
+$070mn_紹介状感染症0bsCommon(特になし)
+
+
+
+

@@ -73,7 +73,7 @@ Description: "ARGtxt"
 * subject = Reference(ARGpatient)
 #endbigdef
 
-#bigdef $060mn_共通検査受診(ARGencounter)
+#bigdef $060on_共通検査受診(ARGencounter)
 * encounter = Reference(ARGencounter)
 #endbigdef
 

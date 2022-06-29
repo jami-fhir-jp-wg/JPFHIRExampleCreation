@@ -1,0 +1,46 @@
+#include "fshDef/jpCondition_eReferralDef.fshdef"
+
+$000mn_ExampleJPCondition_eCS(cc1ReferralExample01)  
+$001mn_Description(conditionReferralExample01 診療情報提供書　主訴例)
+$002or_ValidationProfile_JPCondition_eCS()
+$010on_症病管理番号(192837-01)
+$040mn_症病状態TEXT(上腹部痛)
+$050mn_症病患者(jppatientExample01)
+$070on_症病時期日(2022-06-09)
+
+$000mn_ExampleJPCondition_eCS(cc2ReferralExample01)  
+$001mn_Description(conditionReferralExample01 診療情報提供書　主訴例)
+$002or_ValidationProfile_JPCondition_eCS()
+$010on_症病管理番号(192837-02)
+$040mn_症病状態TEXT(腰痛)
+$050mn_症病患者(jppatientExample01)
+$070on_症病時期日(2022-05)
+
+$000mn_ExampleJPCondition_eCS(piReferralExample01)  
+$001mn_Description(conditionReferralExample01 診療情報提供書　現病歴例)
+$002or_ValidationProfile_JPCondition_eCS()
+$010on_症病管理番号(192838)
+$040mn_症病状態TEXT()
+$050mn_症病患者(jppatientExample01)
+$150or_傷病追加TEXT(２０２２年６月上旬から夜食後に時々上腹部痛があり、だんだんひどくなっている。他に目立った症状なし。)
+
+$000mn_ExampleJPCondition_eCS(ph1ReferralExample01)  
+$001mn_Description(conditionReferralExample01 診療情報提供書　既往歴例1)
+$002or_ValidationProfile_JPCondition_eCS()
+$010on_症病管理番号(192839-01)
+$040mn_症病状態TEXT(狭心症)
+$050mn_症病患者(jppatientExample01)
+$070on_症病時期日(2018)
+$150or_傷病追加TEXT(2018年　狭心症　２ヶ月治療で軽快。)
+
+$000mn_ExampleJPCondition_eCS(ph2ReferralExample01)  
+$001mn_Description(conditionReferralExample01 診療情報提供書　既往歴例2)
+$002or_ValidationProfile_JPCondition_eCS()
+$010on_症病管理番号(192839-02)
+$040mn_症病状態TEXT(左前腕骨折)
+$050mn_症病患者(jppatientExample01)
+$070on_症病時期日(2019)
+$150or_傷病追加TEXT(交通事故で左前腕骨折　３ヶ月ギプス固定。)
+
+
+

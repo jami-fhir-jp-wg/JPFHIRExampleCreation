@@ -46,20 +46,20 @@ Description: "ARGtxt"
 * classHistory[+].class.system = "http://terminology.hl7.org/CodeSystem/v3-ActCode"
 * classHistory[=].class.code = #IMP
 * classHistory[=].class.display = "入院"
-* classHistory[=].priod.start = "ARGstartDate"
-* classHistory[=].priod.end = "ARGendDate"
+* classHistory[=].period.start = "ARGstartDate"
+* classHistory[=].period.end = "ARGendDate"
 #endbigdef
 
 #bigdef $040or_受診履歴外来(ARGdate)
 * classHistory[+].class.system = "http://terminology.hl7.org/CodeSystem/v3-ActCode"
 * classHistory[=].class.code = #AMP
 * classHistory[=].class.display = "外来"
-* classHistory[=].priod.start = "ARGdate"
+* classHistory[=].period.start = "ARGdate"
 #endbigdef
 
 #bigdef $050on_受診入院期間(ARGstartDate, ARGendDate)
-* priod.start = "ARGstartDate"
-* priod.end = "ARGendDate"
+* period.start = "ARGstartDate"
+* period.end = "ARGendDate"
 #endbigdef
 
 #bigdef $060on_受診入院日数(ARGdays)
