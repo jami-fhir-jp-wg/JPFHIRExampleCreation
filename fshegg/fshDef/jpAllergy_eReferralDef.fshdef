@@ -20,7 +20,7 @@ Description: "ARGtxt"
 
 #ifndef $002or_ValidationProfile_JPAllergy_eCS()
 #bigdef $002or_ValidationProfile_JPAllergy_eCS()
-* meta.profile[+] = "http://jpfhir.jp/fhir/eReferral/StructureDefinition/JP_Allergy_eClinicalSummary"
+* meta.profile[+] = "http://jpfhir.jp/fhir/eReferral/StructureDefinition/JP_AllergyIntolerance_eClinicalSummary"
 #endbigdef
 #endif
 
@@ -87,7 +87,9 @@ Description: "ARGtxt"
 #endbigdef
 
 #bigdef $100on_アレルギ時期年齢(ARGage)
+* onsetAge.system = "http://unitsofmeasure.org"
 * onsetAge.value = ARGage
+* onsetAge.code = #a
 #endbigdef
 
 //当面中略（診療情報提供書）

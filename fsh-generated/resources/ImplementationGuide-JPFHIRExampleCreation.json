@@ -145,6 +145,14 @@
       },
       {
         "reference": {
+          "reference": "Observation/psobsCommonExample01"
+        },
+        "name": "psobsCommonExample01",
+        "description": "ObservationCommon検査結果　例",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
           "reference": "Encounter/purposeReferralExample01"
         },
         "name": "purposeReferralExample01",

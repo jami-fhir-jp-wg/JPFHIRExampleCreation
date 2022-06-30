@@ -8,7 +8,7 @@ Usage: #example
 
 Description: "allergyeferralExample01 診療情報提供書　アレルギー例1"
 
-* meta.profile[+] = "http://jpfhir.jp/fhir/eReferral/StructureDefinition/JPAllergy_eClinicalSummary"
+* meta.profile[+] = "http://jpfhir.jp/fhir/eReferral/StructureDefinition/JP_AllergyIntolerance_eClinicalSummary"
 
 * identifier.system = "http://jpfhir.jp/fhir/Common/CodeSystem/resourceInstance-identifier"
 * identifier.value = "102934701"
@@ -35,7 +35,9 @@ Description: "allergyeferralExample01 診療情報提供書　アレルギー例
 
 //100on_アレルギ時期日時(ARGdate,ARGtime)
 //100on_アレルギ時期日(ARGdate)
+* onsetAge.system = "http://unitsofmeasure.org"
 * onsetAge.value = 30
+* onsetAge.code = #a
 
 * note.text = "サバ食後３時間ほどで全身に発疹と腹痛あり"
 
@@ -46,7 +48,7 @@ Usage: #example
 
 Description: "allergyeferralExample01 診療情報提供書　アレルギー例1"
 
-* meta.profile[+] = "http://jpfhir.jp/fhir/eReferral/StructureDefinition/JPAllergy_eClinicalSummary"
+* meta.profile[+] = "http://jpfhir.jp/fhir/eReferral/StructureDefinition/JP_AllergyIntolerance_eClinicalSummary"
 
 * identifier.system = "http://jpfhir.jp/fhir/Common/CodeSystem/resourceInstance-identifier"
 * identifier.value = "102934701"
@@ -73,7 +75,9 @@ Description: "allergyeferralExample01 診療情報提供書　アレルギー例
 
 //100on_アレルギ時期日時(ARGdate,ARGtime)
 //100on_アレルギ時期日(ARGdate)
+* onsetAge.system = "http://unitsofmeasure.org"
 * onsetAge.value = 10
+* onsetAge.code = #a
 
 * note.text = "食べると口の周りが痺れる感じ"
 

@@ -8,7 +8,7 @@ Usage: #example
   
 Description: "conditionReferralExample01 診療情報提供書　主訴例"
 
-* meta.profile[+] = "http://jpfhir.jp/fhir/eReferral/StructureDefinition/JPCondition_eClinicalSummary"
+* meta.profile[+] = "http://jpfhir.jp/fhir/eReferral/StructureDefinition/JP_Condition_eClinicalSummary"
 
 * identifier.system = "http://jpfhir.jp/fhir/Common/CodeSystem/resourceInstance-identifier"
 * identifier.value = "192837-01"
@@ -31,7 +31,7 @@ Usage: #example
   
 Description: "conditionReferralExample01 診療情報提供書　主訴例"
 
-* meta.profile[+] = "http://jpfhir.jp/fhir/eReferral/StructureDefinition/JPCondition_eClinicalSummary"
+* meta.profile[+] = "http://jpfhir.jp/fhir/eReferral/StructureDefinition/JP_Condition_eClinicalSummary"
 
 * identifier.system = "http://jpfhir.jp/fhir/Common/CodeSystem/resourceInstance-identifier"
 * identifier.value = "192837-02"
@@ -54,7 +54,7 @@ Usage: #example
   
 Description: "conditionReferralExample01 診療情報提供書　現病歴例"
 
-* meta.profile[+] = "http://jpfhir.jp/fhir/eReferral/StructureDefinition/JPCondition_eClinicalSummary"
+* meta.profile[+] = "http://jpfhir.jp/fhir/eReferral/StructureDefinition/JP_Condition_eClinicalSummary"
 
 * identifier.system = "http://jpfhir.jp/fhir/Common/CodeSystem/resourceInstance-identifier"
 * identifier.value = "192838"
@@ -62,7 +62,7 @@ Description: "conditionReferralExample01 診療情報提供書　現病歴例"
  // active | recurrence | relapse | inactive | remission | resolved
 * category = http://terminology.hl7.org/CodeSystem/condition-category#problem-list-item
 
-* code[+].text = ""
+* code[+].text = "上腹部痛"
 
 * subject = Reference(jppatientExample01)
 
@@ -75,7 +75,7 @@ Usage: #example
   
 Description: "conditionReferralExample01 診療情報提供書　既往歴例1"
 
-* meta.profile[+] = "http://jpfhir.jp/fhir/eReferral/StructureDefinition/JPCondition_eClinicalSummary"
+* meta.profile[+] = "http://jpfhir.jp/fhir/eReferral/StructureDefinition/JP_Condition_eClinicalSummary"
 
 * identifier.system = "http://jpfhir.jp/fhir/Common/CodeSystem/resourceInstance-identifier"
 * identifier.value = "192839-01"
@@ -100,7 +100,7 @@ Usage: #example
   
 Description: "conditionReferralExample01 診療情報提供書　既往歴例2"
 
-* meta.profile[+] = "http://jpfhir.jp/fhir/eReferral/StructureDefinition/JPCondition_eClinicalSummary"
+* meta.profile[+] = "http://jpfhir.jp/fhir/eReferral/StructureDefinition/JP_Condition_eClinicalSummary"
 
 * identifier.system = "http://jpfhir.jp/fhir/Common/CodeSystem/resourceInstance-identifier"
 * identifier.value = "192839-02"
