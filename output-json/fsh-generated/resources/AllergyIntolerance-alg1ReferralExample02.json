@@ -4,7 +4,7 @@
   "meta": {
     "profile": [
       "http://jpfhir.jp/fhir/core/StructureDefinition/JP_AllergyIntolerance",
-      "http://jpfhir.jp/fhir/eReferral/StructureDefinition/JP_Allergy_eClinicalSummary"
+      "http://jpfhir.jp/fhir/eReferral/StructureDefinition/JP_AllergyIntolerance_eClinicalSummary"
     ]
   },
   "identifier": [
@@ -36,7 +36,9 @@
     "reference": "Encounter/encounterReferralExample01"
   },
   "onsetAge": {
-    "value": 10
+    "system": "http://unitsofmeasure.org",
+    "value": 10,
+    "code": "a"
   },
   "note": [
     {
