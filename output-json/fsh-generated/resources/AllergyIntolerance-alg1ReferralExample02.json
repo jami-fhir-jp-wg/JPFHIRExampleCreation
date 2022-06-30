@@ -4,7 +4,7 @@
   "meta": {
     "profile": [
       "http://jpfhir.jp/fhir/core/StructureDefinition/JP_AllergyIntolerance",
-      "http://jpfhir.jp/fhir/eReferral/StructureDefinition/JPAllergy_eClinicalSummary"
+      "http://jpfhir.jp/fhir/eReferral/StructureDefinition/JP_Allergy_eClinicalSummary"
     ]
   },
   "identifier": [
