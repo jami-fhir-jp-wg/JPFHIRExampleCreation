@@ -20,7 +20,7 @@ Description: "ARGtxt"
 
 #ifndef $002or_ValidationProfile_JPCondition_eCS()
 #bigdef $002or_ValidationProfile_JPCondition_eCS()
-* meta.profile[+] = "http://jpfhir.jp/fhir/eReferral/StructureDefinition/JPCondition_eClinicalSummary"
+* meta.profile[+] = "http://jpfhir.jp/fhir/eReferral/StructureDefinition/JP_Condition_eClinicalSummary"
 #endbigdef
 #endif
 
