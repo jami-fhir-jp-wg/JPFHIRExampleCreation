@@ -62,7 +62,7 @@ Description: "conditionReferralExample01 診療情報提供書　現病歴例"
  // active | recurrence | relapse | inactive | remission | resolved
 * category = http://terminology.hl7.org/CodeSystem/condition-category#problem-list-item
 
-* code[+].text = "上腹部痛"
+* code[+].text = ""
 
 * subject = Reference(jppatientExample01)
 

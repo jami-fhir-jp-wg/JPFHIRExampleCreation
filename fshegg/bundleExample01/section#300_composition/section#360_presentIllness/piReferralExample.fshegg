@@ -1,0 +1,11 @@
+#include "fshDef/jpCondition_eReferralDef.fshdef"
+
+
+$000mn_ExampleJPCondition_eCS(piReferralExample01)  
+$001mn_Description(conditionReferralExample01 診療情報提供書　現病歴例)
+$002or_ValidationProfile_JPCondition_eCS()
+$010on_症病管理番号(192838)
+$040mn_症病状態TEXT()
+$050mn_症病患者(jppatientExample01)
+$150or_傷病追加TEXT(２０２２年６月上旬から夜食後に時々上腹部痛があり、だんだんひどくなっている。他に目立った症状なし。)
+
