@@ -33,7 +33,7 @@ jobs:
     - name: Setup jp-core package
       env:
         PACKAGE: jp-core.draft1#1.1.0-beta
-        PACKAGEREFER: jp-eReferral-0.9.0-beta.tgz
+        PACKAGEREFER: jp-eReferral-0.9.0-beta
       run: |
         mkdir -p /home/runner/.fhir
         mkdir -p /home/runner/.fhir/packages
