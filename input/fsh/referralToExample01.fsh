@@ -64,13 +64,12 @@ Description: "紹介先医療機関情報　例"
 * identifier[+].system = "http://jpfhir.jp/fhir/Common/IdSystem/insurance-medical-institution-no"
 * identifier[=].value = "1311234567"
 * type[+].coding.system = "http://terminology.hl7.org/CodeSystem/organization-type"
-* type[=].coding.code = #porv
+* type[=].coding.code = #prov
 
 * name = "東京第一テスト病院"
 
 * telecom[+].system = #phone
 * telecom[=].value = "03-1234-5678"
-* telecom[=].use = #home
 
 * address[+].text = "東京都文京区文京町１−２−３"
 * address[=].postalCode = "113-0001"

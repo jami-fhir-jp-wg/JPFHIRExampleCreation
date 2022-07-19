@@ -1,17 +1,17 @@
-#include "fshDef/jpEncounter_eReferralDef.fshdef"
+#include "fshDef/jpEncounter_eClinicalSummaryDef.fshdef"
 
-$000mn_ExampleJPEncounter_eReferral(purposeReferralExample01)  
+$000mn_ExampleJPEncounter_eClinicalSummary(purposeReferralExample01)  
 $001mn_Description(encounterReferralExample01 診療情報提供書での紹介目的　例)
-$002or_ValidationProfile_JPEncounter_eReferral()
+$002or_ValidationProfile_JPEncounter_eClinicalSummary()
 $010on_受診管理番号(192837)
 $030mn_受診外来()
 $060mr_受診理由病名TEXT(腹痛精査お願いします。)
 
 
 
-$000mn_ExampleJPEncounter_eReferral(encounterReferralExample01)  
+$000mn_ExampleJPEncounter_eClinicalSummary(encounterReferralExample01)  
 $001mn_Description(encounterReferralExample01 外来受診　例)
-$002or_ValidationProfile_JPEncounter_eReferral()
+$002or_ValidationProfile_JPEncounter_eClinicalSummary()
 $010on_受診管理番号(192844)
 $030mn_受診外来()
 $040or_受診履歴外来(2020-08-20)

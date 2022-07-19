@@ -77,7 +77,7 @@ Description: "ARGtxt"
 * section[+].title = "紹介先情報"
 * section[=].code = $referral-section#910 "紹介先情報セクション"
 * section[=].text.status = #additional
-* section[=].text.div = "<div>ARGorgname</div>"
+* section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">ARGorgname</div>"
 * section[=].entry[+].reference = "ARGorgref"
 * section[=].entry[=].display = "紹介先医療機関 JP_Organization"
 #endbigdef
@@ -94,9 +94,9 @@ Description: "ARGtxt"
 
 #bigdef  $060mn_紹介状元機関(ARGorgname, ARGorgref)
 * section[+].title = "紹介元情報"
-* section[=].code = $referral-section#910 "紹介元情報セクション"
+* section[=].code = $referral-section#920 "紹介元情報セクション"
 * section[=].text.status = #additional
-* section[=].text.div = "<div>ARGorgname</div>"
+* section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">ARGorgname</div>"
 * section[=].entry[+].reference = "ARGorgref"
 * section[=].entry[=].display = "紹介元医療機関 JP_Organization"
 #endbigdef
@@ -117,7 +117,7 @@ Description: "ARGtxt"
 * section[=].section[+].title = "紹介目的"
 * section[=].section[=].code = $referral-section#950 "紹介目的セクション"
 * section[=].section[=].text.status = #additional
-* section[=].section[=].text.div = "<div>ARGtext</div>"
+* section[=].section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">ARGtext</div>"
 //  Reference(JP_Ecounter) 紹介目的
 * section[=].section[=].entry[+].reference = "ARGref"
 #endbigdef
@@ -133,7 +133,7 @@ Description: "ARGtxt"
 * section[=].section[+].title = "傷病名・主訴"
 * section[=].section[=].code = $referral-section#340 "傷病名・主訴セクション"
 * section[=].section[=].text.status = #additional
-* section[=].section[=].text.div = "<div>ARGtext</div>"
+* section[=].section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">ARGtext</div>"
 //  Reference(JP_Condition) 傷病名・主訴
 $multiEntryRef(ARGref)
 #endbigdef
@@ -142,7 +142,7 @@ $multiEntryRef(ARGref)
 * section[=].section[+].title = "現病歴"
 * section[=].section[=].code = $referral-section#360 "現病歴セクション"
 * section[=].section[=].text.status = #additional
-* section[=].section[=].text.div = "<div>ARGtext</div>"
+* section[=].section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">ARGtext</div>"
 //  Reference(JP_Condition) 
 $multiEntryRef(ARGref)
 #endbigdef
@@ -151,44 +151,54 @@ $multiEntryRef(ARGref)
 * section[=].section[+].title = "既往歴"
 * section[=].section[=].code = $referral-section#370 "既往歴セクション"
 * section[=].section[=].text.status = #additional
-* section[=].section[=].text.div = "<div>2018年　狭心症　２ヶ月治療で軽快。2019年　交通事故で左前腕骨折　３ヶ月ギプス固定。</div>"
+* section[=].section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">2018年　狭心症　２ヶ月治療で軽快。2019年　交通事故で左前腕骨折　３ヶ月ギプス固定。</div>"
 //  Reference(JP_Condition) 既往歴
 $multiEntryRef(ARGref)
 #endbigdef
 
 #bigdef  $070mn_紹介状アレルギーAllergy(ARGtext,ARGref...)
 * section[=].section[+].title = "アレルギー・不耐性反応"
-* section[=].section[=].code = $referral-section#370 "アレルギー・不耐性反応セクション"
+* section[=].section[=].code = $referral-section#510 "アレルギー・不耐性反応セクション"
 * section[=].section[=].text.status = #additional
-* section[=].section[=].text.div = "<div>ARGtext</div>"
+* section[=].section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">ARGtext</div>"
 //  Reference(JP_Condition) アレルギー
 $multiEntryRef(ARGref)
 #endbigdef
 
 #bigdef  $070mn_紹介状家族歴Family(ARGtext,ARGref...)
 * section[=].section[+].title = "家族歴"
-* section[=].section[=].code = $referral-section#370 "家族歴セクション"
+* section[=].section[=].code = $referral-section#550 "家族歴セクション"
 * section[=].section[=].text.status = #additional
-* section[=].section[=].text.div = "<div>ARGtext</div>"
+* section[=].section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">ARGtext</div>"
 //  Reference(JP_FamilyMemberHistory) 家族歴
 $multiEntryRef(ARGref)
 #endbigdef
 
 #bigdef  $070mn_紹介状身体所見0bsCommon(ARGtext,ARGref...)
 * section[=].section[+].title = "身体所見"
-* section[=].section[=].code = $referral-section#370 "身体所見セクション"
+* section[=].section[=].code = $referral-section#610 "身体所見セクション"
 * section[=].section[=].text.status = #additional
-* section[=].section[=].text.div = "<div>ARGtext</div>"
+* section[=].section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">ARGtext</div>"
 //  Reference(JP_Observation_Common) 身体所見
 $multiEntryRef(ARGref)
 #endbigdef
 
 #bigdef  $070mn_紹介状感染症0bsCommon(ARGtext,ARGref...)
 * section[=].section[+].title = "感染症情報"
-* section[=].section[=].code = $referral-section#370 "感染症情報セクション"
+* section[=].section[=].code = $referral-section#520 "感染症情報セクション"
 * section[=].section[=].text.status = #additional
-* section[=].section[=].text.div = "<div>ARGtext</div>"
+* section[=].section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">ARGtext</div>"
 //  Reference(JP_Observation_Common) 感染症情報
+$multiEntryRef(ARGref)
+#endbigdef
+
+
+#bigdef  $070mn_紹介状臨床経過DocRef(ARGtext,ARGref...)
+* section[=].section[+].title = "臨床経過"
+* section[=].section[=].code = $referral-section#330 "臨床経過セクション"
+* section[=].section[=].text.status = #additional
+* section[=].section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">ARGtext</div>"
+//  Reference(JP_DocumentReference) 臨床経過
 $multiEntryRef(ARGref)
 #endbigdef
 

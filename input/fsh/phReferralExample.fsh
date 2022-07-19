@@ -8,7 +8,7 @@ Usage: #example
   
 Description: "conditionReferralExample01 診療情報提供書　既往歴例1"
 
-* meta.profile[+] = "http://jpfhir.jp/fhir/eReferral/StructureDefinition/JP_Condition_eClinicalSummary"
+* meta.profile[+] = "http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Condition_eClinicalSummary"
 
 * identifier.system = "http://jpfhir.jp/fhir/Common/CodeSystem/resourceInstance-identifier"
 * identifier.value = "192839-01"
@@ -33,7 +33,7 @@ Usage: #example
   
 Description: "conditionReferralExample01 診療情報提供書　既往歴例2"
 
-* meta.profile[+] = "http://jpfhir.jp/fhir/eReferral/StructureDefinition/JP_Condition_eClinicalSummary"
+* meta.profile[+] = "http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Condition_eClinicalSummary"
 
 * identifier.system = "http://jpfhir.jp/fhir/Common/CodeSystem/resourceInstance-identifier"
 * identifier.value = "192839-02"

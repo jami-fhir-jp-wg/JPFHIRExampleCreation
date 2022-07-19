@@ -1,6 +1,6 @@
-// Encounter_eReferral
+// Encounter_eClinicalSummary
 
-#bigdef $000mn_ExampleJPEncounter_eReferral(ARGinstancename)
+#bigdef $000mn_ExampleJPEncounter_eClinicalSummary(ARGinstancename)
 Instance: ARGinstancename
 InstanceOf: JP_Encounter
 Usage: #example
@@ -18,9 +18,9 @@ Description: "ARGtxt"
 #endbigdef
 #endif
 
-#ifndef $002or_ValidationProfile_JPEncounter_eReferral()
-#bigdef $002or_ValidationProfile_JPEncounter_eReferral() 
-* meta.profile[+] = "http://jpfhir.jp/fhir/eReferral/StructureDefinition/JP_Encounter_eClinicalSummary"
+#ifndef $002or_ValidationProfile_JPEncounter_eClinicalSummary()
+#bigdef $002or_ValidationProfile_JPEncounter_eClinicalSummary() 
+* meta.profile[+] = "http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Encounter_eClinicalSummary"
 #endbigdef
 #endif
 

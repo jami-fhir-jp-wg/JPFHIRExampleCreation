@@ -8,7 +8,7 @@ Usage: #example
 
 Description: "allergyeferralExample01 診療情報提供書　アレルギー例1"
 
-* meta.profile[+] = "http://jpfhir.jp/fhir/eReferral/StructureDefinition/JP_AllergyIntolerance_eClinicalSummary"
+* meta.profile[+] = "http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_AllergyIntolerance_eClinicalSummary"
 
 * identifier.system = "http://jpfhir.jp/fhir/Common/CodeSystem/resourceInstance-identifier"
 * identifier.value = "102934701"
@@ -48,7 +48,7 @@ Usage: #example
 
 Description: "allergyeferralExample01 診療情報提供書　アレルギー例1"
 
-* meta.profile[+] = "http://jpfhir.jp/fhir/eReferral/StructureDefinition/JP_AllergyIntolerance_eClinicalSummary"
+* meta.profile[+] = "http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_AllergyIntolerance_eClinicalSummary"
 
 * identifier.system = "http://jpfhir.jp/fhir/Common/CodeSystem/resourceInstance-identifier"
 * identifier.value = "102934701"

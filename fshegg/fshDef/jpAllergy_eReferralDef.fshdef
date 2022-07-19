@@ -20,7 +20,7 @@ Description: "ARGtxt"
 
 #ifndef $002or_ValidationProfile_JPAllergy_eCS()
 #bigdef $002or_ValidationProfile_JPAllergy_eCS()
-* meta.profile[+] = "http://jpfhir.jp/fhir/eReferral/StructureDefinition/JP_AllergyIntolerance_eClinicalSummary"
+* meta.profile[+] = "http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_AllergyIntolerance_eClinicalSummary"
 #endbigdef
 #endif
 

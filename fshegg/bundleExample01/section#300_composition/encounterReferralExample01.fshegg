@@ -1,9 +1,0 @@
-#include "fshDef/jpEncounter_eReferralDef.fshdef"
-
-
-$000mn_ExampleJPEncounter_eReferral(encounterReferralExample01)  
-$001mn_Description(encounterReferralExample01 外来受診　例)
-$002or_ValidationProfile_JPEncounter_eReferral()
-$010on_受診管理番号(192844)
-$030mn_受診外来()
-$040or_受診履歴外来(2020-08-20)

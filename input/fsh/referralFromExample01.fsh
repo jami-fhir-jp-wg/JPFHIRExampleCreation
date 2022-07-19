@@ -64,13 +64,12 @@ Description: "紹介元医療機関情報　例"
 * identifier[+].system = "http://jpfhir.jp/fhir/Common/IdSystem/insurance-medical-institution-no"
 * identifier[=].value = "1319876543"
 * type[+].coding.system = "http://terminology.hl7.org/CodeSystem/organization-type"
-* type[=].coding.code = #porv
+* type[=].coding.code = #prov
 
 * name = "港診療所"
 
 * telecom[+].system = #phone
 * telecom[=].value = "03-9876-5432"
-* telecom[=].use = #home
 
 * address[+].text = "東京都港区新橋１−２−３"
 * address[=].postalCode = "106-9900"
