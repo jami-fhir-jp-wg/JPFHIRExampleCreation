@@ -38,6 +38,7 @@ jobs:
         mkdir -p /home/runner/.fhir
         mkdir -p /home/runner/.fhir/packages
         mkdir -p /home/runner/.fhir/packages/$PACKAGE
+        mkdir -p /home/runner/.fhir/packages/$PACKAGEREFER
         : # local cache にpackage をcopyして展開する
         cp ./packages_snapshot/$PACKAGE.tgz /home/runner/.fhir/packages/$PACKAGE/$PACKAGE.tgz
         tar xzf /home/runner/.fhir/packages/$PACKAGE/$PACKAGE.tgz -C /home/runner/.fhir/packages/$PACKAGE/
