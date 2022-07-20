@@ -65,7 +65,7 @@ jobs:
 
     - name: push files of directory output-json
       run: |
-        git rm -r --cached output-json
+        git rm -rf output-json
         git add ./output-json
         git commit -m "output-json"
         git push origin develop1.0
