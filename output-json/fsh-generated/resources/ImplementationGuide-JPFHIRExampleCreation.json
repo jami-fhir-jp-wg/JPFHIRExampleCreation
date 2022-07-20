@@ -1,0 +1,242 @@
+{
+  "resourceType": "ImplementationGuide",
+  "id": "JPFHIRExampleCreation",
+  "url": "http://jpfhir.jp/fhir/JPFHIRExampleCreation/ImplementationGuide/JPFHIRExampleCreation",
+  "version": "0.9.0",
+  "name": "eMunicipalCheckupImplementationGuide",
+  "status": "draft",
+  "publisher": "Kazuhiko Ohe",
+  "contact": [
+    {
+      "name": "Kazuhiko Ohe",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://jpfhir.jp"
+        }
+      ]
+    }
+  ],
+  "packageId": "JPFHIRExampleCreation",
+  "fhirVersion": [
+    "4.0.1"
+  ],
+  "dependsOn": [
+    {
+      "packageId": "jp-core.draft1",
+      "uri": "http://jpfhir.jp/fhir/core/ImplementationGuide/jp-core.draft1",
+      "version": "1.1.0-beta",
+      "id": "jp_core_draft1"
+    },
+    {
+      "packageId": "jp-ereferral",
+      "uri": "http://jpfhir.jp/fhir/eReferral/ImplementationGuide/jp-ereferral",
+      "version": "0.9.0-beta",
+      "id": "jp_ereferral"
+    }
+  ],
+  "definition": {
+    "resource": [
+      {
+        "reference": {
+          "reference": "MedicationRequest/JP-MedReq-ePreData-Example-fukintouByDay"
+        },
+        "name": "JP-MedReq-ePreData-Example-fukintouByDay",
+        "description": "不均等投与1日用法の医薬品処方１件　MedicationRequestリソースのインスタンス例（プレドニン錠５ｍｇ１日３回　毎食後　７錠（４錠－２錠－１錠））",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "MedicationRequest/MedicationRequestExample01"
+        },
+        "name": "MedicationRequestExample01",
+        "description": "内服　処方例１件　MedicationRequestリソースのインスタンス例",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "AllergyIntolerance/alg1ReferralExample01"
+        },
+        "name": "alg1ReferralExample01",
+        "description": "allergyeferralExample01 診療情報提供書　アレルギー例1",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "AllergyIntolerance/alg1ReferralExample02"
+        },
+        "name": "alg1ReferralExample02",
+        "description": "allergyeferralExample01 診療情報提供書　アレルギー例1",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Condition/cc1ReferralExample01"
+        },
+        "name": "cc1ReferralExample01",
+        "description": "conditionReferralExample01 診療情報提供書　主訴例",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Condition/cc2ReferralExample01"
+        },
+        "name": "cc2ReferralExample01",
+        "description": "conditionReferralExample01 診療情報提供書　主訴例",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "DocumentReference/ccourseReferralExample01"
+        },
+        "name": "ccourseReferralExample01",
+        "description": "ccourseReferralExample01 診療情報提供書　経過記録文書例",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Composition/compositionReferralExample01"
+        },
+        "name": "compositionReferralExample01",
+        "description": "構成情報サンプル　composition",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Encounter/encounterReferralExample01"
+        },
+        "name": "encounterReferralExample01",
+        "description": "encounterReferralExample01 外来受診　例",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Patient/jppatientExample01"
+        },
+        "name": "jppatientExample01",
+        "description": "JPPatient患者FHIR　例",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Patient/jppatientExample02"
+        },
+        "name": "jppatientExample02",
+        "description": "JPPatient患者FHIR　例",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Observation/obsCommonExample01"
+        },
+        "name": "obsCommonExample01",
+        "description": "ObservationCommon検査結果　例",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Condition/ph1ReferralExample01"
+        },
+        "name": "ph1ReferralExample01",
+        "description": "conditionReferralExample01 診療情報提供書　既往歴例1",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Condition/ph2ReferralExample01"
+        },
+        "name": "ph2ReferralExample01",
+        "description": "conditionReferralExample01 診療情報提供書　既往歴例2",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Condition/piReferralExample01"
+        },
+        "name": "piReferralExample01",
+        "description": "conditionReferralExample01 診療情報提供書　現病歴例",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Observation/psobsCommonExample01"
+        },
+        "name": "psobsCommonExample01",
+        "description": "ObservationCommon検査結果　例",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Encounter/purposeReferralExample01"
+        },
+        "name": "purposeReferralExample01",
+        "description": "encounterReferralExample01 診療情報提供書での紹介目的　例",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Organization/referralFromOrganizaitonDeptExample01"
+        },
+        "name": "referralFromOrganizaitonDeptExample01",
+        "description": "紹介元医療機関の診療科情報　例",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Organization/referralFromOrganizaitonExample01"
+        },
+        "name": "referralFromOrganizaitonExample01",
+        "description": "紹介元医療機関情報　例",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Practitioner/referralFromPractitionerExample01"
+        },
+        "name": "referralFromPractitionerExample01",
+        "description": "紹介元医療機関の医師情報　例",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Organization/referralToOrganizaitonDeptExample01"
+        },
+        "name": "referralToOrganizaitonDeptExample01",
+        "description": "紹介先医療機関の診療科情報　例",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Organization/referralToOrganizaitonExample01"
+        },
+        "name": "referralToOrganizaitonExample01",
+        "description": "紹介先医療機関情報　例",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Practitioner/referralToPractitionerExample01"
+        },
+        "name": "referralToPractitionerExample01",
+        "description": "紹介先医療機関の医師情報　例",
+        "exampleBoolean": true
+      }
+    ],
+    "page": {
+      "nameUrl": "toc.html",
+      "title": "Table of Contents",
+      "generation": "html",
+      "page": []
+    },
+    "parameter": [
+      {
+        "code": "copyrightyear",
+        "value": "2022+"
+      },
+      {
+        "code": "releaselabel",
+        "value": "ci-build"
+      }
+    ]
+  }
+}
