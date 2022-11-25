@@ -58,18 +58,20 @@ jobs:
       run: | 
         sushi . -o ./output-json
 
+    - name: CHeckout doc
+      uses: actions/checkout@v2
+      with:
+        ref: generated-fsh
+        path: doc
+
     - name: git setting 
       run: |
         git config --local user.email "kohe@m.u-tokyo.ac.jp"
         git config --local user.name "jami-fhir-jp-wg"
+      working-directory: ./output-json 
 
-
-    - name: publish output files to another branch
+    - name: Commit files
       if: success()
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        publish_branch: generated-fsh
-        publish_dir: .
-        publish_dir: ./input
-        publish_dir: ./output-json
-
+        run: |
+          git commit -m "add generated fsh and json" -a
+          git push origin generated-fsh
