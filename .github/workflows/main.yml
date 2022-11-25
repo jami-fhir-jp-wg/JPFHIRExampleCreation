@@ -75,3 +75,4 @@ jobs:
         run: |
           git commit -m "add generated fsh and json" -a
           git push origin generated-fsh
+      working-directory: ./output-json 
