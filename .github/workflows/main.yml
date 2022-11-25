@@ -63,9 +63,12 @@ jobs:
         git config --local user.email "kohe@m.u-tokyo.ac.jp"
         git config --local user.name "jami-fhir-jp-wg"
 
-    - name: push files of directory output-json
-      run: |
-        git rm -rf --ignore-unmatch output-json/*.json
-        git add  --ignore-removal --ignore-errors  ./output-json
-        git commit -m "output-json"
-        git push origin develop1.0
+    - name: publish output files to another branch
+      if: success()
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        publish_branch: generated-fsh
+        publish_dir: .
+        publish_dir: ./input
+        publish_dir: ./output-json
+
