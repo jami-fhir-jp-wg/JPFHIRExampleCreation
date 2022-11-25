@@ -69,5 +69,5 @@ jobs:
         git config --local user.email "kohe@m.u-tokyo.ac.jp"
         git config --local user.name "jami-fhir-jp-wg"
         git commit -m "add generated fsh and json" -a
-        git push origin generated-fsh
+        git origin generated-fsh
       working-directory: ./output-json 
