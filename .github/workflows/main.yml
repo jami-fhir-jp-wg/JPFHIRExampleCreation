@@ -59,15 +59,7 @@ jobs:
         sushi . -o ./output-json
 
     - name: CHeckout doc
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
       with:
-        ref: generated-fsh
-        path: output-json
-
-    - name: git setting 
-      run: |
-        git config --local user.email "kohe@m.u-tokyo.ac.jp"
-        git config --local user.name "jami-fhir-jp-wg"
-        git commit -m "add generated fsh and json" -a
-        git origin generated-fsh
-      working-directory: ./output-json 
+        repository: ''
+        ref: 'generated-fsh'
