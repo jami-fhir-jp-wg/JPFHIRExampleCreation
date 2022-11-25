@@ -65,7 +65,7 @@ jobs:
 
     - name: push files of directory output-json
       run: |
-        git rm -rf --ignore-unmatch output-json
+        git rm -rf --ignore-unmatch output-json/*
         git add  --ignore-removal --ignore-errors  ./output-json
         git commit -m "output-json"
         git push origin develop1.0
