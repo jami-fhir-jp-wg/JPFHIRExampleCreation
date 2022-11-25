@@ -32,8 +32,8 @@ jobs:
 
     - name: Setup jp-core package
       env:
-        PACKAGE: jp-core.draft1#1.1.0-beta
-        PACKAGEREFER: jp-ereferral#0.9.0-beta
+        PACKAGE: jp-core.r4#1.1.1-snap
+        PACKAGEREFER: jp-ereferral#0.9.1-snap
 
       run: |
         mkdir -p /home/runner/.fhir
