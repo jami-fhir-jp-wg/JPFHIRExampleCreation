@@ -62,17 +62,12 @@ jobs:
       uses: actions/checkout@v2
       with:
         ref: generated-fsh
-        path: doc
+        path: output-json
 
     - name: git setting 
       run: |
         git config --local user.email "kohe@m.u-tokyo.ac.jp"
         git config --local user.name "jami-fhir-jp-wg"
-      working-directory: ./output-json 
-
-    - name: Commit files
-      if: success()
-        run: |
-          git commit -m "add generated fsh and json" -a
-          git push origin generated-fsh
+        git commit -m "add generated fsh and json" -a
+        git push origin generated-fsh
       working-directory: ./output-json 
