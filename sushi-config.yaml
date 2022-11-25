@@ -19,6 +19,7 @@ publisher:
   name: Kazuhiko Ohe
   url: http://jpfhir.jp
   # email: test@example.org
+  
 dependencies:
   jp-core.r4:
 # to avoid  warning message "The canonical URL for an Implementation Guide must point directly to the implementation guide resource, not to the Implementation Guide as a whole"
