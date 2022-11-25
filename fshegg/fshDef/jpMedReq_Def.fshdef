@@ -59,10 +59,10 @@ Description: "ARGtxt"
 
 #bigdef $010mn_処方番号(ARGshohono,ARGrpno)
 #comment  // 例　$01mn_処方番号(1029,01)
-* identifier[RpNumber].system = "urn:oid:1.2.392.100495.20.3.81"
-* identifier[RpNumber].value = "ARGshohono"
-* identifier[OrderInRp].system = "urn:oid:1.2.392.100495.20.3.82"
-* identifier[OrderInRp].value = "ARGrpno"
+* identifier[rpNumber].system = "urn:oid:1.2.392.100495.20.3.81"
+* identifier[rpNumber].value = "ARGshohono"
+* identifier[orderInRp].system = "urn:oid:1.2.392.100495.20.3.82"
+* identifier[orderInRp].value = "ARGrpno"
 * status = #active
 * intent = #order
 #endbigdef
