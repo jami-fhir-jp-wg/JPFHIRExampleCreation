@@ -63,6 +63,7 @@ jobs:
         git config --local user.email "kohe@m.u-tokyo.ac.jp"
         git config --local user.name "jami-fhir-jp-wg"
 
+
     - name: publish output files to another branch
       if: success()
       uses: peaceiris/actions-gh-pages@v3
