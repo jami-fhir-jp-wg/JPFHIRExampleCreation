@@ -17,7 +17,7 @@ Description: "ARGtxt"
 #endbigdef
 #endif
 
-#ifndef $002or_ValidationProfile_JPBundle__eReferral)
+#ifndef $002or_ValidationProfile_JPBundle__eReferral
 #bigdef $002or_ValidationProfile_JPBundle__eReferral()
 * meta.profile[+] = "http://jpfhir.jp/fhir/eReferral/StructureDefinition/JP_Bundle_eReferral"
 #endbigdef
@@ -35,5 +35,5 @@ Description: "ARGtxt"
 
 #bigdef  $030mn_文書entry(ARGurl,ARGresourceRef)
 * entry[+].fullUrl = "ARGurl"
-* entry[=].resource = Reference(ARGresourceRef)
+* entry[=].resource = ARGresourceRef
 #endbigdef

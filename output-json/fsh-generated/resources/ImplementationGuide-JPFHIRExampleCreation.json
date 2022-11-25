@@ -71,6 +71,14 @@
       },
       {
         "reference": {
+          "reference": "Bundle/bundleReferralExample01"
+        },
+        "name": "bundleReferralExample01",
+        "description": "bundleReferralExample01 診療情報提供書Bundle",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
           "reference": "Condition/cc1ReferralExample01"
         },
         "name": "cc1ReferralExample01",
