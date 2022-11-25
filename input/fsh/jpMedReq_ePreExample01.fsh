@@ -41,10 +41,10 @@ Description: "内服　処方例１件　MedicationRequestリソースのイン�
 * meta.profile[+] = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationRequest"
  
 
-* identifier[RpNumber].system = "urn:oid:1.2.392.100495.20.3.81"
-* identifier[RpNumber].value = "1"
-* identifier[OrderInRp].system = "urn:oid:1.2.392.100495.20.3.82"
-* identifier[OrderInRp].value = "1"
+* identifier[rpNumber].system = "urn:oid:1.2.392.100495.20.3.81"
+* identifier[rpNumber].value = "1"
+* identifier[orderInRp].system = "urn:oid:1.2.392.100495.20.3.82"
+* identifier[orderInRp].value = "1"
 * status = #active
 * intent = #order
 

@@ -43,10 +43,10 @@ Description: "不均等投与1日用法の医薬品処方１件　MedicationRequ
 * meta.profile[+] = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationRequest"
  
 
-* identifier[RpNumber].system = "urn:oid:1.2.392.100495.20.3.81"
-* identifier[RpNumber].value = "9"
-* identifier[OrderInRp].system = "urn:oid:1.2.392.100495.20.3.82"
-* identifier[OrderInRp].value = "1"
+* identifier[rpNumber].system = "urn:oid:1.2.392.100495.20.3.81"
+* identifier[rpNumber].value = "9"
+* identifier[orderInRp].system = "urn:oid:1.2.392.100495.20.3.82"
+* identifier[orderInRp].value = "1"
 * status = #active
 * intent = #order
 
