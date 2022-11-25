@@ -7,7 +7,7 @@ on:
     paths:
       - 'fshegg/**'
       - 'sushi-config.yaml'
-      - '.githun/workflows'
+      - '.github/workflows'
   pull_request:
     branches: [ develop1.0 ]
     
