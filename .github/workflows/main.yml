@@ -50,6 +50,10 @@ jobs:
       run: |
         sudo apt-get install filepp
 
+    - name: Download uuid-tiny
+      run: |
+        sudo apt-get install libuuid-tiny-perl
+
     - name: Run filepp by file pre proccessor converting egg to egg.fsh
       run: | 
         while read -r f;do outfname=`basename $f .fshegg`;echo "converting $f to ./input/fsh/$outfname.fsh";filepp -b  -I./fshegg  -M/usr/local/share/filepp/modules -m bigdef.pm -m foreach.pm -m bigfunc.pm  -M ./perlFunc  -m base64.pm $f >./input/fsh/$outfname.fsh;done < <(find ./fshegg -name *.fshegg );
