@@ -1,6 +1,7 @@
 // Compositionリース
 #include "fshDef/jpComposition_eReferralDef.fshdef"
 
+
 #define $jppatientExample01 jppatientExample01
 #define $referralFromPractitionerExample01  referralFromPractitionerExample01
 #define $referralToPractitionerExample01    referralToPractitionerExample01
@@ -12,6 +13,7 @@
 #define $referralFromOrganizaitonDeptExample01  referralFromOrganizaitonDeptExample01
 
 #define $purposeReferralExample01   purposeReferralExample01
+#define $cc1ReferralExample01   cc1ReferralExample01
 #define $cc2ReferralExample01   cc2ReferralExample01
 #define $piReferralExample01    piReferralExample01
 #define $ph1ReferralExample01   ph1ReferralExample01
@@ -20,6 +22,7 @@
 #define $alg1ReferralExample02  alg1ReferralExample02
 #define $psobsCommonExample01   psobsCommonExample01
 #define $ccourseReferralExample01   ccourseReferralExample01
+
 
 $000mn_ExampleJPComposition_eReferral(compositionReferralExample01)
 $001mn_Description(構成情報サンプル　composition)
@@ -42,7 +45,7 @@ $070mn_紹介状傷病名Condition(上腹部痛、腰痛,$cc1ReferralExample01,$
 $070mn_紹介状現病歴Condition(２０２２年６月上旬から夜食後に時々上腹部痛があり、だんだんひどくなっている。他に目立った症状なし。,$piReferralExample01) 
 $070mn_紹介状既往歴Condition(2018年　狭心症　２ヶ月治療で軽快。2019年　交通事故で左前腕骨折　３ヶ月ギプス固定。,$ph1ReferralExample01,$ph2ReferralExample01) 
 $070mn_紹介状アレルギーAllergy(サバ　キーウイ,$alg1ReferralExample01,$alg1ReferralExample02) 
-$070mn_紹介状家族歴Family(母　胃がん,ARGref...) 
+$070mn_紹介状家族歴Family(母　胃がん) 
 $070mn_紹介状身体所見0bsCommon(腹部所見：上腹部圧痛あり、その他特に所見なし。,$psobsCommonExample01) 
 $070mn_紹介状感染症0bsCommon(特になし)
 $070mn_紹介状臨床経過DocRef(添付参照,$ccourseReferralExample01)

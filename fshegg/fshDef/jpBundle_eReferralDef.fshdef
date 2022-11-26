@@ -1,3 +1,5 @@
+#function genUUID4 UUIDV4generator::genUUID4
+
 #bigdef $000mn_ExampleJPBundle_eReferral(ARGinstancename)
 Instance: ARGinstancename
 InstanceOf: Bundle

@@ -47,13 +47,13 @@ Description: "紹介元医療機関情報　例"
 // 
 // 機関都道府県番号：2桁数字　北海道は01
 * extension[+].url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Organization_PrefectureNo" (exactly)
-* extension[=].valueIdentifier.system = "urn:oid:1.2.392.100495.20.3.21"
-* extension[=].valueIdentifier.value = "13"
+* extension[=].valueCoding.system = "urn:oid:1.2.392.100495.20.3.21"
+* extension[=].valueCoding.code = #13
 
 // 点数表コード１桁「1：医科」、「3：歯科」
 * extension[+].url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Organization_InsuranceOrganizationCategory" (exactly)
-* extension[=].valueIdentifier.system = "urn:oid:1.2.392.100495.20.3.22"
-* extension[=].valueIdentifier.value = "1"
+* extension[=].valueCoding.system = "urn:oid:1.2.392.100495.20.3.22"
+* extension[=].valueCoding.code = #1
 
 // 保険医療機関番号７桁
 * extension[+].url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Organization_InsuranceOrganizationNo" (exactly)
