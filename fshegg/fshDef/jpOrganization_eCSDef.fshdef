@@ -66,7 +66,7 @@ Description: "ARGtxt"
 
 #bigdef $010mn_機関医療機関番号(ARGorgno)
 #comment  //医療機関番号１０桁
-* identifier[+].system = "http://jpfhir.jp/fhir/Common/IdSystem/insurance-medical-institution-no"
+* identifier[+].system = "http://jpfhir.jp/fhir/core/IdSystem/insurance-medical-institution-no"
 * identifier[=].value = "ARGorgno"
 * type[+].coding.system = "http://terminology.hl7.org/CodeSystem/organization-type"
 * type[=].coding.code = #prov

@@ -13,7 +13,7 @@
     }
   ],
   "identifier": {
-    "system": "http://jpfhir.jp/fhir/Common/IdSystem/resourceInstance-identifier",
+    "system": "http://jpfhir.jp/fhir/core/IdSystem/resourceInstance-identifier",
     "value": "ARGcode"
   },
   "status": "final",
@@ -38,26 +38,26 @@
     }
   ],
   "subject": {
-    "reference": "urn:uuid:c5521630-63e5-485a-86df-5e77a6be45bd",
+    "reference": "jppatientExample01",
     "type": "Patient",
     "display": "患者リソースPatient"
   },
   "date": "2020-08-21T12:12:20+09:00",
   "author": [
     {
-      "reference": "urn:uuid:3351a68a-febf-4b26-adc8-c4cf9d7cf199",
+      "reference": "referralFromPractitionerExample01",
       "type": "PractitionerRole",
       "display": "紹介状作成者PractitionerRoleリソース"
     },
     {
-      "reference": "urn:uuid:f206f37a-72fe-435f-aca6-05e8f03a0338",
+      "reference": "referralFromOrganizaitonExample01",
       "type": "Organaization",
       "display": "紹介状作成機関Organaizationリソース"
     }
   ],
   "title": "診療情報提供書",
   "custodian": {
-    "reference": "urn:uuid:f206f37a-72fe-435f-aca6-05e8f03a0338",
+    "reference": "referralFromOrganizaitonExample01",
     "type": "Organaization",
     "display": "紹介状交付責任機関Organaizationリソース"
   },
@@ -91,17 +91,17 @@
       },
       "entry": [
         {
-          "reference": "urn:uuid:ee2b7764-a36a-4731-8c79-e3b9449dc1ae",
+          "reference": "referralToOrganizaitonExample01",
           "type": "Organization",
           "display": "紹介先医療機関"
         },
         {
-          "reference": "urn:uuid:8b5766b0-05f6-4529-b29c-55bfcae7b074",
+          "reference": "referralToOrganizaitonDeptExample01",
           "type": "Organization",
           "display": "紹介先診療科"
         },
         {
-          "reference": "urn:uuid:855d7076-d468-44fe-873c-7a65e1f511a0",
+          "reference": "referralToPractitionerExample01",
           "type": "Practitioner",
           "display": "紹介先医師"
         }
@@ -124,17 +124,17 @@
       },
       "entry": [
         {
-          "reference": "urn:uuid:f206f37a-72fe-435f-aca6-05e8f03a0338",
+          "reference": "referralFromOrganizaitonExample01",
           "type": "Organization",
           "display": "紹介元医療機関"
         },
         {
-          "reference": "urn:uuid:8c71d669-2a38-49e6-8590-d1d1959ec02f",
+          "reference": "referralFromOrganizaitonDeptExample01",
           "type": "Organization",
           "display": "紹介元診療科"
         },
         {
-          "reference": "urn:uuid:3351a68a-febf-4b26-adc8-c4cf9d7cf199",
+          "reference": "referralFromPractitionerExample01",
           "type": "Practitioner",
           "display": "紹介元医師"
         }
@@ -169,7 +169,7 @@
           },
           "entry": [
             {
-              "reference": "urn:uuid:f6747191-590c-4a3a-b25e-e82c162c36f2",
+              "reference": "purposeReferralExample01",
               "type": "Encounter",
               "display": "紹介目的"
             }
@@ -192,12 +192,12 @@
           },
           "entry": [
             {
-              "reference": "urn:uuid:f7e44699-2071-4b63-8c53-c52a0ec4d8ea",
+              "reference": "cc1ReferralExample01",
               "type": "Condition",
               "display": "傷病名・主訴"
             },
             {
-              "reference": "urn:uuid:6a042b52-45ff-4ad7-a950-9c8f0baf640e",
+              "reference": "cc2ReferralExample01",
               "type": "Condition",
               "display": "傷病名・主訴"
             }
@@ -220,7 +220,7 @@
           },
           "entry": [
             {
-              "reference": "urn:uuid:5b68bbe5-d4f2-4913-9a2e-9f7428a3778d",
+              "reference": "piReferralExample01",
               "type": "Condition",
               "display": "現病歴"
             }
@@ -243,12 +243,12 @@
           },
           "entry": [
             {
-              "reference": "urn:uuid:465a1e1d-4597-4beb-91f4-5b9c4dc94765",
+              "reference": "ph1ReferralExample01",
               "type": "Condition",
               "display": "既往歴"
             },
             {
-              "reference": "urn:uuid:02a31c42-0e46-4105-b8e3-8d9b4a10f5fc",
+              "reference": "ph2ReferralExample01",
               "type": "Condition",
               "display": "既往歴"
             }
@@ -271,12 +271,12 @@
           },
           "entry": [
             {
-              "reference": "urn:uuid:81c3325d-0a0d-487e-9c30-d4ca69793e8c",
+              "reference": "alg1ReferralExample01",
               "type": "AllergyIntolerance",
               "display": "アレルギー・不耐性反応"
             },
             {
-              "reference": "urn:uuid:e754a170-9080-4640-b71a-cc665f1ccbfb",
+              "reference": "alg1ReferralExample02",
               "type": "AllergyIntolerance",
               "display": "アレルギー・不耐性反応"
             }
@@ -315,7 +315,7 @@
           },
           "entry": [
             {
-              "reference": "urn:uuid:9a45b195-2a33-4b32-a76f-819dbeba8b0a",
+              "reference": "psobsCommonExample01",
               "type": "Observation",
               "display": "身体所見"
             }
@@ -354,7 +354,7 @@
           },
           "entry": [
             {
-              "reference": "urn:uuid:47edb18e-39cb-422f-afe8-3a8947ddb5c6",
+              "reference": "ccourseReferralExample01",
               "type": "DocumentReference",
               "display": "臨床経過"
             }

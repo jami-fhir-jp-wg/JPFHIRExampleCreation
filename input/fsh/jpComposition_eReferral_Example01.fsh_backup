@@ -20,7 +20,7 @@ Description: "構成情報サンプル　composition"
 * extension.url = "http://hl7.org/fhir/StructureDefinition/composition-clinicaldocument-versionNumber"
 * extension.valueString = "ARGcode"
  
-* identifier.system = "http://jpfhir.jp/fhir/Common/IdSystem/resourceInstance-identifier"
+* identifier.system = "http://jpfhir.jp/fhir/core/IdSystem/resourceInstance-identifier"
 * identifier.value = "ARGcode"
 * status = #final
 * type = $doc-typecodes#57133-1 "診療情報提供書"

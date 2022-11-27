@@ -10,7 +10,7 @@ Description: "conditionReferralExample01 診療情報提供書　主訴例"
 
 * meta.profile[+] = "http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Condition_eClinicalSummary"
 
-* identifier.system = "http://jpfhir.jp/fhir/Common/CodeSystem/resourceInstance-identifier"
+* identifier.system = "http://jpfhir.jp/fhir/core/IdSystem/resourceInstance-identifier"
 * identifier.value = "192837-01"
 * clinicalStatus = http://terminology.hl7.org/CodeSystem/condition-clinical#active
  // active | recurrence | relapse | inactive | remission | resolved
@@ -33,7 +33,7 @@ Description: "conditionReferralExample01 診療情報提供書　主訴例"
 
 * meta.profile[+] = "http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Condition_eClinicalSummary"
 
-* identifier.system = "http://jpfhir.jp/fhir/Common/CodeSystem/resourceInstance-identifier"
+* identifier.system = "http://jpfhir.jp/fhir/core/IdSystem/resourceInstance-identifier"
 * identifier.value = "192837-02"
 * clinicalStatus = http://terminology.hl7.org/CodeSystem/condition-clinical#active
  // active | recurrence | relapse | inactive | remission | resolved

@@ -8,7 +8,7 @@
   },
   "identifier": [
     {
-      "system": "http://jpfhir.jp/fhir/Common/CodeSystem/resourceInstance-identifier",
+      "system": "http://jpfhir.jp/fhir/core/IdSystem/resourceInstance-identifier",
       "value": "192837"
     }
   ],

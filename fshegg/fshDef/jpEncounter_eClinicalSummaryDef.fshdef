@@ -25,7 +25,7 @@ Description: "ARGtxt"
 #endif
 
 #bigdef $010on_受診管理番号(ARGnumber)
-* identifier.system = "http://jpfhir.jp/fhir/Common/CodeSystem/resourceInstance-identifier"
+* identifier.system = "http://jpfhir.jp/fhir/core/IdSystem/resourceInstance-identifier"
 * identifier.value = "ARGnumber"
 * status = #finished
 #endbigdef

@@ -111,6 +111,14 @@
       },
       {
         "reference": {
+          "reference": "Composition/compositionReferralExampleTest"
+        },
+        "name": "compositionReferralExampleTest",
+        "description": "構成情報サンプル　composition",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
           "reference": "Encounter/encounterReferralExample01"
         },
         "name": "encounterReferralExample01",

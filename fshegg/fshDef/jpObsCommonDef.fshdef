@@ -32,7 +32,7 @@ Description: "ARGtxt"
 
 
 #bigdef $010on_共通検査報告ID(ARGnumber)
-* identifier.system = "http://jpfhir.jp/fhir/Common/CodeSystem/resourceInstance-identifier"
+* identifier.system = "http://jpfhir.jp/fhir/core/IdSystem/resourceInstance-identifier"
 * identifier.value = "ARGnumber"
 * status = #final
 #endbigdef

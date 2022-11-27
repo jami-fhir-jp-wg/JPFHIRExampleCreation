@@ -56,7 +56,7 @@ Description: "ARGtxt"
 #endbigdef
 
 #bigdef  $010mn_紹介状文書ID(ARGtext)
-* identifier.system = "http://jpfhir.jp/fhir/Common/IdSystem/resourceInstance-identifier"
+* identifier.system = "http://jpfhir.jp/fhir/core/IdSystem/resourceInstance-identifier"
 * identifier.value = "ARGcode"
 * status = #final
 * type = $doc-typecodes#57133-1 "診療情報提供書"
@@ -87,12 +87,12 @@ Description: "ARGtxt"
 * author[=].display = "紹介状作成者PractitionerRoleリソース"
 
 * author[+].reference = "ARGresourceReforg"
-* author[=].type = "Organaization"
-* author[=].display = "紹介状作成機関Organaizationリソース"
+* author[=].type = "Organization"
+* author[=].display = "紹介状作成機関Organizationリソース"
 * title = "診療情報提供書"
 * custodian.reference = "ARGresourceReforg"
-* custodian.type = "Organaization"
-* custodian.display = "紹介状交付責任機関Organaizationリソース"
+* custodian.type = "Organization"
+* custodian.display = "紹介状交付責任機関Organizationリソース"
 #endbigdef
 
 #bigdef  $060mn_紹介状発行日(ARGdate)
@@ -142,6 +142,17 @@ $multiEntryRefSectionLevel1(紹介元医師, Practitioner, ARGpersonref)
 * section[=].section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">ARGtext</div>"
 $multiEntryRefSectionLevel2(紹介目的, Encounter, ARGref)
 #endbigdef
+
+#bigdef  $071mn_紹介状目的Ecounter(ARGtext)
+* section[+].title = "構造情報"
+* section[=].code = $referral-section#300 "構造情報セクション"
+* section[=].section[+].title = "紹介目的"
+* section[=].section[=].code = $referral-section#950 "紹介目的セクション"
+* section[=].section[=].text.status = #additional
+* section[=].section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">ARGtext</div>"
+* section[=].section[=].emptyReason = http://terminology.hl7.org/CodeSystem/list-empty-reason#unavailable
+#endbigdef
+
 
 #bigdef  $070mn_紹介状傷病名Condition(ARGtext,ARGref...)
 * section[=].section[+].title = "傷病名・主訴"

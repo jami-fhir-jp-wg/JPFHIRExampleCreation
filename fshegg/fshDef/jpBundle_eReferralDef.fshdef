@@ -26,7 +26,7 @@ Description: "ARGtxt"
 #endif
 
 #bigdef  $010mn_文書ID(ARGcode)
-* identifier.system = "http://jpfhir.jp/fhir/Common/IdSystem/documentInstance-identifier"
+* identifier.system = "http://jpfhir.jp/fhir/core/IdSystem/documentInstance-identifier"
 * identifier.value = "ARGcode"
 * type = #document
 #endbigdef

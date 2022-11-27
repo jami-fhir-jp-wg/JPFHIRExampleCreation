@@ -61,7 +61,7 @@ Description: "紹介先医療機関情報　例"
 * extension[=].valueIdentifier.value = "1234567"
 
 //
-* identifier[+].system = "http://jpfhir.jp/fhir/Common/IdSystem/insurance-medical-institution-no"
+* identifier[+].system = "http://jpfhir.jp/fhir/core/IdSystem/insurance-medical-institution-no"
 * identifier[=].value = "1311234567"
 * type[+].coding.system = "http://terminology.hl7.org/CodeSystem/organization-type"
 * type[=].coding.code = #prov
