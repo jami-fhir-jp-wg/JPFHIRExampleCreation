@@ -13,3 +13,6 @@ sushi .  -o ./output-json
 
 cd ..
 java -jar work/validator_cli.jar JPFHIRExampleCreation/output-json/fsh-generated/resources/*.json -ig JPFHIRExampleCreation/packages_snapshot/jp-ereferral#0.9.1-snap.tgz -tx https://tx.jpfhir.jp:8081
+
+java -jar work/validator_cli.jar JPFHIRExampleCreation/output-json/fsh-generated/resources/Bundle-bundleReferralExample01.json -ig JPFHIRExampleCreation/packages_snapshot/jp-ereferral#0.9.1-snap.tgz -tx https://tx.jpfhir.jp:8081 >JPFHIRExampleCreation/output.txt
+

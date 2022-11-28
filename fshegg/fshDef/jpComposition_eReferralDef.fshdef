@@ -83,7 +83,7 @@ Description: "ARGtxt"
 
 #bigdef  $050mn_紹介状作成者(ARGresourceRefauthor, ARGresourceReforg)
 * author[0].reference = "ARGresourceRefauthor"
-* author[=].type = "PractitionerRole"
+* author[=].type = "Practitioner"
 * author[=].display = "紹介状作成者PractitionerRoleリソース"
 
 * author[+].reference = "ARGresourceReforg"
