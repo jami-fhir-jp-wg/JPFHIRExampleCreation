@@ -90,7 +90,7 @@ Description: "ARGtxt"
 * author[=].type = "Organization"
 * author[=].display = "紹介状作成機関Organizationリソース"
 * title = "診療情報提供書"
-* custodian.reference = "ARGresourceReforg"
+* custodian.reference = Reference(ARGresourceReforg)
 * custodian.type = "Organization"
 * custodian.display = "紹介状交付責任機関Organizationリソース"
 #endbigdef

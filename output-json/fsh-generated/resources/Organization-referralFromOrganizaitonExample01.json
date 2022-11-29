@@ -1,10 +1,9 @@
 {
   "resourceType": "Organization",
-  "id": "referralFromOrganizaitonExample01",
+  "id": "urn:uuid:221f2598-cab7-461a-832b-8b5501c7d42c",
   "meta": {
     "profile": [
-      "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Organization",
-      "http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Organization_eClinicalSummary_issuer"
+      "http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Organization_eClinicalSummary"
     ]
   },
   "extension": [

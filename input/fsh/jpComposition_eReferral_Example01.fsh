@@ -27,7 +27,7 @@ Description: "構成情報サンプル　composition"
 * category = $doc-typecodes#57133-1 "診療情報提供書"
 
 // * subject.reference = "jppatientExample01"
-* subject.reference = "urn:uuid:3dc2541e-0647-42b8-a676-bf793d360e1d"
+* subject.reference = "urn:uuid:0a43ab16-b609-4aff-926b-501d1fd3993d"
 * subject.type = "Patient"
 * subject.display = "患者リソースPatient"
 
@@ -37,16 +37,16 @@ Description: "構成情報サンプル　composition"
 * date = "2020-08-21T12:12:20+09:00"
 
 // * author[0].reference = "referralFromPractitionerExample01"
-* author[0].reference = "urn:uuid:3058a335-0835-4722-801c-ce7ca4bed351"
+* author[0].reference = "urn:uuid:eb3727e4-fd9a-4281-8a0a-c6970413f3cc"
 * author[=].type = "Practitioner"
 * author[=].display = "紹介状作成者PractitionerRoleリソース"
 // * author[+].reference = "referralFromOrganizaitonExample01"
-* author[+].reference = "urn:uuid:8b7df950-64dc-4ad4-b791-d831cc034b93"
+* author[+].reference = "urn:uuid:221f2598-cab7-461a-832b-8b5501c7d42c"
 * author[=].type = "Organization"
 * author[=].display = "紹介状作成機関Organizationリソース"
 * title = "診療情報提供書"
-// * custodian.reference = "referralFromOrganizaitonExample01"
-* custodian.reference = "urn:uuid:8b7df950-64dc-4ad4-b791-d831cc034b93"
+// * custodian.reference = Reference(referralFromOrganizaitonExample01)
+* custodian = Reference(urn:uuid:221f2598-cab7-461a-832b-8b5501c7d42c)
 * custodian.type = "Organization"
 * custodian.display = "紹介状交付責任機関Organizationリソース"
 
@@ -58,19 +58,19 @@ Description: "構成情報サンプル　composition"
 * section[=].text.status = #additional
 * section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">東京第一テスト病院</div>"
 // * section[=].entry[+].reference = "referralToOrganizaitonExample01"
-* section[=].entry[+].reference = "urn:uuid:707bd66a-6613-48ba-ac7e-e6c8d79ce686"
+* section[=].entry[+].reference = "urn:uuid:5fefea53-098d-4793-9425-2aa783f34830"
 * section[=].entry[=].type = "Organization"
 * section[=].entry[=].display = "紹介先医療機関"
 
 
 // * section[=].entry[+].reference = "referralToOrganizaitonDeptExample01"
-* section[=].entry[+].reference = "urn:uuid:e6ee0c54-0c57-49c2-ab9f-1a3979a72f69"
+* section[=].entry[+].reference = "urn:uuid:d4163977-9402-4e01-83fb-1564ab24370e"
 * section[=].entry[=].type = "Organization"
 * section[=].entry[=].display = "紹介先診療科"
 
 
 // * section[=].entry[+].reference = "referralToPractitionerExample01"
-* section[=].entry[+].reference = "urn:uuid:3f8a83fa-4083-4196-9cfe-a8a0c7f0b0c3"
+* section[=].entry[+].reference = "urn:uuid:daa34959-b248-4df3-8ac0-d910ab22f14b"
 * section[=].entry[=].type = "Practitioner"
 * section[=].entry[=].display = "紹介先医師"
 
@@ -80,19 +80,19 @@ Description: "構成情報サンプル　composition"
 * section[=].text.status = #additional
 * section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">港診療所</div>"
 // * section[=].entry[+].reference = "referralFromOrganizaitonExample01"
-* section[=].entry[+].reference = "urn:uuid:8b7df950-64dc-4ad4-b791-d831cc034b93"
+* section[=].entry[+].reference = "urn:uuid:221f2598-cab7-461a-832b-8b5501c7d42c"
 * section[=].entry[=].type = "Organization"
 * section[=].entry[=].display = "紹介元医療機関"
 
 
 // * section[=].entry[+].reference = "referralFromOrganizaitonDeptExample01"
-* section[=].entry[+].reference = "urn:uuid:9ab43aef-11c2-4042-84d0-f22370355d3b"
+* section[=].entry[+].reference = "urn:uuid:8af6af7a-161a-442e-84a5-3195b101e031"
 * section[=].entry[=].type = "Organization"
 * section[=].entry[=].display = "紹介元診療科"
 
 
 // * section[=].entry[+].reference = "referralFromPractitionerExample01"
-* section[=].entry[+].reference = "urn:uuid:3058a335-0835-4722-801c-ce7ca4bed351"
+* section[=].entry[+].reference = "urn:uuid:eb3727e4-fd9a-4281-8a0a-c6970413f3cc"
 * section[=].entry[=].type = "Practitioner"
 * section[=].entry[=].display = "紹介元医師"
 
@@ -104,7 +104,7 @@ Description: "構成情報サンプル　composition"
 * section[=].section[=].text.status = #additional
 * section[=].section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">腹痛精査お願いします。</div>"
 // * section[=].section[=].entry[+].reference = "purposeReferralExample01"
-* section[=].section[=].entry[+].reference = "urn:uuid:7871927d-e2ef-4cd4-8d7c-0786d44bfd8b"
+* section[=].section[=].entry[+].reference = "urn:uuid:da36cc86-7f13-48a6-a10c-cdb4b22badda"
 * section[=].section[=].entry[=].type = "Encounter"
 * section[=].section[=].entry[=].display = "紹介目的"
 
@@ -114,11 +114,11 @@ Description: "構成情報サンプル　composition"
 * section[=].section[=].text.status = #additional
 * section[=].section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">上腹部痛、腰痛</div>"
 // * section[=].section[=].entry[+].reference = "cc1ReferralExample01"
-* section[=].section[=].entry[+].reference = "urn:uuid:96a7aa3a-377c-48ae-80f6-8c930f661d47"
+* section[=].section[=].entry[+].reference = "urn:uuid:57aec5e9-960e-4871-9852-2205b30256f6"
 * section[=].section[=].entry[=].type = "Condition"
 * section[=].section[=].entry[=].display = "傷病名・主訴"
 // * section[=].section[=].entry[+].reference = "cc2ReferralExample01"
-* section[=].section[=].entry[+].reference = "urn:uuid:b88de069-fd19-4b91-9b68-be235661c57f"
+* section[=].section[=].entry[+].reference = "urn:uuid:504be63e-e983-4eb4-bdf6-c3b511135b34"
 * section[=].section[=].entry[=].type = "Condition"
 * section[=].section[=].entry[=].display = "傷病名・主訴"
 
@@ -128,7 +128,7 @@ Description: "構成情報サンプル　composition"
 * section[=].section[=].text.status = #additional
 * section[=].section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">２０２２年６月上旬から夜食後に時々上腹部痛があり、だんだんひどくなっている。他に目立った症状なし。</div>"
 // * section[=].section[=].entry[+].reference = "piReferralExample01"
-* section[=].section[=].entry[+].reference = "urn:uuid:d0415670-683c-4eb3-98da-d7bb6b75d605"
+* section[=].section[=].entry[+].reference = "urn:uuid:569892e2-dc8f-457f-ae4a-91e847d0eb25"
 * section[=].section[=].entry[=].type = "Condition"
 * section[=].section[=].entry[=].display = "現病歴"
 
@@ -139,11 +139,11 @@ Description: "構成情報サンプル　composition"
 * section[=].section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">2018年　狭心症　２ヶ月治療で軽快。2019年　交通事故で左前腕骨折　３ヶ月ギプス固定。</div>"
 //  Reference(JP_Condition) 既往歴
 // * section[=].section[=].entry[+].reference = "ph1ReferralExample01"
-* section[=].section[=].entry[+].reference = "urn:uuid:45cbbe3b-1a23-4c37-9009-6a03e1d9d216"
+* section[=].section[=].entry[+].reference = "urn:uuid:7a5006f3-d0e0-4b6d-b7fc-18602f3ca0b8"
 * section[=].section[=].entry[=].type = "Condition"
 * section[=].section[=].entry[=].display = "既往歴"
 // * section[=].section[=].entry[+].reference = "ph2ReferralExample01"
-* section[=].section[=].entry[+].reference = "urn:uuid:d3856843-ad78-4ebc-940e-3e0d2eb91f1b"
+* section[=].section[=].entry[+].reference = "urn:uuid:369c732b-b377-4aa8-b0b1-6242191ccdfd"
 * section[=].section[=].entry[=].type = "Condition"
 * section[=].section[=].entry[=].display = "既往歴"
 
@@ -154,11 +154,11 @@ Description: "構成情報サンプル　composition"
 * section[=].section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">サバ　キーウイ</div>"
 //  Reference(JP_Condition) アレルギー
 // * section[=].section[=].entry[+].reference = "alg1ReferralExample01"
-* section[=].section[=].entry[+].reference = "urn:uuid:56fa58e6-2799-4a2f-9bbd-f868431dc32c"
+* section[=].section[=].entry[+].reference = "urn:uuid:32fc0a5c-6950-4d58-a396-ace45e6730fb"
 * section[=].section[=].entry[=].type = "AllergyIntolerance"
 * section[=].section[=].entry[=].display = "アレルギー・不耐性反応"
 // * section[=].section[=].entry[+].reference = "alg1ReferralExample02"
-* section[=].section[=].entry[+].reference = "urn:uuid:d9de56c6-0704-4d38-8759-3f637f93b017"
+* section[=].section[=].entry[+].reference = "urn:uuid:559b131f-e275-4202-9783-830555ad4635"
 * section[=].section[=].entry[=].type = "AllergyIntolerance"
 * section[=].section[=].entry[=].display = "アレルギー・不耐性反応"
 
@@ -176,7 +176,7 @@ Description: "構成情報サンプル　composition"
 * section[=].section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">腹部所見：上腹部圧痛あり、その他特に所見なし。</div>"
 //  Reference(JP_Observation_Common) 身体所見
 // * section[=].section[=].entry[+].reference = "psobsCommonExample01"
-* section[=].section[=].entry[+].reference = "urn:uuid:aaf33505-fe73-4f8e-9db8-24331b601d9f"
+* section[=].section[=].entry[+].reference = "urn:uuid:dabd2db0-d0fb-4405-85d5-2f34c04aa1be"
 * section[=].section[=].entry[=].type = "Observation"
 * section[=].section[=].entry[=].display = "身体所見"
 
@@ -194,7 +194,7 @@ Description: "構成情報サンプル　composition"
 * section[=].section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">添付参照</div>"
 //  Reference(JP_DocumentReference) 臨床経過
 // * section[=].section[=].entry[+].reference = "ccourseReferralExample01"
-* section[=].section[=].entry[+].reference = "urn:uuid:5eb7caf6-9594-430d-8840-f814813b8716"
+* section[=].section[=].entry[+].reference = "urn:uuid:53474e78-4cd6-4816-9c5a-87652169e9da"
 * section[=].section[=].entry[=].type = "DocumentReference"
 * section[=].section[=].entry[=].display = "臨床経過"
 

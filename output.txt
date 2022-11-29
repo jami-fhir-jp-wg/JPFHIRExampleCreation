@@ -1,4 +1,4 @@
-FHIR Validation tool Version 5.6.80 (Git# 3ab720a6af40). Built 2022-11-22T14:29:01.401Z (5 days old)
+FHIR Validation tool Version 5.6.80 (Git# 3ab720a6af40). Built 2022-11-22T14:29:01.401Z (6 days old)
   Java:   11.0.10 from /Library/Java/JavaVirtualMachines/jdk-11.0.10+9/Contents/Home on x86_64 (64bit). 30688MB available
   Paths:  Current = /Users/kohe/GitHub, Package Cache = /Users/kohe/.fhir/packages
   Params: JPFHIRExampleCreation/output-json/fsh-generated/resources/Bundle-bundleReferralExample01.json -ig JPFHIRExampleCreation/packages_snapshot/jp-ereferral#0.9.1-snap.tgz -tx https://tx.jpfhir.jp:8081
@@ -7,17 +7,35 @@ Scanning for versions (no -version parameter):
 -> use version 4.0
   Jurisdiction: Japan
 Loading
-  Load FHIR v4.0 from hl7.fhir.r4.core#4.0.1.: - 4576 resources (00:03.289)
-  Load hl7.terminology#4.0.0 - 4164 resources (00:02.668)
-  Load R5 Extensions - 56 resources (00:02.371)
-  Terminology server https://tx.jpfhir.jp:8081 - Version null (00:00.477)
-  Load JPFHIRExampleCreation/packages_snapshot/jp-ereferral#0.9.1-snap.tgz - 72 resources (00:00.972)
+  Load FHIR v4.0 from hl7.fhir.r4.core#4.0.1.: - 4576 resources (00:03.398)
+  Load hl7.terminology#4.0.0 - 4164 resources (00:01.514)
+  Load R5 Extensions - 56 resources (00:02.469)
+  Terminology server https://tx.jpfhir.jp:8081 - Version null (00:00.467)
+  Load JPFHIRExampleCreation/packages_snapshot/jp-ereferral#0.9.1-snap.tgz - 72 resources (00:01.379)
   Package Summary: [hl7.fhir.r4.core#4.0.1, hl7.fhir.xver-extensions#0.0.11, hl7.terminology#4.0.0]
   Get set...  go (00:00.003)
 Validating
   Validate JPFHIRExampleCreation/output-json/fsh-generated/resources/Bundle-bundleReferralExample01.json
-Validate Bundle against http://hl7.org/fhir/StructureDefinition/Bundle|4.0.1  Load jp-ereferral..  Load jp-core.r4#1.1.1-rc - 198 resources (00:01.202)
-........20..........40.Validate Organization against http://jpfhir.jp/fhir/core/StructureDefinition/JP_Organization|1.1.1..........20..........40..........60..........80.........|
+Validate Bundle against http://hl7.org/fhir/StructureDefinition/Bundle|4.0.1  Load jp-ereferral..  Load jp-core.r4#1.1.1-rc - 198 resources (00:01.122)
+........20..........40.Validate Practitioner against http://hl7.org/fhir/StructureDefinition/Practitioner|4.0.1|
+Validate Practitioner against http://jpfhir.jp/fhir/core/StructureDefinition/JP_Practitioner|
+Validate Practitioner against http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Practitioner_eClinicalSummary_author|
+Validate Organization against http://hl7.org/fhir/StructureDefinition/Organization|4.0.1|
+Validate Organization against http://jpfhir.jp/fhir/core/StructureDefinition/JP_Organization|
+Validate Organization against http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Organization_eClinicalSummary_issuer|
+Validate Practitioner against http://hl7.org/fhir/StructureDefinition/Practitioner|4.0.1|
+Validate Practitioner against http://jpfhir.jp/fhir/core/StructureDefinition/JP_Practitioner|
+Validate Practitioner against http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Practitioner_eClinicalSummary_author|
+Validate Organization against http://hl7.org/fhir/StructureDefinition/Organization|4.0.1|
+Validate Organization against http://jpfhir.jp/fhir/core/StructureDefinition/JP_Organization|
+Validate Organization against http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Organization_eClinicalSummary_issuer|
+Validate Practitioner against http://hl7.org/fhir/StructureDefinition/Practitioner|4.0.1|
+Validate Practitioner against http://jpfhir.jp/fhir/core/StructureDefinition/JP_Practitioner|
+Validate Practitioner against http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Practitioner_eClinicalSummary_author|
+Validate Organization against http://hl7.org/fhir/StructureDefinition/Organization|4.0.1|
+Validate Organization against http://jpfhir.jp/fhir/core/StructureDefinition/JP_Organization|
+Validate Organization against http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Organization_eClinicalSummary_issuer|
+...Validate Organization against http://jpfhir.jp/fhir/core/StructureDefinition/JP_Organization|1.1.1..........20..........40..........60..........80.........|
 Validate Organization against http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Organization_eClinicalSummary_issuer..........20..........40..........60..........80..........100|
 Validate Organization against http://jpfhir.jp/fhir/core/StructureDefinition/JP_Organization|1.1.1..........20..........40..........60..........80.........|
 Validate Organization against http://jpfhir.jp/fhir/core/StructureDefinition/JP_Organization|1.1.1|
@@ -33,25 +51,29 @@ Validate Organization against http://jpfhir.jp/fhir/eClinicalSummary/StructureDe
 Validate Organization against http://jpfhir.jp/fhir/core/StructureDefinition/JP_Organization|1.1.1|
 Validate Practitioner against http://jpfhir.jp/fhir/core/StructureDefinition/JP_Practitioner|1.1.1|
 Validate Practitioner against http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Practitioner_eClinicalSummary_author|
-.......60..........80..........100..........120...|
- 00:03.657
-Done. Times: Loading: 00:10.591, validation: 00:04.860. Memory = 1Gb
+....60..........80..........100..........120......|
+ 00:03.511
+Done. Times: Loading: 00:10.315, validation: 00:04.633. Memory = 327Mb
 
-*FAILURE*: 12 errors, 12 warnings, 9 notes
-  Error @ Bundle.entry[0].resource.ofType(Composition).custodian.reference (line 77, col72): Value is 'urn:uuid:8b7df950-64dc-4ad4-b791-d831cc034b93' but must be 'JP_Organization'
+*FAILURE*: 18 errors, 12 warnings, 7 notes
+  Error @ Bundle.entry[0].resource.ofType(Composition).author[0].reference (line 65, col74): Value is 'urn:uuid:eb3727e4-fd9a-4281-8a0a-c6970413f3cc' but must be 'JP_Practitioner_eClinicalSummary'
+  Error @ Bundle.entry[0].resource.ofType(Composition).author[1].reference (line 70, col74): Value is 'urn:uuid:221f2598-cab7-461a-832b-8b5501c7d42c' but must be 'JP_Practitioner_eClinicalSummary'
+  Error @ Bundle.entry[0].resource.ofType(Composition).custodian.reference (line 77, col72): Value is 'urn:uuid:221f2598-cab7-461a-832b-8b5501c7d42c' but must be 'JP_Organization_eClinicalSummary'
   Error @ Bundle.entry[7].resource.ofType(Organization).partOf: Relative URLs must be of the format [ResourceName]/[id].  Encountered referralFromOrganizaitonDeptExample01
   Error @ Bundle.entry[6].resource.ofType(Organization).partOf: Relative URLs must be of the format [ResourceName]/[id].  Encountered referralToOrganizaitonDeptExample01
+  Error @ Bundle.entry[0].resource.ofType(Composition).author[0] (line 64, col12): Profile http://jpfhir.jp/fhir/eReferral/StructureDefinition/JP_Composition_eReferral|0.9.1, Element matches more than one slice - authorPractitioner, authorDepartment
+  Error @ Bundle.entry[0].resource.ofType(Composition).author[0] (line 64, col12): Profile http://jpfhir.jp/fhir/eReferral/StructureDefinition/JP_Composition_eReferral|0.9.1, Element matches more than one slice - authorPractitioner, authorOrganization
+  Error @ Bundle.entry[0].resource.ofType(Composition).author[1] (line 69, col12): Profile http://jpfhir.jp/fhir/eReferral/StructureDefinition/JP_Composition_eReferral|0.9.1, Element matches more than one slice - authorPractitioner, authorDepartment
+  Error @ Bundle.entry[0].resource.ofType(Composition).author[1] (line 69, col12): Profile http://jpfhir.jp/fhir/eReferral/StructureDefinition/JP_Composition_eReferral|0.9.1, Element matches more than one slice - authorPractitioner, authorOrganization
   Error @ Bundle.entry[0].resource.ofType(Composition).section[0].entry[0] (line 110, col16): Profile http://jpfhir.jp/fhir/eReferral/StructureDefinition/JP_Composition_eReferral|0.9.1, Element matches more than one slice - referralToOrganizaiton, referralToDepartment
   Error @ Bundle.entry[0].resource.ofType(Composition).section[0].entry[1] (line 115, col16): Profile http://jpfhir.jp/fhir/eReferral/StructureDefinition/JP_Composition_eReferral|0.9.1, Element matches more than one slice - referralToOrganizaiton, referralToDepartment
   Error @ Bundle.entry[0].resource.ofType(Composition).section[1].entry[0] (line 143, col16): Profile http://jpfhir.jp/fhir/eReferral/StructureDefinition/JP_Composition_eReferral|0.9.1, Element matches more than one slice - referralFromOrganizaiton, referralFromDepartment
   Error @ Bundle.entry[0].resource.ofType(Composition).section[1].entry[1] (line 148, col16): Profile http://jpfhir.jp/fhir/eReferral/StructureDefinition/JP_Composition_eReferral|0.9.1, Element matches more than one slice - referralFromOrganizaiton, referralFromDepartment
-  Error @ Bundle.entry[0].resource.ofType(Composition).author[0] (line 64, col12): Slicing cannot be evaluated: Error processing path expression for discriminator: Error @1, 1: The function "resolve" requires 0 parameters (src = 'resolve(reference)')
-  Error @ Bundle.entry[0].resource.ofType(Composition).author[1] (line 69, col12): Slicing cannot be evaluated: Error processing path expression for discriminator: Error @1, 1: The function "resolve" requires 0 parameters (src = 'resolve(reference)')
+  Error @ Bundle.entry[0].resource.ofType(Composition) (line 76, col23): Composition.author:authorOrganization: minimum required = 1, but only found 0 (from http://jpfhir.jp/fhir/eReferral/StructureDefinition/JP_Composition_eReferral|0.9.1)
+  Error @ Bundle.entry[0].resource.ofType(Composition) (line 76, col23): Composition.author:authorPractitioner: max allowed = 1, but found 2 (from http://jpfhir.jp/fhir/eReferral/StructureDefinition/JP_Composition_eReferral|0.9.1)
   Error @ Bundle.entry[0].resource.ofType(Composition).section[0] (line 94, col12): Composition.section:referralToSection.entry:referralToOrganizaiton: max allowed = 1, but found 2 (from http://jpfhir.jp/fhir/eReferral/StructureDefinition/JP_Composition_eReferral|0.9.1)
   Error @ Bundle.entry[0].resource.ofType(Composition).section[1] (line 127, col12): Composition.section:referralFromSection.entry:referralFromOrganizaiton: max allowed = 1, but found 2 (from http://jpfhir.jp/fhir/eReferral/StructureDefinition/JP_Composition_eReferral|0.9.1)
   Error @ Bundle.entry[0].resource.ofType(Composition) (line 76, col23): Problem processing expression '((section.code.coding.where(code = '200')).exists()) xor (section.code.coding.where(code = '300')).exists())' in profile 'http://jpfhir.jp/fhir/eReferral/StructureDefinition/JP_Composition_eReferral|0.9.1' at path 'Bundle.entry[0].resource.ofType(Composition)': Error @1, 7: Premature ExpressionNode termination at unexpected token ")"
-  Information @ Bundle.entry[0].resource.ofType(Composition) (line 76, col23): Composition.author:authorOrganization: Found 0 matches, but unable to check minimum required (Composition.author) due to lack of slicing validation (from http://jpfhir.jp/fhir/eReferral/StructureDefinition/JP_Composition_eReferral|0.9.1)
-  Information @ Bundle.entry[0].resource.ofType(Composition) (line 76, col23): Composition.author:authorPractitioner: Found 0 matches, but unable to check minimum required (Composition.author) due to lack of slicing validation (from http://jpfhir.jp/fhir/eReferral/StructureDefinition/JP_Composition_eReferral|0.9.1)
   Information @ Bundle.entry[0].resource.ofType(Composition).type (line 38, col22): None of the codings provided are in the value set 'FHIR Document Type Codes' (http://hl7.org/fhir/ValueSet/doc-typecodes|4.0.1), and a coding is recommended to come from this value set) (codes = http://jpfhir.jp/fhir/Common/CodeSystem/doc-typecodes#57133-1)
   Information @ Bundle.meta.profile[0] (line 7, col6): Canonical URL 'http://jpfhir.jp/fhir/eReferral/StructureDefinition/JP_Bundle_eReferral' does not resolve
   Information @ Bundle.entry[6].resource.ofType(Organization).meta.profile[1] (line 677, col12): Canonical URL 'http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Organization_eClinicalSummary_departmentOfIssuer' does not resolve
@@ -61,13 +83,13 @@ Done. Times: Loading: 00:10.591, validation: 00:04.860. Memory = 1Gb
   Information @ Bundle.entry[17].resource.ofType(DocumentReference).type.coding[0] (line 1155, col14): Code System URI 'http://loinc.org' is unknown so the code cannot be validated
   Warning @ Bundle.entry[8].resource.ofType(Encounter).class (line 757, col72): Display Name for http://terminology.hl7.org/CodeSystem/v3-ActCode#AMB should be one of 1 choices from 'ambulatory', not '外来' for 'http://terminology.hl7.org/CodeSystem/v3-ActCode#AMB'
   Warning @ Bundle.entry[16].resource.ofType(Observation).category[0] (line 1122, col12): Display Name for http://terminology.hl7.org/CodeSystem/observation-category#exam should be one of 1 choices from 'Exam', not '身体検査・観察'
-  Warning @ Bundle.entry[9].resource.ofType(Condition).subject: Entry 1 matches the reference Patient/jppatientExample01 by type and id but it's fullUrl urn:uuid:3dc2541e-0647-42b8-a676-bf793d360e1d does not match the full target URL urn:uuid:jppatientExample01 by Bundle resolution rules
-  Warning @ Bundle.entry[10].resource.ofType(Condition).subject: Entry 1 matches the reference Patient/jppatientExample01 by type and id but it's fullUrl urn:uuid:3dc2541e-0647-42b8-a676-bf793d360e1d does not match the full target URL urn:uuid:jppatientExample01 by Bundle resolution rules
-  Warning @ Bundle.entry[11].resource.ofType(Condition).subject: Entry 1 matches the reference Patient/jppatientExample01 by type and id but it's fullUrl urn:uuid:3dc2541e-0647-42b8-a676-bf793d360e1d does not match the full target URL urn:uuid:jppatientExample01 by Bundle resolution rules
-  Warning @ Bundle.entry[12].resource.ofType(Condition).subject: Entry 1 matches the reference Patient/jppatientExample01 by type and id but it's fullUrl urn:uuid:3dc2541e-0647-42b8-a676-bf793d360e1d does not match the full target URL urn:uuid:jppatientExample01 by Bundle resolution rules
-  Warning @ Bundle.entry[13].resource.ofType(Condition).subject: Entry 1 matches the reference Patient/jppatientExample01 by type and id but it's fullUrl urn:uuid:3dc2541e-0647-42b8-a676-bf793d360e1d does not match the full target URL urn:uuid:jppatientExample01 by Bundle resolution rules
-  Warning @ Bundle.entry[14].resource.ofType(AllergyIntolerance).patient: Entry 1 matches the reference Patient/jppatientExample01 by type and id but it's fullUrl urn:uuid:3dc2541e-0647-42b8-a676-bf793d360e1d does not match the full target URL urn:uuid:jppatientExample01 by Bundle resolution rules
-  Warning @ Bundle.entry[15].resource.ofType(AllergyIntolerance).patient: Entry 1 matches the reference Patient/jppatientExample01 by type and id but it's fullUrl urn:uuid:3dc2541e-0647-42b8-a676-bf793d360e1d does not match the full target URL urn:uuid:jppatientExample01 by Bundle resolution rules
+  Warning @ Bundle.entry[9].resource.ofType(Condition).subject: Entry 1 matches the reference Patient/jppatientExample01 by type and id but it's fullUrl urn:uuid:0a43ab16-b609-4aff-926b-501d1fd3993d does not match the full target URL urn:uuid:jppatientExample01 by Bundle resolution rules
+  Warning @ Bundle.entry[10].resource.ofType(Condition).subject: Entry 1 matches the reference Patient/jppatientExample01 by type and id but it's fullUrl urn:uuid:0a43ab16-b609-4aff-926b-501d1fd3993d does not match the full target URL urn:uuid:jppatientExample01 by Bundle resolution rules
+  Warning @ Bundle.entry[11].resource.ofType(Condition).subject: Entry 1 matches the reference Patient/jppatientExample01 by type and id but it's fullUrl urn:uuid:0a43ab16-b609-4aff-926b-501d1fd3993d does not match the full target URL urn:uuid:jppatientExample01 by Bundle resolution rules
+  Warning @ Bundle.entry[12].resource.ofType(Condition).subject: Entry 1 matches the reference Patient/jppatientExample01 by type and id but it's fullUrl urn:uuid:0a43ab16-b609-4aff-926b-501d1fd3993d does not match the full target URL urn:uuid:jppatientExample01 by Bundle resolution rules
+  Warning @ Bundle.entry[13].resource.ofType(Condition).subject: Entry 1 matches the reference Patient/jppatientExample01 by type and id but it's fullUrl urn:uuid:0a43ab16-b609-4aff-926b-501d1fd3993d does not match the full target URL urn:uuid:jppatientExample01 by Bundle resolution rules
+  Warning @ Bundle.entry[14].resource.ofType(AllergyIntolerance).patient: Entry 1 matches the reference Patient/jppatientExample01 by type and id but it's fullUrl urn:uuid:0a43ab16-b609-4aff-926b-501d1fd3993d does not match the full target URL urn:uuid:jppatientExample01 by Bundle resolution rules
+  Warning @ Bundle.entry[15].resource.ofType(AllergyIntolerance).patient: Entry 1 matches the reference Patient/jppatientExample01 by type and id but it's fullUrl urn:uuid:0a43ab16-b609-4aff-926b-501d1fd3993d does not match the full target URL urn:uuid:jppatientExample01 by Bundle resolution rules
   Warning @ Bundle.meta.profile[0] (line 1, col2): Profile reference 'http://jpfhir.jp/fhir/eReferral/StructureDefinition/JP_Bundle_eReferral' has not been checked because it is unknown, and fetching it resulted in the error The URL 'http://jpfhir.jp/fhir/eReferral/StructureDefinition/JP_Bundle_eReferral' is not known to the FHIR validator, and has not been provided as part of the setup / parameters
   Warning @ Bundle.entry[6].resource.ofType(Organization).meta.profile[1] (line 698, col20): Profile reference 'http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Organization_eClinicalSummary_departmentOfIssuer' has not been checked because it is unknown, and fetching it resulted in the error The URL 'http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Organization_eClinicalSummary_departmentOfIssuer' is not known to the FHIR validator, and has not been provided as part of the setup / parameters
   Warning @ Bundle.entry[7].resource.ofType(Organization).meta.profile[1] (line 733, col20): Profile reference 'http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Organization_eClinicalSummary_departmentOfIssuer' has not been checked because it is unknown, and fetching it resulted in the error The URL 'http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Organization_eClinicalSummary_departmentOfIssuer' is not known to the FHIR validator, and has not been provided as part of the setup / parameters
