@@ -26,7 +26,7 @@ Description: "構成情報サンプル　composition"
 * category = $doc-typecodes#57133-1 "診療情報提供書"
 
 // * subject.reference = "jppatientExample01"
-* subject.reference = "urn:uuid:0a43ab16-b609-4aff-926b-501d1fd3993d"
+* subject.reference = "urn:uuid:d0e4cc23-82bd-4425-9f35-ec317d3cf226"
 * subject.type = "Patient"
 * subject.display = "患者リソースPatient"
 
@@ -36,16 +36,16 @@ Description: "構成情報サンプル　composition"
 * date = "2020-08-21T12:12:20+09:00"
 
 // * author[0].reference = "referralFromPractitionerExample01"
-* author[0].reference = "urn:uuid:eb3727e4-fd9a-4281-8a0a-c6970413f3cc"
+* author[0].reference = "urn:uuid:1f93709e-0b74-43fd-a674-b285297043b5"
 * author[=].type = "Practitioner"
 * author[=].display = "紹介状作成者PractitionerRoleリソース"
 // * author[+].reference = "referralFromOrganizaitonExample01"
-* author[+].reference = "urn:uuid:221f2598-cab7-461a-832b-8b5501c7d42c"
+* author[+].reference = "urn:uuid:2d13225e-e325-4eea-bfaa-f6c1e5ff586f"
 * author[=].type = "Organization"
 * author[=].display = "紹介状作成機関Organizationリソース"
 * title = "診療情報提供書"
 // * custodian.reference = Reference(referralFromOrganizaitonExample01)
-* custodian = Reference(urn:uuid:221f2598-cab7-461a-832b-8b5501c7d42c)
+* custodian.reference = none
 * custodian.type = "Organization"
 * custodian.display = "紹介状交付責任機関Organizationリソース"
 
@@ -57,19 +57,19 @@ Description: "構成情報サンプル　composition"
 * section[=].text.status = #additional
 * section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">東京第一テスト病院</div>"
 // * section[=].entry[+].reference = "referralToOrganizaitonExample01"
-* section[=].entry[+].reference = "urn:uuid:5fefea53-098d-4793-9425-2aa783f34830"
+* section[=].entry[+].reference = "urn:uuid:62e74295-fb09-4f53-b4f7-94d270945984"
 * section[=].entry[=].type = "Organization"
 * section[=].entry[=].display = "紹介先医療機関"
 
 
 // * section[=].entry[+].reference = "referralToOrganizaitonDeptExample01"
-* section[=].entry[+].reference = "urn:uuid:d4163977-9402-4e01-83fb-1564ab24370e"
+* section[=].entry[+].reference = "urn:uuid:37d7cf2d-a22f-4af9-b2d9-347dc878acb0"
 * section[=].entry[=].type = "Organization"
 * section[=].entry[=].display = "紹介先診療科"
 
 
 // * section[=].entry[+].reference = "referralToPractitionerExample01"
-* section[=].entry[+].reference = "urn:uuid:daa34959-b248-4df3-8ac0-d910ab22f14b"
+* section[=].entry[+].reference = "urn:uuid:8d7ce30f-2d54-40da-88d7-91682401175b"
 * section[=].entry[=].type = "Practitioner"
 * section[=].entry[=].display = "紹介先医師"
 
@@ -79,19 +79,19 @@ Description: "構成情報サンプル　composition"
 * section[=].text.status = #additional
 * section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">港診療所</div>"
 // * section[=].entry[+].reference = "referralFromOrganizaitonExample01"
-* section[=].entry[+].reference = "urn:uuid:221f2598-cab7-461a-832b-8b5501c7d42c"
+* section[=].entry[+].reference = "urn:uuid:2d13225e-e325-4eea-bfaa-f6c1e5ff586f"
 * section[=].entry[=].type = "Organization"
 * section[=].entry[=].display = "紹介元医療機関"
 
 
 // * section[=].entry[+].reference = "referralFromOrganizaitonDeptExample01"
-* section[=].entry[+].reference = "urn:uuid:8af6af7a-161a-442e-84a5-3195b101e031"
+* section[=].entry[+].reference = "urn:uuid:7dd04b03-8a26-4f4a-b6dc-2274acba3aeb"
 * section[=].entry[=].type = "Organization"
 * section[=].entry[=].display = "紹介元診療科"
 
 
 // * section[=].entry[+].reference = "referralFromPractitionerExample01"
-* section[=].entry[+].reference = "urn:uuid:eb3727e4-fd9a-4281-8a0a-c6970413f3cc"
+* section[=].entry[+].reference = "urn:uuid:1f93709e-0b74-43fd-a674-b285297043b5"
 * section[=].entry[=].type = "Practitioner"
 * section[=].entry[=].display = "紹介元医師"
 

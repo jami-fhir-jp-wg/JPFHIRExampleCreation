@@ -53,8 +53,8 @@
       {
         "id": "DeviceUseStatement",
         "path": "DeviceUseStatement",
-        "short": "Record of use of a device",
-        "definition": "A record of a device being used by a patient where the record is the result of a report from the patient or another clinician.",
+        "short": "デバイスの使用の記録 / Record of use of a device",
+        "definition": "記録が患者または他の臨床医からの報告の結果である患者が使用しているデバイスの記録。 / A record of a device being used by a patient where the record is the result of a report from the patient or another clinician.",
         "min": 0,
         "max": "*",
         "base": {
@@ -66,7 +66,7 @@
           {
             "key": "dom-2",
             "severity": "error",
-            "human": "If the resource is contained in another resource, it SHALL NOT contain nested Resources",
+            "human": "リソースが別のリソースに含まれている場合、ネストされたリソースを含めてはなりません / If the resource is contained in another resource, it SHALL NOT contain nested Resources",
             "expression": "contained.contained.empty()",
             "xpath": "not(parent::f:contained and f:contained)",
             "source": "http://hl7.org/fhir/StructureDefinition/DomainResource"
@@ -74,7 +74,7 @@
           {
             "key": "dom-3",
             "severity": "error",
-            "human": "If the resource is contained in another resource, it SHALL be referred to from elsewhere in the resource or SHALL refer to the containing resource",
+            "human": "リソースが別のリソースに含まれている場合、それはリソースの他の場所から参照されるか、含有リソースを参照するものとします / If the resource is contained in another resource, it SHALL be referred to from elsewhere in the resource or SHALL refer to the containing resource",
             "expression": "contained.where((('#'+id in (%resource.descendants().reference | %resource.descendants().as(canonical) | %resource.descendants().as(uri) | %resource.descendants().as(url))) or descendants().where(reference = '#').exists() or descendants().where(as(canonical) = '#').exists() or descendants().where(as(canonical) = '#').exists()).not()).trace('unmatched', id).empty()",
             "xpath": "not(exists(for $id in f:contained/*/f:id/@value return $contained[not(parent::*/descendant::f:reference/@value=concat('#', $contained/*/id/@value) or descendant::f:reference[@value='#'])]))",
             "source": "http://hl7.org/fhir/StructureDefinition/DomainResource"
@@ -82,7 +82,7 @@
           {
             "key": "dom-4",
             "severity": "error",
-            "human": "If a resource is contained in another resource, it SHALL NOT have a meta.versionId or a meta.lastUpdated",
+            "human": "リソースが別のリソースに含まれている場合、meta.versionidまたはmeta.lastupdatedを持たないものとします / If a resource is contained in another resource, it SHALL NOT have a meta.versionId or a meta.lastUpdated",
             "expression": "contained.meta.versionId.empty() and contained.meta.lastUpdated.empty()",
             "xpath": "not(exists(f:contained/*/f:meta/f:versionId)) and not(exists(f:contained/*/f:meta/f:lastUpdated))",
             "source": "http://hl7.org/fhir/StructureDefinition/DomainResource"
@@ -90,7 +90,7 @@
           {
             "key": "dom-5",
             "severity": "error",
-            "human": "If a resource is contained in another resource, it SHALL NOT have a security label",
+            "human": "別のリソースにリソースが含まれている場合、セキュリティラベルはありません / If a resource is contained in another resource, it SHALL NOT have a security label",
             "expression": "contained.meta.security.empty()",
             "xpath": "not(exists(f:contained/*/f:meta/f:security))",
             "source": "http://hl7.org/fhir/StructureDefinition/DomainResource"
@@ -103,12 +103,12 @@
               },
               {
                 "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice-explanation",
-                "valueMarkdown": "When a resource has no narrative, only systems that fully understand the data can display the resource to a human safely. Including a human readable representation in the resource makes for a much more robust eco-system and cheaper handling of resources by intermediary systems. Some ecosystems restrict distribution of resources to only those systems that do fully understand the resources, and as a consequence implementers may believe that the narrative is superfluous. However experience shows that such eco-systems often open up to new participants over time."
+                "valueMarkdown": "リソースに叙述(Narative)がない場合、データを完全に理解するシステムのみがリソースを人間に安全に表示できます。リソースに人間の読み取り可能な表現を含めることは、はるかに堅牢なエコシステムと、仲介システムによるリソースのより安価な取り扱いになります。一部のエコシステムは、リソースの分布をリソースを完全に理解しているシステムのみに制限しており、その結果、実装者は叙述(Narative)が余計であると信じるかもしれません。しかし、経験によると、そのようなエコシステムは、多くの場合、時間の経過とともに新しい参加者に開かれています。 / When a resource has no narrative, only systems that fully understand the data can display the resource to a human safely. Including a human readable representation in the resource makes for a much more robust eco-system and cheaper handling of resources by intermediary systems. Some ecosystems restrict distribution of resources to only those systems that do fully understand the resources, and as a consequence implementers may believe that the narrative is superfluous. However experience shows that such eco-systems often open up to new participants over time."
               }
             ],
             "key": "dom-6",
             "severity": "warning",
-            "human": "A resource should have narrative for robust management",
+            "human": "リソースには、堅牢な管理のための叙述(Narative)が必要です / A resource should have narrative for robust management",
             "expression": "text.`div`.exists()",
             "xpath": "exists(f:text/h:div)",
             "source": "http://hl7.org/fhir/StructureDefinition/DomainResource"
@@ -134,9 +134,9 @@
       {
         "id": "DeviceUseStatement.id",
         "path": "DeviceUseStatement.id",
-        "short": "Logical id of this artifact",
-        "definition": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.",
-        "comment": "The only time that a resource does not have an id is when it is being submitted to the server using a create operation.",
+        "short": "このアーティファクトの論理ID / Logical id of this artifact",
+        "definition": "リソースのURLで使用されるリソースの論理ID。割り当てられたら、この値は変更されません。 / The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.",
+        "comment": "リソースにIDがないのは、IDが作成操作を使用してサーバーに送信されている場合です。 / The only time that a resource does not have an id is when it is being submitted to the server using a create operation.",
         "min": 0,
         "max": "1",
         "base": {
@@ -161,8 +161,8 @@
       {
         "id": "DeviceUseStatement.meta",
         "path": "DeviceUseStatement.meta",
-        "short": "Metadata about the resource",
-        "definition": "The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.",
+        "short": "リソースに関するメタデータ / Metadata about the resource",
+        "definition": "リソースに関するメタデータ。これは、インフラストラクチャによって維持されるコンテンツです。コンテンツの変更は、常にリソースのバージョンの変更に関連付けられているとは限りません。 / The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.",
         "min": 0,
         "max": "1",
         "base": {
@@ -179,7 +179,7 @@
           {
             "key": "ele-1",
             "severity": "error",
-            "human": "All FHIR elements must have a @value or children",
+            "human": "すべてのFHIR要素には、@valueまたは子供が必要です / All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() > id.count())",
             "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
@@ -191,9 +191,9 @@
       {
         "id": "DeviceUseStatement.implicitRules",
         "path": "DeviceUseStatement.implicitRules",
-        "short": "A set of rules under which this content was created",
-        "definition": "A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.",
-        "comment": "Asserting this rule set restricts the content to be only understood by a limited set of trading partners. This inherently limits the usefulness of the data in the long term. However, the existing health eco-system is highly fractured, and not yet ready to define, collect, and exchange data in a generally computable sense. Wherever possible, implementers and/or specification writers should avoid using this element. Often, when used, the URL is a reference to an implementation guide that defines these special rules as part of it's narrative along with other profiles, value sets, etc.",
+        "short": "このコンテンツが作成されたルールのセット / A set of rules under which this content was created",
+        "definition": "リソースが構築されたときに従った一連のルールへの参照。コンテンツの処理時に理解する必要があります。多くの場合、これは他のプロファイルなどとともに特別なルールを定義する実装ガイドへの参照です。 / A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.",
+        "comment": "このルールセットを主張することは、コンテンツが限られた取引パートナーのセットによってのみ理解されることを制限します。これにより、本質的に長期的にデータの有用性が制限されます。ただし、既存の健康エコシステムは非常に破壊されており、一般的に計算可能な意味でデータを定義、収集、交換する準備ができていません。可能な限り、実装者や仕様ライターはこの要素の使用を避ける必要があります。多くの場合、使用する場合、URLは、これらの特別なルールを他のプロファイル、バリューセットなどとともに叙述(Narative)の一部として定義する実装ガイドへの参照です。 / Asserting this rule set restricts the content to be only understood by a limited set of trading partners. This inherently limits the usefulness of the data in the long term. However, the existing health eco-system is highly fractured, and not yet ready to define, collect, and exchange data in a generally computable sense. Wherever possible, implementers and/or specification writers should avoid using this element. Often, when used, the URL is a reference to an implementation guide that defines these special rules as part of it's narrative along with other profiles, value sets, etc.",
         "min": 0,
         "max": "1",
         "base": {
@@ -210,22 +210,22 @@
           {
             "key": "ele-1",
             "severity": "error",
-            "human": "All FHIR elements must have a @value or children",
+            "human": "すべてのFHIR要素には、@valueまたは子供が必要です / All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() > id.count())",
             "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
         "isModifier": true,
-        "isModifierReason": "This element is labeled as a modifier because the implicit rules may provide additional knowledge about the resource that modifies it's meaning or interpretation",
+        "isModifierReason": "暗黙のルールは、意味または解釈を変更するリソースに関する追加の知識を提供する可能性があるため、この要素は修飾子としてラベル付けされています。 / This element is labeled as a modifier because the implicit rules may provide additional knowledge about the resource that modifies it's meaning or interpretation",
         "isSummary": true
       },
       {
         "id": "DeviceUseStatement.language",
         "path": "DeviceUseStatement.language",
-        "short": "Language of the resource content",
-        "definition": "The base language in which the resource is written.",
-        "comment": "Language is provided to support indexing and accessibility (typically, services such as text to speech use the language tag). The html language tag in the narrative applies  to the narrative. The language tag on the resource may be used to specify the language of other presentations generated from the data in the resource. Not all the content has to be in the base language. The Resource.language should not be assumed to apply to the narrative automatically. If a language is specified, it should it also be specified on the div element in the html (see rules in HTML5 for information about the relationship between xml:lang and the html lang attribute).",
+        "short": "リソースコンテンツの言語 / Language of the resource content",
+        "definition": "リソースが書かれている基本言語。 / The base language in which the resource is written.",
+        "comment": "言語は、インデックス作成とアクセシビリティをサポートするために提供されます（通常、テキストから音声までのサービスなどのサービスが言語タグを使用します）。叙述(Narative)のHTML言語タグは、叙述(Narative)に適用されます。リソース上の言語タグを使用して、リソース内のデータから生成された他のプレゼンテーションの言語を指定できます。すべてのコンテンツが基本言語である必要はありません。リソース。言語は、叙述(Narative)に自動的に適用されると想定されるべきではありません。言語が指定されている場合、HTMLのDIV要素にも指定されている場合（XML：LangとHTML Lang属性の関係については、HTML5のルールを参照してください）。 / Language is provided to support indexing and accessibility (typically, services such as text to speech use the language tag). The html language tag in the narrative applies  to the narrative. The language tag on the resource may be used to specify the language of other presentations generated from the data in the resource. Not all the content has to be in the base language. The Resource.language should not be assumed to apply to the narrative automatically. If a language is specified, it should it also be specified on the div element in the html (see rules in HTML5 for information about the relationship between xml:lang and the html lang attribute).",
         "min": 0,
         "max": "1",
         "base": {
@@ -242,7 +242,7 @@
           {
             "key": "ele-1",
             "severity": "error",
-            "human": "All FHIR elements must have a @value or children",
+            "human": "すべてのFHIR要素には、@valueまたは子供が必要です / All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() > id.count())",
             "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
@@ -266,16 +266,16 @@
             }
           ],
           "strength": "preferred",
-          "description": "A human language.",
+          "description": "人間の言語。 / A human language.",
           "valueSet": "http://hl7.org/fhir/ValueSet/languages"
         }
       },
       {
         "id": "DeviceUseStatement.text",
         "path": "DeviceUseStatement.text",
-        "short": "Text summary of the resource, for human interpretation",
-        "definition": "A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.",
-        "comment": "Contained resources do not have narrative. Resources that are not contained SHOULD have a narrative. In some cases, a resource may only have text with little or no additional discrete data (as long as all minOccurs=1 elements are satisfied).  This may be necessary for data from legacy systems where information is captured as a \"text blob\" or where text is additionally entered raw or narrated and encoded information is added later.",
+        "short": "人間の解釈のためのリソースのテキスト概要 / Text summary of the resource, for human interpretation",
+        "definition": "リソースの概要を含み、人間へのリソースの内容を表すために使用できる人間の読み取り可能な叙述(Narative)。叙述(Narative)はすべての構造化されたデータをエンコードする必要はありませんが、人間が叙述(Narative)を読むだけで「臨床的に安全」にするために十分な詳細を含める必要があります。リソースの定義は、臨床的安全を確保するために、叙述(Narative)で表現するコンテンツを定義する場合があります。 / A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.",
+        "comment": "含まれるリソースには叙述(Narative)がありません。含まれていないリソースには叙述(Narative)が必要です。場合によっては、リソースには、追加の個別のデータがほとんどまたはまったくないテキストのみがあります（すべてのMinoccur = 1要素が満たされている限り）。これは、情報がtext blob (バイナリー ラージ オブジェクト)としてキャプチャされるレガシーシステムからのデータ、またはテキストが生またはナレーションされ、エンコードされた情報が後で追加される場合に必要になる場合があります。 / Contained resources do not have narrative. Resources that are not contained SHOULD have a narrative. In some cases, a resource may only have text with little or no additional discrete data (as long as all minOccurs=1 elements are satisfied).  This may be necessary for data from legacy systems where information is captured as a \"text blob\" or where text is additionally entered raw or narrated and encoded information is added later.",
         "alias": [
           "narrative",
           "html",
@@ -298,7 +298,7 @@
           {
             "key": "ele-1",
             "severity": "error",
-            "human": "All FHIR elements must have a @value or children",
+            "human": "すべてのFHIR要素には、@valueまたは子供が必要です / All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() > id.count())",
             "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
@@ -316,9 +316,9 @@
       {
         "id": "DeviceUseStatement.contained",
         "path": "DeviceUseStatement.contained",
-        "short": "Contained, inline Resources",
-        "definition": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope.",
-        "comment": "This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again. Contained resources may have profiles and tags In their meta elements, but SHALL NOT have security labels.",
+        "short": "インラインリソースが含まれています / Contained, inline Resources",
+        "definition": "これらのリソースには、それらを含むリソースを除いて独立した存在はありません - 独立して特定することはできず、独自の独立したトランザクションスコープを持つこともできません。 / These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope.",
+        "comment": "識別が失われると、コンテンツを適切に識別できる場合は、これを行うべきではありません。含まれるリソースには、メタ要素にプロファイルとタグがある場合がありますが、セキュリティラベルはありません。 / This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again. Contained resources may have profiles and tags In their meta elements, but SHALL NOT have security labels.",
         "alias": [
           "inline resources",
           "anonymous resources",
@@ -348,9 +348,9 @@
       {
         "id": "DeviceUseStatement.extension",
         "path": "DeviceUseStatement.extension",
-        "short": "Additional content defined by implementations",
-        "definition": "May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
-        "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "short": "実装で定義された追加のコンテンツ / Additional content defined by implementations",
+        "definition": "リソースの基本的な定義の一部ではない追加情報を表すために使用できます。拡張機能を安全で管理しやすくするために、拡張機能の定義と使用に適用される厳格なガバナンスセットがあります。実装者は拡張機能を定義できますが、拡張機能の定義の一部として満たされる一連の要件があります。 / May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+        "comment": "拡張機能を使用または定義する機関や管轄権に関係なく、アプリケーション、プロジェクト、または標準による拡張機能の使用に関連するスティグマはありません。拡張機能の使用は、FHIR仕様がすべての人にコアレベルのシンプルさを保持できるようにするものです。 / There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
         "alias": [
           "extensions",
           "user content"
@@ -371,7 +371,7 @@
           {
             "key": "ele-1",
             "severity": "error",
-            "human": "All FHIR elements must have a @value or children",
+            "human": "すべてのFHIR要素には、@valueまたは子供が必要です / All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() > id.count())",
             "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
@@ -379,7 +379,7 @@
           {
             "key": "ext-1",
             "severity": "error",
-            "human": "Must have either extensions or value[x], not both",
+            "human": "両方ではなく、拡張または値[x]が必要です / Must have either extensions or value[x], not both",
             "expression": "extension.exists() != value.exists()",
             "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), \"value\")])",
             "source": "http://hl7.org/fhir/StructureDefinition/Extension"
@@ -397,10 +397,10 @@
       {
         "id": "DeviceUseStatement.modifierExtension",
         "path": "DeviceUseStatement.modifierExtension",
-        "short": "Extensions that cannot be ignored",
-        "definition": "May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
-        "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
-        "requirements": "Modifier extensions allow for extensions that *cannot* be safely ignored to be clearly distinguished from the vast majority of extensions which can be safely ignored.  This promotes interoperability by eliminating the need for implementers to prohibit the presence of extensions. For further information, see the [definition of modifier extensions](extensibility.html#modifierExtension).",
+        "short": "無視できない拡張機能 / Extensions that cannot be ignored",
+        "definition": "リソースの基本的な定義の一部ではなく、それを含む要素の理解および/または含有要素の子孫の理解を変更するために使用される場合があります。通常、修飾子要素は否定または資格を提供します。拡張機能を安全で管理しやすくするために、拡張機能の定義と使用に適用される厳格なガバナンスセットがあります。実装者は拡張機能を定義することが許可されていますが、拡張機能の定義の一部として満たされる一連の要件があります。アプリケーションの処理リソースは、修飾子拡張機能をチェックする必要があります。\n\nモディファイア拡張は、リソースまたはdomainResource上の要素の意味を変更してはなりません（修飾軸自体の意味を変更することはできません）。 / May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
+        "comment": "拡張機能を使用または定義する機関や管轄権に関係なく、アプリケーション、プロジェクト、または標準による拡張機能の使用に関連するスティグマはありません。拡張機能の使用は、FHIR仕様がすべての人にコアレベルのシンプルさを保持できるようにするものです。 / There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "requirements": "修飾子拡張機能により、安全に無視できる大部分の拡張機能と明確に区別できるように、安全に無視できない拡張機能が可能になります。これにより、実装者が拡張の存在を禁止する必要性を排除することにより、相互運用性が促進されます。詳細については、[修飾子拡張の定義]（拡張性.html＃modifierextension）を参照してください。 / Modifier extensions allow for extensions that *cannot* be safely ignored to be clearly distinguished from the vast majority of extensions which can be safely ignored.  This promotes interoperability by eliminating the need for implementers to prohibit the presence of extensions. For further information, see the [definition of modifier extensions](extensibility.html#modifierExtension).",
         "alias": [
           "extensions",
           "user content"
@@ -421,7 +421,7 @@
           {
             "key": "ele-1",
             "severity": "error",
-            "human": "All FHIR elements must have a @value or children",
+            "human": "すべてのFHIR要素には、@valueまたは子供が必要です / All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() > id.count())",
             "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
@@ -429,14 +429,14 @@
           {
             "key": "ext-1",
             "severity": "error",
-            "human": "Must have either extensions or value[x], not both",
+            "human": "両方ではなく、拡張または値[x]が必要です / Must have either extensions or value[x], not both",
             "expression": "extension.exists() != value.exists()",
             "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), \"value\")])",
             "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ],
         "isModifier": true,
-        "isModifierReason": "Modifier extensions are expected to modify the meaning or interpretation of the resource that contains them",
+        "isModifierReason": "モディファイア拡張は、それらを含むリソースの意味または解釈を変更することが期待されています / Modifier extensions are expected to modify the meaning or interpretation of the resource that contains them",
         "isSummary": false,
         "mapping": [
           {
@@ -448,8 +448,8 @@
       {
         "id": "DeviceUseStatement.identifier",
         "path": "DeviceUseStatement.identifier",
-        "short": "External identifier for this record",
-        "definition": "An external identifier for this statement such as an IRI.",
+        "short": "このレコードの外部識別子 / External identifier for this record",
+        "definition": "IRIなどのこのステートメントの外部識別子。 / An external identifier for this statement such as an IRI.",
         "min": 0,
         "max": "*",
         "base": {
@@ -466,7 +466,7 @@
           {
             "key": "ele-1",
             "severity": "error",
-            "human": "All FHIR elements must have a @value or children",
+            "human": "すべてのFHIR要素には、@valueまたは子供が必要です / All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() > id.count())",
             "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
@@ -492,9 +492,9 @@
       {
         "id": "DeviceUseStatement.basedOn",
         "path": "DeviceUseStatement.basedOn",
-        "short": "Fulfills plan, proposal or order",
-        "definition": "A plan, proposal or order that is fulfilled in whole or in part by this DeviceUseStatement.",
-        "requirements": "Allows tracing of authorization for the DeviceUseStatement and tracking whether proposals/recommendations were acted upon.",
+        "short": "計画、提案、または命令を満たします / Fulfills plan, proposal or order",
+        "definition": "このdevice -sestatementによって全体的または一部に満たされる計画、提案、または命令。 / A plan, proposal or order that is fulfilled in whole or in part by this DeviceUseStatement.",
+        "requirements": "DeviceSestatementの許可の追跡と、提案/勧告が行われたかどうかを追跡することができます。 / Allows tracing of authorization for the DeviceUseStatement and tracking whether proposals/recommendations were acted upon.",
         "alias": [
           "fulfills"
         ],
@@ -517,7 +517,7 @@
           {
             "key": "ele-1",
             "severity": "error",
-            "human": "All FHIR elements must have a @value or children",
+            "human": "すべてのFHIR要素には、@valueまたは子供が必要です / All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() > id.count())",
             "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
@@ -543,9 +543,9 @@
       {
         "id": "DeviceUseStatement.status",
         "path": "DeviceUseStatement.status",
-        "short": "active | completed | entered-in-error +",
-        "definition": "A code representing the patient or other source's judgment about the state of the device used that this statement is about.  Generally this will be active or completed.",
-        "comment": "DeviceUseStatment is a statement at a point in time.  The status is only representative at the point when it was asserted.  The value set for contains codes that assert the status of the use  by the patient (for example, stopped or on hold) as well as codes that assert the status of the resource itself (for example, entered in error).\r\rThis element is labeled as a modifier because the status contains the codes that mark the statement as not currently valid.",
+        "short": "アクティブ|完了|Enter-in-error + / active | completed | entered-in-error +",
+        "definition": "このステートメントがその声明を使用した患者または他のソースのデバイスの状態に関する判断を表すコード。通常、これはアクティブまたは完了します。 / A code representing the patient or other source's judgment about the state of the device used that this statement is about.  Generally this will be active or completed.",
+        "comment": "DeviceSestatmentは、ある時点での声明です。ステータスは、主張された時点でのみ代表です。に設定された値には、患者による使用状況を主張するコード（たとえば、停止または保留中）と、リソース自体のステータスを主張するコード（たとえば、誤って入力）を含むコードが含まれています。\r\rこの要素には、ステートメントが現在有効ではないとマークするコードが含まれているため、この要素にモディファイアとしてラベル付けされています。 / DeviceUseStatment is a statement at a point in time.  The status is only representative at the point when it was asserted.  The value set for contains codes that assert the status of the use  by the patient (for example, stopped or on hold) as well as codes that assert the status of the resource itself (for example, entered in error).\r\rThis element is labeled as a modifier because the status contains the codes that mark the statement as not currently valid.",
         "min": 1,
         "max": "1",
         "base": {
@@ -562,14 +562,14 @@
           {
             "key": "ele-1",
             "severity": "error",
-            "human": "All FHIR elements must have a @value or children",
+            "human": "すべてのFHIR要素には、@valueまたは子供が必要です / All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() > id.count())",
             "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
         "isModifier": true,
-        "isModifierReason": "This element is labelled as a modifier because it is a status element that contains status entered-in-error which means that the resource should not be treated as valid",
+        "isModifierReason": "この要素は、リソースを有効として扱うべきではないことを意味するステータスに入力されたステータスを含むステータス要素であるため、修飾子としてラベル付けされています。 / This element is labelled as a modifier because it is a status element that contains status entered-in-error which means that the resource should not be treated as valid",
         "isSummary": true,
         "binding": {
           "extension": [
@@ -579,7 +579,7 @@
             }
           ],
           "strength": "required",
-          "description": "A coded concept indicating the current status of the Device Usage.",
+          "description": "デバイスの使用状況の現在のステータスを示すコード化された概念。 / A coded concept indicating the current status of the Device Usage.",
           "valueSet": "http://hl7.org/fhir/ValueSet/device-statement-status|4.0.1"
         },
         "mapping": [
@@ -604,8 +604,8 @@
       {
         "id": "DeviceUseStatement.subject",
         "path": "DeviceUseStatement.subject",
-        "short": "Patient using device",
-        "definition": "The patient who used the device.",
+        "short": "デバイスを使用して患者 / Patient using device",
+        "definition": "デバイスを使用した患者。 / The patient who used the device.",
         "min": 1,
         "max": "1",
         "base": {
@@ -626,7 +626,7 @@
           {
             "key": "ele-1",
             "severity": "error",
-            "human": "All FHIR elements must have a @value or children",
+            "human": "すべてのFHIR要素には、@valueまたは子供が必要です / All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() > id.count())",
             "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
@@ -656,9 +656,9 @@
       {
         "id": "DeviceUseStatement.derivedFrom",
         "path": "DeviceUseStatement.derivedFrom",
-        "short": "Supporting information",
-        "definition": "Allows linking the DeviceUseStatement to the underlying Request, or to other information that supports or is used to derive the DeviceUseStatement.",
-        "comment": "The most common use cases for deriving a DeviceUseStatement comes from creating it from a request or from an observation or a claim. it should be noted that the amount of information that is available varies from the type resource that you derive the DeviceUseStatement from.",
+        "short": "サポート情報 / Supporting information",
+        "definition": "DeviceSestatementを基礎となる要求、またはDeviceSestatementの導出にサポートまたは使用する他の情報にリンクできます。 / Allows linking the DeviceUseStatement to the underlying Request, or to other information that supports or is used to derive the DeviceUseStatement.",
+        "comment": "DeviceSestatementを導き出すための最も一般的なユースケースは、リクエストまたは観察または請求からそれを作成することです。利用可能な情報の量は、deviceSestatementを導き出すタイプリソースによって異なることに注意する必要があります。 / The most common use cases for deriving a DeviceUseStatement comes from creating it from a request or from an observation or a claim. it should be noted that the amount of information that is available varies from the type resource that you derive the DeviceUseStatement from.",
         "min": 0,
         "max": "*",
         "base": {
@@ -683,7 +683,7 @@
           {
             "key": "ele-1",
             "severity": "error",
-            "human": "All FHIR elements must have a @value or children",
+            "human": "すべてのFHIR要素には、@valueまたは子供が必要です / All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() > id.count())",
             "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
@@ -695,8 +695,8 @@
       {
         "id": "DeviceUseStatement.timing[x]",
         "path": "DeviceUseStatement.timing[x]",
-        "short": "How often  the device was used",
-        "definition": "How often the device was used.",
+        "short": "デバイスが使用される頻度 / How often  the device was used",
+        "definition": "デバイスが使用される頻度。 / How often the device was used.",
         "min": 0,
         "max": "1",
         "base": {
@@ -719,7 +719,7 @@
           {
             "key": "ele-1",
             "severity": "error",
-            "human": "All FHIR elements must have a @value or children",
+            "human": "すべてのFHIR要素には、@valueまたは子供が必要です / All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() > id.count())",
             "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
@@ -745,8 +745,8 @@
       {
         "id": "DeviceUseStatement.recordedOn",
         "path": "DeviceUseStatement.recordedOn",
-        "short": "When statement was recorded",
-        "definition": "The time at which the statement was made/recorded.",
+        "short": "声明が記録されたとき / When statement was recorded",
+        "definition": "声明が作成/記録された時間。 / The time at which the statement was made/recorded.",
         "min": 0,
         "max": "1",
         "base": {
@@ -763,7 +763,7 @@
           {
             "key": "ele-1",
             "severity": "error",
-            "human": "All FHIR elements must have a @value or children",
+            "human": "すべてのFHIR要素には、@valueまたは子供が必要です / All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() > id.count())",
             "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
@@ -785,8 +785,8 @@
       {
         "id": "DeviceUseStatement.source",
         "path": "DeviceUseStatement.source",
-        "short": "Who made the statement",
-        "definition": "Who reported the device was being used by the patient.",
+        "short": "誰が声明を出した / Who made the statement",
+        "definition": "このデバイスが患者によって使用されていると報告した人。 / Who reported the device was being used by the patient.",
         "min": 0,
         "max": "1",
         "base": {
@@ -809,7 +809,7 @@
           {
             "key": "ele-1",
             "severity": "error",
-            "human": "All FHIR elements must have a @value or children",
+            "human": "すべてのFHIR要素には、@valueまたは子供が必要です / All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() > id.count())",
             "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
@@ -831,8 +831,8 @@
       {
         "id": "DeviceUseStatement.device",
         "path": "DeviceUseStatement.device",
-        "short": "Reference to device used",
-        "definition": "The details of the device used.",
+        "short": "使用されるデバイスへの参照 / Reference to device used",
+        "definition": "使用されるデバイスの詳細。 / The details of the device used.",
         "min": 1,
         "max": "1",
         "base": {
@@ -852,7 +852,7 @@
           {
             "key": "ele-1",
             "severity": "error",
-            "human": "All FHIR elements must have a @value or children",
+            "human": "すべてのFHIR要素には、@valueまたは子供が必要です / All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() > id.count())",
             "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
@@ -874,8 +874,8 @@
       {
         "id": "DeviceUseStatement.reasonCode",
         "path": "DeviceUseStatement.reasonCode",
-        "short": "Why device was used",
-        "definition": "Reason or justification for the use of the device.",
+        "short": "デバイスが使用された理由 / Why device was used",
+        "definition": "デバイスの使用の理由または正当化。 / Reason or justification for the use of the device.",
         "min": 0,
         "max": "*",
         "base": {
@@ -892,7 +892,7 @@
           {
             "key": "ele-1",
             "severity": "error",
-            "human": "All FHIR elements must have a @value or children",
+            "human": "すべてのFHIR要素には、@valueまたは子供が必要です / All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() > id.count())",
             "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
@@ -918,8 +918,8 @@
       {
         "id": "DeviceUseStatement.reasonReference",
         "path": "DeviceUseStatement.reasonReference",
-        "short": "Why was DeviceUseStatement performed?",
-        "definition": "Indicates another resource whose existence justifies this DeviceUseStatement.",
+        "short": "DeviceSestatementが実行されたのはなぜですか？ / Why was DeviceUseStatement performed?",
+        "definition": "存在がこのdeviceSestatementを正当化する別のリソースを示します。 / Indicates another resource whose existence justifies this DeviceUseStatement.",
         "min": 0,
         "max": "*",
         "base": {
@@ -943,7 +943,7 @@
           {
             "key": "ele-1",
             "severity": "error",
-            "human": "All FHIR elements must have a @value or children",
+            "human": "すべてのFHIR要素には、@valueまたは子供が必要です / All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() > id.count())",
             "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
@@ -973,9 +973,9 @@
       {
         "id": "DeviceUseStatement.bodySite",
         "path": "DeviceUseStatement.bodySite",
-        "short": "Target body site",
-        "definition": "Indicates the anotomic location on the subject's body where the device was used ( i.e. the target).",
-        "requirements": "Knowing where the device is targeted is important for tracking if multiple sites are possible. If more information than just a code is required, use the extension [http://hl7.org/fhir/StructureDefinition/bodySite](null.html).",
+        "short": "ターゲットボディサイト / Target body site",
+        "definition": "デバイスが使用されている被験者の本体（つまり、ターゲット）の陽性の位置を示します。 / Indicates the anotomic location on the subject's body where the device was used ( i.e. the target).",
+        "requirements": "デバイスがターゲットにされている場所を知ることは、複数のサイトが可能かどうかを追跡するために重要です。単なるコードよりも多くの情報が必要な場合は、拡張子[http://hl7.org/fhir/structuredefinition/bodysite]（null.html）を使用します。 / Knowing where the device is targeted is important for tracking if multiple sites are possible. If more information than just a code is required, use the extension [http://hl7.org/fhir/StructureDefinition/bodySite](null.html).",
         "min": 0,
         "max": "1",
         "base": {
@@ -992,7 +992,7 @@
           {
             "key": "ele-1",
             "severity": "error",
-            "human": "All FHIR elements must have a @value or children",
+            "human": "すべてのFHIR要素には、@valueまたは子供が必要です / All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() > id.count())",
             "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
@@ -1008,7 +1008,7 @@
             }
           ],
           "strength": "example",
-          "description": "Codes describing anatomical locations. May include laterality.",
+          "description": "解剖学的場所を説明するコード。左右性が含まれる場合があります。 / Codes describing anatomical locations. May include laterality.",
           "valueSet": "http://hl7.org/fhir/ValueSet/body-site"
         },
         "mapping": [
@@ -1025,8 +1025,8 @@
       {
         "id": "DeviceUseStatement.note",
         "path": "DeviceUseStatement.note",
-        "short": "Addition details (comments, instructions)",
-        "definition": "Details about the device statement that were not represented at all or sufficiently in one of the attributes provided in a class. These may include for example a comment, an instruction, or a note associated with the statement.",
+        "short": "追加の詳細（コメント、指示） / Addition details (comments, instructions)",
+        "definition": "クラスで提供されている属性の1つでまったく表されていない、または十分に表されていないデバイスステートメントの詳細。これらには、たとえばコメント、指示、または声明に関連するメモが含まれる場合があります。 / Details about the device statement that were not represented at all or sufficiently in one of the attributes provided in a class. These may include for example a comment, an instruction, or a note associated with the statement.",
         "min": 0,
         "max": "*",
         "base": {
@@ -1043,7 +1043,7 @@
           {
             "key": "ele-1",
             "severity": "error",
-            "human": "All FHIR elements must have a @value or children",
+            "human": "すべてのFHIR要素には、@valueまたは子供が必要です / All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() > id.count())",
             "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
