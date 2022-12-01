@@ -14,7 +14,7 @@
   "timestamp": "2021-11-26T10:00:00+09:00",
   "entry": [
     {
-      "fullUrl": "urn:uuid:ccd17cec-eebd-412d-9568-6fedb110e567",
+      "fullUrl": "urn:uuid:f7109fce-572e-4d39-9657-534aca8f94e6",
       "resource": {
         "resourceType": "Composition",
         "id": "compositionReferralExample01",
@@ -55,26 +55,31 @@
           }
         ],
         "subject": {
-          "reference": "urn:uuid:f9a0d875-2413-4653-9ce0-cd5b1a5383f6",
+          "reference": "urn:uuid:fbb3e0ce-4abe-4f58-905d-41f4bff22607",
           "type": "Patient",
           "display": "患者リソースPatient"
+        },
+        "encounter": {
+          "reference": "urn:uuid:8b6f09fa-3b04-4229-932b-ad98a5e706d2",
+          "type": "Encounter",
+          "display": "受診Encounterリソース"
         },
         "date": "2020-08-21T12:12:20+09:00",
         "author": [
           {
-            "reference": "urn:uuid:d23aea10-20e7-4266-9eca-6ba53966e96f",
+            "reference": "urn:uuid:61da641e-6418-4e55-856b-593a2eaa96da",
             "type": "Practitioner",
             "display": "紹介状作成者PractitionerRoleリソース"
           },
           {
-            "reference": "urn:uuid:4be13836-d9c5-4156-976e-7ada7ad6ec5f",
+            "reference": "urn:uuid:b6da3111-94cf-4241-a4cd-3c3edb2596a8",
             "type": "Organization",
             "display": "紹介状作成機関Organizationリソース"
           }
         ],
         "title": "診療情報提供書",
         "custodian": {
-          "reference": "urn:uuid:4be13836-d9c5-4156-976e-7ada7ad6ec5f",
+          "reference": "urn:uuid:b6da3111-94cf-4241-a4cd-3c3edb2596a8",
           "type": "Organization",
           "display": "紹介状交付責任機関Organizationリソース"
         },
@@ -108,17 +113,17 @@
             },
             "entry": [
               {
-                "reference": "urn:uuid:b9603e8d-773d-406d-889d-42bcaf19bd84",
+                "reference": "urn:uuid:1b0136d2-628b-4ea1-ad88-133ec5e7478d",
                 "type": "Organization",
                 "display": "紹介先医療機関"
               },
               {
-                "reference": "urn:uuid:d9b31062-ee2d-4c24-9bec-8a2e301341c5",
+                "reference": "urn:uuid:0786743a-b14a-449e-9cf3-a3380b8114bf",
                 "type": "Organization",
                 "display": "紹介先診療科"
               },
               {
-                "reference": "urn:uuid:196dd763-9939-4b21-909f-0d3883188064",
+                "reference": "urn:uuid:63bedefa-840b-4477-a9bb-3ac706302285",
                 "type": "Practitioner",
                 "display": "紹介先医師"
               }
@@ -141,17 +146,17 @@
             },
             "entry": [
               {
-                "reference": "urn:uuid:4be13836-d9c5-4156-976e-7ada7ad6ec5f",
+                "reference": "urn:uuid:b6da3111-94cf-4241-a4cd-3c3edb2596a8",
                 "type": "Organization",
                 "display": "紹介元医療機関"
               },
               {
-                "reference": "urn:uuid:69144e08-bb82-4043-b985-7a41489d9c2f",
+                "reference": "urn:uuid:2cb706fa-f7b2-4a5e-8fe8-ed9f4c993304",
                 "type": "Organization",
                 "display": "紹介元診療科"
               },
               {
-                "reference": "urn:uuid:d23aea10-20e7-4266-9eca-6ba53966e96f",
+                "reference": "urn:uuid:61da641e-6418-4e55-856b-593a2eaa96da",
                 "type": "Practitioner",
                 "display": "紹介元医師"
               }
@@ -186,7 +191,7 @@
                 },
                 "entry": [
                   {
-                    "reference": "urn:uuid:f6e5fc5f-224c-41c3-9f0c-249ba95a9a9e",
+                    "reference": "urn:uuid:6a1068b0-f3a2-4321-8986-8d627a1759cd",
                     "type": "Encounter",
                     "display": "紹介目的"
                   }
@@ -209,12 +214,12 @@
                 },
                 "entry": [
                   {
-                    "reference": "urn:uuid:c66c535b-bfb0-401a-81b6-08de6bcbd823",
+                    "reference": "urn:uuid:4b33e199-9a69-4fd1-8f47-26f7522d369f",
                     "type": "Condition",
                     "display": "傷病名・主訴"
                   },
                   {
-                    "reference": "urn:uuid:5d872336-74b6-4b69-a443-7ade800a3cab",
+                    "reference": "urn:uuid:8c397d49-298f-4e86-a325-5b071f705348",
                     "type": "Condition",
                     "display": "傷病名・主訴"
                   }
@@ -237,7 +242,7 @@
                 },
                 "entry": [
                   {
-                    "reference": "urn:uuid:0003d3f9-78dd-42e1-9c3d-a1b777d8d5aa",
+                    "reference": "urn:uuid:59d7d3af-4801-42a5-a68c-2884fa9dda31",
                     "type": "Condition",
                     "display": "現病歴"
                   }
@@ -260,12 +265,12 @@
                 },
                 "entry": [
                   {
-                    "reference": "urn:uuid:f3ff258e-815e-44eb-a959-cb89bd92a42d",
+                    "reference": "urn:uuid:37e61dbc-9bd1-4e0b-b229-bc8ee3b0dbbc",
                     "type": "Condition",
                     "display": "既往歴"
                   },
                   {
-                    "reference": "urn:uuid:64fe4ca4-513b-44c1-97d9-474db6b8df2a",
+                    "reference": "urn:uuid:cb5d465a-2f9c-4f81-8562-222a53eb0069",
                     "type": "Condition",
                     "display": "既往歴"
                   }
@@ -288,12 +293,12 @@
                 },
                 "entry": [
                   {
-                    "reference": "urn:uuid:3099ff3e-1f37-4c6b-a4f4-17ae51aaa8e6",
+                    "reference": "urn:uuid:e773fe6d-8b19-4cc7-892f-6a1b2f9ce774",
                     "type": "AllergyIntolerance",
                     "display": "アレルギー・不耐性反応"
                   },
                   {
-                    "reference": "urn:uuid:f2a78877-af3a-41b0-88c7-0b56f75d610c",
+                    "reference": "urn:uuid:a19900b0-6956-4288-8c5a-0fb73a726cc3",
                     "type": "AllergyIntolerance",
                     "display": "アレルギー・不耐性反応"
                   }
@@ -332,7 +337,7 @@
                 },
                 "entry": [
                   {
-                    "reference": "urn:uuid:197e0d65-099e-401d-b5fb-2f64ffe5fe4d",
+                    "reference": "urn:uuid:574f0a00-5989-4d13-bfa1-c79b6559b614",
                     "type": "Observation",
                     "display": "身体所見"
                   }
@@ -371,7 +376,7 @@
                 },
                 "entry": [
                   {
-                    "reference": "urn:uuid:eb4085b8-1850-441c-8c8a-9e11febf0c97",
+                    "reference": "urn:uuid:d75539d3-cc84-42da-8726-1784a806c90c",
                     "type": "DocumentReference",
                     "display": "臨床経過"
                   }
@@ -383,7 +388,7 @@
       }
     },
     {
-      "fullUrl": "urn:uuid:f9a0d875-2413-4653-9ce0-cd5b1a5383f6",
+      "fullUrl": "urn:uuid:fbb3e0ce-4abe-4f58-905d-41f4bff22607",
       "resource": {
         "resourceType": "Patient",
         "id": "jppatientExample01",
@@ -448,14 +453,51 @@
       }
     },
     {
-      "fullUrl": "urn:uuid:d23aea10-20e7-4266-9eca-6ba53966e96f",
+      "fullUrl": "urn:uuid:8b6f09fa-3b04-4229-932b-ad98a5e706d2",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "encounterReferralExample01",
+        "meta": {
+          "profile": [
+            "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Encounter",
+            "http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Encounter_eClinicalSummary"
+          ]
+        },
+        "identifier": [
+          {
+            "system": "http://jpfhir.jp/fhir/core/IdSystem/resourceInstance-identifier",
+            "value": "192844"
+          }
+        ],
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "外来"
+        },
+        "classHistory": [
+          {
+            "class": {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+              "code": "AMB",
+              "display": "外来"
+            },
+            "period": {
+              "start": "2020-08-20"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:61da641e-6418-4e55-856b-593a2eaa96da",
       "resource": {
         "resourceType": "Practitioner",
         "id": "referralFromPractitionerExample01",
         "meta": {
           "profile": [
             "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Practitioner",
-            "http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Practitioner_eClinicalSummary_author"
+            "http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Practitioner_eClinicalSummary"
           ]
         },
         "name": [
@@ -491,14 +533,14 @@
       }
     },
     {
-      "fullUrl": "urn:uuid:196dd763-9939-4b21-909f-0d3883188064",
+      "fullUrl": "urn:uuid:63bedefa-840b-4477-a9bb-3ac706302285",
       "resource": {
         "resourceType": "Practitioner",
         "id": "referralToPractitionerExample01",
         "meta": {
           "profile": [
             "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Practitioner",
-            "http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Practitioner_eClinicalSummary_author"
+            "http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Practitioner_eClinicalSummary"
           ]
         },
         "name": [
@@ -534,7 +576,7 @@
       }
     },
     {
-      "fullUrl": "urn:uuid:4be13836-d9c5-4156-976e-7ada7ad6ec5f",
+      "fullUrl": "urn:uuid:b6da3111-94cf-4241-a4cd-3c3edb2596a8",
       "resource": {
         "resourceType": "Organization",
         "id": "referralFromOrganizaitonExample01",
@@ -600,7 +642,7 @@
       }
     },
     {
-      "fullUrl": "urn:uuid:b9603e8d-773d-406d-889d-42bcaf19bd84",
+      "fullUrl": "urn:uuid:1b0136d2-628b-4ea1-ad88-133ec5e7478d",
       "resource": {
         "resourceType": "Organization",
         "id": "referralToOrganizaitonExample01",
@@ -666,7 +708,7 @@
       }
     },
     {
-      "fullUrl": "urn:uuid:d9b31062-ee2d-4c24-9bec-8a2e301341c5",
+      "fullUrl": "urn:uuid:0786743a-b14a-449e-9cf3-a3380b8114bf",
       "resource": {
         "resourceType": "Organization",
         "id": "referralToOrganizaitonDeptExample01",
@@ -696,12 +738,12 @@
         ],
         "name": "循環器内科",
         "partOf": {
-          "reference": "referralToOrganizaitonDeptExample01"
+          "reference": "urn:uuid:0786743a-b14a-449e-9cf3-a3380b8114bf"
         }
       }
     },
     {
-      "fullUrl": "urn:uuid:69144e08-bb82-4043-b985-7a41489d9c2f",
+      "fullUrl": "urn:uuid:2cb706fa-f7b2-4a5e-8fe8-ed9f4c993304",
       "resource": {
         "resourceType": "Organization",
         "id": "referralFromOrganizaitonDeptExample01",
@@ -731,12 +773,12 @@
         ],
         "name": "眼科",
         "partOf": {
-          "reference": "referralFromOrganizaitonDeptExample01"
+          "reference": "urn:uuid:2cb706fa-f7b2-4a5e-8fe8-ed9f4c993304"
         }
       }
     },
     {
-      "fullUrl": "urn:uuid:f6e5fc5f-224c-41c3-9f0c-249ba95a9a9e",
+      "fullUrl": "urn:uuid:6a1068b0-f3a2-4321-8986-8d627a1759cd",
       "resource": {
         "resourceType": "Encounter",
         "id": "purposeReferralExample01",
@@ -766,7 +808,7 @@
       }
     },
     {
-      "fullUrl": "urn:uuid:c66c535b-bfb0-401a-81b6-08de6bcbd823",
+      "fullUrl": "urn:uuid:4b33e199-9a69-4fd1-8f47-26f7522d369f",
       "resource": {
         "resourceType": "Condition",
         "id": "cc1ReferralExample01",
@@ -804,13 +846,13 @@
           "text": "上腹部痛"
         },
         "subject": {
-          "reference": "Patient/jppatientExample01"
+          "reference": "urn:uuid:fbb3e0ce-4abe-4f58-905d-41f4bff22607"
         },
         "onsetDateTime": "2022-06-09"
       }
     },
     {
-      "fullUrl": "urn:uuid:5d872336-74b6-4b69-a443-7ade800a3cab",
+      "fullUrl": "urn:uuid:8c397d49-298f-4e86-a325-5b071f705348",
       "resource": {
         "resourceType": "Condition",
         "id": "cc2ReferralExample01",
@@ -848,13 +890,13 @@
           "text": "腰痛"
         },
         "subject": {
-          "reference": "Patient/jppatientExample01"
+          "reference": "urn:uuid:fbb3e0ce-4abe-4f58-905d-41f4bff22607"
         },
         "onsetDateTime": "2022-05"
       }
     },
     {
-      "fullUrl": "urn:uuid:0003d3f9-78dd-42e1-9c3d-a1b777d8d5aa",
+      "fullUrl": "urn:uuid:59d7d3af-4801-42a5-a68c-2884fa9dda31",
       "resource": {
         "resourceType": "Condition",
         "id": "piReferralExample01",
@@ -892,7 +934,7 @@
           "text": "上腹部痛"
         },
         "subject": {
-          "reference": "Patient/jppatientExample01"
+          "reference": "urn:uuid:fbb3e0ce-4abe-4f58-905d-41f4bff22607"
         },
         "note": [
           {
@@ -902,7 +944,7 @@
       }
     },
     {
-      "fullUrl": "urn:uuid:f3ff258e-815e-44eb-a959-cb89bd92a42d",
+      "fullUrl": "urn:uuid:37e61dbc-9bd1-4e0b-b229-bc8ee3b0dbbc",
       "resource": {
         "resourceType": "Condition",
         "id": "ph1ReferralExample01",
@@ -940,7 +982,7 @@
           "text": "狭心症"
         },
         "subject": {
-          "reference": "Patient/jppatientExample01"
+          "reference": "urn:uuid:fbb3e0ce-4abe-4f58-905d-41f4bff22607"
         },
         "onsetDateTime": "2018",
         "note": [
@@ -951,7 +993,7 @@
       }
     },
     {
-      "fullUrl": "urn:uuid:64fe4ca4-513b-44c1-97d9-474db6b8df2a",
+      "fullUrl": "urn:uuid:cb5d465a-2f9c-4f81-8562-222a53eb0069",
       "resource": {
         "resourceType": "Condition",
         "id": "ph2ReferralExample01",
@@ -989,7 +1031,7 @@
           "text": "左前腕骨折"
         },
         "subject": {
-          "reference": "Patient/jppatientExample01"
+          "reference": "urn:uuid:fbb3e0ce-4abe-4f58-905d-41f4bff22607"
         },
         "onsetDateTime": "2019",
         "note": [
@@ -1000,7 +1042,7 @@
       }
     },
     {
-      "fullUrl": "urn:uuid:3099ff3e-1f37-4c6b-a4f4-17ae51aaa8e6",
+      "fullUrl": "urn:uuid:e773fe6d-8b19-4cc7-892f-6a1b2f9ce774",
       "resource": {
         "resourceType": "AllergyIntolerance",
         "id": "alg1ReferralExample01",
@@ -1033,10 +1075,10 @@
           "text": "サバ"
         },
         "patient": {
-          "reference": "Patient/jppatientExample01"
+          "reference": "urn:uuid:fbb3e0ce-4abe-4f58-905d-41f4bff22607"
         },
         "encounter": {
-          "reference": "Encounter/encounterReferralExample01"
+          "reference": "urn:uuid:8b6f09fa-3b04-4229-932b-ad98a5e706d2"
         },
         "onsetAge": {
           "system": "http://unitsofmeasure.org",
@@ -1051,7 +1093,7 @@
       }
     },
     {
-      "fullUrl": "urn:uuid:f2a78877-af3a-41b0-88c7-0b56f75d610c",
+      "fullUrl": "urn:uuid:a19900b0-6956-4288-8c5a-0fb73a726cc3",
       "resource": {
         "resourceType": "AllergyIntolerance",
         "id": "alg1ReferralExample02",
@@ -1084,10 +1126,10 @@
           "text": "キーウイ"
         },
         "patient": {
-          "reference": "Patient/jppatientExample01"
+          "reference": "urn:uuid:fbb3e0ce-4abe-4f58-905d-41f4bff22607"
         },
         "encounter": {
-          "reference": "Encounter/encounterReferralExample01"
+          "reference": "urn:uuid:8b6f09fa-3b04-4229-932b-ad98a5e706d2"
         },
         "onsetAge": {
           "system": "http://unitsofmeasure.org",
@@ -1102,7 +1144,7 @@
       }
     },
     {
-      "fullUrl": "urn:uuid:197e0d65-099e-401d-b5fb-2f64ffe5fe4d",
+      "fullUrl": "urn:uuid:574f0a00-5989-4d13-bfa1-c79b6559b614",
       "resource": {
         "resourceType": "Observation",
         "id": "psobsCommonExample01",
@@ -1133,13 +1175,13 @@
           "text": "腹部所見"
         },
         "subject": {
-          "reference": "Patient/29384"
+          "reference": "urn:uuid:fbb3e0ce-4abe-4f58-905d-41f4bff22607"
         },
         "valueString": "上腹部圧痛あり、その他特に所見なし。"
       }
     },
     {
-      "fullUrl": "urn:uuid:eb4085b8-1850-441c-8c8a-9e11febf0c97",
+      "fullUrl": "urn:uuid:d75539d3-cc84-42da-8726-1784a806c90c",
       "resource": {
         "resourceType": "DocumentReference",
         "id": "ccourseReferralExample01",
@@ -1164,7 +1206,7 @@
           {
             "attachment": {
               "contentType": "text/plain;charset=UTF-8",
-              "data": "NC4xMC4J5a625peP5q2044K744Kv44K344On44OzCuWutuaXj+attOaDheWgseOBr+OAgeWutuaXj+S4gOS6uuOBq+OBpOOBhOOBpjHjgaTjga5GYW1pbHlNZW1iZXJIaXN0b3J544Oq44K944O844K544KS5L2/55So44GX44Gm6KiY6L+w44GZ44KL44CC5LuV5qeY44Gv5qyh44Gu6KGo44Gn44GC44KL44CCCgrvvJzooagxM+OAgOOAgEZhbWlsaU1lbWJlckhpc3Rvcnnjg6rjgr3jg7zjgrnjgIDlrrbml4/mrbTmg4XloLHvvJ4KCjQuMTEuCei6q+S9k+aJgOimi+OCu+OCr+OCt+ODp+ODswrouqvkvZPmiYDopovjga/oprPlr5/jgoTmpJzmn7vmiYDopovjga7kuIDnqK7jgajjgZfjgabjgIEx6aCF55uu44GU44Go44GrMeOBpOOBrk9ic2VydmF0aW9u44Oq44K944O844K544KS5L2/55So44GX44Gm6KiY6L+w44GZ44KL44CCT2JzZXJ2YXRpb27jga5jYXRlZ29yeeimgee0oOOBq1wiZXhhbVwi44KS6Kit5a6a44GZ44KL44CC6aCF55uu44Kz44O844OJT2JzZXJ2YXRpb24gLmNvZGUuY29kaW5nLmNvZGXjgavoqK3lrprjgZnjgbnjgY3pganliIfjgarmqJnmupbjgrPjg7zjg4njgYzjgarjgYTpoIXnm67jga7loLTlkIjjgavjga/jgIFPYnNlcnZhdGlvbiAuY29kZS50ZXh0IOOBq+ODhuOCreOCueODiOOBp+mgheebruWQjeOBoOOBkeOCkuiomOi/sOOBmeOCi+OBk+OBqOOCguOBp+OBjeOCi+OAggrku5Xmp5jjga/mrKHjga7ooajjgafjgYLjgovjgIIKCu+8nOihqDE444CA44CAT2JzZXJ2YXRpb27jg6rjgr3jg7zjgrnjgIDjgIDmpJzmn7vjg7voprPlr5/mg4XloLHvvJ7jgIAKCjQuMTIuCeaEn+afk+eXh+aDheWgseOCu+OCr+OCt+ODp+ODswrmhJ/mn5Pnl4fjgavplqLjgZnjgovmgqPogIXnirbmhYvjga/jgIHmpJzmn7vntZDmnpzjgavjgojjgovmg4XloLHjgajjgIHnlr7mgqPlkI3jgavjgojjgovmg4XloLHjgYzjgYLjgovjga7jgafjgIHpganlrpzjgIHmpJzmn7vmiYDopovjga7kuIDnqK7jgajjgZfjgabjgIEx6aCF55uu44GU44Go44GrMeOBpOOBrk9ic2VydmF0aW9u44Oq44K944O844K544KS5L2/55So44GZ44KL44GL44CB5YK355eF5ZCN44O75Li76Ki044K744Kv44K344On44Oz44Go5ZCM5qeY44GrMeeWvuaCo+OBlOOBqOOBqzHjgaTjga5Db25kaXRpb27jg6rjgr3jg7zjgrnjgpLkvb/nlKjjgZnjgovjgYvjgIHjgb7jgZ/jga/jgZ3jga7kuKHmlrnjgpLkvb/nlKjjgZfjgaboqJjov7DjgZnjgovjgIIKCu+8nOihqDE444CA44CAT2JzZXJ2YXRpb27jg6rjgr3jg7zjgrnjgIDjgIDmpJzmn7vjg7voprPlr5/mg4XloLHvvJ7jgIDvvIjlho3mjrLvvIkKCjQuMTMuCeWFpemZouaZguacjeiWrOaDheWgseOCu+OCr+OCt+ODp+ODswrlhaXpmaLmmYLjga7mnI3olqzmg4XloLHvvIjmraPnorrjgavjga/lhaXpmaLnm7TliY3jgb7jgafjga7mnI3olqzmg4XloLHvvInjga/jgIEx5Yy76Jas5ZOB44GU44Go44GrMeOBpOOBrk1lZGljYXRpb25TdGF0ZW1lbnTjg6rjgr3jg7zjgrnjgpLkvb/nlKjjgZfjgaboqJjov7DjgZnjgovjgIJNZWRpY2F0aW9uU3RhdGVtZW5044Gn44Gv44CBMeWMu+iWrOWTgeOBlOOBqOOBq+eUqOazleOCkuiomOi/sOOBmeOCi+OBk+OBqOOBjOOBp+OBjeOAgeOBneOCjOOBjOW/heimgeOBquWgtOWQiOOBp+aDheWgseOBjOWFpeaJi+OBp+OBjeOCi+WgtOWQiOOBq+OBr+OAgU1lZGljYXRpb25TdGF0ZW1lbnQuZG9zYWdl6KaB57Sg44Gr6KiY6L+w44GZ44KL44CCCuS7leanmOOBr+asoeOBruihqOOBp+OBguOCi+OAggoK77yc6KGoMTfjgIDjgIBNZWRpY2F0aW9uU3RhdGVtZW5044Oq44K944O844K544CA44CA5pyN6Jas5oOF5aCx77yeCu+8nOihqDE3LTEgTWVkaWNhdGlvblN0YXRlbWVudCBkb3NhZ2XjgIDlh6bmlrnkvp3poLzmg4XloLHjga7mnI3olqznlKjms5Xmg4XloLHvvJ4KCjQuMTQuCeekvuS8muattOODu+eUn+a0u+e/kuaFo+OCu+OCr+OCt+ODp+ODswrnpL7kvJrvvIjnlJ/mtLvvvInmrbTmg4XloLHjga/oprPlr5/oqr/mn7vjga7kuIDnqK7jgajjgZfjgabjgIEx6aCF55uu44GU44Go44GrMeOBpOOBrk9ic2VydmF0aW9u44Oq44K944O844K544KS5L2/55So44GX44Gm6KiY6L+w44GZ44KL44CCT2JzZXJ2YXRpb27jga5jYXRlZ29yeeimgee0oOOBq1wic29jaWFsLWhpc3RvcnlcIuOCkuioreWumuOBmeOCi+OAgumgheebruOCs+ODvOODiU9ic2VydmF0aW9uIC5jb2RlLmNvZGluZy5jb2Rl44Gr6Kit5a6a44GZ44G544GN6YGp5YiH44Gq5qiZ5rqW44Kz44O844OJ44GM44Gq44GE6aCF55uu44Gu5aC05ZCI44Gr44Gv44CBT2JzZXJ2YXRpb24gLmNvZGUudGV4dCDjgavjg4bjgq3jgrnjg4jjgafpoIXnm67lkI3jgaDjgZHjgpLoqJjov7DjgZnjgovjgZPjgajjgoLjgafjgY3jgovjgILku5Xmp5jjga/mrKHjga7ooajjgafjgYLjgovjgIIKCu+8nOihqDE444CA44CAT2JzZXJ2YXRpb27jg6rjgr3jg7zjgrnjgIDjgIDmpJzmn7vjg7voprPlr5/mg4XloLHvvJ7vvIjlho3mjrLvvIkKCjQuMTUuCeS6iOmYsuaOpeeoruattOOCu+OCr+OCt+ODp+ODswrkuojpmLLmjqXnqK7jga7lsaXmrbTjga/jgIHlhaXpmaLjgavjgYvjgYvjgo/jgonjgZpJbW11bmFpemFpb27jg6rjgr3jg7zjgrnjgpLkvb/nlKjjgZfjgaboqJjov7DjgZnjgovjgILku5Xmp5jjgpLmrKHjga7ooajjgavnpLrjgZnjgIIKCu+8nOihqDE144CA44CASW1tdW5pemF0aW9u44Oq44K944O844K544CA44Ov44Kv44OB44Oz5o6l56iu5oOF5aCx77yeCgo0LjE2LgnmiYvooZPjgrvjgq/jgrfjg6fjg7MKNC4xNy4J6Ly46KGA5q2044K744Kv44K344On44OzCjQuMTguCeWHpue9ruOCu+OCr+OCt+ODp+ODswrmsrvnmYLjg7vlh6bnva7jg7vmiYvooZPnrYnvvIjmipXolqzjgpLpmaTjgY/vvInjga/jgIHjgZnjgbnjgaZQcm9jZWR1cmXjg6rjgr3jg7zjgrnjgpLkvb/nlKjjgZfjgaboqJjov7DjgZnjgovjgIIK44Gq44GK44CB6Ki65pat44Gu44Gf44KB44Gu5qSc5p+75omL5oqA44Gu5a6f5pa944Gr44Gk44GE44Gm44Gv44CB5qSc5p+757WQ5p6c44Gu44K744Kv44K344On44Oz44Gn6KiY6L+w44GZ44KL44CCCm5vdGXopoHntKDjgavlj5nov7DnmoToqJjov7Djga/jgafjgY3jgovjgYzjgIEzLjfjgafoqqzmmI7jgZfjgZ/jgojjgYbjgatlbnRyeS50ZXh044Gr6KiY6L+w44GX44Gm44KC44KI44GE44CCCu+8nOihqDIz44CA44CAUHJvY2VkdXJl44Oq44K944O844K544CA44CA5YWl6Zmi5Lit5rK755mC5Yem572u5oOF5aCx77yeCgogICAg"
+              "data": "6aOf5qyy5LiN5oyv44Go5b+D56qp6YOo55eb44KS6KqN44KB44Gf77yO5oKq5b+D5ZiU5ZCQ44GM44G/44KJ44KM77yM5ZCQ54mp44Gr5paw6a6u6KGA44GM5re35YWl44GX44Gm44GE44Gf44Gf44KB5pWR5oCl5aSW5p2l44KS5Y+X6Ki644GX77yM57eK5oCl5YWl6Zmi44Go44Gq44Gj44Gf77yOCuWFpemZouaZguePvueXhzrouqvplbcxNjIuNWNt77yM5L2T6YeNNDUuMmtn77yM6KGA5ZynODAvNjBtbUhn77yM6ISI5ouNODAv5YiG77yM5pW077yM5L2T5ripMzYuNO+8jgrnnLznnrzntZDohpzjgavosqfooYDjgpLoqo3jgoHjgZ/vvI7ohbnpg6jjga/lubPlnabvvIzou5/jgafohavnmKTjgoTlnKfnl5vjgarjgZfvvI7ohbjooJXli5Xpn7PmraPluLjvvI4K5YWl6Zmi5pmC5qSc5p+75oiQ57i+KFRhYmxlMSk65pyr5qKi6KGA5ray5qSc5p+744Gn77yMSGI1LjBnL2Rs77yMSHQxNS41JeOBqOiRl+aYjuOBquiyp+ihgOOCkuiqjeOCgeOBn++8jgrkuIrpg6jmtojljJbnrqHlhoXoppbpj6HmpJzmn7s65YWl6Zmi57+M5pel44Gu5qSc5p+744Gn44Gv77yM5q6L6IOD5ZC75ZCI6YOo5b6M5aOB44Gr57SEMi41Y23jga7mvbDnmI3lvaLmiJDjgpLoqo3jgoHvvIzmvbDnmI3lupXjgavlh53ooYDloYrjga7ku5jnnYDjgZfjgZ/pnLLlh7rooYDnrqHjgajmgJ3jgo/jgozjgovpmobotbfjgYzjgb/jgonjgozjgZ/jgYzvvIzmlrDprq7lh7rooYDjga/jgarjgY/vvIzmipfmvbDnmI3olqzmipXkuI7jgavjgojjgovntYzpgY7oprPlr5/jgajjgarjgaPjgZ/vvI4="
             }
           }
         ]

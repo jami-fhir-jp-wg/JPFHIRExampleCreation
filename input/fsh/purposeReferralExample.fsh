@@ -3,8 +3,8 @@
 Instance: purposeReferralExample01
 InstanceOf: JP_Encounter
 Usage: #inline
-  
-Description: "encounterReferralExample01 診療情報提供書での紹介目的　例"
+
+Description: "purposeReferralExample01 診療情報提供書での紹介目的　例"
 
 * meta.profile[+] = "http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Encounter_eClinicalSummary"
 
@@ -24,7 +24,7 @@ Description: "encounterReferralExample01 診療情報提供書での紹介目的
 Instance: encounterReferralExample01
 InstanceOf: JP_Encounter
 Usage: #inline
-  
+
 Description: "encounterReferralExample01 外来受診　例"
 
 * meta.profile[+] = "http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Encounter_eClinicalSummary"

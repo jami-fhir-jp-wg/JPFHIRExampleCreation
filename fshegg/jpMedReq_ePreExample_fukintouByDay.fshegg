@@ -11,7 +11,7 @@ $002or_ValidationProfile_JPMedicationRequest_ePrescriptionData()
 $010mn_処方番号(9,1)
 $020mr_処方薬HOT9(105271807,プレドニン錠５ｍｇ)
 $030mn_処方薬TEXT(プレドニン錠５ｍｇ)
-$040mn_処方患者(JP-Patient-ePreData-Example)
+$040mn_処方患者(jppatientExample01)
 
 $050mn_処方日時(2020-08-21,12:28:17)
 

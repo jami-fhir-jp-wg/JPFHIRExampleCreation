@@ -115,7 +115,7 @@ Description: "ARGtxt"
 
 #bigdef $040mn_処方患者(ARGpatient)
 #comment  // 例 $04mn_処方患者(JP-Patient-ePreData-Example)
-* subject = Reference(ARGpatient)
+* subject.reference = "ARGpatient"
 #endbigdef
 
 #bigdef $050mn_処方日時(ARGdate,ARGtime)

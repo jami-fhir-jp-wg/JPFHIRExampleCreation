@@ -205,7 +205,15 @@
           "reference": "StructureDefinition/JP-Organization-eClinicalSummary-department"
         },
         "name": "JP_Organization_eClinicalSummary_department",
-        "description": "処方を発行した医療機関の診療科情報　JP_Organizationの派生プロファイル",
+        "description": "医療機関の診療科情報　JP_Organizationの派生プロファイル",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/JP-Organization-eClinicalSummary-departmentOfissuer"
+        },
+        "name": "JP_Organization_eClinicalSummary_departmentOfIssuer",
+        "description": "医療文書を発行した医療機関の診療科情報　JP_Organizationの派生プロファイル",
         "exampleBoolean": false
       },
       {

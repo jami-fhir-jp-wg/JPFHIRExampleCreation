@@ -3,7 +3,7 @@
 Instance: psobsCommonExample01
 InstanceOf: JP_Observation_Common
 Usage: #inline
-  
+
 Description: "ObservationCommon検査結果　例"
 
 * meta.profile[+] = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_Common"
@@ -16,7 +16,8 @@ Description: "ObservationCommon検査結果　例"
 
 * code.text = "腹部所見"
 
-* subject = Reference(Patient/29384)
+// * subject.reference = "jppatientExample01"
+* subject.reference = "urn:uuid:fbb3e0ce-4abe-4f58-905d-41f4bff22607"
 
 * valueString = "上腹部圧痛あり、その他特に所見なし。"
 
@@ -24,7 +25,7 @@ Description: "ObservationCommon検査結果　例"
 Instance: obsCommonExample01
 InstanceOf: JP_Observation_Common
 Usage: #inline
-  
+
 Description: "ObservationCommon検査結果　例"
 
 * meta.profile[+] = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_Common"
@@ -37,7 +38,8 @@ Description: "ObservationCommon検査結果　例"
 
 * code.text = "腹部所見"
 
-* subject = Reference(Patient/29384)
+// * subject.reference = "jppatientExample01"
+* subject.reference = "urn:uuid:fbb3e0ce-4abe-4f58-905d-41f4bff22607"
 
 * valueString = "上腹部圧痛あり、その他特に所見なし。"
 

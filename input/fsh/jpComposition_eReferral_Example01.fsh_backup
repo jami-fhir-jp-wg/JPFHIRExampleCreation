@@ -30,7 +30,10 @@ Description: "構成情報サンプル　composition"
 * subject.type = "Patient"
 * subject.display = "患者リソースPatient"
  
-// 030on_紹介状受診(encounterReferralExample01) 
+* encounter.reference = "encounterReferralExample01"
+* encounter.type = "Encounter"
+* encounter.display = "受診Encounterリソース"
+ 
 // 2020-08-21 2020-08-21
 // ATGtime 12:12:20
 * date = "2020-08-21T12:12:20+09:00"

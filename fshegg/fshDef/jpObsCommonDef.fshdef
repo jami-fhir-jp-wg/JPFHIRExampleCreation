@@ -70,11 +70,11 @@ Description: "ARGtxt"
 #endbigdef
 
 #bigdef $050mn_共通検査患者(ARGpatient)
-* subject = Reference(ARGpatient)
+* subject.reference = "ARGpatient"
 #endbigdef
 
 #bigdef $060on_共通検査受診(ARGencounter)
-* encounter = Reference(ARGencounter)
+* encounter.reference = "ARGencounter"
 #endbigdef
 
 #bigdef $070on_共通検査日時(ARGdate,ARGtime)
@@ -89,7 +89,7 @@ Description: "ARGtxt"
 #endbigdef
 
 #bigdef $080or_共通検査実施責任者(ARGpersonetc)
-* performer[+] = Reference(ARGpersonetc)
+* performer[+].reference = "ARGpersonetc"
 #endbigdef
 
 #bigdef $090on_共通検査結果TEXT(ARGtext)

@@ -5,7 +5,7 @@
 Instance: ph1ReferralExample01
 InstanceOf: JP_Condition
 Usage: #inline
-  
+
 Description: "conditionReferralExample01 診療情報提供書　既往歴例1"
 
 * meta.profile[+] = "http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Condition_eClinicalSummary"
@@ -18,7 +18,8 @@ Description: "conditionReferralExample01 診療情報提供書　既往歴例1"
 
 * code[+].text = "狭心症"
 
-* subject = Reference(jppatientExample01)
+// * subject.reference = "jppatientExample01"
+* subject.reference = "urn:uuid:fbb3e0ce-4abe-4f58-905d-41f4bff22607"
 
 // 2018 2020-08-21
 // ATGtime 12:12:20
@@ -30,7 +31,7 @@ Description: "conditionReferralExample01 診療情報提供書　既往歴例1"
 Instance: ph2ReferralExample01
 InstanceOf: JP_Condition
 Usage: #inline
-  
+
 Description: "conditionReferralExample01 診療情報提供書　既往歴例2"
 
 * meta.profile[+] = "http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Condition_eClinicalSummary"
@@ -43,7 +44,8 @@ Description: "conditionReferralExample01 診療情報提供書　既往歴例2"
 
 * code[+].text = "左前腕骨折"
 
-* subject = Reference(jppatientExample01)
+// * subject.reference = "jppatientExample01"
+* subject.reference = "urn:uuid:fbb3e0ce-4abe-4f58-905d-41f4bff22607"
 
 // 2019 2020-08-21
 // ATGtime 12:12:20

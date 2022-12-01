@@ -73,12 +73,12 @@ Description: "ARGtxt"
 #endbigdef
 
 #bigdef $080mn_アレルギ患者(ARGpatient)
-* patient = Reference(ARGpatient)
+* patient.reference = "ARGpatient"
 #endbigdef
 
 
 #bigdef $090on_アレルギ受診(ARGencounter)
-* encounter = Reference(ARGencounter)
+* encounter.reference = "ARGencounter"
 #endbigdef
 
 

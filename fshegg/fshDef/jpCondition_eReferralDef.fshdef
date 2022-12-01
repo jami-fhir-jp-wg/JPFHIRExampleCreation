@@ -69,11 +69,11 @@ Description: "ARGtxt"
 #endbigdef
 
 #bigdef $050mn_症病患者(ARGpatient)
-* subject = Reference(ARGpatient)
+* subject.reference = "ARGpatient"
 #endbigdef
 
 #bigdef $060on_症病受診(ARGencounter)
-* encounter = Reference(ARGencounter)
+* encounter.reference = "ARGencounter"
 #endbigdef
 
 #bigdef $070on_症病時期日時((ARGdate,ARGtime)

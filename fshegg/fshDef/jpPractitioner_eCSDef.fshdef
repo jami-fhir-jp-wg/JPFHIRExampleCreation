@@ -29,7 +29,7 @@ Description: "ARGtxt"
 
 #ifndef $002or_ValidationProfile_JPPractitioner_eCS()
 #bigdef $002or_ValidationProfile_JPPractitioner_eCS() 
-* meta.profile[+] = "http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Practitioner_eClinicalSummary_author"
+* meta.profile[+] = "http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Practitioner_eClinicalSummary"
 #endbigdef
 #endif
 

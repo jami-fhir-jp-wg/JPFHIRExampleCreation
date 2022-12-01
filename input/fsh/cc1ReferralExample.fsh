@@ -5,7 +5,7 @@
 Instance: cc1ReferralExample01
 InstanceOf: JP_Condition
 Usage: #inline
-  
+
 Description: "conditionReferralExample01 診療情報提供書　主訴例"
 
 * meta.profile[+] = "http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Condition_eClinicalSummary"
@@ -18,7 +18,8 @@ Description: "conditionReferralExample01 診療情報提供書　主訴例"
 
 * code[+].text = "上腹部痛"
 
-* subject = Reference(jppatientExample01)
+// * subject.reference = "jppatientExample01"
+* subject.reference = "urn:uuid:fbb3e0ce-4abe-4f58-905d-41f4bff22607"
 
 // 2022-06-09 2020-08-21
 // ATGtime 12:12:20
@@ -28,7 +29,7 @@ Description: "conditionReferralExample01 診療情報提供書　主訴例"
 Instance: cc2ReferralExample01
 InstanceOf: JP_Condition
 Usage: #inline
-  
+
 Description: "conditionReferralExample01 診療情報提供書　主訴例"
 
 * meta.profile[+] = "http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Condition_eClinicalSummary"
@@ -41,7 +42,8 @@ Description: "conditionReferralExample01 診療情報提供書　主訴例"
 
 * code[+].text = "腰痛"
 
-* subject = Reference(jppatientExample01)
+// * subject.reference = "jppatientExample01"
+* subject.reference = "urn:uuid:fbb3e0ce-4abe-4f58-905d-41f4bff22607"
 
 // 2022-05 2020-08-21
 // ATGtime 12:12:20

@@ -1,9 +1,9 @@
 // MedicationResourceリース
 // JP_JPMedicationRequest
 // ePrescriptionData 派生
-//000mn_ExampleJPMedicationRequest_ePrescriptionData(ARGinstancename) 
-//001mn_Description(ARGtxt) 
-//002or_ValidationProfile_JPMedicationRequest_ePrescriptionData() 
+//000mn_ExampleJPMedicationRequest_ePrescriptionData(ARGinstancename)
+//001mn_Description(ARGtxt)
+//002or_ValidationProfile_JPMedicationRequest_ePrescriptionData()
 //010mn_処方番号(ARGshohono,ARGrpno)
 //020mr_処方薬HOT9(ARGcode,ARGname)
 //020mr_処方薬YJ(ARGcode,ARGname)
@@ -30,7 +30,7 @@
 //300on_処方後発変更可()
 //300on_処方後発変更不可(ARGnote)
 
-//不均等投与1日用法の医薬品処方１件　
+//不均等投与1日用法の医薬品処方１件
 //MedicationRequestリソースのインスタンス例
 //プレドニン錠５ｍｇ１日３回　毎食後　７錠（４錠－２錠－１錠）
 
@@ -39,9 +39,9 @@ InstanceOf: JP_MedicationRequest
 Usage: #inline
 
 Description: "不均等投与1日用法の医薬品処方１件　MedicationRequestリソースのインスタンス例（プレドニン錠５ｍｇ１日３回　毎食後　７錠（４錠－２錠－１錠））"
-  
+
 * meta.profile[+] = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationRequest"
- 
+
 
 * identifier[rpNumber].system = "urn:oid:1.2.392.100495.20.3.81"
 * identifier[rpNumber].value = "9"
@@ -54,7 +54,8 @@ Description: "不均等投与1日用法の医薬品処方１件　MedicationRequ
 
 * medicationCodeableConcept.text = "プレドニン錠５ｍｇ"
 
-* subject = Reference(JP-Patient-ePreData-Example)
+// * subject.reference = "jppatientExample01"
+* subject.reference = "urn:uuid:fbb3e0ce-4abe-4f58-905d-41f4bff22607"
 
 
 * authoredOn = "2020-08-21T12:28:17+09:00"

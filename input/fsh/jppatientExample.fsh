@@ -1,6 +1,6 @@
 // Patientリース
 // JP_Patient
-// 000mn_ExampleJPPatient(ARGinstancename)  
+// 000mn_ExampleJPPatient(ARGinstancename)
 // 001mn_Description(ARGtxt)
 // 002or_ValidationProfile(ARGmetaprofile)
 // 002or_ValidationProfile_JPPatient()
@@ -15,7 +15,7 @@
 // 040or_患者自宅電話番号(ARG)
 // 040or_患者携帯番号(ARG)
 // 040or_患者職場電話番号(ARG)
-// 050on_患者性別(ARG) 
+// 050on_患者性別(ARG)
 // 060on_患者生年月日(ARG)
 // 070on_患者死亡()
 // 070on_死亡日時(ARG)
@@ -28,7 +28,7 @@
 Instance: jppatientExample01
 InstanceOf: JP_Patient
 Usage: #inline
-  
+
 Description: "JPPatient患者FHIR　例"
 
 * meta.profile[+] = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Patient"

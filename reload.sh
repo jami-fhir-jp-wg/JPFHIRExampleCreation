@@ -10,6 +10,7 @@ cd ~/.fhir/packages/jp-ereferral#0.9.1-snap/
 rm -r package
 gtar xzf jp-ereferral#0.9.1-snap.tgz
 cd ~/GitHub/
+
 cd JPFHIRExampleCreation
 rm -f ./input/fsh/*.fsh; while read -r f;do outfname=`basename $f .fshegg`;echo "converting $f to ./input/fsh/$outfname.fsh";filepp -b  -I./fshegg  -M/usr/local/share/filepp/modules -m bigdef.pm -m foreach.pm -m bigfunc.pm  -M ./perlFunc  -m base64.pm -m uuid4.pm $f >./input/fsh/$outfname.fsh;done < <(find ./fshegg -name *.fshegg );
 python3 pyscripts/addFullUrl2Composition.py 
