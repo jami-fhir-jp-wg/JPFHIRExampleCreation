@@ -34,7 +34,7 @@
 #bigdef $000mn_ExampleJPMedicationRequest(ARGinstancename)
 Instance: ARGinstancename
 InstanceOf: MedicationRequest
-Usage: #example
+Usage: #inline
 #endbigdef
 
 #ifndef $001mn_Description(ARGtxt)

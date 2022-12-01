@@ -2,7 +2,7 @@
 
 Instance: psobsCommonExample01
 InstanceOf: JP_Observation_Common
-Usage: #example
+Usage: #inline
   
 Description: "ObservationCommon検査結果　例"
 
@@ -23,7 +23,7 @@ Description: "ObservationCommon検査結果　例"
 
 Instance: obsCommonExample01
 InstanceOf: JP_Observation_Common
-Usage: #example
+Usage: #inline
   
 Description: "ObservationCommon検査結果　例"
 

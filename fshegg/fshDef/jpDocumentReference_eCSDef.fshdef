@@ -8,7 +8,7 @@
 #bigdef $000mn_ExampleJPDocumentReferencen_eCS(ARGinstancename)
 Instance: ARGinstancename
 InstanceOf: JP_DocumentReference
-Usage: #example
+Usage: #inline
 #endbigdef
 
 #ifndef $001mn_Description(ARGtxt)

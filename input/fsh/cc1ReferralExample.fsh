@@ -4,7 +4,7 @@
 
 Instance: cc1ReferralExample01
 InstanceOf: JP_Condition
-Usage: #example
+Usage: #inline
   
 Description: "conditionReferralExample01 診療情報提供書　主訴例"
 
@@ -27,7 +27,7 @@ Description: "conditionReferralExample01 診療情報提供書　主訴例"
 
 Instance: cc2ReferralExample01
 InstanceOf: JP_Condition
-Usage: #example
+Usage: #inline
   
 Description: "conditionReferralExample01 診療情報提供書　主訴例"
 

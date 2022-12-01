@@ -4,7 +4,7 @@
 
 Instance: alg1ReferralExample01
 InstanceOf: JP_AllergyIntolerance
-Usage: #example
+Usage: #inline
 
 Description: "allergyeferralExample01 診療情報提供書　アレルギー例1"
 
@@ -44,7 +44,7 @@ Description: "allergyeferralExample01 診療情報提供書　アレルギー例
 
 Instance: alg1ReferralExample02
 InstanceOf: JP_AllergyIntolerance
-Usage: #example
+Usage: #inline
 
 Description: "allergyeferralExample01 診療情報提供書　アレルギー例1"
 

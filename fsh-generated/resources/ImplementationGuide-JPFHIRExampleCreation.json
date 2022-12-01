@@ -39,6 +39,22 @@
     "resource": [
       {
         "reference": {
+          "reference": "AllergyIntolerance/alg1ReferralExample01"
+        },
+        "name": "alg1ReferralExample01",
+        "description": "allergyeferralExample01 診療情報提供書　アレルギー例1",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "AllergyIntolerance/alg1ReferralExample02"
+        },
+        "name": "alg1ReferralExample02",
+        "description": "allergyeferralExample01 診療情報提供書　アレルギー例1",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
           "reference": "Bundle/bundleReferralExample01"
         },
         "name": "bundleReferralExample01",

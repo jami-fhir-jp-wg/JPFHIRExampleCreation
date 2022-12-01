@@ -3,7 +3,7 @@
 #bigdef $000mn_ExampleJPCondition_eCS(ARGinstancename)
 Instance: ARGinstancename
 InstanceOf: JP_Condition
-Usage: #example
+Usage: #inline
 #endbigdef
 
 #ifndef $001mn_Description(ARGtxt)

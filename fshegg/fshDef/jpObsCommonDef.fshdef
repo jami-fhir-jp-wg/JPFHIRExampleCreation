@@ -3,7 +3,7 @@
 #bigdef $000mn_ExampleJPObservationCommon(ARGinstancename)
 Instance: ARGinstancename
 InstanceOf: JP_Observation_Common
-Usage: #example
+Usage: #inline
 #endbigdef
 
 #ifndef $001mn_Description(ARGtxt)

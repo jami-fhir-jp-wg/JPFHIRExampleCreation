@@ -5,7 +5,7 @@
 
 Instance: piReferralExample01
 InstanceOf: JP_Condition
-Usage: #example
+Usage: #inline
   
 Description: "conditionReferralExample01 診療情報提供書　現病歴例"
 

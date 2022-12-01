@@ -3,7 +3,7 @@
 #bigdef $000mn_ExampleJPEncounter_eClinicalSummary(ARGinstancename)
 Instance: ARGinstancename
 InstanceOf: JP_Encounter
-Usage: #example
+Usage: #inline
 #endbigdef
 
 #ifndef $001mn_Description(ARGtxt)

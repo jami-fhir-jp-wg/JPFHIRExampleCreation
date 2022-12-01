@@ -36,7 +36,7 @@
 
 Instance: referralToOrganizaitonExample01
 InstanceOf: JP_Organization
-Usage: #example
+Usage: #inline
 
 Description: "紹介先医療機関情報　例"
 
@@ -79,7 +79,7 @@ Description: "紹介先医療機関情報　例"
 
 Instance: referralToOrganizaitonDeptExample01
 InstanceOf: JP_Organization
-Usage: #example
+Usage: #inline
 
 Description: "紹介先医療機関の診療科情報　例"
 
@@ -100,7 +100,7 @@ Description: "紹介先医療機関の診療科情報　例"
 //--------------
 Instance: referralToPractitionerExample01
 InstanceOf: JP_Practitioner
-Usage: #example
+Usage: #inline
 
 Description: "紹介先医療機関の医師情報　例"
 

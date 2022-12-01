@@ -27,7 +27,7 @@
 
 Instance: jppatientExample01
 InstanceOf: JP_Patient
-Usage: #example
+Usage: #inline
   
 Description: "JPPatient患者FHIR　例"
 

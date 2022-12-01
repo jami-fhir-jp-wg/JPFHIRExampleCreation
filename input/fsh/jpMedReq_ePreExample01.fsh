@@ -34,7 +34,7 @@
 
 Instance: MedicationRequestExample01
 InstanceOf: JP_MedicationRequest
-Usage: #example
+Usage: #inline
   
 Description: "内服　処方例１件　MedicationRequestリソースのインスタンス例"
  

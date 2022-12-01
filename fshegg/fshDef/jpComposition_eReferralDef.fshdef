@@ -26,7 +26,7 @@ Alias: $referral-section = http://jpfhir.jp/fhir/eReferral/CodeSystem/document-s
 #bigdef $000mn_ExampleJPComposition_eReferral(ARGinstancename)
 Instance: ARGinstancename
 InstanceOf: Composition
-Usage: #example
+Usage: #inline
 #endbigdef
 
 #ifndef $001mn_Description(ARGtxt)

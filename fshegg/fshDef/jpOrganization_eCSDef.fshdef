@@ -19,7 +19,7 @@
 #bigdef $000mn_ExampleJPOrganization_eCS(ARGinstancename)
 Instance: ARGinstancename
 InstanceOf: JP_Organization
-Usage: #example
+Usage: #inline
 #endbigdef
 
 #ifndef $001mn_Description(ARGtxt)

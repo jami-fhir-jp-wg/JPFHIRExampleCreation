@@ -31,7 +31,7 @@
 #bigdef $000mn_ExampleJPPatient(ARGinstancename)  
 Instance: ARGinstancename
 InstanceOf: JP_Patient
-Usage: #example
+Usage: #inline
 #endbigdef
 
 #ifndef $001mn_Description(ARGtxt)

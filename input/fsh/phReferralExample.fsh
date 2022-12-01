@@ -4,7 +4,7 @@
 
 Instance: ph1ReferralExample01
 InstanceOf: JP_Condition
-Usage: #example
+Usage: #inline
   
 Description: "conditionReferralExample01 診療情報提供書　既往歴例1"
 
@@ -29,7 +29,7 @@ Description: "conditionReferralExample01 診療情報提供書　既往歴例1"
 
 Instance: ph2ReferralExample01
 InstanceOf: JP_Condition
-Usage: #example
+Usage: #inline
   
 Description: "conditionReferralExample01 診療情報提供書　既往歴例2"
 

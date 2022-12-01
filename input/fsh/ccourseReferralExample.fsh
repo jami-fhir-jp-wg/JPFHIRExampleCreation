@@ -4,7 +4,7 @@
 
 Instance: ccourseReferralExample01
 InstanceOf: JP_DocumentReference
-Usage: #example
+Usage: #inline
   
 Description: "ccourseReferralExample01 診療情報提供書　経過記録文書例"
 

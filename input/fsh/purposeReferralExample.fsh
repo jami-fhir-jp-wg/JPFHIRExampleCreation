@@ -2,7 +2,7 @@
 //以下省略（診療情報提供書）
 Instance: purposeReferralExample01
 InstanceOf: JP_Encounter
-Usage: #example
+Usage: #inline
   
 Description: "encounterReferralExample01 診療情報提供書での紹介目的　例"
 
@@ -23,7 +23,7 @@ Description: "encounterReferralExample01 診療情報提供書での紹介目的
 
 Instance: encounterReferralExample01
 InstanceOf: JP_Encounter
-Usage: #example
+Usage: #inline
   
 Description: "encounterReferralExample01 外来受診　例"
 
