@@ -55,7 +55,7 @@ Description: "不均等投与1日用法の医薬品処方１件　MedicationRequ
 * medicationCodeableConcept.text = "プレドニン錠５ｍｇ"
 
 // * subject.reference = "jppatientExample01"
-* subject.reference = "urn:uuid:dbeca8c9-34af-46fa-b1d9-ebf0f3d0d690"
+* subject.reference = "urn:uuid:c523415e-3623-44a4-8c4e-9df8320177f9"
 
 
 * authoredOn = "2020-08-21T12:28:17+09:00"
