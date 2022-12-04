@@ -57,7 +57,7 @@ Description: "内服　処方例１件　MedicationRequestリソースのイン�
 * medicationCodeableConcept.text = "カルボシステイン２５０ｍｇ錠"
 
 // * subject.reference = "jppatientExample01"
-* subject.reference = "urn:uuid:c523415e-3623-44a4-8c4e-9df8320177f9"
+* subject.reference = "urn:uuid:1329a718-c5fc-4205-9b65-4cae3829ea22"
 
 * authoredOn = "2020-08-21T12:28:17+09:00"
 
