@@ -4,7 +4,7 @@
   "name": "JP_valueSet_medicationCode_gs1_14",
   "id": "jp-valueSet-medicationCode-gs1-14",
   "description": "医薬品コードGTIN 14桁",
-  "version": "0.9.1",
+  "version": "0.9.2",
   "url": "http://jpfhir.jp/fhir/ePrescription/ValueSet/jp-medicationcode-gs1-14",
   "compose": {
     "include": [

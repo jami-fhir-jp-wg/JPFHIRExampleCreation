@@ -17,7 +17,7 @@ Description: "ObservationCommon検査結果　例"
 * code.text = "腹部所見"
 
 // * subject.reference = "jppatientExample01"
-* subject.reference = "urn:uuid:fbb3e0ce-4abe-4f58-905d-41f4bff22607"
+* subject.reference = "urn:uuid:8cf7bdf0-cb09-408c-9bc3-2f6e5373d183"
 
 * valueString = "上腹部圧痛あり、その他特に所見なし。"
 
@@ -39,7 +39,7 @@ Description: "ObservationCommon検査結果　例"
 * code.text = "腹部所見"
 
 // * subject.reference = "jppatientExample01"
-* subject.reference = "urn:uuid:fbb3e0ce-4abe-4f58-905d-41f4bff22607"
+* subject.reference = "urn:uuid:8cf7bdf0-cb09-408c-9bc3-2f6e5373d183"
 
 * valueString = "上腹部圧痛あり、その他特に所見なし。"
 

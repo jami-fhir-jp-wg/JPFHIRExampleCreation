@@ -4,7 +4,7 @@ Instance: purposeReferralExample01
 InstanceOf: JP_Encounter
 Usage: #inline
 
-Description: "purposeReferralExample01 診療情報提供書での紹介目的　例"
+Description: "encounterReferralExample01 診療情報提供書での紹介目的　例"
 
 * meta.profile[+] = "http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Encounter_eClinicalSummary"
 

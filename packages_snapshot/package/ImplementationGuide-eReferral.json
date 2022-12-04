@@ -2,7 +2,7 @@
   "resourceType": "ImplementationGuide",
   "id": "eReferral",
   "url": "http://jpfhir.jp/fhir/eReferral/ImplementationGuide/eReferral",
-  "version": "0.9.1",
+  "version": "0.9.2",
   "name": "JAMIeReferralImplementationGuide",
   "title": "JAMI eReferral ImplementationGuide",
   "status": "draft",
