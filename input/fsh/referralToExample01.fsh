@@ -96,7 +96,7 @@ Description: "紹介先医療機関の診療科情報　例"
 * name = "循環器内科"
 
 // * partOf.reference = "referralToOrganizaitonDeptExample01"
-* partOf.reference = "urn:uuid:3a7e3bb7-b248-4881-b0c8-3fc51c5909f1"
+* partOf.reference = "urn:uuid:9d205411-22d1-4284-aca8-5530bc5aa517"
 
 //--------------
 Instance: referralToPractitionerExample01

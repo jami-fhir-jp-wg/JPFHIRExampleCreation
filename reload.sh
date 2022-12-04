@@ -25,4 +25,4 @@ rm -f ./input/fsh/*.fsh; while read -r f;do outfname=`basename $f .fshegg`;echo 
 python3 pyscripts/addFullUrl2Composition.py 
 sushi .  -o ./output-json
 cd ~/GitHub/
-java -jar work/validator_cli.jar JPFHIRExampleCreation/output-json/fsh-generated/resources/Bundle-bundleReferralExample01.json -ig JPFHIRExampleCreation/packages_snapshot/jp-ereferral#0.9.1-snap.tgz -tx https://tx.jpfhir.jp:8081 >JPFHIRExampleCreation/output.txt
+java -jar work/validator_cli.jar JPFHIRExampleCreation/output-json/fsh-generated/resources/Bundle-bundleReferralExample01.json -ig JPFHIRExampleCreation/packages_snapshot/jp-ereferral#$version-snap.tgz -tx https://tx.jpfhir.jp:8081 >JPFHIRExampleCreation/output.txt

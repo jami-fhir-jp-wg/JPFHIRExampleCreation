@@ -122,6 +122,13 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/JP-Device-eClinicalSummary"
+        },
+        "name": "JP_Device_eClinicalSummary",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/JP-DocumentReference"
         },
         "name": "JP_DocumentReference",
@@ -158,6 +165,13 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/JP-ImagingStudy-Radiology-eClinicalSummary"
+        },
+        "name": "JP_ImagingStudy_Radiology_eClinicalSummary",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/JP-Immunization"
         },
         "name": "JP_Immunization",
@@ -183,6 +197,13 @@
           "reference": "StructureDefinition/JP-MedicationStatement"
         },
         "name": "JP_MedicationStatement",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/JP-MedicationStatement-eClinicalSummary"
+        },
+        "name": "JP_MedicationStatement_eClinicalSummary",
         "exampleBoolean": false
       },
       {
@@ -272,9 +293,23 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/JP-RelatedPerson-eClinicalSummary"
+        },
+        "name": "JP_RelatedPerson_eClinicalSummary",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/JP-ResearchStudy"
         },
         "name": "JP_ResearchStudy",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/JP-ResearchStudy-"
+        },
+        "name": "JP_ResearchStudy_eClinicalSummary",
         "exampleBoolean": false
       },
       {
