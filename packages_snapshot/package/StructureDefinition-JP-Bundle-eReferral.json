@@ -11,8 +11,8 @@
       "valueCode": "not-classified"
     }
   ],
-  "url": "http://jpfhir.jp/fhir/eReferral/StructureDefinition/JP_Bundle_eReferral",
-  "version": "0.9.2",
+  "url": "http://jpfhir.jp/fhir/CCLIX/StructureDefinition/JP_Bundle_eReferral",
+  "version": "0.9.1",
   "name": "JP_Bundle_eReferral",
   "status": "active",
   "description": "診療情報提供書のための文書 Bundleリソース",
@@ -64,7 +64,7 @@
         "id": "Bundle.identifier.system",
         "path": "Bundle.identifier.system",
         "min": 1,
-        "fixedUri": "http://jpfhir.jp/fhir/core/IdSystem/documentInstance-identifier",
+        "fixedUri": "http://jpfhir.jp/fhir/Common/IdSystem/documentInstance-identifier",
         "mustSupport": true
       },
       {
@@ -100,7 +100,7 @@
           ],
           "rules": "open"
         },
-        "min": 6
+        "min": 7
       },
       {
         "id": "Bundle.entry:composition",
@@ -201,17 +201,17 @@
         "max": "0"
       },
       {
-        "id": "Bundle.entry:eferralDoctorAndauthorisedAuthor",
+        "id": "Bundle.entry:authorisedAuthor",
         "path": "Bundle.entry",
-        "sliceName": "eferralDoctorAndauthorisedAuthor",
-        "short": "正当な権限があって文書を作成した個人や紹介先／元医師の情報",
-        "definition": "正当な権限があって文書を作成した個人や紹介先／元医師を表すPractitionerリソースで記述する。\r\nauthorisedAuthorRole要素が参照するPractitionerRoleから参照される。",
+        "sliceName": "authorisedAuthor",
+        "short": "正当な権限があって文書を作成した個人の情報",
+        "definition": "正当な権限があって文書を作成した個人を表すPractitionerリソースで記述する。\r\nauthorisedAuthorRole要素が参照するPractitionerRoleから参照される。",
         "min": 1,
-        "max": "2",
+        "max": "1",
         "mustSupport": true
       },
       {
-        "id": "Bundle.entry:eferralDoctorAndauthorisedAuthor.fullUrl",
+        "id": "Bundle.entry:authorisedAuthor.fullUrl",
         "path": "Bundle.entry.fullUrl",
         "short": "埋め込まれているPractitionerリソースを一意に識別するためのUUID",
         "definition": "埋め込まれているPractitionerリソースを一意に識別するためのUUID。",
@@ -219,7 +219,7 @@
         "mustSupport": true
       },
       {
-        "id": "Bundle.entry:eferralDoctorAndauthorisedAuthor.resource",
+        "id": "Bundle.entry:authorisedAuthor.resource",
         "path": "Bundle.entry.resource",
         "short": "Practitionerリソースのインスタンス本体",
         "definition": "Practitionerリソースのインスタンス本体。",
@@ -228,24 +228,24 @@
           {
             "code": "Practitioner",
             "profile": [
-              "http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Practitioner_eClinicalSummary_author"
+              "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Practitioner"
             ]
           }
         ],
         "mustSupport": true
       },
       {
-        "id": "Bundle.entry:eferralDoctorAndauthorisedAuthor.search",
+        "id": "Bundle.entry:authorisedAuthor.search",
         "path": "Bundle.entry.search",
         "max": "0"
       },
       {
-        "id": "Bundle.entry:eferralDoctorAndauthorisedAuthor.request",
+        "id": "Bundle.entry:authorisedAuthor.request",
         "path": "Bundle.entry.request",
         "max": "0"
       },
       {
-        "id": "Bundle.entry:eferralDoctorAndauthorisedAuthor.response",
+        "id": "Bundle.entry:authorisedAuthor.response",
         "path": "Bundle.entry.response",
         "max": "0"
       },
@@ -290,8 +290,8 @@
         "id": "Bundle.entry:department",
         "path": "Bundle.entry",
         "sliceName": "department",
-        "short": "紹介先文書作成機関の診療科",
-        "definition": "紹介先文書作成機関の診療科",
+        "short": "紹介先／元医療機関／文書作成機関の診療科",
+        "definition": "紹介先／元医療機関／文書作成機関の診療科",
         "min": 0,
         "max": "*",
         "mustSupport": true
@@ -324,41 +324,48 @@
         "max": "0"
       },
       {
-        "id": "Bundle.entry:departmentOfissuer",
+        "id": "Bundle.entry:referralDoctor",
         "path": "Bundle.entry",
-        "sliceName": "departmentOfissuer",
-        "short": "紹介元文書作成機関の診療科",
-        "definition": "紹介元文書作成機関の診療科",
-        "min": 0,
+        "sliceName": "referralDoctor",
+        "short": "紹介先／元医師",
+        "definition": "紹介先／元医師",
+        "min": 1,
         "max": "*",
         "mustSupport": true
       },
       {
-        "id": "Bundle.entry:departmentOfissuer.resource",
+        "id": "Bundle.entry:referralDoctor.resource",
         "path": "Bundle.entry.resource",
         "type": [
           {
-            "code": "Organization",
+            "code": "Practitioner",
             "profile": [
-              "http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Organization_eClinicalSummary_departmentOfIssuer"
+              "http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Practitioner_eClinicalSummary"
             ]
           }
         ]
       },
       {
-        "id": "Bundle.entry:departmentOfissuer.search",
-        "path": "Bundle.entry.search",
-        "max": "0"
+        "id": "Bundle.entry:cdaDocument",
+        "path": "Bundle.entry",
+        "sliceName": "cdaDocument",
+        "short": "CDA規約文書ファイルへの参照",
+        "definition": "CDA規約文書ファイルへの参照",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true
       },
       {
-        "id": "Bundle.entry:departmentOfissuer.request",
-        "path": "Bundle.entry.request",
-        "max": "0"
-      },
-      {
-        "id": "Bundle.entry:departmentOfissuer.response",
-        "path": "Bundle.entry.response",
-        "max": "0"
+        "id": "Bundle.entry:cdaDocument.resource",
+        "path": "Bundle.entry.resource",
+        "type": [
+          {
+            "code": "DocumentReference",
+            "profile": [
+              "http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_DocumentReference_CDAdocument"
+            ]
+          }
+        ]
       },
       {
         "id": "Bundle.entry:referralEncounter",
@@ -553,7 +560,7 @@
           {
             "code": "DocumentReference",
             "profile": [
-              "http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_DocumentReference_eClinicalSummary"
+              "http://jpfhir.jp/fhir/core/StructureDefinition/JP_DocumentReference"
             ]
           }
         ]

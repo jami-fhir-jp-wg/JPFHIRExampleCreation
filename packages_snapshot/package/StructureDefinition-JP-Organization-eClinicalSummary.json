@@ -12,7 +12,7 @@
     }
   ],
   "url": "http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Organization_eClinicalSummary",
-  "version": "0.9.2",
+  "version": "0.9.1",
   "name": "JP_Organization_eClinicalSummary",
   "status": "active",
   "description": "処方を発行した医療機関の情報　JP_Organizationの派生プロファイル",
@@ -46,6 +46,19 @@
   "derivation": "constraint",
   "differential": {
     "element": [
+      {
+        "id": "Organization",
+        "path": "Organization",
+        "constraint": [
+          {
+            "key": "checkPhoneNumberExists",
+            "severity": "error",
+            "human": "【telecomに電話番号が最低ひとつ記述されている】",
+            "expression": "(telecom.where(value.exists())).exists()",
+            "source": "http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Organization_eClinicalSummary"
+          }
+        ]
+      },
       {
         "id": "Organization.text",
         "path": "Organization.text",

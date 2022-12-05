@@ -12,7 +12,7 @@
     }
   ],
   "url": "http://jpfhir.jp/fhir/ePrescription/StructureDefinition/JP_MedicationRequest_ePrescriptionData",
-  "version": "0.9.2",
+  "version": "0.9.1",
   "name": "JP_MedicationRequest_ePrescriptionData",
   "title": "JP MedicationRequest ePrescriptionData Profile",
   "status": "active",

@@ -12,7 +12,7 @@
     }
   ],
   "url": "http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_AllergyIntolerance_eClinicalSummary",
-  "version": "0.9.2",
+  "version": "0.9.1",
   "name": "JP_AllergyIntolerance_eClinicalSummary",
   "status": "active",
   "description": "Dummy for JP-Core",

@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "jp-medicationrequest-dispenserequest-instructionfordispense",
   "url": "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DispenseRequest_InstructionForDispense",
-  "version": "0.9.2",
+  "version": "0.9.1",
   "name": "JP_MedicationRequest_DispenseRequest_InstructionForDispense",
   "title": "JP Core MedicationRequest DispenseRequest InstructionForDispense Extension",
   "status": "active",
