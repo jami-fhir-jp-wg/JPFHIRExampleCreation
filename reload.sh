@@ -3,6 +3,7 @@ cd ~/GitHub/eReferral
 sushi -s .
 mv fsh-generated/resources fsh-generated/package
 cp -r fsh-generated/package  ../JPFHIRExampleCreation/packages_snapshot
+rm -rf ../JPFHIRExampleCreation/packages_snapshot/package
 cd ../JPFHIRExampleCreation/packages_snapshot/
 cp package.json_jpreferral_$version-snap package/package.json
 gtar czf package.tgz package ; mv package.tgz jp-ereferral#$version-snap.tgz
@@ -15,6 +16,7 @@ cd ~/GitHub/
 cd ~/GitHub/eReferral
 sushi .
 mv fsh-generated/resources fsh-generated/package
+rm -rf ../JPFHIRExampleCreation/packages_snapshot/package
 cp -r fsh-generated/package  ../JPFHIRExampleCreation/packages_snapshot
 cd ../JPFHIRExampleCreation/packages_snapshot/
 cp package.json_jpreferral_$version-diff package/package.json
