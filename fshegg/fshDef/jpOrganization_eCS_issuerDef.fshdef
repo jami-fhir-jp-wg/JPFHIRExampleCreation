@@ -16,7 +16,7 @@
 // 080or_機関住所(ARGpostal,ARGtext)
 
 
-#bigdef $000mn_ExampleJPOrganization_eCS(ARGinstancename)
+#bigdef $000mn_ExampleJPOrganization_eCS_issuer(ARGinstancename)
 Instance: ARGinstancename
 InstanceOf: JP_Organization
 Usage: #inline
@@ -36,7 +36,7 @@ Description: "ARGtxt"
 
 #ifndef $002or_ValidationProfile_JPOrganization_eCS()
 #bigdef $002or_ValidationProfile_JPOrganization_eCS() 
-* meta.profile[+] = "http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Organization_eClinicalSummary"
+* meta.profile[+] = "http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Organization_eClinicalSummary_issuer"
 #endbigdef
 #endif
 

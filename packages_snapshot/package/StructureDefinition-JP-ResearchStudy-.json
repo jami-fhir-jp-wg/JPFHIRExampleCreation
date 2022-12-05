@@ -1,6 +1,6 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "JP-ResearchStudy",
+  "id": "JP-ResearchStudy-",
   "extension": [
     {
       "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-category",
@@ -11,9 +11,9 @@
       "valueCode": "business"
     }
   ],
-  "url": "http://jpfhir.jp/fhir/core/StructureDefinition/JP_ResearchStudy",
+  "url": "http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_ResearchStudy_eClinicalSummary",
   "version": "0.9.2",
-  "name": "JP_ResearchStudy",
+  "name": "JP_ResearchStudy_eClinicalSummary",
   "status": "active",
   "fhirVersion": "4.0.1",
   "mapping": [
@@ -46,7 +46,7 @@
   "kind": "resource",
   "abstract": false,
   "type": "ResearchStudy",
-  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/ResearchStudy",
+  "baseDefinition": "http://jpfhir.jp/fhir/core/StructureDefinition/JP_ResearchStudy",
   "derivation": "constraint",
   "differential": {
     "element": [

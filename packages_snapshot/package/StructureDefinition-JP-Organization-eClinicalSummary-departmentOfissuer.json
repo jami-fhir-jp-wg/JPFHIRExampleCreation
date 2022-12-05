@@ -1,27 +1,23 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "JP-ResearchStudy",
+  "id": "JP-Organization-eClinicalSummary-departmentOfissuer",
   "extension": [
     {
       "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-category",
-      "valueString": "Specialized.Public Health &amp; Research"
+      "valueString": "Base.Entities"
     },
     {
       "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-security-category",
       "valueCode": "business"
     }
   ],
-  "url": "http://jpfhir.jp/fhir/core/StructureDefinition/JP_ResearchStudy",
+  "url": "http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Organization_eClinicalSummary_departmentOfIssuer",
   "version": "0.9.2",
-  "name": "JP_ResearchStudy",
+  "name": "JP_Organization_eClinicalSummary_departmentOfIssuer",
   "status": "active",
+  "description": "医療文書を発行した医療機関の診療科情報　JP_Organizationの派生プロファイル",
   "fhirVersion": "4.0.1",
   "mapping": [
-    {
-      "identity": "BRIDG5.1",
-      "uri": "https://bridgmodel.nci.nih.gov",
-      "name": "BRIDG 5.1 Mapping"
-    },
     {
       "identity": "v2",
       "uri": "http://hl7.org/v2",
@@ -33,9 +29,9 @@
       "name": "RIM Mapping"
     },
     {
-      "identity": "clinicaltrials-gov",
-      "uri": "http://clinicaltrials.gov",
-      "name": "ClinicalTrials.gov Mapping"
+      "identity": "servd",
+      "uri": "http://www.omg.org/spec/ServD/1.0/",
+      "name": "ServD"
     },
     {
       "identity": "w5",
@@ -45,14 +41,14 @@
   ],
   "kind": "resource",
   "abstract": false,
-  "type": "ResearchStudy",
-  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/ResearchStudy",
+  "type": "Organization",
+  "baseDefinition": "http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Organization_eClinicalSummary_department",
   "derivation": "constraint",
   "differential": {
     "element": [
       {
-        "id": "ResearchStudy",
-        "path": "ResearchStudy"
+        "id": "Organization",
+        "path": "Organization"
       }
     ]
   }

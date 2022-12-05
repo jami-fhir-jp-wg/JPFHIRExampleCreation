@@ -6,11 +6,11 @@
 #define $referralFromPractitionerExample01  referralFromPractitionerExample01
 #define $referralToPractitionerExample01    referralToPractitionerExample01
 
-#define $referralFromOrganizaitonExample01  referralFromOrganizaitonExample01
-#define $referralToOrganizaitonExample01    referralToOrganizaitonExample01
+#define $referralFromOrganizationExample01  referralFromOrganizationExample01
+#define $referralToOrganizationExample01    referralToOrganizationExample01
 
-#define $referralToOrganizaitonDeptExample01    referralToOrganizaitonDeptExample01
-#define $referralFromOrganizaitonDeptExample01  referralFromOrganizaitonDeptExample01
+#define $referralToOrganizationDeptExample01    referralToOrganizationDeptExample01
+#define $referralFromOrganizationDeptExample01  referralFromOrganizationDeptExample01
 
 #define $purposeReferralExample01   purposeReferralExample01
 #define $cc1ReferralExample01   cc1ReferralExample01
@@ -32,13 +32,13 @@ $010mn_紹介状文書ID(34875506)
 $020mn_紹介状患者情報($jppatientExample01) 
 $030on_紹介状受診(encounterReferralExample01) 
 $040mn_紹介状作成日時(2020-08-21, 12:12:20) 
-$050mn_紹介状作成者($referralFromPractitionerExample01,$referralFromOrganizaitonExample01) 
+$050mn_紹介状作成者($referralFromPractitionerExample01,$referralFromOrganizationExample01) 
 $060mn_紹介状発行日(2020-08-21) 
-$060mn_紹介状先機関(東京第一テスト病院, $referralToOrganizaitonExample01) 
-$060on_紹介状先科($referralToOrganizaitonDeptExample01) 
+$060mn_紹介状先機関(東京第一テスト病院, $referralToOrganizationExample01) 
+$060on_紹介状先科($referralToOrganizationDeptExample01) 
 $060on_紹介状先医師($referralToPractitionerExample01) 
-$060mn_紹介状元機関(港診療所, $referralFromOrganizaitonExample01) 
-$060on_紹介状元科($referralFromOrganizaitonDeptExample01) 
+$060mn_紹介状元機関(港診療所, $referralFromOrganizationExample01) 
+$060on_紹介状元科($referralFromOrganizationDeptExample01) 
 $060on_紹介状元医師($referralFromPractitionerExample01) 
 $070mn_紹介状目的Ecounter(腹痛精査お願いします。,$purposeReferralExample01) 
 $070mn_紹介状傷病名Condition(上腹部痛、腰痛,$cc1ReferralExample01,$cc2ReferralExample01) 

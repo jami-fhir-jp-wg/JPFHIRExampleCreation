@@ -1,19 +1,19 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "JP-Immunization-eClinicalSummary",
+  "id": "JP-ImagingStudy-Radiology-eClinicalSummary",
   "extension": [
     {
       "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-category",
-      "valueString": "Clinical.Medications"
+      "valueString": "Clinical.Diagnostics"
     },
     {
       "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-security-category",
       "valueCode": "patient"
     }
   ],
-  "url": "http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Immunization_eClinicalSummary",
+  "url": "http://jpfhir.jp/fhir/core/StructureDefinition/JP_ImagingStudy_Radiology_eClinicalSummary",
   "version": "0.9.2",
-  "name": "JP_Immunization_eClinicalSummary",
+  "name": "JP_ImagingStudy_Radiology_eClinicalSummary",
   "status": "active",
   "fhirVersion": "4.0.1",
   "mapping": [
@@ -23,14 +23,14 @@
       "name": "Workflow Pattern"
     },
     {
-      "identity": "v2",
-      "uri": "http://hl7.org/v2",
-      "name": "HL7 v2 Mapping"
-    },
-    {
       "identity": "rim",
       "uri": "http://hl7.org/v3",
       "name": "RIM Mapping"
+    },
+    {
+      "identity": "dicom",
+      "uri": "http://nema.org/dicom",
+      "name": "DICOM Tag Mapping"
     },
     {
       "identity": "w5",
@@ -38,21 +38,21 @@
       "name": "FiveWs Pattern Mapping"
     },
     {
-      "identity": "cda",
-      "uri": "http://hl7.org/v3/cda",
-      "name": "CDA (R2)"
+      "identity": "v2",
+      "uri": "http://hl7.org/v2",
+      "name": "HL7 v2 Mapping"
     }
   ],
   "kind": "resource",
   "abstract": false,
-  "type": "Immunization",
-  "baseDefinition": "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Immunization",
+  "type": "ImagingStudy",
+  "baseDefinition": "http://jpfhir.jp/fhir/core/StructureDefinition/JP_ImagingStudy_Radiology",
   "derivation": "constraint",
   "differential": {
     "element": [
       {
-        "id": "Immunization",
-        "path": "Immunization"
+        "id": "ImagingStudy",
+        "path": "ImagingStudy"
       }
     ]
   }

@@ -12,7 +12,7 @@
     }
   ],
   "url": "http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Encounter_eClinicalSummary",
-  "version": "0.9.1",
+  "version": "0.9.2",
   "name": "JP_Encounter_eClinicalSummary",
   "status": "active",
   "date": "2022-11-07",

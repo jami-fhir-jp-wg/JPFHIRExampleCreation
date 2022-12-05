@@ -2,7 +2,7 @@
   "resourceType": "ImplementationGuide",
   "id": "eReferral",
   "url": "http://jpfhir.jp/fhir/eReferral/ImplementationGuide/eReferral",
-  "version": "0.9.1",
+  "version": "0.9.2",
   "name": "JAMIeReferralImplementationGuide",
   "title": "JAMI eReferral ImplementationGuide",
   "status": "draft",
@@ -122,6 +122,13 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/JP-Device-eClinicalSummary"
+        },
+        "name": "JP_Device_eClinicalSummary",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/JP-DocumentReference"
         },
         "name": "JP_DocumentReference",
@@ -158,6 +165,13 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/JP-ImagingStudy-Radiology-eClinicalSummary"
+        },
+        "name": "JP_ImagingStudy_Radiology_eClinicalSummary",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/JP-Immunization"
         },
         "name": "JP_Immunization",
@@ -187,6 +201,13 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/JP-MedicationStatement-eClinicalSummary"
+        },
+        "name": "JP_MedicationStatement_eClinicalSummary",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/JP-Observation-eClinicalSummary"
         },
         "name": "JP_Observation_Common_eClinicalSummary",
@@ -205,7 +226,15 @@
           "reference": "StructureDefinition/JP-Organization-eClinicalSummary-department"
         },
         "name": "JP_Organization_eClinicalSummary_department",
-        "description": "処方を発行した医療機関の診療科情報　JP_Organizationの派生プロファイル",
+        "description": "医療機関の診療科情報　JP_Organizationの派生プロファイル",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/JP-Organization-eClinicalSummary-departmentOfissuer"
+        },
+        "name": "JP_Organization_eClinicalSummary_departmentOfIssuer",
+        "description": "医療文書を発行した医療機関の診療科情報　JP_Organizationの派生プロファイル",
         "exampleBoolean": false
       },
       {
@@ -264,9 +293,23 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/JP-RelatedPerson-eClinicalSummary"
+        },
+        "name": "JP_RelatedPerson_eClinicalSummary",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/JP-ResearchStudy"
         },
         "name": "JP_ResearchStudy",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/JP-ResearchStudy-"
+        },
+        "name": "JP_ResearchStudy_eClinicalSummary",
         "exampleBoolean": false
       },
       {

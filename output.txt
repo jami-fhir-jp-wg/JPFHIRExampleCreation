@@ -7,82 +7,159 @@ Scanning for versions (no -version parameter):
 -> use version 4.0
   Jurisdiction: Japan
 Loading
-  Load FHIR v4.0 from hl7.fhir.r4.core#4.0.1.: - 4576 resources (00:03.626)
-  Load hl7.terminology#4.0.0 - 4164 resources (00:02.596)
-  Load R5 Extensions - 56 resources (00:02.545)
-  Terminology server https://tx.jpfhir.jp:8081 - Version null (00:00.532)
-  Load JPFHIRExampleCreation/packages_snapshot/jp-ereferral#0.9.2-snap.tgz - 72 resources (00:00.855)
+  Load FHIR v4.0 from hl7.fhir.r4.core#4.0.1.: - 4576 resources (00:03.286)
+  Load hl7.terminology#4.0.0 - 4164 resources (00:01.725)
+  Load R5 Extensions - 56 resources (00:02.256)
+  Terminology server https://tx.jpfhir.jp:8081 - Version null (00:00.565)
+  Load JPFHIRExampleCreation/packages_snapshot/jp-ereferral#0.9.2-snap.tgz - 78 resources (00:01.093)
   Package Summary: [hl7.fhir.r4.core#4.0.1, hl7.fhir.xver-extensions#0.0.11, hl7.terminology#4.0.0]
-  Get set...  go (00:00.003)
+  Get set...  go (00:00.002)
 Validating
   Validate JPFHIRExampleCreation/output-json/fsh-generated/resources/Bundle-bundleReferralExample01.json
-Validate Bundle against http://hl7.org/fhir/StructureDefinition/Bundle|4.0.1  Load jp-ereferral..  Load jp-core.r4#1.1.1-rc - 198 resources (00:01.348)
-........20..........40..Validate Practitioner against http://hl7.org/fhir/StructureDefinition/Practitioner|4.0.1|
+Validate Bundle against http://hl7.org/fhir/StructureDefinition/Bundle|4.0.1..  Load jp-core.r4#1.1.1-rc - 198 resources (00:01.231)
+........20..........40....Validate Practitioner against http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Practitioner_eClinicalSummary|0.9.2|
 Validate Practitioner against http://jpfhir.jp/fhir/core/StructureDefinition/JP_Practitioner|
-Validate Practitioner against http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Practitioner_eClinicalSummary|
-Validate Organization against http://hl7.org/fhir/StructureDefinition/Organization|4.0.1|
+Validate Organization against http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Organization_eClinicalSummary_issuer|0.9.2|
+Validate Organization against http://jpfhir.jp/fhir/core/StructureDefinition/JP_Organization|
+Validate Organization against http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Organization_eClinicalSummary_department|0.9.2..........20..........40..........60..........80.........|
 Validate Organization against http://jpfhir.jp/fhir/core/StructureDefinition/JP_Organization|
 Validate Organization against http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Organization_eClinicalSummary_issuer|
-Validate Practitioner against http://hl7.org/fhir/StructureDefinition/Practitioner|4.0.1|
-Validate Practitioner against http://jpfhir.jp/fhir/core/StructureDefinition/JP_Practitioner|
-Validate Practitioner against http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Practitioner_eClinicalSummary|
-Validate Organization against http://hl7.org/fhir/StructureDefinition/Organization|4.0.1|
+......60.Validate Organization against http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Organization_eClinicalSummary|0.9.2..........20..........40..........60..........80.........|
+Validate Organization against http://jpfhir.jp/fhir/core/StructureDefinition/JP_Organization..........20..........40..........60..........80..........100..|
+Validate Organization against http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Organization_eClinicalSummary_department..........20..........40..........60..........80..........100..|
+Validate Organization against http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Organization_eClinicalSummary|0.9.2|
+Validate Organization against http://jpfhir.jp/fhir/core/StructureDefinition/JP_Organization|
+Validate Organization against http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Organization_eClinicalSummary_department|
+Validate Organization against http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Organization_eClinicalSummary_department|0.9.2|
+Validate Organization against http://jpfhir.jp/fhir/core/StructureDefinition/JP_Organization|
+Validate Organization against http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Organization_eClinicalSummary_department|0.9.2|
+Validate Organization against http://jpfhir.jp/fhir/core/StructureDefinition/JP_Organization|
+Validate Practitioner against http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Practitioner_eClinicalSummary|0.9.2..........20..........40..........60..........80.........|
+Validate Practitioner against http://jpfhir.jp/fhir/core/StructureDefinition/JP_Practitioner..........20..........40..........60..........80..........100..|
+.Validate Organization against http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Organization_eClinicalSummary_issuer|0.9.2|
+Validate Organization against http://jpfhir.jp/fhir/core/StructureDefinition/JP_Organization|
+Validate Organization against http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Organization_eClinicalSummary_issuer|0.9.2..........20..........40..........60..........80.........|
+Validate Organization against http://jpfhir.jp/fhir/core/StructureDefinition/JP_Organization|
+Validate Organization against http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Organization_eClinicalSummary_department|
+Validate Organization against http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Organization_eClinicalSummary_department|0.9.2|
 Validate Organization against http://jpfhir.jp/fhir/core/StructureDefinition/JP_Organization|
 Validate Organization against http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Organization_eClinicalSummary_issuer|
-Validate Practitioner against http://hl7.org/fhir/StructureDefinition/Practitioner|4.0.1|
+Validate Organization against http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Organization_eClinicalSummary_department|0.9.2|
+Validate Organization against http://jpfhir.jp/fhir/core/StructureDefinition/JP_Organization|
+Validate Practitioner against http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Practitioner_eClinicalSummary|0.9.2|
 Validate Practitioner against http://jpfhir.jp/fhir/core/StructureDefinition/JP_Practitioner|
-Validate Practitioner against http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Practitioner_eClinicalSummary|
-Validate Organization against http://hl7.org/fhir/StructureDefinition/Organization|4.0.1|
+........80..........100..........120..........140|
+Validate Bundle against http://jpfhir.jp/fhir/eReferral/StructureDefinition/JP_Bundle_eReferralValidate Composition against http://jpfhir.jp/fhir/eReferral/StructureDefinition/JP_Composition_eReferral|0.9.2|
+Validate Patient against http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Patient_eClinicalSummary|0.9.2..........20..........40..........60..........80.........|
+Validate Patient against http://jpfhir.jp/fhir/core/StructureDefinition/JP_Patient|
+Validate Practitioner against http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Practitioner_eClinicalSummary|0.9.2|
+Validate Practitioner against http://jpfhir.jp/fhir/core/StructureDefinition/JP_Practitioner|
+Validate Practitioner against http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Practitioner_eClinicalSummary|0.9.2|
+Validate Practitioner against http://jpfhir.jp/fhir/core/StructureDefinition/JP_Practitioner|
+Validate Organization against http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Organization_eClinicalSummary|0.9.2|
 Validate Organization against http://jpfhir.jp/fhir/core/StructureDefinition/JP_Organization|
 Validate Organization against http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Organization_eClinicalSummary_issuer|
-...Validate Organization against http://jpfhir.jp/fhir/core/StructureDefinition/JP_Organization|1.1.1..........20..........40..........60..........80.........|
-Validate Organization against http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Organization_eClinicalSummary_issuer..........20..........40..........60..........80..........100|
-Validate Organization against http://jpfhir.jp/fhir/core/StructureDefinition/JP_Organization|1.1.1..........20..........40..........60..........80.........|
-Validate Organization against http://jpfhir.jp/fhir/core/StructureDefinition/JP_Organization|1.1.1|
+Validate Organization against http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Organization_eClinicalSummary|0.9.2|
+Validate Organization against http://jpfhir.jp/fhir/core/StructureDefinition/JP_Organization|
+Validate Organization against http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Organization_eClinicalSummary_department|
+Validate Organization against http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Organization_eClinicalSummary_department|0.9.2|
+Validate Organization against http://jpfhir.jp/fhir/core/StructureDefinition/JP_Organization|
 Validate Organization against http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Organization_eClinicalSummary_issuer|
-Validate Organization against http://jpfhir.jp/fhir/core/StructureDefinition/JP_Organization|1.1.1|
-Validate Practitioner against http://jpfhir.jp/fhir/core/StructureDefinition/JP_Practitioner|1.1.1..........20..........40..........60..........80.........|
-Validate Practitioner against http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Practitioner_eClinicalSummary..........20..........40..........60..........80..........100..|
-..Validate Organization against http://jpfhir.jp/fhir/core/StructureDefinition/JP_Organization|1.1.1|
+Validate Organization against http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Organization_eClinicalSummary_department|0.9.2|
+Validate Organization against http://jpfhir.jp/fhir/core/StructureDefinition/JP_Organization|
+Validate Organization against http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Organization_eClinicalSummary_departmentOfIssuer|0.9.2..........20..........40..........60..........80.........|
+Validate Organization against http://jpfhir.jp/fhir/core/StructureDefinition/JP_Organization|
 Validate Organization against http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Organization_eClinicalSummary_issuer|
-Validate Organization against http://jpfhir.jp/fhir/core/StructureDefinition/JP_Organization|1.1.1..........20..........40..........60..........80.........|
-Validate Organization against http://jpfhir.jp/fhir/core/StructureDefinition/JP_Organization|1.1.1|
-Validate Organization against http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Organization_eClinicalSummary_issuer|
-Validate Organization against http://jpfhir.jp/fhir/core/StructureDefinition/JP_Organization|1.1.1|
-Validate Practitioner against http://jpfhir.jp/fhir/core/StructureDefinition/JP_Practitioner|1.1.1|
-Validate Practitioner against http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Practitioner_eClinicalSummary|
-...60..........80..........100..........120......|
- 00:02.988
-Done. Times: Loading: 00:10.962, validation: 00:04.336. Memory = 776Mb
+Validate Organization against http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Organization_eClinicalSummary_departmentOfIssuer|0.9.2..........20..........40..........60..........80.........|
+Validate Organization against http://jpfhir.jp/fhir/core/StructureDefinition/JP_Organization|
+Validate Organization against http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Organization_eClinicalSummary_department|
+Validate Encounter against http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Encounter_eClinicalSummary|0.9.2|
+Validate Encounter against http://jpfhir.jp/fhir/core/StructureDefinition/JP_Encounter|
+Validate Encounter against http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Encounter_eClinicalSummary|0.9.2|
+Validate Encounter against http://jpfhir.jp/fhir/core/StructureDefinition/JP_Encounter|
+Validate Condition against http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Condition_eClinicalSummary|0.9.2|
+Validate Condition against http://jpfhir.jp/fhir/core/StructureDefinition/JP_Condition|
+Validate Condition against http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Condition_eClinicalSummary|0.9.2|
+Validate Condition against http://jpfhir.jp/fhir/core/StructureDefinition/JP_Condition|
+Validate Condition against http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Condition_eClinicalSummary|0.9.2|
+Validate Condition against http://jpfhir.jp/fhir/core/StructureDefinition/JP_Condition|
+Validate Condition against http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Condition_eClinicalSummary|0.9.2|
+Validate Condition against http://jpfhir.jp/fhir/core/StructureDefinition/JP_Condition|
+Validate Condition against http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Condition_eClinicalSummary|0.9.2|
+Validate Condition against http://jpfhir.jp/fhir/core/StructureDefinition/JP_Condition|
+Validate AllergyIntolerance against http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_AllergyIntolerance_eClinicalSummary|0.9.2|
+Validate AllergyIntolerance against http://jpfhir.jp/fhir/core/StructureDefinition/JP_AllergyIntolerance|
+Validate AllergyIntolerance against http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_AllergyIntolerance_eClinicalSummary|0.9.2|
+Validate AllergyIntolerance against http://jpfhir.jp/fhir/core/StructureDefinition/JP_AllergyIntolerance|
+Validate Observation against http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Observation_Common_eClinicalSummary|0.9.2..........20..........40..........60..........80.........|
+Validate Observation against http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_Common|
+Validate DocumentReference against http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_DocumentReference_eClinicalSummary|0.9.2|
+Validate DocumentReference against http://jpfhir.jp/fhir/core/StructureDefinition/JP_DocumentReference|
+..|
+ 00:03.041
+Done. Times: Loading: 00:09.743, validation: 00:04.272. Memory = 414Mb
 
-*FAILURE*: 16 errors, 7 warnings, 7 notes
-  Error @ Bundle.entry[0].resource.ofType(Composition).author[0].reference (line 70, col74): Value is 'urn:uuid:78dc5b01-58c2-4b64-8db0-c4bda37bc1f4' but must be 'JP_Practitioner_eClinicalSummary'
-  Error @ Bundle.entry[0].resource.ofType(Composition).author[1].reference (line 75, col74): Value is 'urn:uuid:64e7c9b4-1ee8-49b9-933b-0780d6834132' but must be 'JP_Practitioner_eClinicalSummary'
-  Error @ Bundle.entry[0].resource.ofType(Composition).custodian.reference (line 82, col72): Value is 'urn:uuid:64e7c9b4-1ee8-49b9-933b-0780d6834132' but must be 'JP_Organization_eClinicalSummary'
-  Error @ Bundle.entry[0].resource.ofType(Composition).author[0] (line 69, col12): Profile http://jpfhir.jp/fhir/eReferral/StructureDefinition/JP_Composition_eReferral|0.9.1, Element matches more than one slice - authorPractitioner, authorDepartment
-  Error @ Bundle.entry[0].resource.ofType(Composition).author[0] (line 69, col12): Profile http://jpfhir.jp/fhir/eReferral/StructureDefinition/JP_Composition_eReferral|0.9.1, Element matches more than one slice - authorPractitioner, authorOrganization
-  Error @ Bundle.entry[0].resource.ofType(Composition).author[1] (line 74, col12): Profile http://jpfhir.jp/fhir/eReferral/StructureDefinition/JP_Composition_eReferral|0.9.1, Element matches more than one slice - authorPractitioner, authorDepartment
-  Error @ Bundle.entry[0].resource.ofType(Composition).author[1] (line 74, col12): Profile http://jpfhir.jp/fhir/eReferral/StructureDefinition/JP_Composition_eReferral|0.9.1, Element matches more than one slice - authorPractitioner, authorOrganization
-  Error @ Bundle.entry[0].resource.ofType(Composition).section[0].entry[0] (line 115, col16): Profile http://jpfhir.jp/fhir/eReferral/StructureDefinition/JP_Composition_eReferral|0.9.1, Element matches more than one slice - referralToOrganizaiton, referralToDepartment
-  Error @ Bundle.entry[0].resource.ofType(Composition).section[0].entry[1] (line 120, col16): Profile http://jpfhir.jp/fhir/eReferral/StructureDefinition/JP_Composition_eReferral|0.9.1, Element matches more than one slice - referralToOrganizaiton, referralToDepartment
-  Error @ Bundle.entry[0].resource.ofType(Composition).section[1].entry[0] (line 148, col16): Profile http://jpfhir.jp/fhir/eReferral/StructureDefinition/JP_Composition_eReferral|0.9.1, Element matches more than one slice - referralFromOrganizaiton, referralFromDepartment
-  Error @ Bundle.entry[0].resource.ofType(Composition).section[1].entry[1] (line 153, col16): Profile http://jpfhir.jp/fhir/eReferral/StructureDefinition/JP_Composition_eReferral|0.9.1, Element matches more than one slice - referralFromOrganizaiton, referralFromDepartment
-  Error @ Bundle.entry[0].resource.ofType(Composition) (line 81, col23): Composition.author:authorOrganization: minimum required = 1, but only found 0 (from http://jpfhir.jp/fhir/eReferral/StructureDefinition/JP_Composition_eReferral|0.9.1)
-  Error @ Bundle.entry[0].resource.ofType(Composition) (line 81, col23): Composition.author:authorPractitioner: max allowed = 1, but found 2 (from http://jpfhir.jp/fhir/eReferral/StructureDefinition/JP_Composition_eReferral|0.9.1)
-  Error @ Bundle.entry[0].resource.ofType(Composition).section[0] (line 99, col12): Composition.section:referralToSection.entry:referralToOrganizaiton: max allowed = 1, but found 2 (from http://jpfhir.jp/fhir/eReferral/StructureDefinition/JP_Composition_eReferral|0.9.1)
-  Error @ Bundle.entry[0].resource.ofType(Composition).section[1] (line 132, col12): Composition.section:referralFromSection.entry:referralFromOrganizaiton: max allowed = 1, but found 2 (from http://jpfhir.jp/fhir/eReferral/StructureDefinition/JP_Composition_eReferral|0.9.1)
-  Error @ Bundle.entry[0].resource.ofType(Composition) (line 81, col23): Problem processing expression '((section.code.coding.where(code = '200')).exists()) xor (section.code.coding.where(code = '300')).exists())' in profile 'http://jpfhir.jp/fhir/eReferral/StructureDefinition/JP_Composition_eReferral|0.9.1' at path 'Bundle.entry[0].resource.ofType(Composition)': Error @1, 7: Premature ExpressionNode termination at unexpected token ")"
+*FAILURE*: 4 errors, 5 warnings, 3 notes
+  Error @ Bundle (line 1, col2): Bundle.entry:composition: minimum required = 1, but only found 0 (from http://jpfhir.jp/fhir/eReferral/StructureDefinition/JP_Bundle_eReferral|0.9.2)
+  Error @ Bundle (line 1, col2): Bundle.entry:organization: minimum required = 2, but only found 1 (from http://jpfhir.jp/fhir/eReferral/StructureDefinition/JP_Bundle_eReferral|0.9.2)
+  Error @ Bundle.entry[0].resource.ofType(Composition).section[0] (line 99, col12): Composition.section:referralToSection.entry:referralToDepartment: max allowed = 1, but found 2 (from http://jpfhir.jp/fhir/eReferral/StructureDefinition/JP_Composition_eReferral|0.9.2)
+  Error @ Bundle.entry[0].resource.ofType(Composition).section[0] (line 99, col12): Composition.section:referralToSection.entry:referralToOrganizaiton: minimum required = 1, but only found 0 (from http://jpfhir.jp/fhir/eReferral/StructureDefinition/JP_Composition_eReferral|0.9.2)
+  Information @ Bundle.entry[0] (line 16, col6): This element does not match any known slice defined in the profile http://jpfhir.jp/fhir/eReferral/StructureDefinition/JP_Bundle_eReferral|0.9.2
+    slice info: Bundle.entry[0]: Does not match slice 'composition' (discriminator: resource.conformsTo('http://jpfhir.jp/fhir/eReferral/StructureDefinition/JP_Composition_eReferral'))
+    slice info: Bundle.entry[0]: Bundle.entry[0].resource.ofType(Composition).section[0]: Composition.section:referralToSection.entry:referralToOrganizaiton: minimum required = 1, but only found 0 (from http://jpfhir.jp/fhir/eReferral/StructureDefinition/JP_Composition_eReferral|0.9.2)
+    slice info: Bundle.entry[0]: Bundle.entry[0].resource.ofType(Composition).section[0]: Composition.section:referralToSection.entry:referralToDepartment: max allowed = 1, but found 2 (from http://jpfhir.jp/fhir/eReferral/StructureDefinition/JP_Composition_eReferral|0.9.2)
+    slice info: Bundle.entry[0]: Does not match slice 'patient' (discriminator: resource.conformsTo('http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Patient_eClinicalSummary'))
+    slice info: Bundle.entry[0]: Bundle.entry[0].resource: Specified profile type was 'Patient' in profile 'http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Patient_eClinicalSummary|0.9.2', but found type 'Composition'
+    slice info: Bundle.entry[0]: Does not match slice 'practitioners' (discriminator: resource.conformsTo('http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Practitioner_eClinicalSummary'))
+    slice info: Bundle.entry[0]: Bundle.entry[0].resource: Specified profile type was 'Practitioner' in profile 'http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Practitioner_eClinicalSummary|0.9.2', but found type 'Composition'
+    slice info: Bundle.entry[0]: Does not match slice 'organization' (discriminator: resource.conformsTo('http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Organization_eClinicalSummary'))
+    slice info: Bundle.entry[0]: Bundle.entry[0].resource: Specified profile type was 'Organization' in profile 'http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Organization_eClinicalSummary|0.9.2', but found type 'Composition'
+    slice info: Bundle.entry[0]: Does not match slice 'department' (discriminator: resource.conformsTo('http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Organization_eClinicalSummary_department'))
+    slice info: Bundle.entry[0]: Bundle.entry[0].resource: Specified profile type was 'Organization' in profile 'http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Organization_eClinicalSummary_department|0.9.2', but found type 'Composition'
+    slice info: Bundle.entry[0]: Does not match slice 'departmentOfissuer' (discriminator: resource.conformsTo('http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Organization_eClinicalSummary_departmentOfIssuer'))
+    slice info: Bundle.entry[0]: Bundle.entry[0].resource: Specified profile type was 'Organization' in profile 'http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Organization_eClinicalSummary_departmentOfIssuer|0.9.2', but found type 'Composition'
+    slice info: Bundle.entry[0]: Does not match slice 'referralEncounter' (discriminator: resource.conformsTo('http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Encounter_eClinicalSummary'))
+    slice info: Bundle.entry[0]: Bundle.entry[0].resource: Specified profile type was 'Encounter' in profile 'http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Encounter_eClinicalSummary|0.9.2', but found type 'Composition'
+    slice info: Bundle.entry[0]: Does not match slice 'problem' (discriminator: resource.conformsTo('http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Condition_eClinicalSummary'))
+    slice info: Bundle.entry[0]: Bundle.entry[0].resource: Specified profile type was 'Condition' in profile 'http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Condition_eClinicalSummary|0.9.2', but found type 'Composition'
+    slice info: Bundle.entry[0]: Does not match slice 'allergy' (discriminator: resource.conformsTo('http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_AllergyIntolerance_eClinicalSummary'))
+    slice info: Bundle.entry[0]: Bundle.entry[0].resource: Specified profile type was 'AllergyIntolerance' in profile 'http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_AllergyIntolerance_eClinicalSummary|0.9.2', but found type 'Composition'
+    slice info: Bundle.entry[0]: Does not match slice 'familyHistory' (discriminator: resource.conformsTo('http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_FamilyMemberHistory_eClinicalSummary'))
+    slice info: Bundle.entry[0]: Bundle.entry[0].resource: Specified profile type was 'FamilyMemberHistory' in profile 'http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_FamilyMemberHistory_eClinicalSummary|0.9.2', but found type 'Composition'
+    slice info: Bundle.entry[0]: Does not match slice 'observation' (discriminator: resource.conformsTo('http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Observation_Common_eClinicalSummary'))
+    slice info: Bundle.entry[0]: Bundle.entry[0].resource: Specified profile type was 'Observation' in profile 'http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Observation_Common_eClinicalSummary|0.9.2', but found type 'Composition'
+    slice info: Bundle.entry[0]: Does not match slice 'immunization' (discriminator: resource.conformsTo('http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Immunization_eClinicalSummary'))
+    slice info: Bundle.entry[0]: Bundle.entry[0].resource: Specified profile type was 'Immunization' in profile 'http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Immunization_eClinicalSummary|0.9.2', but found type 'Composition'
+    slice info: Bundle.entry[0]: Does not match slice 'procedure' (discriminator: resource.conformsTo('http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Procedure_eClinicalSummary'))
+    slice info: Bundle.entry[0]: Bundle.entry[0].resource: Specified profile type was 'Procedure' in profile 'http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Procedure_eClinicalSummary|0.9.2', but found type 'Composition'
+    slice info: Bundle.entry[0]: Does not match slice 'medicationRequest' (discriminator: resource.conformsTo('http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationRequest'))
+    slice info: Bundle.entry[0]: Bundle.entry[0].resource: Specified profile type was 'MedicationRequest' in profile 'http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationRequest|1.1.1', but found type 'Composition'
+    slice info: Bundle.entry[0]: Does not match slice 'documentReference' (discriminator: resource.conformsTo('http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_DocumentReference_eClinicalSummary'))
+    slice info: Bundle.entry[0]: Bundle.entry[0].resource: Specified profile type was 'DocumentReference' in profile 'http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_DocumentReference_eClinicalSummary|0.9.2', but found type 'Composition'
+    slice info: Bundle.entry[0]: Does not match slice 'carePlan' (discriminator: resource.conformsTo('http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_CarePlan_eClinicalSummary'))
+    slice info: Bundle.entry[0]: Bundle.entry[0].resource: Specified profile type was 'CarePlan' in profile 'http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_CarePlan_eClinicalSummary|0.9.2', but found type 'Composition'
+    slice info: Bundle.entry[0]: Does not match slice 'medicalDeviceUse' (discriminator: resource.conformsTo('http://jpfhir.jp/fhir/core/StructureDefinition/JP_DeviceUseStatement'))
+    slice info: Bundle.entry[0]: Bundle.entry[0].resource: Specified profile type was 'DeviceUseStatement' in profile 'http://jpfhir.jp/fhir/core/StructureDefinition/JP_DeviceUseStatement|0.9.2', but found type 'Composition'
+    slice info: Bundle.entry[0]: Does not match slice 'medicalDevice' (discriminator: resource.conformsTo('http://jpfhir.jp/fhir/core/StructureDefinition/JP_Device'))
+    slice info: Bundle.entry[0]: Bundle.entry[0].resource: Specified profile type was 'Device' in profile 'http://jpfhir.jp/fhir/core/StructureDefinition/JP_Device|0.9.2', but found type 'Composition'
+    slice info: Bundle.entry[0]: Does not match slice 'imageStudy' (discriminator: resource.conformsTo('http://jpfhir.jp/fhir/core/StructureDefinition/JP_ImagingStudy_Radiology'))
+    slice info: Bundle.entry[0]: Bundle.entry[0].resource: Specified profile type was 'ImagingStudy' in profile 'http://jpfhir.jp/fhir/core/StructureDefinition/JP_ImagingStudy_Radiology|1.1.1', but found type 'Composition'
+    slice info: Bundle.entry[0]: Does not match slice 'diagReport' (discriminator: resource.conformsTo('http://jpfhir.jp/fhir/core/StructureDefinition/JP_DiagnosticReport_Common'))
+    slice info: Bundle.entry[0]: Bundle.entry[0].resource: Specified profile type was 'DiagnosticReport' in profile 'http://jpfhir.jp/fhir/core/StructureDefinition/JP_DiagnosticReport_Common|1.1.1', but found type 'Composition'
+    slice info: Bundle.entry[0]: Does not match slice 'advancedDirective' (discriminator: resource.conformsTo('http://jpfhir.jp/fhir/core/StructureDefinition/JP_Consent'))
+    slice info: Bundle.entry[0]: Bundle.entry[0].resource: Specified profile type was 'Consent' in profile 'http://jpfhir.jp/fhir/core/StructureDefinition/JP_Consent|0.9.2', but found type 'Composition'
+    slice info: Bundle.entry[0]: Does not match slice 'researchSubject' (discriminator: resource.conformsTo('http://jpfhir.jp/fhir/core/StructureDefinition/JP_ResearchSubject'))
+    slice info: Bundle.entry[0]: Bundle.entry[0].resource: Specified profile type was 'ResearchSubject' in profile 'http://jpfhir.jp/fhir/core/StructureDefinition/JP_ResearchSubject|0.9.2', but found type 'Composition'
+    slice info: Bundle.entry[0]: Does not match slice 'researchStudy' (discriminator: resource.conformsTo('http://jpfhir.jp/fhir/core/StructureDefinition/JP_ResearchStudy'))
+    slice info: Bundle.entry[0]: Bundle.entry[0].resource: Specified profile type was 'ResearchStudy' in profile 'http://jpfhir.jp/fhir/core/StructureDefinition/JP_ResearchStudy|0.9.2', but found type 'Composition'
+    slice info: Bundle.entry[0]: Does not match slice 'relatedPerson' (discriminator: resource.conformsTo('http://jpfhir.jp/fhir/core/StructureDefinition/JP_RelatedPerson'))
+    slice info: Bundle.entry[0]: Bundle.entry[0].resource: Specified profile type was 'RelatedPerson' in profile 'http://jpfhir.jp/fhir/core/StructureDefinition/JP_RelatedPerson|0.9.2', but found type 'Composition'
+    slice info: Bundle.entry[0]: Does not match slice 'binaryData' (discriminator: resource.conformsTo('http://jpfhir.jp/fhir/core/StructureDefinition/JP_Binary'))
+    slice info: Bundle.entry[0]: Bundle.entry[0].resource: Specified profile type was 'Binary' in profile 'http://jpfhir.jp/fhir/core/StructureDefinition/JP_Binary|0.9.2', but found type 'Composition'
   Information @ Bundle.entry[0].resource.ofType(Composition).type (line 38, col22): None of the codings provided are in the value set 'FHIR Document Type Codes' (http://hl7.org/fhir/ValueSet/doc-typecodes|4.0.1), and a coding is recommended to come from this value set) (codes = http://jpfhir.jp/fhir/Common/CodeSystem/doc-typecodes#57133-1)
-  Information @ Bundle.meta.profile[0] (line 7, col6): Canonical URL 'http://jpfhir.jp/fhir/eReferral/StructureDefinition/JP_Bundle_eReferral' does not resolve
-  Information @ Bundle.entry[7].resource.ofType(Organization).meta.profile[1] (line 719, col12): Canonical URL 'http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Organization_eClinicalSummary_departmentOfIssuer' does not resolve
-  Information @ Bundle.entry[7].resource.meta.profile[1] (line 719, col12): Canonical URL 'http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Organization_eClinicalSummary_departmentOfIssuer' does not resolve
-  Information @ Bundle.entry[8].resource.ofType(Organization).meta.profile[1] (line 754, col12): Canonical URL 'http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Organization_eClinicalSummary_departmentOfIssuer' does not resolve
-  Information @ Bundle.entry[8].resource.meta.profile[1] (line 754, col12): Canonical URL 'http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Organization_eClinicalSummary_departmentOfIssuer' does not resolve
-  Information @ Bundle.entry[18].resource.ofType(DocumentReference).type.coding[0] (line 1197, col14): Code System URI 'http://loinc.org' is unknown so the code cannot be validated
+  Information @ Bundle.entry[16].resource.ofType(DocumentReference).type.coding[0] (line 1096, col14): Code System URI 'http://loinc.org' is unknown so the code cannot be validated
   Warning @ Bundle.entry[2].resource.ofType(Encounter).class (line 474, col72): Display Name for http://terminology.hl7.org/CodeSystem/v3-ActCode#AMB should be one of 1 choices from 'ambulatory', not '外来' for 'http://terminology.hl7.org/CodeSystem/v3-ActCode#AMB'
   Warning @ Bundle.entry[2].resource.ofType(Encounter).classHistory[0].class (line 481, col76): Display Name for http://terminology.hl7.org/CodeSystem/v3-ActCode#AMB should be one of 1 choices from 'ambulatory', not '外来' for 'http://terminology.hl7.org/CodeSystem/v3-ActCode#AMB'
-  Warning @ Bundle.entry[9].resource.ofType(Encounter).class (line 799, col72): Display Name for http://terminology.hl7.org/CodeSystem/v3-ActCode#AMB should be one of 1 choices from 'ambulatory', not '外来' for 'http://terminology.hl7.org/CodeSystem/v3-ActCode#AMB'
-  Warning @ Bundle.entry[17].resource.ofType(Observation).category[0] (line 1164, col12): Display Name for http://terminology.hl7.org/CodeSystem/observation-category#exam should be one of 1 choices from 'Exam', not '身体検査・観察'
-  Warning @ Bundle.meta.profile[0] (line 1, col2): Profile reference 'http://jpfhir.jp/fhir/eReferral/StructureDefinition/JP_Bundle_eReferral' has not been checked because it is unknown, and fetching it resulted in the error The URL 'http://jpfhir.jp/fhir/eReferral/StructureDefinition/JP_Bundle_eReferral' is not known to the FHIR validator, and has not been provided as part of the setup / parameters
-  Warning @ Bundle.entry[7].resource.ofType(Organization).meta.profile[1] (line 740, col20): Profile reference 'http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Organization_eClinicalSummary_departmentOfIssuer' has not been checked because it is unknown, and fetching it resulted in the error The URL 'http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Organization_eClinicalSummary_departmentOfIssuer' is not known to the FHIR validator, and has not been provided as part of the setup / parameters
-  Warning @ Bundle.entry[8].resource.ofType(Organization).meta.profile[1] (line 775, col20): Profile reference 'http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Organization_eClinicalSummary_departmentOfIssuer' has not been checked because it is unknown, and fetching it resulted in the error The URL 'http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Organization_eClinicalSummary_departmentOfIssuer' is not known to the FHIR validator, and has not been provided as part of the setup / parameters
+  Warning @ Bundle.entry[7].resource.ofType(Encounter).class (line 698, col72): Display Name for http://terminology.hl7.org/CodeSystem/v3-ActCode#AMB should be one of 1 choices from 'ambulatory', not '外来' for 'http://terminology.hl7.org/CodeSystem/v3-ActCode#AMB'
+  Warning @ Bundle.entry[15].resource.ofType(Observation).category[0] (line 1063, col12): Display Name for http://terminology.hl7.org/CodeSystem/observation-category#exam should be one of 1 choices from 'Exam', not '身体検査・観察'
+  Warning @ Bundle.entry[15].resource.category[0] (line 1063, col12): Display Name for http://terminology.hl7.org/CodeSystem/observation-category#exam should be one of 1 choices from 'Exam', not '身体検査・観察'

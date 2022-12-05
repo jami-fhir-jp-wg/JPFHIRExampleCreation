@@ -14,7 +14,7 @@
   "timestamp": "2021-11-26T10:00:00+09:00",
   "entry": [
     {
-      "fullUrl": "urn:uuid:937147fd-3e33-46d6-8eb9-6f391f2f3b76",
+      "fullUrl": "urn:uuid:580af201-3a30-43d9-9acc-75a08503044c",
       "resource": {
         "resourceType": "Composition",
         "id": "compositionReferralExample01",
@@ -55,31 +55,31 @@
           }
         ],
         "subject": {
-          "reference": "urn:uuid:b11e2fca-a64f-45b2-aba8-3d1fb9dd86f1",
+          "reference": "urn:uuid:53fcc255-5630-42dd-bd14-d1caf074fbed",
           "type": "Patient",
           "display": "患者リソースPatient"
         },
         "encounter": {
-          "reference": "urn:uuid:d9d64743-52f2-4ea2-bf0c-c1e9ff07bdd1",
+          "reference": "urn:uuid:eb67ba45-7b5d-428c-8e6b-5d8d96413bdd",
           "type": "Encounter",
           "display": "受診Encounterリソース"
         },
         "date": "2020-08-21T12:12:20+09:00",
         "author": [
           {
-            "reference": "urn:uuid:78dc5b01-58c2-4b64-8db0-c4bda37bc1f4",
+            "reference": "urn:uuid:3800a0de-dc28-4afe-809d-06b69236c9af",
             "type": "Practitioner",
             "display": "紹介状作成者PractitionerRoleリソース"
           },
           {
-            "reference": "urn:uuid:64e7c9b4-1ee8-49b9-933b-0780d6834132",
+            "reference": "urn:uuid:a7c183f5-bde5-499d-9690-079f360610b0",
             "type": "Organization",
             "display": "紹介状作成機関Organizationリソース"
           }
         ],
         "title": "診療情報提供書",
         "custodian": {
-          "reference": "urn:uuid:64e7c9b4-1ee8-49b9-933b-0780d6834132",
+          "reference": "urn:uuid:a7c183f5-bde5-499d-9690-079f360610b0",
           "type": "Organization",
           "display": "紹介状交付責任機関Organizationリソース"
         },
@@ -113,17 +113,17 @@
             },
             "entry": [
               {
-                "reference": "urn:uuid:928e8817-6a30-4676-b5be-c8c240b24738",
+                "reference": "urn:uuid:cde4e818-5339-481f-9406-3447d3b92f89",
                 "type": "Organization",
                 "display": "紹介先医療機関"
               },
               {
-                "reference": "urn:uuid:7488ebe6-e2e2-4c7c-a23c-433eece9188d",
+                "reference": "urn:uuid:cde4e818-5339-481f-9406-3447d3b92f89",
                 "type": "Organization",
                 "display": "紹介先診療科"
               },
               {
-                "reference": "urn:uuid:7df5692d-1f70-44b7-8958-d4b3260e6b2c",
+                "reference": "urn:uuid:60383d52-0b84-4278-88e7-4c18d600f75d",
                 "type": "Practitioner",
                 "display": "紹介先医師"
               }
@@ -146,17 +146,17 @@
             },
             "entry": [
               {
-                "reference": "urn:uuid:64e7c9b4-1ee8-49b9-933b-0780d6834132",
+                "reference": "urn:uuid:a7c183f5-bde5-499d-9690-079f360610b0",
                 "type": "Organization",
                 "display": "紹介元医療機関"
               },
               {
-                "reference": "urn:uuid:03245d0f-e6eb-44d6-a8cc-54458a8db4a4",
+                "reference": "urn:uuid:cde4e818-5339-481f-9406-3447d3b92f89",
                 "type": "Organization",
                 "display": "紹介元診療科"
               },
               {
-                "reference": "urn:uuid:78dc5b01-58c2-4b64-8db0-c4bda37bc1f4",
+                "reference": "urn:uuid:3800a0de-dc28-4afe-809d-06b69236c9af",
                 "type": "Practitioner",
                 "display": "紹介元医師"
               }
@@ -191,7 +191,7 @@
                 },
                 "entry": [
                   {
-                    "reference": "urn:uuid:b4503d76-f073-4631-8714-fdb9f19eb0da",
+                    "reference": "urn:uuid:3fa474b0-2f2d-433f-854b-f436effd767d",
                     "type": "Encounter",
                     "display": "紹介目的"
                   }
@@ -214,12 +214,12 @@
                 },
                 "entry": [
                   {
-                    "reference": "urn:uuid:f98f4149-81a0-47e2-94f8-dada91f4a76d",
+                    "reference": "urn:uuid:893e8d89-a373-4983-9619-ca38dc5dfe05",
                     "type": "Condition",
                     "display": "傷病名・主訴"
                   },
                   {
-                    "reference": "urn:uuid:c481759a-2d27-4b1f-b092-18f035bc1e87",
+                    "reference": "urn:uuid:1b9cdd99-38fc-4cf3-a17e-f19d2854fd81",
                     "type": "Condition",
                     "display": "傷病名・主訴"
                   }
@@ -242,7 +242,7 @@
                 },
                 "entry": [
                   {
-                    "reference": "urn:uuid:c9800289-c983-4a09-a948-caa14aea4d9e",
+                    "reference": "urn:uuid:60f1d617-6fc4-4126-b5ce-f13f3275a029",
                     "type": "Condition",
                     "display": "現病歴"
                   }
@@ -265,12 +265,12 @@
                 },
                 "entry": [
                   {
-                    "reference": "urn:uuid:63e74144-f400-4a12-98ed-c762f2365e27",
+                    "reference": "urn:uuid:fcc0ecf8-a371-4cd7-bb70-e18e227358ea",
                     "type": "Condition",
                     "display": "既往歴"
                   },
                   {
-                    "reference": "urn:uuid:5d02ceab-84a8-4cd9-8adb-55e499542b4c",
+                    "reference": "urn:uuid:9210a69b-7753-4fdc-a05a-1baf798696d9",
                     "type": "Condition",
                     "display": "既往歴"
                   }
@@ -293,12 +293,12 @@
                 },
                 "entry": [
                   {
-                    "reference": "urn:uuid:006b9a2c-9a9f-4cef-869d-4af8e61d8b5e",
+                    "reference": "urn:uuid:d444afee-e911-4345-9d62-5845010e18a1",
                     "type": "AllergyIntolerance",
                     "display": "アレルギー・不耐性反応"
                   },
                   {
-                    "reference": "urn:uuid:287e31c0-5c68-4cbb-8a4e-7aa02f93a8cf",
+                    "reference": "urn:uuid:975a1cfa-0b81-48d9-b07b-1cb0463e3eb0",
                     "type": "AllergyIntolerance",
                     "display": "アレルギー・不耐性反応"
                   }
@@ -337,7 +337,7 @@
                 },
                 "entry": [
                   {
-                    "reference": "urn:uuid:4aeaaea0-9401-4d61-8616-844bc7a106bb",
+                    "reference": "urn:uuid:d776665d-a392-4ed8-9851-8caededa1141",
                     "type": "Observation",
                     "display": "身体所見"
                   }
@@ -376,7 +376,7 @@
                 },
                 "entry": [
                   {
-                    "reference": "urn:uuid:9ada2459-bee2-47b9-ac2f-6568d9d9157f",
+                    "reference": "urn:uuid:e253c769-3b64-4d09-a9b9-f59d491edbaa",
                     "type": "DocumentReference",
                     "display": "臨床経過"
                   }
@@ -388,7 +388,7 @@
       }
     },
     {
-      "fullUrl": "urn:uuid:b11e2fca-a64f-45b2-aba8-3d1fb9dd86f1",
+      "fullUrl": "urn:uuid:53fcc255-5630-42dd-bd14-d1caf074fbed",
       "resource": {
         "resourceType": "Patient",
         "id": "jppatientExample01",
@@ -453,7 +453,7 @@
       }
     },
     {
-      "fullUrl": "urn:uuid:d9d64743-52f2-4ea2-bf0c-c1e9ff07bdd1",
+      "fullUrl": "urn:uuid:eb67ba45-7b5d-428c-8e6b-5d8d96413bdd",
       "resource": {
         "resourceType": "Encounter",
         "id": "encounterReferralExample01",
@@ -490,7 +490,7 @@
       }
     },
     {
-      "fullUrl": "urn:uuid:78dc5b01-58c2-4b64-8db0-c4bda37bc1f4",
+      "fullUrl": "urn:uuid:3800a0de-dc28-4afe-809d-06b69236c9af",
       "resource": {
         "resourceType": "Practitioner",
         "id": "referralFromPractitionerExample01",
@@ -533,7 +533,7 @@
       }
     },
     {
-      "fullUrl": "urn:uuid:7df5692d-1f70-44b7-8958-d4b3260e6b2c",
+      "fullUrl": "urn:uuid:60383d52-0b84-4278-88e7-4c18d600f75d",
       "resource": {
         "resourceType": "Practitioner",
         "id": "referralToPractitionerExample01",
@@ -576,10 +576,10 @@
       }
     },
     {
-      "fullUrl": "urn:uuid:64e7c9b4-1ee8-49b9-933b-0780d6834132",
+      "fullUrl": "urn:uuid:a7c183f5-bde5-499d-9690-079f360610b0",
       "resource": {
         "resourceType": "Organization",
-        "id": "referralFromOrganizaitonExample01",
+        "id": "referralFromOrganizationExample01",
         "meta": {
           "profile": [
             "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Organization",
@@ -642,115 +642,14 @@
       }
     },
     {
-      "fullUrl": "urn:uuid:928e8817-6a30-4676-b5be-c8c240b24738",
+      "fullUrl": "urn:uuid:cde4e818-5339-481f-9406-3447d3b92f89",
       "resource": {
         "resourceType": "Organization",
-        "id": "referralToOrganizaitonExample01",
+        "id": "referralFromOrganizationDeptExample01",
         "meta": {
           "profile": [
             "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Organization",
-            "http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Organization_eClinicalSummary_issuer"
-          ]
-        },
-        "extension": [
-          {
-            "url": "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Organization_PrefectureNo",
-            "valueCoding": {
-              "system": "urn:oid:1.2.392.100495.20.3.21",
-              "code": "13"
-            }
-          },
-          {
-            "url": "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Organization_InsuranceOrganizationCategory",
-            "valueCoding": {
-              "system": "urn:oid:1.2.392.100495.20.3.22",
-              "code": "1"
-            }
-          },
-          {
-            "url": "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Organization_InsuranceOrganizationNo",
-            "valueIdentifier": {
-              "system": "urn:oid:1.2.392.100495.20.3.23",
-              "value": "1234567"
-            }
-          }
-        ],
-        "identifier": [
-          {
-            "system": "http://jpfhir.jp/fhir/core/IdSystem/insurance-medical-institution-no",
-            "value": "1311234567"
-          }
-        ],
-        "type": [
-          {
-            "coding": [
-              {
-                "system": "http://terminology.hl7.org/CodeSystem/organization-type",
-                "code": "prov"
-              }
-            ]
-          }
-        ],
-        "name": "東京第一テスト病院",
-        "telecom": [
-          {
-            "system": "phone",
-            "value": "03-1234-5678"
-          }
-        ],
-        "address": [
-          {
-            "text": "東京都文京区文京町１−２−３",
-            "postalCode": "113-0001",
-            "country": "JP"
-          }
-        ]
-      }
-    },
-    {
-      "fullUrl": "urn:uuid:7488ebe6-e2e2-4c7c-a23c-433eece9188d",
-      "resource": {
-        "resourceType": "Organization",
-        "id": "referralToOrganizaitonDeptExample01",
-        "meta": {
-          "profile": [
-            "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Organization",
-            "http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Organization_eClinicalSummary_departmentOfIssuer"
-          ]
-        },
-        "type": [
-          {
-            "coding": [
-              {
-                "system": "http://terminology.hl7.org/CodeSystem/organization-type",
-                "code": "dept"
-              }
-            ]
-          },
-          {
-            "coding": [
-              {
-                "system": "urn:oid:1.2.392.100495.20.2.51",
-                "code": "03"
-              }
-            ]
-          }
-        ],
-        "name": "循環器内科",
-        "partOf": {
-          "reference": "urn:uuid:7488ebe6-e2e2-4c7c-a23c-433eece9188d"
-        }
-      }
-    },
-    {
-      "fullUrl": "urn:uuid:03245d0f-e6eb-44d6-a8cc-54458a8db4a4",
-      "resource": {
-        "resourceType": "Organization",
-        "id": "referralFromOrganizaitonDeptExample01",
-        "meta": {
-          "profile": [
-            "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Organization",
-            "http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Organization_eClinicalSummary_departmentOfIssuer"
+            "http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Organization_eClinicalSummary_department"
           ]
         },
         "type": [
@@ -773,12 +672,12 @@
         ],
         "name": "眼科",
         "partOf": {
-          "reference": "urn:uuid:03245d0f-e6eb-44d6-a8cc-54458a8db4a4"
+          "reference": "urn:uuid:cde4e818-5339-481f-9406-3447d3b92f89"
         }
       }
     },
     {
-      "fullUrl": "urn:uuid:b4503d76-f073-4631-8714-fdb9f19eb0da",
+      "fullUrl": "urn:uuid:3fa474b0-2f2d-433f-854b-f436effd767d",
       "resource": {
         "resourceType": "Encounter",
         "id": "purposeReferralExample01",
@@ -808,7 +707,7 @@
       }
     },
     {
-      "fullUrl": "urn:uuid:f98f4149-81a0-47e2-94f8-dada91f4a76d",
+      "fullUrl": "urn:uuid:893e8d89-a373-4983-9619-ca38dc5dfe05",
       "resource": {
         "resourceType": "Condition",
         "id": "cc1ReferralExample01",
@@ -846,13 +745,13 @@
           "text": "上腹部痛"
         },
         "subject": {
-          "reference": "urn:uuid:b11e2fca-a64f-45b2-aba8-3d1fb9dd86f1"
+          "reference": "urn:uuid:53fcc255-5630-42dd-bd14-d1caf074fbed"
         },
         "onsetDateTime": "2022-06-09"
       }
     },
     {
-      "fullUrl": "urn:uuid:c481759a-2d27-4b1f-b092-18f035bc1e87",
+      "fullUrl": "urn:uuid:1b9cdd99-38fc-4cf3-a17e-f19d2854fd81",
       "resource": {
         "resourceType": "Condition",
         "id": "cc2ReferralExample01",
@@ -890,13 +789,13 @@
           "text": "腰痛"
         },
         "subject": {
-          "reference": "urn:uuid:b11e2fca-a64f-45b2-aba8-3d1fb9dd86f1"
+          "reference": "urn:uuid:53fcc255-5630-42dd-bd14-d1caf074fbed"
         },
         "onsetDateTime": "2022-05"
       }
     },
     {
-      "fullUrl": "urn:uuid:c9800289-c983-4a09-a948-caa14aea4d9e",
+      "fullUrl": "urn:uuid:60f1d617-6fc4-4126-b5ce-f13f3275a029",
       "resource": {
         "resourceType": "Condition",
         "id": "piReferralExample01",
@@ -934,7 +833,7 @@
           "text": "上腹部痛"
         },
         "subject": {
-          "reference": "urn:uuid:b11e2fca-a64f-45b2-aba8-3d1fb9dd86f1"
+          "reference": "urn:uuid:53fcc255-5630-42dd-bd14-d1caf074fbed"
         },
         "note": [
           {
@@ -944,7 +843,7 @@
       }
     },
     {
-      "fullUrl": "urn:uuid:63e74144-f400-4a12-98ed-c762f2365e27",
+      "fullUrl": "urn:uuid:fcc0ecf8-a371-4cd7-bb70-e18e227358ea",
       "resource": {
         "resourceType": "Condition",
         "id": "ph1ReferralExample01",
@@ -982,7 +881,7 @@
           "text": "狭心症"
         },
         "subject": {
-          "reference": "urn:uuid:b11e2fca-a64f-45b2-aba8-3d1fb9dd86f1"
+          "reference": "urn:uuid:53fcc255-5630-42dd-bd14-d1caf074fbed"
         },
         "onsetDateTime": "2018",
         "note": [
@@ -993,7 +892,7 @@
       }
     },
     {
-      "fullUrl": "urn:uuid:5d02ceab-84a8-4cd9-8adb-55e499542b4c",
+      "fullUrl": "urn:uuid:9210a69b-7753-4fdc-a05a-1baf798696d9",
       "resource": {
         "resourceType": "Condition",
         "id": "ph2ReferralExample01",
@@ -1031,7 +930,7 @@
           "text": "左前腕骨折"
         },
         "subject": {
-          "reference": "urn:uuid:b11e2fca-a64f-45b2-aba8-3d1fb9dd86f1"
+          "reference": "urn:uuid:53fcc255-5630-42dd-bd14-d1caf074fbed"
         },
         "onsetDateTime": "2019",
         "note": [
@@ -1042,7 +941,7 @@
       }
     },
     {
-      "fullUrl": "urn:uuid:006b9a2c-9a9f-4cef-869d-4af8e61d8b5e",
+      "fullUrl": "urn:uuid:d444afee-e911-4345-9d62-5845010e18a1",
       "resource": {
         "resourceType": "AllergyIntolerance",
         "id": "alg1ReferralExample01",
@@ -1075,10 +974,10 @@
           "text": "サバ"
         },
         "patient": {
-          "reference": "urn:uuid:b11e2fca-a64f-45b2-aba8-3d1fb9dd86f1"
+          "reference": "urn:uuid:53fcc255-5630-42dd-bd14-d1caf074fbed"
         },
         "encounter": {
-          "reference": "urn:uuid:d9d64743-52f2-4ea2-bf0c-c1e9ff07bdd1"
+          "reference": "urn:uuid:eb67ba45-7b5d-428c-8e6b-5d8d96413bdd"
         },
         "onsetAge": {
           "system": "http://unitsofmeasure.org",
@@ -1093,7 +992,7 @@
       }
     },
     {
-      "fullUrl": "urn:uuid:287e31c0-5c68-4cbb-8a4e-7aa02f93a8cf",
+      "fullUrl": "urn:uuid:975a1cfa-0b81-48d9-b07b-1cb0463e3eb0",
       "resource": {
         "resourceType": "AllergyIntolerance",
         "id": "alg1ReferralExample02",
@@ -1126,10 +1025,10 @@
           "text": "キーウイ"
         },
         "patient": {
-          "reference": "urn:uuid:b11e2fca-a64f-45b2-aba8-3d1fb9dd86f1"
+          "reference": "urn:uuid:53fcc255-5630-42dd-bd14-d1caf074fbed"
         },
         "encounter": {
-          "reference": "urn:uuid:d9d64743-52f2-4ea2-bf0c-c1e9ff07bdd1"
+          "reference": "urn:uuid:eb67ba45-7b5d-428c-8e6b-5d8d96413bdd"
         },
         "onsetAge": {
           "system": "http://unitsofmeasure.org",
@@ -1144,7 +1043,7 @@
       }
     },
     {
-      "fullUrl": "urn:uuid:4aeaaea0-9401-4d61-8616-844bc7a106bb",
+      "fullUrl": "urn:uuid:d776665d-a392-4ed8-9851-8caededa1141",
       "resource": {
         "resourceType": "Observation",
         "id": "psobsCommonExample01",
@@ -1175,13 +1074,13 @@
           "text": "腹部所見"
         },
         "subject": {
-          "reference": "urn:uuid:b11e2fca-a64f-45b2-aba8-3d1fb9dd86f1"
+          "reference": "urn:uuid:53fcc255-5630-42dd-bd14-d1caf074fbed"
         },
         "valueString": "上腹部圧痛あり、その他特に所見なし。"
       }
     },
     {
-      "fullUrl": "urn:uuid:9ada2459-bee2-47b9-ac2f-6568d9d9157f",
+      "fullUrl": "urn:uuid:e253c769-3b64-4d09-a9b9-f59d491edbaa",
       "resource": {
         "resourceType": "DocumentReference",
         "id": "ccourseReferralExample01",

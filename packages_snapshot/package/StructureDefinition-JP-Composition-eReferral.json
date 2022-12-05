@@ -12,7 +12,7 @@
     }
   ],
   "url": "http://jpfhir.jp/fhir/eReferral/StructureDefinition/JP_Composition_eReferral",
-  "version": "0.9.1",
+  "version": "0.9.2",
   "name": "JP_Composition_eReferral",
   "status": "active",
   "description": "処方情報のリソース構成情報と文書日付に関するCompositionの派生プロファイル",
@@ -59,7 +59,7 @@
             "key": "checkExist-CDASection-or-CompositionSection",
             "severity": "error",
             "human": "【セクション構成はCDAセクションと構造情報セクションのどちらか一方だけ存在している必要がある。】",
-            "expression": "((section.code.coding.where(code = '200')).exists()) xor (section.code.coding.where(code = '300')).exists())",
+            "expression": "((section.code.coding.where(code = '200')).exists()) xor ((section.code.coding.where(code = '300')).exists())",
             "source": "http://jpfhir.jp/fhir/eReferral/StructureDefinition/JP_Composition_eReferral"
           }
         ]
@@ -185,7 +185,11 @@
         "definition": "文書カテゴリーコード。　診療情報提供書ではtype.coding.codeに記述される文書区分コードと同一。",
         "min": 1,
         "max": "1",
-        "mustSupport": true
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://jpfhir.jp/fhir/Common/ValueSet/doc-typecodes"
+        }
       },
       {
         "id": "Composition.category.coding",
@@ -270,9 +274,7 @@
         },
         "short": "文書作成責任者と文書作成機関とへの参照。",
         "definition": "文書作成責任者を表すPractitionerリソースへの参照、および,文書作成機関か、または文書作成機関の診療科と文書作成機関を表すOrganizationリソースへの参照の2つのReferenceを繰り返す。",
-        "min": 2,
-        "max": "3",
-        "mustSupport": true
+        "min": 2
       },
       {
         "id": "Composition.author:authorPractitioner",
@@ -280,9 +282,14 @@
         "sliceName": "authorPractitioner",
         "min": 1,
         "max": "1",
-        "patternReference": {
-          "reference": "JP_Practitioner_eClinicalSummary"
-        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Practitioner_eClinicalSummary"
+            ]
+          }
+        ],
         "mustSupport": true
       },
       {
@@ -291,9 +298,14 @@
         "sliceName": "authorOrganization",
         "min": 1,
         "max": "1",
-        "patternReference": {
-          "reference": "JP_Organization_eClinicalSummary"
-        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Organization_eClinicalSummary_issuer"
+            ]
+          }
+        ],
         "mustSupport": true
       },
       {
@@ -302,9 +314,14 @@
         "sliceName": "authorDepartment",
         "min": 0,
         "max": "1",
-        "patternReference": {
-          "reference": "JP_Organization_eClinicalSummary_department"
-        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Organization_eClinicalSummary_department"
+            ]
+          }
+        ],
         "mustSupport": true
       },
       {
@@ -319,9 +336,14 @@
         "short": "文書の作成・修正を行い、文書の管理責任を持つ医療機関（Organizationリソース）への参照",
         "definition": "文書作成機関と同一の組織の場合、custodian要素からは文書作成機関を表すOrganizationリソースへの参照となる。文書作成機関とは異なる組織である場合は、文書作成機関とは別のOrganizationリソースで表現し、custodian要素からはそのOrganizationリソースを参照する。",
         "min": 1,
-        "patternReference": {
-          "reference": "JP_Organization_eClinicalSummary"
-        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Organization_eClinicalSummary"
+            ]
+          }
+        ],
         "mustSupport": true
       },
       {
@@ -523,7 +545,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Organization"
+              "http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Organization_eClinicalSummary_issuer"
             ]
           }
         ],
@@ -541,7 +563,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Organization"
+              "http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Organization_eClinicalSummary_department"
             ]
           }
         ],
@@ -559,7 +581,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Practitioner"
+              "http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Practitioner_eClinicalSummary"
             ]
           }
         ],
@@ -703,7 +725,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Organization"
+              "http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Organization_eClinicalSummary"
             ]
           }
         ],
@@ -721,7 +743,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Organization"
+              "http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Organization_eClinicalSummary_department"
             ]
           }
         ],
@@ -739,7 +761,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Practitioner"
+              "http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Practitioner_eClinicalSummary"
             ]
           }
         ],

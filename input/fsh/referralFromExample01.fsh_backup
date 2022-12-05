@@ -35,7 +35,7 @@
 // 030on_医療者カナ氏名(ARGfirstnamekana,ARGgivennamekana)
 
 //--------------
-Instance: referralFromOrganizaitonExample01
+Instance: referralFromOrganizationExample01
 InstanceOf: JP_Organization
 Usage: #inline
 
@@ -77,14 +77,14 @@ Description: "紹介元医療機関情報　例"
 
 //--------------
 
-Instance: referralFromOrganizaitonDeptExample01
+Instance: referralFromOrganizationDeptExample01
 InstanceOf: JP_Organization
 Usage: #inline
 
 Description: "紹介元医療機関の診療科情報　例"
 
 //002or_ValidationProfile(ARGmetaprofile)
-* meta.profile[+] = "http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Organization_eClinicalSummary_departmentOfIssuer"
+* meta.profile[+] = "http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Organization_eClinicalSummary_department"
  
 // 
 * type[+].coding.system = "http://terminology.hl7.org/CodeSystem/organization-type"
@@ -95,7 +95,7 @@ Description: "紹介元医療機関の診療科情報　例"
 
 * name = "眼科"
 
-* partOf.reference = "referralFromOrganizaitonDeptExample01"
+* partOf.reference = "referralFromOrganizationDeptExample01"
 
 //--------------
 Instance: referralFromPractitionerExample01

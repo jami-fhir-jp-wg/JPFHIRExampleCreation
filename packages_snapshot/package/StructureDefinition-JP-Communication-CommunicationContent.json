@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "JP-Communication-CommunicationContent",
   "url": "http://jpfhir.jp/fhir/eReferral/Extension/StructureDefinition/JP_Communication_CommunicationContent",
-  "version": "0.9.1",
+  "version": "0.9.2",
   "name": "JP_Communication_CommunicationContent",
   "status": "draft",
   "description": "処方箋備考情報のための拡張プロファイル",

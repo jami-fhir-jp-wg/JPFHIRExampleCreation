@@ -34,14 +34,14 @@
 // 030mn_医療者漢字氏名(ARGfirstname,ARGgivenname)
 // 030on_医療者カナ氏名(ARGfirstnamekana,ARGgivennamekana)
 
-Instance: referralToOrganizaitonExample01
+Instance: referralToOrganizationExample01
 InstanceOf: JP_Organization
 Usage: #inline
 
 Description: "紹介先医療機関情報　例"
 
 // 002or_ValidationProfile(ARGmetaprofile)
-* meta.profile[+] = "http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Organization_eClinicalSummary_issuer"
+* meta.profile[+] = "http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Organization_eClinicalSummary"
 
 //
 //--------------
@@ -77,14 +77,14 @@ Description: "紹介先医療機関情報　例"
 
 //--------------
 
-Instance: referralToOrganizaitonDeptExample01
+Instance: referralToOrganizationDeptExample01
 InstanceOf: JP_Organization
 Usage: #inline
 
 Description: "紹介先医療機関の診療科情報　例"
 
 //002or_ValidationProfile(ARGmetaprofile)
-* meta.profile[+] = "http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Organization_eClinicalSummary_departmentOfIssuer"
+* meta.profile[+] = "http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Organization_eClinicalSummary_department"
 
 //
 * type[+].coding.system = "http://terminology.hl7.org/CodeSystem/organization-type"
@@ -95,8 +95,8 @@ Description: "紹介先医療機関の診療科情報　例"
 
 * name = "循環器内科"
 
-// * partOf.reference = "referralToOrganizaitonDeptExample01"
-* partOf.reference = "urn:uuid:7488ebe6-e2e2-4c7c-a23c-433eece9188d"
+// * partOf.reference = "referralToOrganizationDeptExample01"
+* partOf.reference = "urn:uuid:cde4e818-5339-481f-9406-3447d3b92f89"
 
 //--------------
 Instance: referralToPractitionerExample01

@@ -12,7 +12,7 @@
     }
   ],
   "url": "http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_DocumentReference_CDAdocument",
-  "version": "0.9.1",
+  "version": "0.9.2",
   "name": "JP_DocumentReference_CDAdocument",
   "status": "active",
   "fhirVersion": "4.0.1",

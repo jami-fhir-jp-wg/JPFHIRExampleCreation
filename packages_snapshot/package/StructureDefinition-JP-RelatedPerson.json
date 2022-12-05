@@ -12,7 +12,7 @@
     }
   ],
   "url": "http://jpfhir.jp/fhir/core/StructureDefinition/JP_RelatedPerson",
-  "version": "0.9.1",
+  "version": "0.9.2",
   "name": "JP_RelatedPerson",
   "status": "active",
   "fhirVersion": "4.0.1",
