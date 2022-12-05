@@ -239,14 +239,6 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/JP-Organization-eClinicalSummary-issuer"
-        },
-        "name": "JP_Organization_eClinicalSummary_issuer",
-        "description": "処方を発行した医療機関の情報　JP_Organizationの派生プロファイル",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
           "reference": "StructureDefinition/JP-Patient-eClinicalSummary"
         },
         "name": "JP_Patient_eClinicalSummary",

@@ -42,7 +42,8 @@ Usage: #inline
 Description: "紹介元医療機関情報　例"
 
 // 002r_ValidationProfile(ARGmetaprofile)
-* meta.profile[+] = "http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Organization_eClinicalSummary_issuer"
+//* meta.profile[+] = "http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Organization_eClinicalSummary_issuer"
+* meta.profile[+] = "http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Organization_eClinicalSummary"
 
 //
 // 機関都道府県番号：2桁数字　北海道は01
@@ -96,7 +97,7 @@ Description: "紹介元医療機関の診療科情報　例"
 * name = "眼科"
 
 // * partOf.reference = "referralFromOrganizationDeptExample01"
-* partOf.reference = "urn:uuid:cde4e818-5339-481f-9406-3447d3b92f89"
+* partOf.reference = "urn:uuid:d6a456b8-ffeb-4f59-9b2d-1b368998d373"
 
 //--------------
 Instance: referralFromPractitionerExample01

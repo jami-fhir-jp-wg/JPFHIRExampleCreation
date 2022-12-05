@@ -3,7 +3,7 @@
   "id": "JP-Organization-eReferral-issuer-Example",
   "meta": {
     "profile": [
-      "http://jpfhir.jp/fhir/eReferral/StructureDefinition/JP_Organization_eReferral_issuer"
+      "http://jpfhir.jp/fhir/eReferral/StructureDefinition/JP_Organization_eReferral"
     ]
   },
   "extension": [

@@ -302,7 +302,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Organization_eClinicalSummary_issuer"
+              "http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Organization_eClinicalSummary"
             ]
           }
         ],
@@ -534,9 +534,9 @@
         "max": "3"
       },
       {
-        "id": "Composition.section:referralFromSection.entry:referralFromOrganizaiton",
+        "id": "Composition.section:referralFromSection.entry:referralFromOrganization",
         "path": "Composition.section.entry",
-        "sliceName": "referralFromOrganizaiton",
+        "sliceName": "referralFromOrganization",
         "short": "紹介元医療機関",
         "definition": "紹介元医療機関",
         "min": 1,
@@ -545,7 +545,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Organization_eClinicalSummary_issuer"
+              "http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Organization_eClinicalSummary"
             ]
           }
         ],
@@ -714,9 +714,9 @@
         "max": "3"
       },
       {
-        "id": "Composition.section:referralToSection.entry:referralToOrganizaiton",
+        "id": "Composition.section:referralToSection.entry:referralToOrganization",
         "path": "Composition.section.entry",
-        "sliceName": "referralToOrganizaiton",
+        "sliceName": "referralToOrganization",
         "short": "紹介先医療機関",
         "definition": "紹介先医療機関",
         "min": 1,
