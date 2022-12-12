@@ -1,7 +1,7 @@
 #include "fshDef/jpAllergy_eReferralDef.fshdef"
 
 $000mn_ExampleJPAllergy_eCS(alg1ReferralExample01Inline)
-$001mn_Description(allergyeferralExample01 診療情報提供書　アレルギー例1)
+$001mn_Description(allergyeferralExample01 診療情報提供書　アレルギー例1　サバ)
 $002or_ValidationProfile_JPAllergy_eCS()
 $010on_アレルギ管理番号(102934701)
 $040on_アレルギタイプ()
@@ -20,7 +20,7 @@ $100on_アレルギ時期年齢(30)
 $150or_アレルギ追加TEXT(サバ食後３時間ほどで全身に発疹と腹痛あり)
 
 $000mn_ExampleJPAllergy_eCS(alg1ReferralExample02Inline)
-$001mn_Description(allergyeferralExample01 診療情報提供書　アレルギー例1)
+$001mn_Description(allergyeferralExample01 診療情報提供書　アレルギー例1　キーウイ)
 $002or_ValidationProfile_JPAllergy_eCS()
 $010on_アレルギ管理番号(102934701)
 $040on_アレルギタイプ()
