@@ -19,7 +19,7 @@ Description: "conditionReferralExample01 診療情報提供書　既往歴例1�
 * code[+].text = "狭心症"
 
 // * subject.reference = "jppatientExample01Inline"
-* subject.reference = "urn:uuid:0a48a4bf-0d87-4efb-aafd-d45e0842a4dd"
+* subject.reference = "urn:uuid:83aa2413-57b7-4769-b2bf-465450ddb351"
 
 // 2018 2020-08-21
 // ATGtime 12:12:20
@@ -45,7 +45,7 @@ Description: "conditionReferralExample01 診療情報提供書　既往歴例2�
 * code[+].text = "左前腕骨折"
 
 // * subject.reference = "jppatientExample01Inline"
-* subject.reference = "urn:uuid:0a48a4bf-0d87-4efb-aafd-d45e0842a4dd"
+* subject.reference = "urn:uuid:83aa2413-57b7-4769-b2bf-465450ddb351"
 
 // 2019 2020-08-21
 // ATGtime 12:12:20

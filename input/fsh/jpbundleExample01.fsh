@@ -13,60 +13,60 @@ Description: "bundleReferralExample01 診療情報提供書Bundle"
 
 * timestamp = "2021-11-26T10:00:00+09:00"
 
-* entry[+].fullUrl = "urn:uuid:830ec2d1-67a7-427e-b6fe-ad0eb29da7fb"
+* entry[+].fullUrl = "urn:uuid:8b4cf9eb-24f1-41c0-a899-b93a11904c06"
 * entry[=].resource = compositionReferralExample01Inline
 
-* entry[+].fullUrl = "urn:uuid:0a48a4bf-0d87-4efb-aafd-d45e0842a4dd"
+* entry[+].fullUrl = "urn:uuid:83aa2413-57b7-4769-b2bf-465450ddb351"
 * entry[=].resource = jppatientExample01Inline
 
-* entry[+].fullUrl = "urn:uuid:7cad1f19-3435-451d-9a71-a81b61f3358e"
+* entry[+].fullUrl = "urn:uuid:7280fa27-20fc-4ebe-9f5d-3836b8a6b63e"
 * entry[=].resource = encounterReferralExample01Inline
 
-* entry[+].fullUrl = "urn:uuid:3e6a0ba2-d781-4fd7-9de6-e077b690daed"
+* entry[+].fullUrl = "urn:uuid:a3cc1035-cf0b-4e23-8e59-e647fbf69f6e"
 * entry[=].resource = referralFromPractitionerExample01Inline
 
-* entry[+].fullUrl = "urn:uuid:f11535c2-043d-43b6-bf99-b8298ea3c946"
+* entry[+].fullUrl = "urn:uuid:5f30b2c2-8827-4964-8e2f-e729130435f8"
 * entry[=].resource = referralToPractitionerExample01Inline
 
-* entry[+].fullUrl = "urn:uuid:8a888471-9781-4fb7-b5c4-b34afcdea638"
+* entry[+].fullUrl = "urn:uuid:ffdb043b-fda7-4ec6-9ed1-df8d4b066a0b"
 * entry[=].resource = referralFromOrganizationExample01Inline
 
-* entry[+].fullUrl = "urn:uuid:a44951be-cdaa-4c53-9e35-6be013da5441"
+* entry[+].fullUrl = "urn:uuid:45165ee8-01cb-4448-9fd8-43b7ab4a2c32"
 * entry[=].resource = referralToOrganizationExample01Inline
 
-* entry[+].fullUrl = "urn:uuid:9f92f003-69e6-4983-85eb-fb49a3110b59"
+* entry[+].fullUrl = "urn:uuid:7756d1a3-ae1d-45e3-a5bb-cee0b98c84a4"
 * entry[=].resource = referralToOrganizationDeptExample01Inline
 
-* entry[+].fullUrl = "urn:uuid:2e979bec-720b-4e36-8eb9-ebe661172af3"
+* entry[+].fullUrl = "urn:uuid:eca4154f-202b-4a34-9704-65dba07d5e01"
 * entry[=].resource = referralFromOrganizationDeptExample01Inline
 
-* entry[+].fullUrl = "urn:uuid:3acc3dc7-c79b-41f1-8eea-ac4de9b664b8"
+* entry[+].fullUrl = "urn:uuid:f6f953a2-0d56-4657-9394-983c3341bac0"
 * entry[=].resource = purposeReferralExample01Inline
 
-* entry[+].fullUrl = "urn:uuid:6a31db8e-109d-4349-b0cf-095131c3307a"
+* entry[+].fullUrl = "urn:uuid:629f90ab-b189-4897-88c1-0f5c5c931edf"
 * entry[=].resource = cc1ReferralExample01Inline
 
-* entry[+].fullUrl = "urn:uuid:a9358f3e-c743-4998-aa89-1be54c31b432"
+* entry[+].fullUrl = "urn:uuid:fd2ca19a-ddbc-425c-b3bd-8230e63a7e95"
 * entry[=].resource = cc2ReferralExample01Inline
 
-* entry[+].fullUrl = "urn:uuid:5eab50b2-6741-467c-a2fd-a4adab1f835f"
+* entry[+].fullUrl = "urn:uuid:d994fd19-2318-47e2-8022-10d6b768fc6b"
 * entry[=].resource = piReferralExample01Inline
 
-* entry[+].fullUrl = "urn:uuid:5c650562-f4e4-40b3-87c6-e9a0376be7a8"
+* entry[+].fullUrl = "urn:uuid:2bd8c881-5bee-494c-a37a-1d29eea42f99"
 * entry[=].resource = ph1ReferralExample01Inline
 
-* entry[+].fullUrl = "urn:uuid:a28198b9-6a23-4677-ba2e-5eb3e17d9792"
+* entry[+].fullUrl = "urn:uuid:1b6aeba7-1a9d-4738-84cf-f96973f5db6a"
 * entry[=].resource = ph2ReferralExample01Inline
 
-* entry[+].fullUrl = "urn:uuid:711b07ae-d20b-40b0-9aa9-c7f1981409e6"
+* entry[+].fullUrl = "urn:uuid:cef923ed-bcd8-462d-87c3-094fe9fb4568"
 * entry[=].resource = alg1ReferralExample01Inline
 
-* entry[+].fullUrl = "urn:uuid:5a1aae74-f720-415a-ba15-a6c8b5d4c5a1"
+* entry[+].fullUrl = "urn:uuid:7c59466c-23de-4632-8762-2a4421e383f9"
 * entry[=].resource = alg1ReferralExample02Inline
 
-* entry[+].fullUrl = "urn:uuid:481835ef-0891-45de-a006-087954ab6b7c"
+* entry[+].fullUrl = "urn:uuid:757c3dde-5482-4366-8e09-89d76c1683a2"
 * entry[=].resource = psobsCommonExample01Inline
 
-* entry[+].fullUrl = "urn:uuid:a6e4fc73-a749-4583-94a7-18e4241b4c75"
+* entry[+].fullUrl = "urn:uuid:4b1266da-891e-42a4-aae2-2f7d6fe7a44b"
 * entry[=].resource = ccourseReferralExample01Inline
 

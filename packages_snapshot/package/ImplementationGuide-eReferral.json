@@ -654,7 +654,7 @@
           "reference": "Bundle/bundleReferralExample01"
         },
         "name": "bundleReferralExample01",
-        "description": "bundleReferralExample01 診療情報提供書Bundle本体サンプル",
+        "description": "bundleReferralExample01 診療情報提供書Bundle",
         "exampleCanonical": "http://jpfhir.jp/fhir/eReferral/StructureDefinition/JP_Bundle_eReferral"
       },
       {
