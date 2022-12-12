@@ -7,16 +7,16 @@ Scanning for versions (no -version parameter):
 -> use version 4.0
   Jurisdiction: Japan
 Loading
-  Load FHIR v4.0 from hl7.fhir.r4.core#4.0.1.: - 4576 resources (00:03.679)
-  Load hl7.terminology#4.0.0 - 4164 resources (00:03.471)
-  Load R5 Extensions - 56 resources (00:03.200)
-  Terminology server https://tx.jpfhir.jp:8081 - Version null (00:01.340)
-  Load JPFHIRExampleCreation/packages_snapshot/jp-ereferral#0.9.2-snap.tgz - 77 resources (00:00.919)
+  Load FHIR v4.0 from hl7.fhir.r4.core#4.0.1.: - 4576 resources (00:03.537)
+  Load hl7.terminology#4.0.0 - 4164 resources (00:01.555)
+  Load R5 Extensions - 56 resources (00:02.142)
+  Terminology server https://tx.jpfhir.jp:8081 - Version null (00:00.485)
+  Load JPFHIRExampleCreation/packages_snapshot/jp-ereferral#0.9.2-snap.tgz - 76 resources (00:00.790)
   Package Summary: [hl7.fhir.r4.core#4.0.1, hl7.fhir.xver-extensions#0.0.11, hl7.terminology#4.0.0]
-  Get set...  go (00:00.008)
+  Get set...  go (00:00.002)
 Validating
   Validate JPFHIRExampleCreation/output-json/fsh-generated/resources/Bundle-bundleReferralExample01.json
-Validate Bundle against http://hl7.org/fhir/StructureDefinition/Bundle|4.0.1..  Load jp-core.r4#1.1.1-rc - 198 resources (00:01.275)
+Validate Bundle against http://hl7.org/fhir/StructureDefinition/Bundle|4.0.1..  Load jp-core.r4#1.1.1-rc - 198 resources (00:00.873)
 ........20..........40..Validate Practitioner against http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Practitioner_eClinicalSummary|1.1.0-rc|
 Validate Practitioner against http://jpfhir.jp/fhir/core/StructureDefinition/JP_Practitioner|
 Validate Organization against http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Organization_eClinicalSummary|1.1.0-rc|
@@ -99,12 +99,13 @@ Validate Observation against http://jpfhir.jp/fhir/core/StructureDefinition/JP_O
 Validate DocumentReference against http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_DocumentReference_eClinicalSummary|1.1.0-rc|
 Validate DocumentReference against http://jpfhir.jp/fhir/core/StructureDefinition/JP_DocumentReference|
 ..|
- 00:03.092
-Done. Times: Loading: 00:13.391, validation: 00:04.368. Memory = 1Gb
+ 00:03.097
+Done. Times: Loading: 00:09.324, validation: 00:03.971. Memory = 1Gb
 
-Success: 0 errors, 5 warnings, 2 notes
+Success: 0 errors, 6 warnings, 2 notes
   Information @ Bundle.entry[0].resource.ofType(Composition).type (line 38, col22): None of the codings provided are in the value set 'FHIR Document Type Codes' (http://hl7.org/fhir/ValueSet/doc-typecodes|4.0.1), and a coding is recommended to come from this value set) (codes = http://jpfhir.jp/fhir/Common/CodeSystem/doc-typecodes#57133-1)
   Information @ Bundle.entry[18].resource.ofType(DocumentReference).type.coding[0] (line 1197, col14): Code System URI 'http://loinc.org' is unknown so the code cannot be validated
+  Warning @ Bundle.entry[20] (line 1095, col6): Entry 'urn:uuid:82b1fa27-9c5c-4fab-98d6-6e4f566c6f27' isn't reachable by traversing forwards from first Bundle entry, and isn't a resource type that is typically used that way - check this is not missed somewhere
   Warning @ Bundle.entry[2].resource.ofType(Encounter).class (line 474, col72): Display Name for http://terminology.hl7.org/CodeSystem/v3-ActCode#AMB should be one of 1 choices from 'ambulatory', not '外来' for 'http://terminology.hl7.org/CodeSystem/v3-ActCode#AMB'
   Warning @ Bundle.entry[2].resource.ofType(Encounter).classHistory[0].class (line 481, col76): Display Name for http://terminology.hl7.org/CodeSystem/v3-ActCode#AMB should be one of 1 choices from 'ambulatory', not '外来' for 'http://terminology.hl7.org/CodeSystem/v3-ActCode#AMB'
   Warning @ Bundle.entry[9].resource.ofType(Encounter).class (line 799, col72): Display Name for http://terminology.hl7.org/CodeSystem/v3-ActCode#AMB should be one of 1 choices from 'ambulatory', not '外来' for 'http://terminology.hl7.org/CodeSystem/v3-ActCode#AMB'

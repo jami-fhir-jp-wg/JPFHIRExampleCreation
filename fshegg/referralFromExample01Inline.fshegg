@@ -1,0 +1,38 @@
+#include "fshDef/jpOrganization_eCS_issuerDef.fshdef"
+#include "fshDef/jpOrganizationDept_eCSDef.fshdef"
+#include "fshDef/jpPractitioner_eCSDef.fshdef"
+
+//--------------
+$000mn_ExampleJPOrganization_eCS_issuer(referralFromOrganizationExample01Inline)
+$001mn_Description(紹介元医療機関情報　例)
+// 002r_ValidationProfile(ARGmetaprofile)
+$002or_ValidationProfile_JPOrganization_eCS() 
+// 
+$0E1mr_機関都道府県番号(13)
+$0E2mr_機関区分(1)
+$0E3mr_機関保険医療機関番号(9876543)
+//
+$010mn_機関医療機関番号(1319876543)
+$040mn_機関名(港診療所)
+$040or_機関電話番号(03-9876-5432)
+$080or_機関住所(106-9900,東京都港区新橋１−２−３)
+//--------------
+
+$000mn_ExampleJPOrganizationDept_eCS(referralFromOrganizationDeptExample01Inline)
+$001mn_Description(紹介元医療機関の診療科情報　例)
+//002or_ValidationProfile(ARGmetaprofile)
+$002or_ValidationProfile_JPOrganizationDept_eCS() 
+// 
+$030on_診療科コード(urn:oid:1.2.392.100495.20.2.51, 11)
+$040mn_診療科名称(眼科)
+$040mr_診療科所属医療機関参照(referralFromOrganizationDeptExample01Inline)
+//--------------
+$000mn_ExampleJPPractitioner_eCS(referralFromPractitionerExample01Inline)
+$001mn_Description(紹介元医療機関の医師情報　例)
+// 002or_ValidationProfile(ARGmetaprofile) 
+$002or_ValidationProfile_JPPractitioner_eCS() 
+$030mn_医療者漢字氏名(大河内,勘三郎)
+$030on_医療者カナ氏名(オオコウチ,カンザブロウ)
+//--------------
+
+

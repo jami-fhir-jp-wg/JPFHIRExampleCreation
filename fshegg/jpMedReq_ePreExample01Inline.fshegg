@@ -1,0 +1,33 @@
+//MedicationRequestExample01
+
+#include "fshDef/jpMedReq_ePreDef.fshdef"
+
+$000mn_ExampleJPMedicationRequest_ePrescriptionData(MedicationRequestExample01Inline)  
+$001mn_Description(内服　処方例１件　MedicationRequestリソースのインスタンス例) 
+$002or_ValidationProfile_JPMedicationRequest_ePrescriptionData() 
+
+$010mn_処方番号(1,1)
+$020mr_処方薬HOT9(103831601,カルボシステイン錠２５０ｍｇ)
+$020mr_処方薬YJ(2233002F1280,カルボシステイン錠２５０ｍｇ)
+//$020mr_処方薬LOCAL(ARGcode,ARGname,ARGlocalsystem)
+$030mn_処方薬TEXT(カルボシステイン２５０ｍｇ錠)
+$040mn_処方患者(jppatientExample01Inline)
+$050mn_処方日時(2020-08-21,12:28:17)
+//060on_処方薬剤メモ(ARGtext)
+$070mn_処方用法テキスト(内服・経口・１日３回朝昼夕食後)
+//080on_処方開始日(ARGdate)
+$090on_処方実日数(7)
+//100or_処方補足用法(ARGusageauxcode,ARGusageauxname)
+$110or_処方服用全期間日数(7)
+$120mn_処方用法メイン(1013044400000000,内服・経口・１日３回朝昼夕食後)
+//130on_処方用法部位(ARGsitecode,ARGsite)
+$140on_処方内服用法()
+//150on_処方外用用法(ARGmethodcode,ARGmethodname)
+$160mn_処方製剤量指定()
+$170on_処方用法1回量(1,TAB,錠)
+$180on_処方用法1日量(3,TAB,錠)
+$200mn_処方調剤全量(21,TAB,錠)
+$210on_処方調剤全日数(7)
+//300on_処方後発変更可()
+$300on_処方後発変更不可()
+

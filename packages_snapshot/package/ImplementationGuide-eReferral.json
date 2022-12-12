@@ -619,59 +619,187 @@
       },
       {
         "reference": {
-          "reference": "Encounter/JP-Encounter-ePreData-Example"
+          "reference": "MedicationRequest/JP-MedReq-ePreData-Example-fukintouByDay"
         },
-        "name": "JP-Encounter-ePreData-Example",
-        "description": "受診情報Encounterリソースのインスタンス例（外来）",
+        "name": "JP-MedReq-ePreData-Example-fukintouByDay",
+        "description": "不均等投与1日用法の医薬品処方１件　MedicationRequestリソースのインスタンス例（プレドニン錠５ｍｇ１日３回　毎食後　７錠（４錠－２錠－１錠））",
         "exampleBoolean": true
       },
       {
         "reference": {
-          "reference": "Organization/JP-Organization-eReferral-departmentOfIssuer-Example"
+          "reference": "MedicationRequest/MedicationRequestExample01"
         },
-        "name": "JP-Organization-eReferral-departmentOfIssuer-Example",
-        "description": "発行の診療科　 Organizationリソースのインスタンス例（診療科コードがある例）",
+        "name": "MedicationRequestExample01",
+        "description": "内服　処方例１件　MedicationRequestリソースのインスタンス例",
         "exampleBoolean": true
       },
       {
         "reference": {
-          "reference": "Organization/JP-Organization-eReferral-departmentOfIssuer-ExampleType2"
+          "reference": "AllergyIntolerance/alg1ReferralExample01"
         },
-        "name": "JP-Organization-eReferral-departmentOfIssuer-ExampleType2",
-        "description": "発行の診療科　 Organizationリソースのインスタンス例（診療科コードがない例）",
+        "name": "alg1ReferralExample01",
+        "description": "allergyeferralExample01 診療情報提供書　アレルギー例1",
+        "exampleCanonical": "http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_AllergyIntolerance_eClinicalSummary"
+      },
+      {
+        "reference": {
+          "reference": "AllergyIntolerance/alg1ReferralExample02"
+        },
+        "name": "alg1ReferralExample02",
+        "description": "allergyeferralExample01 診療情報提供書　アレルギー例1",
+        "exampleCanonical": "http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_AllergyIntolerance_eClinicalSummary"
+      },
+      {
+        "reference": {
+          "reference": "Bundle/bundleReferralExample01"
+        },
+        "name": "bundleReferralExample01",
+        "description": "bundleReferralExample01 診療情報提供書Bundle",
+        "exampleCanonical": "http://jpfhir.jp/fhir/eReferral/StructureDefinition/JP_Bundle_eReferral"
+      },
+      {
+        "reference": {
+          "reference": "Condition/cc1ReferralExample01"
+        },
+        "name": "cc1ReferralExample01",
+        "description": "conditionReferralExample01 診療情報提供書　主訴例",
+        "exampleCanonical": "http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Condition_eClinicalSummary"
+      },
+      {
+        "reference": {
+          "reference": "Condition/cc2ReferralExample01"
+        },
+        "name": "cc2ReferralExample01",
+        "description": "conditionReferralExample01 診療情報提供書　主訴例",
+        "exampleCanonical": "http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Condition_eClinicalSummary"
+      },
+      {
+        "reference": {
+          "reference": "DocumentReference/ccourseReferralExample01"
+        },
+        "name": "ccourseReferralExample01",
+        "description": "ccourseReferralExample01 診療情報提供書　経過記録文書例",
+        "exampleCanonical": "http://jpfhir.jp/fhir/core/StructureDefinition/JP_DocumentReference"
+      },
+      {
+        "reference": {
+          "reference": "Composition/compositionReferralExample01"
+        },
+        "name": "compositionReferralExample01",
+        "description": "構成情報サンプル　composition",
+        "exampleCanonical": "http://jpfhir.jp/fhir/eReferral/StructureDefinition/JP_Composition_eReferral"
+      },
+      {
+        "reference": {
+          "reference": "Encounter/encounterReferralExample01"
+        },
+        "name": "encounterReferralExample01",
+        "description": "encounterReferralExample01 外来受診　例",
+        "exampleCanonical": "http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Encounter_eClinicalSummary"
+      },
+      {
+        "reference": {
+          "reference": "Patient/jppatientExample01"
+        },
+        "name": "jppatientExample01",
+        "description": "JPPatient患者FHIR　例",
         "exampleBoolean": true
       },
       {
         "reference": {
-          "reference": "Organization/JP-Organization-eReferral-issuer-Example"
+          "reference": "Observation/obsCommonExample01"
         },
-        "name": "JP-Organization-eReferral-issuer-Example",
-        "description": "発行の医療機関　 Organizationリソースのインスタンス例",
+        "name": "obsCommonExample01",
+        "description": "ObservationCommon検査結果　例",
         "exampleBoolean": true
       },
       {
         "reference": {
-          "reference": "Patient/JP-Patient-eReferral-Example"
+          "reference": "Condition/ph1ReferralExample01"
         },
-        "name": "JP-Patient-eReferral-Example",
-        "description": "対象の患者 Patientリソースのインスタンス例",
+        "name": "ph1ReferralExample01",
+        "description": "conditionReferralExample01 診療情報提供書　既往歴例1",
+        "exampleCanonical": "http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Condition_eClinicalSummary"
+      },
+      {
+        "reference": {
+          "reference": "Condition/ph2ReferralExample01"
+        },
+        "name": "ph2ReferralExample01",
+        "description": "conditionReferralExample01 診療情報提供書　既往歴例2",
+        "exampleCanonical": "http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Condition_eClinicalSummary"
+      },
+      {
+        "reference": {
+          "reference": "Condition/piReferralExample01"
+        },
+        "name": "piReferralExample01",
+        "description": "conditionReferralExample01 診療情報提供書　現病歴例",
+        "exampleCanonical": "http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Condition_eClinicalSummary"
+      },
+      {
+        "reference": {
+          "reference": "Observation/psobsCommonExample01"
+        },
+        "name": "psobsCommonExample01",
+        "description": "ObservationCommon検査結果　例",
         "exampleBoolean": true
       },
       {
         "reference": {
-          "reference": "Practitioner/JP-Practitioner-eReferral-author-Example"
+          "reference": "Encounter/purposeReferralExample01"
         },
-        "name": "JP-Practitioner-eReferral-author-Example",
-        "description": "作成した医師 Practitionerリソースのインスタンス例（医師免許番号あり）",
-        "exampleBoolean": true
+        "name": "purposeReferralExample01",
+        "description": "encounterReferralExample01 診療情報提供書での紹介目的　例",
+        "exampleCanonical": "http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Encounter_eClinicalSummary"
       },
       {
         "reference": {
-          "reference": "PractitionerRole/JP-PractitionerRole-eReferral-author-Example"
+          "reference": "Organization/referralFromOrganizationDeptExample01"
         },
-        "name": "JP-PractitionerRole-eReferral-author-Example",
-        "description": "処方した医師の役割 PractitionerRoleリソースのインスタンス例",
-        "exampleBoolean": true
+        "name": "referralFromOrganizationDeptExample01",
+        "description": "紹介元医療機関の診療科情報　例",
+        "exampleCanonical": "http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Organization_eClinicalSummary_department"
+      },
+      {
+        "reference": {
+          "reference": "Organization/referralFromOrganizationExample01"
+        },
+        "name": "referralFromOrganizationExample01",
+        "description": "紹介元医療機関情報　例",
+        "exampleCanonical": "http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Organization_eClinicalSummary"
+      },
+      {
+        "reference": {
+          "reference": "Practitioner/referralFromPractitionerExample01"
+        },
+        "name": "referralFromPractitionerExample01",
+        "description": "紹介元医療機関の医師情報　例",
+        "exampleCanonical": "http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Practitioner_eClinicalSummary"
+      },
+      {
+        "reference": {
+          "reference": "Organization/referralToOrganizationDeptExample01"
+        },
+        "name": "referralToOrganizationDeptExample01",
+        "description": "紹介先医療機関の診療科情報　例",
+        "exampleCanonical": "http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Organization_eClinicalSummary_department"
+      },
+      {
+        "reference": {
+          "reference": "Organization/referralToOrganizationExample01"
+        },
+        "name": "referralToOrganizationExample01",
+        "description": "紹介先医療機関情報　例",
+        "exampleCanonical": "http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Organization_eClinicalSummary"
+      },
+      {
+        "reference": {
+          "reference": "Practitioner/referralToPractitionerExample01"
+        },
+        "name": "referralToPractitionerExample01",
+        "description": "紹介先医療機関の医師情報　例",
+        "exampleCanonical": "http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Practitioner_eClinicalSummary"
       }
     ],
     "page": {
