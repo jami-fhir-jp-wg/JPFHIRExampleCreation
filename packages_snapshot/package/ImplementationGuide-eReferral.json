@@ -638,7 +638,7 @@
           "reference": "AllergyIntolerance/alg1ReferralExample01"
         },
         "name": "alg1ReferralExample01",
-        "description": "allergyeferralExample01 診療情報提供書　アレルギー例1",
+        "description": "allergyeferralExample01 診療情報提供書　アレルギー例1　サバ",
         "exampleCanonical": "http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_AllergyIntolerance_eClinicalSummary"
       },
       {
@@ -646,7 +646,7 @@
           "reference": "AllergyIntolerance/alg1ReferralExample02"
         },
         "name": "alg1ReferralExample02",
-        "description": "allergyeferralExample01 診療情報提供書　アレルギー例1",
+        "description": "allergyeferralExample01 診療情報提供書　アレルギー例1　キーウイ",
         "exampleCanonical": "http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_AllergyIntolerance_eClinicalSummary"
       },
       {
@@ -654,7 +654,7 @@
           "reference": "Bundle/bundleReferralExample01"
         },
         "name": "bundleReferralExample01",
-        "description": "bundleReferralExample01 診療情報提供書Bundle",
+        "description": "bundleReferralExample01 診療情報提供書Bundle本体サンプル",
         "exampleCanonical": "http://jpfhir.jp/fhir/eReferral/StructureDefinition/JP_Bundle_eReferral"
       },
       {
@@ -662,7 +662,7 @@
           "reference": "Condition/cc1ReferralExample01"
         },
         "name": "cc1ReferralExample01",
-        "description": "conditionReferralExample01 診療情報提供書　主訴例",
+        "description": "conditionReferralExample01 診療情報提供書　主訴例　上腹部痛 ",
         "exampleCanonical": "http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Condition_eClinicalSummary"
       },
       {
@@ -670,7 +670,7 @@
           "reference": "Condition/cc2ReferralExample01"
         },
         "name": "cc2ReferralExample01",
-        "description": "conditionReferralExample01 診療情報提供書　主訴例",
+        "description": "conditionReferralExample01 診療情報提供書　主訴例　腰痛",
         "exampleCanonical": "http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Condition_eClinicalSummary"
       },
       {
@@ -678,7 +678,7 @@
           "reference": "DocumentReference/ccourseReferralExample01"
         },
         "name": "ccourseReferralExample01",
-        "description": "ccourseReferralExample01 診療情報提供書　経過記録文書例",
+        "description": "ccourseReferralExample01 診療情報提供書　臨床経過記録文書参照例",
         "exampleCanonical": "http://jpfhir.jp/fhir/core/StructureDefinition/JP_DocumentReference"
       },
       {
@@ -702,7 +702,7 @@
           "reference": "Patient/jppatientExample01"
         },
         "name": "jppatientExample01",
-        "description": "JPPatient患者FHIR　例",
+        "description": "JPPatient患者情報　例",
         "exampleBoolean": true
       },
       {
@@ -742,7 +742,7 @@
           "reference": "Observation/psobsCommonExample01"
         },
         "name": "psobsCommonExample01",
-        "description": "ObservationCommon検査結果　例",
+        "description": "ObservationCommon検査結果　現症例",
         "exampleBoolean": true
       },
       {

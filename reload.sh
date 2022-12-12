@@ -23,8 +23,10 @@ cp package.json_jpreferral_$version-diff package/package.json
 gtar czf package.tgz package ; mv package.tgz jp-ereferral-$version-diff.tgz
 
 cd ~/GitHub/JPFHIRExampleCreation
-rm -f ./input/fsh/*.fsh; while read -r f;do outfname=`basename $f .fshegg`;echo "converting $f to ./input/fsh/$outfname.fsh";filepp -b  -I./fshegg  -M/usr/local/share/filepp/modules -m bigdef.pm -m foreach.pm -m bigfunc.pm  -M ./perlFunc  -m base64.pm -m uuid4.pm $f >./input/fsh/$outfname.fsh;done < <(find ./fshegg -name *.fshegg );
+rm -f ./input/fsh/*.fsh*; while read -r f;do outfname=`basename $f .fshegg`;echo "converting $f to ./input/fsh/$outfname.fsh";filepp -b  -I./fshegg  -M/usr/local/share/filepp/modules -m bigdef.pm -m foreach.pm -m bigfunc.pm  -M ./perlFunc  -m base64.pm -m uuid4.pm $f >./input/fsh/$outfname.fsh;done < <(find ./fshegg -name *.fshegg );
 python3 pyscripts/addFullUrl2Composition.py 
+mkdir -p ./input/fsh/backup
+mv ./input/fsh/*.fsh_backup ./input/fsh/backup/
 sushi .  -o ./output-json
 cd ~/GitHub/
 java -jar work/validator_cli.jar JPFHIRExampleCreation/output-json/fsh-generated/resources/Bundle-bundleReferralExample01.json -ig JPFHIRExampleCreation/packages_snapshot/jp-ereferral#$version-snap.tgz -tx https://tx.jpfhir.jp:8081 >JPFHIRExampleCreation/output.txt

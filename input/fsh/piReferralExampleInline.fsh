@@ -20,7 +20,7 @@ Description: "conditionReferralExample01 診療情報提供書　現病歴例　
 * code[+].text = "上腹部痛"
 
 // * subject.reference = "jppatientExample01Inline"
-* subject.reference = "urn:uuid:0d1054c0-e3a1-4285-bce3-d5bc064bd056"
+* subject.reference = "urn:uuid:6def4a2b-977a-4a5b-9e05-33d43668ee6a"
 
 * note.text = "２０２２年６月上旬から夜食後に時々上腹部痛があり、だんだんひどくなっている。他に目立った症状なし。"
 

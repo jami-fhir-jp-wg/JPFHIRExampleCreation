@@ -7,7 +7,7 @@ Instance: piReferralExample01Inline
 InstanceOf: JP_Condition
 Usage: #inline
   
-Description: "conditionReferralExample01 診療情報提供書　現病歴例"
+Description: "conditionReferralExample01 診療情報提供書　現病歴例　上腹部痛"
 
 * meta.profile[+] = "http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Condition_eClinicalSummary"
 
