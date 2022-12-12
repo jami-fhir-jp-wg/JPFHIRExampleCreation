@@ -3,7 +3,7 @@
 Instance: psobsCommonExample01Inline
 InstanceOf: JP_Observation_Common
 Usage: #inline
-
+  
 Description: "ObservationCommon検査結果　現症例"
 
 * meta.profile[+] = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_Common"
@@ -16,8 +16,7 @@ Description: "ObservationCommon検査結果　現症例"
 
 * code.text = "腹部所見"
 
-// * subject.reference = "jppatientExample01Inline"
-* subject.reference = "urn:uuid:0d1054c0-e3a1-4285-bce3-d5bc064bd056"
+* subject.reference = "jppatientExample01Inline"
 
 * valueString = "上腹部圧痛あり、その他特に所見なし。"
 
@@ -25,7 +24,7 @@ Description: "ObservationCommon検査結果　現症例"
 Instance: obsCommonExample01Inline
 InstanceOf: JP_Observation_Common
 Usage: #inline
-
+  
 Description: "ObservationCommon検査結果　例"
 
 * meta.profile[+] = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_Common"
@@ -38,8 +37,7 @@ Description: "ObservationCommon検査結果　例"
 
 * code.text = "腹部所見"
 
-// * subject.reference = "jppatientExample01Inline"
-* subject.reference = "urn:uuid:0d1054c0-e3a1-4285-bce3-d5bc064bd056"
+* subject.reference = "jppatientExample01Inline"
 
 * valueString = "上腹部圧痛あり、グル音亢進。"
 

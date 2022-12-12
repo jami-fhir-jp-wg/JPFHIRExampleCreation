@@ -6,7 +6,7 @@
 Instance: piReferralExample01Inline
 InstanceOf: JP_Condition
 Usage: #inline
-
+  
 Description: "conditionReferralExample01 診療情報提供書　現病歴例　上腹部痛"
 
 * meta.profile[+] = "http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Condition_eClinicalSummary"
@@ -19,8 +19,7 @@ Description: "conditionReferralExample01 診療情報提供書　現病歴例　
 
 * code[+].text = "上腹部痛"
 
-// * subject.reference = "jppatientExample01Inline"
-* subject.reference = "urn:uuid:0d1054c0-e3a1-4285-bce3-d5bc064bd056"
+* subject.reference = "jppatientExample01Inline"
 
 * note.text = "２０２２年６月上旬から夜食後に時々上腹部痛があり、だんだんひどくなっている。他に目立った症状なし。"
 

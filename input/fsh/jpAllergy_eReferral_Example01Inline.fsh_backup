@@ -20,7 +20,7 @@ Description: "allergyeferralExample01 診療情報提供書　アレルギー例
 //040on_アレルギタイプ不耐性()
 // food | medication | environment | biologic 食物、医薬品、環境、生物学的
 * category = #food
-
+ 
 // food | medication | environment | biologic 食物、医薬品、環境、生物学的
 //060on_アレルギ程度(ARGst)
 // low | high | unable-to-assess 低、高、評価不能
@@ -29,11 +29,9 @@ Description: "allergyeferralExample01 診療情報提供書　アレルギー例
 //070on_アレルギ物質コード名称JFAGY(ARGcode,ARGname)
 * code.text = "サバ"
 
-// * patient.reference = "jppatientExample01Inline"
-* patient.reference = "urn:uuid:0d1054c0-e3a1-4285-bce3-d5bc064bd056"
+* patient.reference = "jppatientExample01Inline"
 
-// * encounter.reference = "encounterReferralExample01Inline"
-* encounter.reference = "urn:uuid:097aa8cd-ebe7-41a4-be87-17d833112f4b"
+* encounter.reference = "encounterReferralExample01Inline"
 
 //100on_アレルギ時期日時(ARGdate,ARGtime)
 //100on_アレルギ時期日(ARGdate)
@@ -62,7 +60,7 @@ Description: "allergyeferralExample01 診療情報提供書　アレルギー例
 //040on_アレルギタイプ不耐性()
 // food | medication | environment | biologic 食物、医薬品、環境、生物学的
 * category = #food
-
+ 
 // food | medication | environment | biologic 食物、医薬品、環境、生物学的
 //060on_アレルギ程度(ARGst)
 // low | high | unable-to-assess 低、高、評価不能
@@ -70,12 +68,10 @@ Description: "allergyeferralExample01 診療情報提供書　アレルギー例
 
 //070on_アレルギ物質コード名称JFAGY(ARGcode,ARGname)
 * code.text = "キーウイ"
+ 
+* patient.reference = "jppatientExample01Inline"
 
-// * patient.reference = "jppatientExample01Inline"
-* patient.reference = "urn:uuid:0d1054c0-e3a1-4285-bce3-d5bc064bd056"
-
-// * encounter.reference = "encounterReferralExample01Inline"
-* encounter.reference = "urn:uuid:097aa8cd-ebe7-41a4-be87-17d833112f4b"
+* encounter.reference = "encounterReferralExample01Inline"
 
 //100on_アレルギ時期日時(ARGdate,ARGtime)
 //100on_アレルギ時期日(ARGdate)

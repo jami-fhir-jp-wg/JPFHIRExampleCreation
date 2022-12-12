@@ -3,7 +3,7 @@ Instance: bundleReferralExample01
 InstanceOf: Bundle
 Usage: #example
 
-Description: "bundleReferralExample01 診療情報提供書Bundle"
+Description: "bundleReferralExample01 診療情報提供書Bundle本体サンプル"
 
 * meta.profile[+] = "http://jpfhir.jp/fhir/eReferral/StructureDefinition/JP_Bundle_eReferral"
 
@@ -13,60 +13,60 @@ Description: "bundleReferralExample01 診療情報提供書Bundle"
 
 * timestamp = "2021-11-26T10:00:00+09:00"
 
-* entry[+].fullUrl = "urn:uuid:e359f070-0dc0-4a20-9d29-79fb9a6a353a"
+* entry[+].fullUrl = "urn:uuid:2ac90cf0-c25d-4e77-85c4-46c2d6201c45"
 * entry[=].resource = compositionReferralExample01Inline
 
-* entry[+].fullUrl = "urn:uuid:e37cac19-9da9-492d-8810-0b7028b2e7e5"
+* entry[+].fullUrl = "urn:uuid:0d1054c0-e3a1-4285-bce3-d5bc064bd056"
 * entry[=].resource = jppatientExample01Inline
 
-* entry[+].fullUrl = "urn:uuid:aafd328b-f5f1-4d82-97df-1e3912b7b83a"
+* entry[+].fullUrl = "urn:uuid:097aa8cd-ebe7-41a4-be87-17d833112f4b"
 * entry[=].resource = encounterReferralExample01Inline
 
-* entry[+].fullUrl = "urn:uuid:30200dae-8f40-4b0c-ae7f-b3d749f84a14"
+* entry[+].fullUrl = "urn:uuid:cba6af27-c68b-48e2-bc0a-6162580c1d78"
 * entry[=].resource = referralFromPractitionerExample01Inline
 
-* entry[+].fullUrl = "urn:uuid:9cc36963-69dd-45f2-91b9-fe3fb9d62ce7"
+* entry[+].fullUrl = "urn:uuid:6182a14e-9316-4211-b93b-2b241c5fd504"
 * entry[=].resource = referralToPractitionerExample01Inline
 
-* entry[+].fullUrl = "urn:uuid:54243f57-bf99-49bb-a550-2dff4f928762"
+* entry[+].fullUrl = "urn:uuid:45fd7313-5f0d-44b9-85cd-d573d3f8a229"
 * entry[=].resource = referralFromOrganizationExample01Inline
 
-* entry[+].fullUrl = "urn:uuid:57f9aa2c-9c23-4d70-a122-32ca6542f16e"
+* entry[+].fullUrl = "urn:uuid:bddf2a92-b7ea-4bad-b790-7672f293a98c"
 * entry[=].resource = referralToOrganizationExample01Inline
 
-* entry[+].fullUrl = "urn:uuid:5be4701a-03b6-4d7d-9e1b-32b181d58900"
+* entry[+].fullUrl = "urn:uuid:f2af685c-d034-4a30-b333-46adc97b0932"
 * entry[=].resource = referralToOrganizationDeptExample01Inline
 
-* entry[+].fullUrl = "urn:uuid:52e8eb12-accd-4fb5-b9db-6f4c81fec40d"
+* entry[+].fullUrl = "urn:uuid:7f5e54ef-4258-4ff7-968a-8a78aeffa650"
 * entry[=].resource = referralFromOrganizationDeptExample01Inline
 
-* entry[+].fullUrl = "urn:uuid:5d9ed8ff-94c8-464b-b434-c43899d79aff"
+* entry[+].fullUrl = "urn:uuid:577165fd-9d2d-45dc-8d5c-115aff5b5660"
 * entry[=].resource = purposeReferralExample01Inline
 
-* entry[+].fullUrl = "urn:uuid:442dbf6f-f31c-4265-953a-1323c5edf71a"
+* entry[+].fullUrl = "urn:uuid:49b1cee9-59d6-43f1-be89-a2c291cb57e1"
 * entry[=].resource = cc1ReferralExample01Inline
 
-* entry[+].fullUrl = "urn:uuid:059cea4f-4222-43a1-9e66-41739059a8b6"
+* entry[+].fullUrl = "urn:uuid:89f27610-e3eb-4147-b707-f3267a6633b0"
 * entry[=].resource = cc2ReferralExample01Inline
 
-* entry[+].fullUrl = "urn:uuid:0cf432f3-6c3d-4c2e-b18f-89605384148c"
+* entry[+].fullUrl = "urn:uuid:e96cc01a-c4d1-48fe-976a-03424c6d8334"
 * entry[=].resource = piReferralExample01Inline
 
-* entry[+].fullUrl = "urn:uuid:20cc10b3-549f-4e00-a6b1-59da4e3b8c14"
+* entry[+].fullUrl = "urn:uuid:c23ca1ae-345a-433b-a608-f4eb2fa2365c"
 * entry[=].resource = ph1ReferralExample01Inline
 
-* entry[+].fullUrl = "urn:uuid:2241aeed-47ab-473a-bd6f-fe393abcfbaf"
+* entry[+].fullUrl = "urn:uuid:bf11af3a-7fd2-4512-be8e-b779775b4620"
 * entry[=].resource = ph2ReferralExample01Inline
 
-* entry[+].fullUrl = "urn:uuid:2616fe00-0b89-4d40-9edf-c7223c793c45"
+* entry[+].fullUrl = "urn:uuid:e8c4377f-1ffb-4ed0-97a2-2e0b930d1043"
 * entry[=].resource = alg1ReferralExample01Inline
 
-* entry[+].fullUrl = "urn:uuid:82b1fa27-9c5c-4fab-98d6-6e4f566c6f27"
+* entry[+].fullUrl = "urn:uuid:b78b7fb9-6e65-42f2-bdc4-96867e24a113"
 * entry[=].resource = alg1ReferralExample02Inline
 
-* entry[+].fullUrl = "urn:uuid:d5f09fcc-c91b-48fd-9c02-ea4cbbf4f74e"
+* entry[+].fullUrl = "urn:uuid:21c2bf03-4f2f-4597-8fc2-5b411327bd44"
 * entry[=].resource = psobsCommonExample01Inline
 
-* entry[+].fullUrl = "urn:uuid:2b5a4cf6-4300-4d26-8f5e-014ca2621c60"
+* entry[+].fullUrl = "urn:uuid:b9d18391-341b-437e-8e3d-a47fe4487a51"
 * entry[=].resource = ccourseReferralExample01Inline
 
