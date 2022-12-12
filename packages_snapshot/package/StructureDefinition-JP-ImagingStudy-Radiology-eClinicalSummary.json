@@ -12,7 +12,7 @@
     }
   ],
   "url": "http://jpfhir.jp/fhir/core/StructureDefinition/JP_ImagingStudy_Radiology_eClinicalSummary",
-  "version": "0.9.2",
+  "version": "1.1.0-rc",
   "name": "JP_ImagingStudy_Radiology_eClinicalSummary",
   "status": "active",
   "fhirVersion": "4.0.1",

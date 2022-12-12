@@ -14,7 +14,7 @@
 
 #define $purposeReferralExample01   purposeReferralExample01
 
-$000mn_ExampleJPComposition_eReferral(compositionReferralExampleTest)
+$000mn_ExampleJPComposition_eReferral(compositionReferralExampleTestInline)
 $001mn_Description(構成情報サンプル　composition)
 $002or_ValidationProfile_JPComposition_eCS()
 $0E1mn_紹介状文書バージョン(1) 

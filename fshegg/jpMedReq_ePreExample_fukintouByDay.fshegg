@@ -4,7 +4,7 @@
 //MedicationRequestリソースのインスタンス例
 //プレドニン錠５ｍｇ１日３回　毎食後　７錠（４錠－２錠－１錠）
 
-$000mn_ExampleJPMedicationRequest_ePrescriptionData(JP-MedReq-ePreData-Example-fukintouByDay)
+$000mn_ExampleJPMedicationRequest_ePrescriptionData(JP-MedReq-ePreData-Example-fukintouByDayInline)
 $001mn_Description(不均等投与1日用法の医薬品処方１件　MedicationRequestリソースのインスタンス例（プレドニン錠５ｍｇ１日３回　毎食後　７錠（４錠－２錠－１錠））)  
 $002or_ValidationProfile_JPMedicationRequest_ePrescriptionData() 
 

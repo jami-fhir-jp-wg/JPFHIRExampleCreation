@@ -1,7 +1,7 @@
 #include "fshDef/jpCondition_eReferralDef.fshdef"
 
 
-$000mn_ExampleJPCondition_eCS(piReferralExample01)  
+$000mn_ExampleJPCondition_eCS(piReferralExample01Inline)  
 $001mn_Description(conditionReferralExample01 診療情報提供書　現病歴例)
 $002or_ValidationProfile_JPCondition_eCS()
 $010on_症病管理番号(192838)

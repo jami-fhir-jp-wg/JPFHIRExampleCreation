@@ -12,7 +12,7 @@
     }
   ],
   "url": "http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Organization_eClinicalSummary",
-  "version": "0.9.2",
+  "version": "1.1.0-rc",
   "name": "JP_Organization_eClinicalSummary",
   "status": "active",
   "description": "処方を発行した医療機関の情報　JP_Organizationの派生プロファイル",

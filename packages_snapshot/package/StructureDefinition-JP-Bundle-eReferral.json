@@ -12,7 +12,7 @@
     }
   ],
   "url": "http://jpfhir.jp/fhir/eReferral/StructureDefinition/JP_Bundle_eReferral",
-  "version": "0.9.2",
+  "version": "1.1.0-rc",
   "name": "JP_Bundle_eReferral",
   "status": "active",
   "description": "診療情報提供書のための文書 Bundleリソース",
@@ -293,7 +293,7 @@
         "short": "紹介先／元医療機関／文書作成機関の診療科",
         "definition": "紹介先／元医療機関／文書作成機関の診療科",
         "min": 0,
-        "max": "*",
+        "max": "2",
         "mustSupport": true
       },
       {
@@ -320,43 +320,6 @@
       },
       {
         "id": "Bundle.entry:department.response",
-        "path": "Bundle.entry.response",
-        "max": "0"
-      },
-      {
-        "id": "Bundle.entry:departmentOfissuer",
-        "path": "Bundle.entry",
-        "sliceName": "departmentOfissuer",
-        "short": "紹介元文書作成機関の診療科",
-        "definition": "紹介元文書作成機関の診療科",
-        "min": 0,
-        "max": "*",
-        "mustSupport": true
-      },
-      {
-        "id": "Bundle.entry:departmentOfissuer.resource",
-        "path": "Bundle.entry.resource",
-        "type": [
-          {
-            "code": "Organization",
-            "profile": [
-              "http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Organization_eClinicalSummary_departmentOfIssuer"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "Bundle.entry:departmentOfissuer.search",
-        "path": "Bundle.entry.search",
-        "max": "0"
-      },
-      {
-        "id": "Bundle.entry:departmentOfissuer.request",
-        "path": "Bundle.entry.request",
-        "max": "0"
-      },
-      {
-        "id": "Bundle.entry:departmentOfissuer.response",
         "path": "Bundle.entry.response",
         "max": "0"
       },

@@ -12,7 +12,7 @@
     }
   ],
   "url": "http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_PractitionerRole_eClinicalSummary_author",
-  "version": "0.9.2",
+  "version": "1.1.0-rc",
   "name": "JP_PractitionerRole_eClinicalSummary_author",
   "status": "draft",
   "description": "処方を発行した医療者の資格情報　JP_PractitionerRole の派生プロファイル",

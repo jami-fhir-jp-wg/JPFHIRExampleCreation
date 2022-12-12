@@ -5,7 +5,7 @@
   "name": "JP_codeSystem_documentTypeCode",
   "id": "jp-codeSystem-documentTypeCode",
   "description": "FHIR文書の文書区分（医療文書全般）",
-  "version": "0.9.2",
+  "version": "1.1.0-rc",
   "url": "http://jpfhir.jp/fhir/Common/CodeSystem/doc-typecodes",
   "concept": [
     {

@@ -2,14 +2,15 @@
   "resourceType": "ImplementationGuide",
   "id": "eReferral",
   "url": "http://jpfhir.jp/fhir/eReferral/ImplementationGuide/eReferral",
-  "version": "0.9.2",
-  "name": "JAMIeReferralImplementationGuide",
-  "title": "JAMI eReferral ImplementationGuide",
+  "version": "1.1.0-rc",
+  "name": "HL7Japan_JAMIeReferralImplementationGuide",
+  "title": "HL7 Japan-JAMI eReferral ImplementationGuide",
   "status": "draft",
-  "publisher": "Kazuhiko Ohe@JAMI",
+  "date": "2022-12-10",
+  "publisher": "Kazuhiko Ohe@JAMI/HL7 Japan",
   "contact": [
     {
-      "name": "Kazuhiko Ohe@JAMI",
+      "name": "Kazuhiko Ohe@JAMI/HL7 Japan",
       "telecom": [
         {
           "system": "url",
@@ -18,7 +19,17 @@
       ]
     }
   ],
-  "description": "JAMI eReferral ImplementationGuide",
+  "description": "HL7 Japan-JAMI eReferral ImplementationGuide",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "code": "JP",
+          "system": "urn:iso:std:iso:3166"
+        }
+      ]
+    }
+  ],
   "packageId": "eReferral",
   "fhirVersion": [
     "4.0.1"
@@ -227,14 +238,6 @@
         },
         "name": "JP_Organization_eClinicalSummary_department",
         "description": "医療機関の診療科情報　JP_Organizationの派生プロファイル",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/JP-Organization-eClinicalSummary-departmentOfissuer"
-        },
-        "name": "JP_Organization_eClinicalSummary_departmentOfIssuer",
-        "description": "医療文書を発行した医療機関の診療科情報　JP_Organizationの派生プロファイル",
         "exampleBoolean": false
       },
       {
@@ -683,7 +686,12 @@
         },
         {
           "nameUrl": "eReferralTables.html",
-          "title": "各表一覧",
+          "title": "リソース表 各表一覧",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "namespace.html",
+          "title": "名前空間一覧",
           "generation": "markdown"
         }
       ]
@@ -691,7 +699,7 @@
     "parameter": [
       {
         "code": "copyrightyear",
-        "value": "2022+"
+        "value": "Kazuhiko Ohe@JAMI/HL7 Japan 2022+"
       },
       {
         "code": "releaselabel",
@@ -776,6 +784,10 @@
       {
         "code": "generate",
         "value": "json"
+      },
+      {
+        "code": "no-validate",
+        "value": "*/hl7.fhir.jp.core"
       },
       {
         "code": "special-url",

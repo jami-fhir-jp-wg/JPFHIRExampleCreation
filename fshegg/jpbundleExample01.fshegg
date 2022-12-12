@@ -1,6 +1,6 @@
 #include "fshDef/jpBundle_eReferralDef.fshdef"
 
-$000mn_ExampleJPBundle_eReferral(bundleReferralExample01)
+$000mn_ExampleJPBundle_eReferral(bundleReferralExample01Inline)
 $001mn_Description(bundleReferralExample01 診療情報提供書Bundle)
 $002or_ValidationProfile_JPBundle__eReferral()
 $010mn_文書ID(123456)

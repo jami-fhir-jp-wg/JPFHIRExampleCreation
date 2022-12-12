@@ -2,7 +2,7 @@
 
 #include "fshDef/jpMedReq_ePreDef.fshdef"
 
-$000mn_ExampleJPMedicationRequest_ePrescriptionData(MedicationRequestExample01)  
+$000mn_ExampleJPMedicationRequest_ePrescriptionData(MedicationRequestExample01Inline)  
 $001mn_Description(内服　処方例１件　MedicationRequestリソースのインスタンス例) 
 $002or_ValidationProfile_JPMedicationRequest_ePrescriptionData() 
 

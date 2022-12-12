@@ -12,7 +12,7 @@
     }
   ],
   "url": "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Device",
-  "version": "0.9.2",
+  "version": "1.1.0-rc",
   "name": "JP_Device",
   "status": "active",
   "fhirVersion": "4.0.1",
