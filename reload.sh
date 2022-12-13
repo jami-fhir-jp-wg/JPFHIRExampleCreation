@@ -1,4 +1,4 @@
-version=0.9.2
+version=0.9.3
 cd ~/GitHub/eReferral
 sushi -s .
 mv fsh-generated/resources fsh-generated/package
