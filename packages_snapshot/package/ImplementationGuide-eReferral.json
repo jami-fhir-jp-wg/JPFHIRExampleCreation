@@ -5,16 +5,20 @@
   "version": "1.1.0-rc",
   "name": "HL7Japan_JAMIeReferralImplementationGuide",
   "title": "HL7 Japan-JAMI eReferral ImplementationGuide",
-  "status": "draft",
+  "status": "active",
   "date": "2022-12-10",
-  "publisher": "Kazuhiko Ohe@JAMI/HL7 Japan",
+  "publisher": "Kazuhiko Ohe@JAMI/HL7Japan and The University of Tokyo",
   "contact": [
     {
-      "name": "Kazuhiko Ohe@JAMI/HL7 Japan",
+      "name": "Kazuhiko Ohe@JAMI/HL7Japan and The University of Tokyo",
       "telecom": [
         {
           "system": "url",
           "value": "http://jpfhir.jp"
+        },
+        {
+          "system": "email",
+          "value": "office@hlfhir.jp"
         }
       ]
     }
@@ -30,6 +34,7 @@
       ]
     }
   ],
+  "copyright": "Copyright HL7Japan and Japan Association of Medical Informatics (JAMI), CC(Creative Commons license) BY-ND CC表示・改変禁止",
   "packageId": "eReferral",
   "fhirVersion": [
     "4.0.1"
@@ -827,11 +832,11 @@
     "parameter": [
       {
         "code": "copyrightyear",
-        "value": "Kazuhiko Ohe@JAMI/HL7 Japan 2022+"
+        "value": "2022+"
       },
       {
         "code": "releaselabel",
-        "value": "ci-build"
+        "value": "release"
       },
       {
         "code": "path-resource",

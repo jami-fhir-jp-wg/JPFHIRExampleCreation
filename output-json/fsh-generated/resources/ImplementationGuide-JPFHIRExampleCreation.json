@@ -31,7 +31,7 @@
     {
       "packageId": "jp-ereferral",
       "uri": "http://jpfhir.jp/fhir/eReferral/ImplementationGuide/jp-ereferral",
-      "version": "0.9.2-snap",
+      "version": "0.9.3-snap",
       "id": "jp_ereferral"
     }
   ],

@@ -504,7 +504,7 @@
         "path": "Bundle.entry",
         "sliceName": "documentReference",
         "short": "DocumentReferenceリソースを参照",
-        "definition": "臨床経過を記述して参照する。",
+        "definition": "DocumentReferenceリソースを参照",
         "min": 0,
         "max": "*",
         "mustSupport": true
@@ -724,7 +724,7 @@
         "path": "Bundle.entry",
         "sliceName": "binaryData",
         "short": "各種備考参照情報を記述したBinaryリソースを参照",
-        "definition": "各種備考参照情報を記述して参照する。",
+        "definition": "各種備考参照情報をBinaryリソースで記述して参照する。",
         "min": 0,
         "max": "*",
         "mustSupport": true
