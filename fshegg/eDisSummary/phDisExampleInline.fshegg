@@ -1,0 +1,11 @@
+#include "fshDef/jpCondition_eDischargeSummaryDef.fshdef"
+
+$000mn_ExampleJPCondition_eCS(ph1DisExample01Inline)  
+$001mn_Description(conditionDisExample01 退院時サマリー　既往歴例1　30歳：胃潰瘍)
+$002or_ValidationProfile_JPCondition_eCS()
+$010on_症病管理番号(192839-01)
+$040mn_症病状態TEXT(胃潰瘍)
+$050mn_症病患者(jppatientExample01Inline)
+$070on_症病時期年齢(30)
+$150or_傷病追加TEXT(30歳：胃潰瘍)
+

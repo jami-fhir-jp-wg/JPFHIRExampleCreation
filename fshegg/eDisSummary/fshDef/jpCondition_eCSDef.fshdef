@@ -76,13 +76,13 @@ Description: "ARGtxt"
 * encounter.reference = "ARGencounter"
 #endbigdef
 
-#bigdef $070on_症病時期日時((ARGdate,ARGtime)
+#bigdef $070on_症病時期日時(ARGdate,ARGtime)
 // ARGdate 2020-08-21
 // ATGtime 12:12:20
 * onsetDateTime = "ARGdateTARGtime+09:00"
 #endbigdef
 
-#bigdef $070on_症病時期日((ARGdate)
+#bigdef $070on_症病時期日(ARGdate)
 // ARGdate 2020-08-21
 // ATGtime 12:12:20
 * onsetDateTime = "ARGdate"

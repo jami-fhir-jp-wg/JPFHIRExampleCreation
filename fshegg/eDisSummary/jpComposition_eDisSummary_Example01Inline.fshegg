@@ -10,7 +10,7 @@
 #define $referralToOrganizationExample01Inline    referralToOrganizationExample01Inline
 #define $docOrgDeptExample01Inline docOrgDeptExample01Inline
 
-#define $purposeDischargeSummaryExample01Inline   purposeDischargeSummaryExample01Inline
+#define $admissionEncounterExample01Inline   admissionEncounterExample01Inline
 #define $cc1ReferralExample01Inline   cc1ReferralExample01Inline
 #define $cc2ReferralExample01Inline   cc2ReferralExample01Inline
 #define $piReferralExample01Inline    piReferralExample01Inline
@@ -35,8 +35,7 @@ $050on_退院時サマリー作成科(docOrgDeptExample01Inline)
 $050mn_退院時サマリー作成責任機関($docOrgExample01Inline)
 $060mn_退院時サマリー期間(2020-08-01, 2020-08-21)
 
-/*
-$070mn_退院時サマリー入院詳細Encounter(ARGtext,ARGref)
+$070mn_退院時サマリー入院詳細Encounter(,$admissionEncounterExample01Inline)
 $070mn_退院時サマリー入院時診断セクションCondition(ARGtext,ARGref...))
 $070on_退院時サマリーアレルギーAllergy(ARGtext,ARGref...)
 $070mn_退院時サマリー入院時主訴Condition(ARGtext,ARGref...)
@@ -66,12 +65,12 @@ $080mn_添付情報DocumentReference(ARGorgref)
 $081mn_添付情報Binary(ARGorgref)
 $090mn_PDFDocumentReference(ARGorgref)
 $091mn_PDFBinary(ARGorgref)
-*/
 
 
 
 
 
+/*
 $070on_退院時サマリー目的Encounter(腹痛精査お願いします。,$purposeDischargeSummaryExample01Inline) 
 $070on_退院時サマリー傷病名Condition(上腹部痛、腰痛,$cc1ReferralExample01Inline,$cc2ReferralExample01Inline) 
 $070mn_退院時サマリー入院時現病歴Condition(２０２２年６月上旬から夜食後に時々上腹部痛があり、だんだんひどくなっている。他に目立った症状なし。,$piReferralExample01Inline) 
@@ -83,5 +82,5 @@ $070on_退院時サマリー感染症ObsCommon(特になし)
 $070on_退院時サマリー臨床経過DocRef(添付参照,$ccourseDischargeSummaryExample01Inline)
 
 
-
+*/
 

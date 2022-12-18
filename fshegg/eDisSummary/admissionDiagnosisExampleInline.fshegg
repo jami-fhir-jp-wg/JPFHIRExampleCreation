@@ -1,0 +1,34 @@
+#include "fshDef/jpCondition_eCSDef.fshdef"
+
+$000mn_ExampleJPCondition_eCS(admissionCCDiagnosisExample01Inline)  
+$001mn_Description(退院時サマリー　入院時主訴　両下肢痛)
+$002or_ValidationProfile_JPCondition_eCS()
+$010on_症病管理番号(192837-01)
+$040mn_症病状態コード名称TEXT(urn:oid:1.2.392.200119.4.101.6,BBPM,両下肢痛,両下肢痛)
+$050mn_症病患者(jppatientExample01Inline)
+$070on_症病時期日(2016-04)
+
+$000mn_ExampleJPCondition_eCS(admissionCCDiagnosisExample02Inline)  
+$001mn_Description(退院時サマリー　入院時主訴　全身倦怠感)
+$002or_ValidationProfile_JPCondition_eCS()
+$010on_症病管理番号(192837-02)
+$040mn_症病状態コード名称TEXT(urn:oid:1.2.392.200119.4.101.6,PDDH,全身倦怠感,全身倦怠感)
+$050mn_症病患者(jppatientExample01Inline)
+$070on_症病時期日(2016-04)
+
+$000mn_ExampleJPCondition_eCS(admissionCCDiagnosisExample02Inline)  
+$001mn_Description(退院時サマリー　入院時主訴　咳嗽)
+$002or_ValidationProfile_JPCondition_eCS()
+$010on_症病管理番号(192837-03)
+$040mn_症病状態コード名称TEXT(urn:oid:1.2.392.200119.4.101.6,TFVU,咳嗽,咳嗽v)
+$050mn_症病患者(jppatientExample01Inline)
+$070on_症病時期日(2016-07)
+
+$000mn_ExampleJPCondition_eCS(admissionADDiagnosisExample02Inline)  
+$001mn_Description(退院時サマリー　入院時診断　心不全)
+$002or_ValidationProfile_JPCondition_eCS()
+$010on_症病管理番号(192837-04)
+$040mn_症病状態コード名称TEXT(urn:oid:1.2.392.200119.4.101.6,U9GK,咳嗽,咳嗽v)
+$050mn_症病患者(jppatientExample01Inline)
+$070on_症病時期日(2016-07)
+

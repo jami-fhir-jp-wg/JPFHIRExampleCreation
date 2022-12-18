@@ -2,10 +2,12 @@
 
 
 $000mn_ExampleJPCondition_eCS(piReferralExample01Inline)  
-$001mn_Description(conditionReferralExample01 退院時サマリー　現病歴例　上腹部痛)
+$001mn_Description(conditionReferralExample01 退院時サマリー　現病歴例)
 $002or_ValidationProfile_JPCondition_eCS()
 $010on_症病管理番号(192838)
-$040mn_症病状態TEXT(上腹部痛)
+$040mn_症病状態TEXT()
 $050mn_症病患者(jppatientExample01Inline)
-$150or_傷病追加TEXT(２０２２年６月上旬から夜食後に時々上腹部痛があり、だんだんひどくなっている。他に目立った症状なし。)
+$150or_傷病追加TEXT(平成28年4月，両下肢痛および全身倦怠感が出現．5月下旬頃より，息切れが出現．6月
+中旬，咳嗽を伴うようになり，7月2日○×医院にて受診．胸部X線写真で肺うっ血を認
+め，心不全の診断で7月4日当科紹介入院となった．)
 

@@ -1,0 +1,20 @@
+// FamilyHistory_eClinicalSummary
+#include "fshDef/jpFamilyHistory_eCSDef.fshdef"
+
+$000mn_ExampleJPFamilyHistory_eCS(jpFamilyHistoryExample01Inline)  
+$001mn_Description(退院時サマリー　家族歴)
+$002or_ValidationProfile_JPFamilyHistory_eCS()
+$010on_管理番号(192837-01)
+$080mn_患者(jppatientExample01Inline)
+$110mn_家族名TEXT(父)
+$240or_家族疾患名(胃がん)
+
+$000mn_ExampleJPFamilyHistory_eCS(jpFamilyHistoryExample02Inline)  
+$001mn_Description(退院時サマリー　家族歴)
+$002or_ValidationProfile_JPFamilyHistory_eCS()
+$010on_管理番号(192837-02)
+$080mn_患者(jppatientExample01Inline)
+$110mn_家族名TEXT()
+$190or_家族歴ノートTEXT(家族に心疾患の既往なし)
+
+

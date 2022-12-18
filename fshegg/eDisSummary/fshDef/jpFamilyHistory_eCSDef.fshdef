@@ -1,0 +1,64 @@
+// FamilyHistory_eClinicalSummary
+
+#bigdef $000mn_ExampleJPFamilyHistory_eCS(ARGinstancename)
+Instance: ARGinstancename
+InstanceOf: JP_FamilyMemberHistory
+Usage: #inline
+#endbigdef
+
+#ifndef $001mn_Description(ARGtxt)
+#bigdef $001mn_Description(ARGtxt)
+Description: "ARGtxt"
+#endbigdef
+#endif
+
+#ifndef $002or_ValidationProfile(ARGmetaprofile)
+#bigdef $002or_ValidationProfile(ARGmetaprofile) 
+* meta.profile[+] = "ARGmetaprofile"
+#endbigdef
+#endif
+
+#ifndef $002or_ValidationProfile_JPFamilyHistory_eCS()
+#bigdef $002or_ValidationProfile_JPFamilyHistory_eCS()
+* meta.profile[+] = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_FamilyMemberHistory"
+#endbigdef
+#endif
+
+#bigdef $010on_管理番号(ARGnumber)
+* identifier.system = "http://jpfhir.jp/fhir/core/IdSystem/resourceInstance-identifier"
+* identifier.value = "ARGnumber"
+* clinicalStatus = http://hl7.org/fhir/ValueSet/history-status#completed
+ // partial | completed | entered-in-error | health-unknown 
+#endbigdef
+
+// 030 verificationStatus
+
+#bigdef $080mn_患者(ARGpatient)
+* patient.reference = "ARGpatient"
+#endbigdef
+
+#bigdef $100on_家族氏名(ARGfamilyName)
+* name = "ARGfamilyName"
+#endbigdef
+
+#bigdef $110mn_家族関係名TEXT(ARGfamilyRelationName)
+* relationship.text = "ARGfamilyRelationName"
+#endbigdef
+
+#bigdef $190or_家族歴ノートTEXT(ARGnote)
+// note.textはmarkdown
+* note.text = "ARGnote"
+#endbigdef
+
+#bigdef $240or_家族疾患名(ARGfamilyDiseasewName)
+* condition[+].code.text = "ARGfamilyDiseasewName"
+#endbigdef
+
+#bigdef $270on_家族疾患時期年齢追加(ARGfamilyDiseaseAge)
+* condition[=].onsetAge = "ARGfamilyDiseasewAge"
+#endbigdef
+
+#bigdef $270on_家族疾患時期時期TEXT追加(ARGfamilyDiseaseOnsetText)
+* condition[=].onsetAge = "ARGfamilyDiseaseOnsetText"
+#endbigdef
+
