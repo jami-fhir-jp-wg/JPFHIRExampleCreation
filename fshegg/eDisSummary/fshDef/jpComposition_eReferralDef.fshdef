@@ -1,0 +1,385 @@
+// Compositionリース
+Alias: $doc-typecodes = http://jpfhir.jp/fhir/Common/CodeSystem/doc-typecodes
+Alias: $referral-section = http://jpfhir.jp/fhir/eDischargeSummary/CodeSystem/document-section
+#define $none NotYetCompleted
+
+
+#comment 可変個の引数を与えて、その引数ごとにsection[=].entry[+]=...を展開する実行時展開関数を定義
+#bigfunc $multiEntryRefSectionLevel1(Display, ResourceType, AAAref...)
+#foreach ARGoneref AAAref
+* section[=].entry[+].reference = "ARGoneref"
+* section[=].entry[=].type = "ResourceType"
+* section[=].entry[=].display = "Display"
+#endforeach
+#endbigfunc
+
+#comment 可変個の引数を与えて、その引数ごとにsection[=].section.entry[+]=...を展開する実行時展開関数を定義
+#bigfunc $multiEntryRefSectionLevel2(Display, ResourceType, AAAref...)
+#foreach ARGoneref AAAref
+* section[=].section[=].entry[+].reference = "ARGoneref"
+* section[=].section[=].entry[=].type = "ResourceType"
+* section[=].section[=].entry[=].display = "Display"
+#endforeach
+#endbigfunc
+
+
+#bigdef $000mn_ExampleJPComposition_eDischargeSummary(ARGinstancename)
+Instance: ARGinstancename
+InstanceOf: Composition
+Usage: #inline
+#endbigdef
+
+#ifndef $001mn_Description(ARGtxt)
+#bigdef $001mn_Description(ARGtxt)
+Description: "ARGtxt"
+#endbigdef
+#endif
+
+#ifndef $002or_ValidationProfile(ARGmetaprofile)
+#bigdef $002or_ValidationProfile(ARGmetaprofile) 
+* meta.profile[+] = "ARGmetaprofile"
+* language = #ja
+#endbigdef
+#endif
+
+
+#ifndef $002or_ValidationProfile_JPComposition_eCS()
+#bigdef $002or_ValidationProfile_JPComposition_eCS()
+* meta.profile[+] = "http://jpfhir.jp/fhir/eDischargeSummary/StructureDefinition/JP_Composition_eDischargeSummary"
+#endbigdef
+#endif
+
+
+#bigdef  $0E1mn_退院時サマリー文書バージョン(ARGtext)
+* extension.url = "http://hl7.org/fhir/StructureDefinition/composition-clinicaldocument-versionNumber"
+* extension.valueString = "ARGcode"
+#endbigdef
+
+#bigdef  $010mn_退院時サマリー文書ID(ARGtext)
+* identifier.system = "http://jpfhir.jp/fhir/core/IdSystem/resourceInstance-identifier"
+* identifier.value = "ARGcode"
+* status = #final
+* type = $doc-typecodes#18842-5 "退院時サマリー"
+* category = $doc-typecodes#18842-5 "退院時サマリー"
+#endbigdef
+
+#bigdef  $020mn_退院時サマリー患者情報(ARGresourceRef)
+* subject.reference = "ARGresourceRef"
+* subject.type = "Patient"
+* subject.display = "患者リソースPatient"
+#endbigdef
+
+#bigdef  $030on_退院時サマリー受診(ARGresourceRef)
+* encounter.reference = "ARGresourceRef"
+* encounter.type = "Encounter"
+* encounter.display = "受診Encounterリソース"
+#endbigdef
+
+#bigdef  $040mn_退院時サマリー作成日時(ARGdate, ARGtime)
+// ARGdate 2020-08-21
+// ATGtime 12:12:20
+* date = "ARGdateTARGtime+09:00"
+#endbigdef
+
+#bigdef  $050mn_退院時サマリー作成者・作成機関(ARGresourceRefauthor, ARGresourceReforg)
+* title = "退院時サマリー"
+* author[0].reference = "ARGresourceRefauthor"
+* author[=].type = "Practitioner"
+* author[=].display = "退院時サマリー作成者PractitionerRoleリソース"
+* author[+].reference = "ARGresourceReforg"
+* author[=].type = "Organization"
+* author[=].display = "退院時サマリー作成機関Organizationリソース"
+#endbigdef
+
+#bigdef  $050on_退院時サマリー作成科(ARGresourceRefdept)
+* author[+].reference = "ARGresourceRefdept"
+* author[=].type = "Organization"
+* author[=].display = "退院時サマリー作成科Organizationリソース"
+#endbigdef
+
+#bigdef  $050mn_退院時サマリー作成責任機関(ARGresourceReforg)
+* custodian.reference = "ARGresourceReforg"
+* custodian.type = "Organization"
+* custodian.display = "退院時サマリー交付責任機関Organizationリソース"
+#endbigdef
+
+#bigdef  $060mn_退院時サマリー期間(ARGdateStart,ARGdateEnd)
+* event.code.text = "退院時サマリー期間"
+* event.period.start = "ARGdateStart"
+* event.period.end = "ARGdateEnd"
+#endbigdef
+
+
+#bigdef  $062mn_CDA参照DocumentReference(ARGorgref)
+* section[+].title = "CDA参照"
+* section[=].code = $referral-section#200 "CDA参照セクション"
+* section[=].text.status = #additional
+$multiEntryRefSectionLevel1(CDA参照, DocumentReference, ARGorgref)
+#endbigdef
+
+#bigdef  $070mn_退院時サマリー入院詳細Encounter(ARGtext,ARGref)
+* section[+].title = "構造情報"
+* section[=].code = $referral-section#300 "構造情報セクション"
+* section[=].section[+].title = "入院詳細"
+* section[=].section[=].code = $referral-section#322 "入院詳細セクション"
+* section[=].section[=].text.status = #additional
+* section[=].section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">ARGtext</div>"
+$multiEntryRefSectionLevel2(ARGtext, Encounter, ARGref)
+#endbigdef
+
+#bigdef  $070mn_退院時サマリー入院時診断セクションCondition(ARGtext,ARGref...)
+* section[=].section[+].title = "入院時診断"
+* section[=].section[=].code = $referral-section#342 "入院時診断セクション"
+* section[=].section[=].text.status = #additional
+* section[=].section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">ARGtext</div>"
+$multiEntryRefSectionLevel2(入院時診断, Condition, ARGref)
+#endbigdef
+
+
+#bigdef  $070on_退院時サマリーアレルギーAllergy(ARGtext,ARGref...)
+* section[=].section[+].title = "アレルギー・不耐性反応"
+* section[=].section[=].code = $referral-section#510 "アレルギー・不耐性反応セクション"
+* section[=].section[=].text.status = #additional
+* section[=].section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">ARGtext</div>"
+//  Reference(JP_Condition) アレルギー
+$multiEntryRefSectionLevel2(アレルギー・不耐性反応,AllergyIntolerance,ARGref)
+#endbigdef
+
+#bigdef  $070mn_退院時サマリー入院時主訴Condition(ARGtext,ARGref...)
+* section[=].section[+].title = "入院時主訴"
+* section[=].section[=].code = $referral-section#352 "傷入院時主訴セクション"
+* section[=].section[=].text.status = #additional
+* section[=].section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">ARGtext</div>"
+$multiEntryRefSectionLevel2(入院時主訴, Condition, ARGref)
+#endbigdef
+
+#bigdef  $070mn_退院時サマリー入院理由Encounter(ARGtext,ARGref)
+* section[=].section[+].title = "入院理由"
+* section[=].section[=].code = $referral-section#312 "入院理由セクション"
+* section[=].section[=].text.status = #additional
+* section[=].section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">ARGtext</div>"
+$multiEntryRefSectionLevel2(入院理由, Encounter, ARGref)
+#endbigdef
+
+
+#bigdef  $070mn_退院時サマリー入院時現病歴Condition(ARGtext,ARGref...)
+* section[=].section[+].title = "現病歴"
+* section[=].section[=].code = $referral-section#362 "現病歴セクション"
+* section[=].section[=].text.status = #additional
+* section[=].section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">ARGtext</div>"
+$multiEntryRefSectionLevel2(現病歴, Condition, ARGref)
+#endbigdef
+
+#bigdef  $070on_退院時サマリー既往歴Condition(ARGtext,ARGref...)
+* section[=].section[+].title = "既往歴"
+* section[=].section[=].code = $referral-section#372 "既往歴セクション"
+* section[=].section[=].text.status = #additional
+* section[=].section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">2018年　狭心症　２ヶ月治療で軽快。2019年　交通事故で左前腕骨折　３ヶ月ギプス固定。</div>"
+//  Reference(JP_Condition) 既往歴
+$multiEntryRefSectionLevel2(既往歴,Condition,ARGref)
+#endbigdef
+
+#bigdef  $070on_退院時サマリー入院時服薬MedicationStatement(ARGtext,ARGref...)
+* section[=].section[+].title = "入院時服薬"
+* section[=].section[=].code = $referral-section#432 "入院時服薬セクション"
+* section[=].section[=].text.status = #additional
+* section[=].section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">ARGtext</div>"
+$multiEntryRefSectionLevel2(入院時服薬,MedicationStatement,ARGref)
+#endbigdef
+
+#bigdef  $070on_退院時サマリー社会歴・生活習慣Family(ARGtext,ARGref...)
+* section[=].section[+].title = "社会歴・生活習慣"
+* section[=].section[=].code = $referral-section#642 "社会歴・生活習慣セクション"
+* section[=].section[=].text.status = #additional
+* section[=].section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">ARGtext</div>"
+$multiEntryRefSectionLevel2(社会歴・生活習慣,Observation,ARGref)
+#endbigdef
+
+#bigdef  $070on_退院時サマリー身体所見ObsCommon(ARGtext,ARGref...)
+* section[=].section[+].title = "身体所見"
+* section[=].section[=].code = $referral-section#612 "身体所見セクション"
+* section[=].section[=].text.status = #additional
+* section[=].section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">ARGtext</div>"
+//  Reference(JP_Observation_Common) 身体所見
+$multiEntryRefSectionLevel2(身体所見,Observation,ARGref)
+#endbigdef
+
+
+#bigdef  $070on_退院時サマリー家族歴Family(ARGtext,ARGref...)
+* section[=].section[+].title = "家族歴"
+* section[=].section[=].code = $referral-section#552 "家族歴セクション"
+* section[=].section[=].text.status = #additional
+* section[=].section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">ARGtext</div>"
+//  Reference(JP_FamilyMemberHistory) 家族歴
+$multiEntryRefSectionLevel2(家族歴,FamilyMemberHistory,ARGref)
+#endbigdef
+
+#bigdef  $070mn_退院時サマリー入院中経過DocRef(ARGtext,ARGref...)
+* section[=].section[+].title = "入院中経過"
+* section[=].section[=].code = $referral-section#333 "入院中経過セクション"
+* section[=].section[=].text.status = #additional
+* section[=].section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">ARGtext</div>"
+//  Reference(JP_DocumentReference) 入院中経過
+$multiEntryRefSectionLevel2(入院中経過,DocumentReference,ARGref)
+#endbigdef
+
+#bigdef  $070mn_退院時サマリー退院時詳細Encounter(ARGtext,ARGref)
+* section[=].section[+].title = "070mn_退院時サマリー退院時詳細Encounter"
+* section[=].section[=].code = $referral-section#324 "退院時詳細セクション"
+* section[=].section[=].text.status = #additional
+* section[=].section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">ARGtext</div>"
+$multiEntryRefSectionLevel2(ARGtext, Encounter, ARGref)
+#endbigdef
+
+
+#bigdef  $070mn_退院時サマリー退院時診断Condition(ARGtext,ARGref...)
+* section[=].section[+].title = "退院時診断"
+* section[=].section[=].code = $referral-section#344 "退院時診断セクション"
+* section[=].section[=].text.status = #additional
+* section[=].section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">ARGtext</div>"
+$multiEntryRefSectionLevel2(退院時診断, Condition, ARGref)
+#endbigdef
+
+#bigdef  $070mn_退院時サマリー退院時投薬指示MedicationRequest(ARGtext,ARGref...)
+* section[=].section[+].title = "退院時投薬指示"
+* section[=].section[=].code = $referral-section#444 "退院時投薬指示セクション"
+* section[=].section[=].text.status = #additional
+* section[=].section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">ARGtext</div>"
+$multiEntryRefSectionLevel2(退院時投薬指示,MedicationRequest,ARGref)
+#endbigdef
+
+#bigdef  $071mn_退院時サマリー退院時投薬指示Bundle(ARGref...)
+* section[=].section[+].title = "退院時投薬指示"
+* section[=].section[=].code = $referral-section#444 "退院時投薬指示セクション"
+* section[=].section[=].text.status = #additional
+$multiEntryRefSectionLevel2(退院時投薬指示,Bundle,ARGref)
+#endbigdef
+
+#bigdef  $070mn_退院時サマリー退院時方針指示CarePlan(ARGtext,ARGref...)
+* section[=].section[+].title = "退院時方針指示"
+* section[=].section[=].code = $referral-section#424 "退院時方針指示セクション"
+* section[=].section[=].text.status = #additional
+* section[=].section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">ARGtext</div>"
+$multiEntryRefSectionLevel2(退院時方針指示,JP_CarePlan,ARGref)
+#endbigdef
+
+#bigdef  $070on_退院時サマリー退院時身体所見ObsCommon(ARGtext,ARGref...)
+* section[=].section[+].title = "退院時身体所見"
+* section[=].section[=].code = $referral-section#614 "退院時身体所見セクション"
+* section[=].section[=].text.status = #additional
+* section[=].section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">ARGtext</div>"
+//  Reference(JP_Observation_Common) 退院時身体所見
+$multiEntryRefSectionLevel2(退院時身体所見,Observation,ARGref)
+#endbigdef
+
+#bigdef  $070on_退院時サマリー入院中治療Procedure(ARGtext,ARGref...)
+* section[=].section[+].title = "入院中治療"
+* section[=].section[=].code = $referral-section#713 "入院中治療セクション"
+* section[=].section[=].text.status = #additional
+* section[=].section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">ARGtext</div>"
+//  Reference(JP_Observation_Common) 入院中治療
+$multiEntryRefSectionLevel2(入院中治療,Procedure,ARGref)
+#endbigdef
+
+#bigdef  $070on_退院時サマリー入院中検査結果Observation(ARGtext,ARGref...)
+* section[=].section[+].title = "入院中検査結果"
+* section[=].section[=].code = $referral-section#713 "入院中検査結果セクション"
+* section[=].section[=].text.status = #additional
+* section[=].section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">ARGtext</div>"
+//  Reference(JP_Observation_Common) 入院中検査結果
+$multiEntryRefSectionLevel2(入院中検査結果,Observation,ARGref)
+#endbigdef
+
+#bigdef  $071on_退院時サマリー入院中検査結果Imaging_study(ARGtext,ARGref...)
+* section[=].section[+].title = "入院中検査結果"
+* section[=].section[=].code = $referral-section#713 "入院中検査結果セクション"
+* section[=].section[=].text.status = #additional
+* section[=].section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">ARGtext</div>"
+//  Reference(JP_Observation_Common) 入院中検査結果
+$multiEntryRefSectionLevel2(入院中検査結果,Imaging_study,ARGref)
+#endbigdef
+
+#bigdef  $072on_退院時サマリー入院中検査結果DiagnosticReport(ARGtext,ARGref...)
+* section[=].section[+].title = "入院中検査結果"
+* section[=].section[=].code = $referral-section#713 "入院中検査結果セクション"
+* section[=].section[=].text.status = #additional
+* section[=].section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">ARGtext</div>"
+//  Reference(JP_Observation_Common) 入院中検査結果
+$multiEntryRefSectionLevel2(入院中検査結果,DiagnosticReport,ARGref)
+#endbigdef
+
+#bigdef  $073on_退院時サマリー入院中検査結果Bundle(ARGtext,ARGref...)
+* section[=].section[+].title = "入院中検査結果"
+* section[=].section[=].code = $referral-section#713 "入院中検査結果セクション"
+* section[=].section[=].text.status = #additional
+* section[=].section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">ARGtext</div>"
+//  Reference(JP_Observation_Common) 入院中検査結果
+$multiEntryRefSectionLevel2(入院中検査結果,Bundle,ARGref)
+#endbigdef
+
+#bigdef  $070on_退院時サマリー医療機器DeviceUseStatement(ARGtext,ARGref...)
+* section[=].section[+].title = "医療機器"
+* section[=].section[=].code = $referral-section#810 "医療機器セクション"
+* section[=].section[=].text.status = #additional
+* section[=].section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">ARGtext</div>"
+//  Reference(JP_Observation_Common) 医療機器
+$multiEntryRefSectionLevel2(医療機器,DeviceUseStatement,ARGref)
+#endbigdef
+
+
+#bigdef  $070on_退院時サマリー予防接種歴Immunization(ARGtext,ARGref...)
+* section[=].section[+].title = "予防接種歴"
+* section[=].section[=].code = $referral-section#530 "予防接種歴セクション"
+* section[=].section[=].text.status = #additional
+* section[=].section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">ARGtext</div>"
+//  Reference(JP_Observation_Common) 予防接種歴
+$multiEntryRefSectionLevel2(予防接種歴,Immunization,ARGref)
+#endbigdef
+
+
+#bigdef  $070on_退院時サマリー事前指示Consent(ARGtext,ARGref...)
+* section[=].section[+].title = "事前指示"
+* section[=].section[=].code = $referral-section#410 "事前指示セクション"
+* section[=].section[=].text.status = #additional
+* section[=].section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">ARGtext</div>"
+//  Reference(JP_Observation_Common) 事前指示
+$multiEntryRefSectionLevel2(事前指示,Consent,ARGref)
+#endbigdef
+
+#bigdef  $070on_退院時サマリー臨床研究参加ResearchSubject(ARGtext,ARGref...)
+* section[=].section[+].title = "臨床研究参加"
+* section[=].section[=].code = $referral-section#830 "臨床研究参加セクション"
+* section[=].section[=].text.status = #additional
+* section[=].section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">ARGtext</div>"
+//  Reference(JP_Observation_Common) 臨床研究参加
+$multiEntryRefSectionLevel2(臨床研究参加,ResearchSubject,ARGref)
+#endbigdef
+
+#bigdef  $080mn_添付情報DocumentReference(ARGorgref)
+* section[+].title = "添付情報"
+* section[=].code = $referral-section#210 "添付情報セクション"
+* section[=].text.status = #additional
+$multiEntryRefSectionLevel1(添付情報, DocumentReference, ARGorgref)
+#endbigdef
+
+#bigdef  $081mn_添付情報Binary(ARGorgref)
+* section[+].title = "添付情報"
+* section[=].code = $referral-section#210 "添付情報セクション"
+* section[=].text.status = #additional
+$multiEntryRefSectionLevel1(添付情報, Binary, ARGorgref)
+#endbigdef
+
+
+#bigdef  $090mn_PDFDocumentReference(ARGorgref)
+* section[+].title = "PDF"
+* section[=].code = $referral-section#210 "PDFセクション"
+* section[=].text.status = #additional
+$multiEntryRefSectionLevel1(PDF, DocumentReference, ARGorgref)
+#endbigdef
+
+#bigdef  $091mn_PDFBinary(ARGorgref)
+* section[+].title = "PDF"
+* section[=].code = $referral-section#210 "PDFセクション"
+* section[=].text.status = #additional
+$multiEntryRefSectionLevel1(PDF, Binary, ARGorgref)
+#endbigdef

@@ -5,7 +5,7 @@
   "name": "JP_codeSystem_eReferral_document_section",
   "id": "jp-codeSystem-eReferral-document-section",
   "description": "処方セクション区分コード",
-  "version": "1.1.0-rc",
+  "version": "1.1.1-rc",
   "url": "http://jpfhir.jp/fhir/eReferral/CodeSystem/document-section",
   "concept": [
     {
@@ -113,6 +113,8 @@
       "display": "紹介目的セクション"
     }
   ],
+  "title": "処方セクション区分コード",
+  "experimental": false,
   "caseSensitive": false,
   "count": 26
 }

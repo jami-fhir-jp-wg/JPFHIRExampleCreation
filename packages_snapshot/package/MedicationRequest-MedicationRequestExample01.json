@@ -34,7 +34,7 @@
     "text": "カルボシステイン２５０ｍｇ錠"
   },
   "subject": {
-    "reference": "jppatientExample01"
+    "reference": "Patient/jppatientExample01"
   },
   "authoredOn": "2020-08-21T12:28:17+09:00",
   "dosageInstruction": [
@@ -42,7 +42,7 @@
       "text": "内服・経口・１日３回朝昼夕食後",
       "extension": [
         {
-          "url": "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DosageInstruction_UsageDuration",
+          "url": "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDosage_UsageDuration",
           "valueDuration": {
             "value": 7,
             "code": "d",
@@ -126,9 +126,9 @@
   "dispenseRequest": {
     "quantity": {
       "value": 21,
-      "code": "21code",
+      "code": "TAB",
       "system": "urn:oid:1.2.392.100495.20.2.101",
-      "unit": "21name"
+      "unit": "錠"
     },
     "expectedSupplyDuration": {
       "value": 7,
@@ -148,7 +148,7 @@
       ]
     },
     "reason": {
-      "text": ""
+      "text": "患者が希望せず"
     }
   }
 }

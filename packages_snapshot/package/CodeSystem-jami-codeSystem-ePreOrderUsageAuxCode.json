@@ -5,7 +5,7 @@
   "name": "JAMI_codeSystem_ePreOrderUsageAuxCode",
   "id": "jami-codeSystem-ePreOrderUsageAuxCode",
   "description": "JAMI補足用法コード8桁",
-  "version": "1.1.0-rc",
+  "version": "1.1.1-rc",
   "url": "urn:oid:1.2.392.200250.2.2.20.22",
   "concept": [
     {
@@ -273,6 +273,8 @@
       "display": "火曜日、土曜日"
     }
   ],
+  "title": "JAMI補足用法コード8桁",
+  "experimental": false,
   "caseSensitive": false,
   "count": 66
 }

@@ -1,0 +1,189 @@
+// Patientリース
+// JP_Patient
+
+// 000mn_ExampleJPPatient(ARGinstancename)  
+// 001mn_Description(ARGtxt)
+// 002or_ValidationProfile(ARGmetaprofile)
+// 002or_ValidationProfile_JPPatient()
+
+// 0E1or_患者宗教(ARGcode)
+// 0E1or_患者生誕地住所TEXT(ARGtext)
+// 0E1or_患者人種(ARGcode)
+
+// 010mn_患者ID(ARG)
+// 020on_患者アクティブ
+// 030on_患者漢字氏名(ARGfirstname,ARGgivenname)
+// 030on_患者カナ氏名(ARGfirstnamekana,ARGgivennamekana)
+// 040or_患者電話番号(ARG)
+// 040or_患者自宅電話番号(ARG)
+// 040or_患者携帯番号(ARG)
+// 040or_患者職場電話番号(ARG)
+// 050on_患者性別(ARG) 
+// 060on_患者生年月日(ARG)
+// 070on_患者死亡()
+// 070on_死亡日時(ARG)
+// 080or_患者住所(ARGpostal,ARGtext)
+// 080or_患者職場住所(ARGpostal,ARGtext)
+// 080or_患者構造化住所(ARGpostal,ARGtext,ARGstate,ARGcity,ARGline)
+// 080or_患者自宅構造化住所(ARGpostal,ARGtext,ARGstate,ARGcity,ARGline)
+// 080or_患者職場構造化住所(ARGpostal,ARGtext,ARGstate,ARGcity,ARGline)
+
+#bigdef $000mn_ExampleJPPatient(ARGinstancename)  
+Instance: ARGinstancename
+InstanceOf: JP_Patient
+Usage: #inline
+#endbigdef
+
+#ifndef $001mn_Description(ARGtxt)
+#bigdef $001mn_Description(ARGtxt)
+Description: "ARGtxt"
+#endbigdef
+#endif
+
+#ifndef $002or_ValidationProfile(ARGmetaprofile)
+#bigdef $002or_ValidationProfile(ARGmetaprofile) 
+* meta.profile[+] = "ARGmetaprofile"
+#endbigdef
+#endif
+
+
+#ifndef $002or_ValidationProfile_JPPatient()
+#bigdef $002or_ValidationProfile_JPPatient() 
+* meta.profile[+] = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Patient"
+#endbigdef
+#endif
+
+#bigdef  $0E1or_患者宗教(ARGcode)
+* extension[+].url = "http://hl7.org/fhir/StructureDefinition/patient-religion" (exactly)
+* extension[=].valueCodeableConcept.code.coding.system = "http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation"
+* extension[=].valueCodeableConceptcode.coding.code = #ARGcode
+#endbigdef
+
+#bigdef  $0E1or_患者生誕地住所TEXT(ARGtext)
+* extension[+].url = "http://hl7.org/fhir/StructureDefinition/patient-birthPlace" (exactly)
+* extension[=].valueAddress.text = "ARGtext"
+#endbigdef
+
+#bigdef  $0E1or_患者人種(ARGcode)
+* extension[+].url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Patient_Race" (exactly)
+* extension[=].valueCoding.system = "urn:oid:2.16.840.1.113883.5.104"
+* extension[=].code.coding.code = #ARGcode
+#endbigdef
+
+#bigdef  $010mn_患者ID(ARG)
+* identifier.system = "urn:oid:1.2.392.200119.6.102.11234567890"
+* identifier.value = "ARG"
+#endbigdef
+
+#bigdef  $020on_患者アクティブ()
+* active = true
+#endbigdef
+
+#bigdef  $030on_患者漢字氏名(ARGfirstname,ARGgivenname)
+* name[+].extension.url = "http://hl7.org/fhir/StructureDefinition/iso21090-EN-representation"
+* name[=].extension.valueCode = #IDE
+* name[=].use = #official
+* name[=].text = "ARGfirstname　ARGgivenname"
+* name[=].family = "ARGfirstname"
+* name[=].given = "ARGgivenname"
+#endbigdef
+
+#bigdef  $030on_患者カナ氏名(ARGfirstnamekana,ARGgivennamekana)
+* name[+].extension.url = "http://hl7.org/fhir/StructureDefinition/iso21090-EN-representation"
+* name[=].extension.valueCode = #SYL
+* name[=].use = #official
+* name[=].text = "ARGfirstnamekana　ARGgivennamekana"
+* name[=].family = "ARGfirstnamekana"
+* name[=].given = "ARGgivennamekana"
+#endbigdef
+
+#bigdef $040or_患者電話番号(ARG)
+// 自宅電話番号と同じ処理
+* telecom[+].system = #phone
+* telecom[=].value = "ARG"
+* telecom[=].use = #home
+#endbigdef
+
+#bigdef $040or_患者自宅電話番号(ARG)
+* telecom[+].system = #phone
+* telecom[=].value = "ARG"
+* telecom[=].use = #home
+#endbigdef
+
+#bigdef $040or_患者携帯番号(ARG)
+* telecom[+].system = #phone
+* telecom[=].value = "ARG"
+* telecom[=].use = #mobile
+#endbigdef
+
+#bigdef $040or_患者職場電話番号(ARG)
+* telecom[+].system = #phone
+* telecom[=].value = "ARG"
+* telecom[=].use = #work
+#endbigdef
+
+#bigdef $050on_患者性別(ARG)    
+* gender = #ARG
+#endbigdef
+
+#bigdef $060on_患者生年月日(ARG)    
+* birthDate = "ARG"
+#endbigdef
+
+#bigdef $070on_患者死亡()    
+* deceasedBoolean = true
+#endbigdef
+
+#bigdef $070on_死亡日時(ARG)    
+* deceasedDateTime = ARG
+#endbigdef
+
+#bigdef $080or_患者住所(ARGpostal,ARGtext)
+* address[+].text = "ARGtext"
+* address[=].postalCode = "ARGpostal"
+* address[=].country = "JP"
+#endbigdef
+
+#bigdef $080or_患者自宅住所(ARGpostal,ARGtext)
+* address[+].use = #home
+* address[=].postalCode = "ARGpostal"
+* address[=].text = "ARGtext"
+* address[=].country = "JP"
+#endbigdef
+
+#bigdef $080or_患者職場住所(ARGpostal,ARGtext)
+* address[+].use = #work
+* address[=].postalCode = "ARGpostal"
+* address[=].text = "ARGtext"
+* address[=].country = "JP"
+#endbigdef
+
+#bigdef $080or_患者構造化住所(ARGpostal,ARGtext,ARGstate,ARGcity,ARGline)
+* address[+].text = "ARGtext"
+* address[=].line = "ARGline"
+* address[=].city = "ARGcity"
+* address[=].state = "ARGstate"
+* address[=].postalCode = "ARGpostal"
+* address[=].country = "JP"
+#endbigdef
+
+#bigdef $080or_患者自宅構造化住所(ARGpostal,ARGtext,ARGstate,ARGcity,ARGline)
+* address[+].use = #home
+* address[=].text = "ARGtext"
+* address[=].line = "ARGline"
+* address[=].city = "ARGcity"
+* address[=].state = "ARGstate"
+* address[=].postalCode = "ARGpostal"
+* address[=].country = "JP"
+#endbigdef
+
+#bigdef $080or_患者職場構造化住所(ARGpostal,ARGtext,ARGstate,ARGcity,ARGline)
+* address[+].use = #work
+* address[=].text = "ARGtext"
+* address[=].line = "ARGline"
+* address[=].city = "ARGcity"
+* address[=].state = "ARGstate"
+* address[=].postalCode = "ARGpostal"
+* address[=].country = "JP"
+#endbigdef
+

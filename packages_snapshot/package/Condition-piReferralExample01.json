@@ -35,7 +35,7 @@
     "text": "上腹部痛"
   },
   "subject": {
-    "reference": "jppatientExample01"
+    "reference": "Patient/jppatientExample01"
   },
   "note": [
     {

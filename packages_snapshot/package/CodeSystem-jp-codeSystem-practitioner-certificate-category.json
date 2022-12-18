@@ -5,7 +5,7 @@
   "name": "JP_codeSystem_practitioner_certificate_category",
   "id": "jp-codeSystem-practitioner-certificate-category",
   "description": "医療従事者資格種別",
-  "version": "1.1.0-rc",
+  "version": "1.1.1-rc",
   "url": "http://jpfhir.jp/fhir/core/CodeSystem/practitioner-certificate-category",
   "concept": [
     {
@@ -17,6 +17,8 @@
       "display": "麻薬施用者"
     }
   ],
+  "title": "医療従事者資格種別",
+  "experimental": false,
   "caseSensitive": false,
   "count": 2
 }

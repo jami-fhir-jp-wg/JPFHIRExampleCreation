@@ -1,3 +1,0 @@
-((section.code.coding.where(code = '200')).exists()) 
-    xor 
-((section.code.coding.where(code = '300')).exists())

@@ -38,31 +38,31 @@
     }
   ],
   "subject": {
-    "reference": "jppatientExample01",
+    "reference": "Patient/jppatientExample01",
     "type": "Patient",
     "display": "患者リソースPatient"
   },
   "encounter": {
-    "reference": "encounterReferralExample01",
+    "reference": "Encounter/encounterReferralExample01",
     "type": "Encounter",
     "display": "受診Encounterリソース"
   },
   "date": "2020-08-21T12:12:20+09:00",
   "author": [
     {
-      "reference": "referralFromPractitionerExample01",
+      "reference": "Practitioner/referralFromPractitionerExample01",
       "type": "Practitioner",
       "display": "紹介状作成者PractitionerRoleリソース"
     },
     {
-      "reference": "referralFromOrganizationExample01",
+      "reference": "Organization/referralFromOrganizationExample01",
       "type": "Organization",
       "display": "紹介状作成機関Organizationリソース"
     }
   ],
   "title": "診療情報提供書",
   "custodian": {
-    "reference": "referralFromOrganizationExample01",
+    "reference": "Organization/referralFromOrganizationExample01",
     "type": "Organization",
     "display": "紹介状交付責任機関Organizationリソース"
   },
@@ -96,17 +96,17 @@
       },
       "entry": [
         {
-          "reference": "referralToOrganizationExample01",
+          "reference": "Organization/referralToOrganizationExample01",
           "type": "Organization",
           "display": "紹介先医療機関"
         },
         {
-          "reference": "referralToOrganizationDeptExample01",
+          "reference": "Organization/referralToOrganizationDeptExample01",
           "type": "Organization",
           "display": "紹介先診療科"
         },
         {
-          "reference": "referralToPractitionerExample01",
+          "reference": "Practitioner/referralToPractitionerExample01",
           "type": "Practitioner",
           "display": "紹介先医師"
         }
@@ -129,17 +129,17 @@
       },
       "entry": [
         {
-          "reference": "referralFromOrganizationExample01",
+          "reference": "Organization/referralFromOrganizationExample01",
           "type": "Organization",
           "display": "紹介元医療機関"
         },
         {
-          "reference": "referralFromOrganizationDeptExample01",
+          "reference": "Organization/referralFromOrganizationDeptExample01",
           "type": "Organization",
           "display": "紹介元診療科"
         },
         {
-          "reference": "referralFromPractitionerExample01",
+          "reference": "Practitioner/referralFromPractitionerExample01",
           "type": "Practitioner",
           "display": "紹介元医師"
         }
@@ -174,7 +174,7 @@
           },
           "entry": [
             {
-              "reference": "purposeReferralExample01",
+              "reference": "Encounter/purposeReferralExample01",
               "type": "Encounter",
               "display": "紹介目的"
             }
@@ -197,12 +197,12 @@
           },
           "entry": [
             {
-              "reference": "cc1ReferralExample01",
+              "reference": "Condition/cc1ReferralExample01",
               "type": "Condition",
               "display": "傷病名・主訴"
             },
             {
-              "reference": "cc2ReferralExample01",
+              "reference": "Condition/cc2ReferralExample01",
               "type": "Condition",
               "display": "傷病名・主訴"
             }
@@ -225,7 +225,7 @@
           },
           "entry": [
             {
-              "reference": "piReferralExample01",
+              "reference": "Condition/piReferralExample01",
               "type": "Condition",
               "display": "現病歴"
             }
@@ -248,12 +248,12 @@
           },
           "entry": [
             {
-              "reference": "ph1ReferralExample01",
+              "reference": "Condition/ph1ReferralExample01",
               "type": "Condition",
               "display": "既往歴"
             },
             {
-              "reference": "ph2ReferralExample01",
+              "reference": "Condition/ph2ReferralExample01",
               "type": "Condition",
               "display": "既往歴"
             }
@@ -276,12 +276,12 @@
           },
           "entry": [
             {
-              "reference": "alg1ReferralExample01",
+              "reference": "AllergyIntolerance/alg1ReferralExample01",
               "type": "AllergyIntolerance",
               "display": "アレルギー・不耐性反応"
             },
             {
-              "reference": "alg1ReferralExample02",
+              "reference": "AllergyIntolerance/alg1ReferralExample02",
               "type": "AllergyIntolerance",
               "display": "アレルギー・不耐性反応"
             }
@@ -320,7 +320,7 @@
           },
           "entry": [
             {
-              "reference": "psobsCommonExample01",
+              "reference": "Observation/psobsCommonExample01",
               "type": "Observation",
               "display": "身体所見"
             }
@@ -359,7 +359,7 @@
           },
           "entry": [
             {
-              "reference": "ccourseReferralExample01",
+              "reference": "DocumentReference/ccourseReferralExample01",
               "type": "DocumentReference",
               "display": "臨床経過"
             }

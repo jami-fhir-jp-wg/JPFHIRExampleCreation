@@ -1,0 +1,108 @@
+// Allergy_eClinicalSummary
+
+#bigdef $000mn_ExampleJPAllergy_eCS(ARGinstancename)
+Instance: ARGinstancename
+InstanceOf: JP_AllergyIntolerance
+Usage: #inline
+#endbigdef
+
+#ifndef $001mn_Description(ARGtxt)
+#bigdef $001mn_Description(ARGtxt)
+Description: "ARGtxt"
+#endbigdef
+#endif
+
+#ifndef $002or_ValidationProfile(ARGmetaprofile)
+#bigdef $002or_ValidationProfile(ARGmetaprofile) 
+* meta.profile[+] = "ARGmetaprofile"
+#endbigdef
+#endif
+
+#ifndef $002or_ValidationProfile_JPAllergy_eCS()
+#bigdef $002or_ValidationProfile_JPAllergy_eCS()
+* meta.profile[+] = "http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_AllergyIntolerance_eClinicalSummary"
+#endbigdef
+#endif
+
+#bigdef $010on_アレルギ管理番号(ARGnumber)
+* identifier.system = "http://jpfhir.jp/fhir/core/IdSystem/resourceInstance-identifier"
+* identifier.value = "ARGnumber"
+* clinicalStatus = http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical#active
+ // active | recurrence | relapse | inactive | remission | resolved
+#endbigdef
+
+// 030 verificationStatus
+
+#bigdef $040on_アレルギタイプ()
+* type = #allergy
+#endbigdef
+
+#bigdef $040on_アレルギタイプ不耐性()
+* type = #intolerance
+#endbigdef
+
+#bigdef $050on_アレルギ種類(ARGcat)
+// food | medication | environment | biologic 食物、医薬品、環境、生物学的
+* category = #ARGcat
+#endbigdef
+
+#bigdef $060on_アレルギ程度(ARGst)
+// low | high | unable-to-assess 低、高、評価不能
+* criticality = #ARGst
+#endbigdef
+
+#bigdef $060on_アレルギ程度不明()
+// low | high | unable-to-assess 低、高、評価不能
+* criticality = #unable-to-assess
+#endbigdef
+
+#bigdef $070on_アレルギ物質コード名称JFAGY_FOOD(ARGcode,ARGname)
+* code = http://jpfhir.jp/fhir/core/CodeSystem/JP_JfagyFoodAllergen_CS#ARGcode "ARGname"
+#endbigdef
+
+#bigdef $070on_アレルギ物質コード名称JFAGY_MEDICINE(ARGcode,ARGname)
+* code = http://jpfhir.jp/fhir/core/CodeSystem/JP_JfagyMedicationAllergen_CS#ARGcode "ARGname"
+#endbigdef
+
+#bigdef $070on_アレルギ物質コード名称JFAGY_OTHES(ARGcode,ARGname)
+* code = http://jpfhir.jp/fhir/core/CodeSystem/JP_JfagyNonFoodNonMedicationAllergen_CS#ARGcode "ARGname"
+#endbigdef
+
+#bigdef $070on_アレルギ物質テキスト(ARGtext)
+* code.text = "ARGtext"
+#endbigdef
+
+#bigdef $080mn_アレルギ患者(ARGpatient)
+* patient.reference = "ARGpatient"
+#endbigdef
+
+
+#bigdef $090on_アレルギ受診(ARGencounter)
+* encounter.reference = "ARGencounter"
+#endbigdef
+
+
+#bigdef $100on_アレルギ時期日時((ARGdate,ARGtime)
+// ARGdate 2020-08-21
+// ATGtime 12:12:20
+* onsetDateTime = "ARGdateTARGtime+09:00"
+#endbigdef
+
+#bigdef $100on_アレルギ時期日((ARGdate)
+// ARGdate 2020-08-21
+// ATGtime 12:12:20
+* onsetDateTime = "ARGdate"
+#endbigdef
+
+#bigdef $100on_アレルギ時期年齢(ARGage)
+* onsetAge.system = "http://unitsofmeasure.org"
+* onsetAge.value = ARGage
+* onsetAge.code = #a
+#endbigdef
+
+//当面中略（退院時サマリー）
+
+#bigdef $150or_アレルギ追加TEXT(ARGtext)
+* note.text = "ARGtext"
+#endbigdef
+

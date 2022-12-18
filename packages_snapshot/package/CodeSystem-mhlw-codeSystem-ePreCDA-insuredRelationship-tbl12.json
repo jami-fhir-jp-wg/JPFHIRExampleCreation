@@ -5,7 +5,7 @@
   "name": "MHLW_codeSystem_ePreCDA_insuredRelationship_tbl12",
   "id": "mhlw-codeSystem-ePreCDA-insuredRelationship-tbl12",
   "description": "厚労省電子処方CDA規格別表12 被保険者区分コード",
-  "version": "1.1.0-rc",
+  "version": "1.1.1-rc",
   "url": "urn:oid:1.2.392.100495.20.2.62",
   "concept": [
     {
@@ -17,6 +17,8 @@
       "display": "被扶養者"
     }
   ],
+  "title": "厚労省電子処方CDA規格別表12 被保険者区分コード",
+  "experimental": false,
   "caseSensitive": false,
   "count": 2
 }

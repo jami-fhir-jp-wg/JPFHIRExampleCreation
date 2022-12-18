@@ -1,5 +1,113 @@
-FHIR Validation tool Version 5.6.80 (Git# 3ab720a6af40). Built 2022-11-22T14:29:01.401Z (20 days old)
-  Java:   11.0.10 from /Library/Java/JavaVirtualMachines/jdk-11.0.10+9/Contents/Home on x86_64 (64bit). 30688MB available
+FHIR Validation tool Version 5.6.80 (Git# 3ab720a6af40). Built 2022-11-22T14:29:01.401Z (25 days old)
+  Java:   17.0.2 from /Library/Java/JavaVirtualMachines/jdk-17.0.2.jdk/Contents/Home on x86_64 (64bit). 12288MB available
   Paths:  Current = /Users/kohe/GitHub, Package Cache = /Users/kohe/.fhir/packages
-  Params: JPFHIRExampleCreation/output-json/fsh-generated/resources/Bundle-bundleReferralExample01.json -ig JPFHIRExampleCreation/packages_snapshot/jp-ereferral#0.9.3-snap.tgz -tx https://tx.jpfhir.jp:8081
+  Params: JPFHIRExampleCreation/output-json/eReferral/fsh-generated/resources/Bundle-bundleReferralExample01.json -ig JPFHIRExampleCreation/packages_snapshot/jp-ereferral#0.9.3-snap.tgz -tx https://tx.jpfhir.jp:8081
 Scanning for versions (no -version parameter):
+  Package JPFHIRExampleCreation/packages_snapshot/jp-ereferral#0.9.3-snap.tgz: 4.0
+-> use version 4.0
+  Jurisdiction: Japan
+Loading
+  Load FHIR v4.0 from hl7.fhir.r4.core#4.0.1.: - 4576 resources (00:03.486)
+  Load hl7.terminology#4.0.0 - 4164 resources (00:01.540)
+  Load R5 Extensions - 123 resources (00:02.651)
+  Terminology server https://tx.jpfhir.jp:8081 - Version null (00:00.712)
+  Load JPFHIRExampleCreation/packages_snapshot/jp-ereferral#0.9.3-snap.tgz - 78 resources (00:00.915)
+  Package Summary: [hl7.fhir.r4.core#4.0.1, hl7.fhir.xver-extensions#0.0.11, hl7.terminology#4.0.0]
+  Get set...  go (00:00.004)
+Validating
+  Validate JPFHIRExampleCreation/output-json/eReferral/fsh-generated/resources/Bundle-bundleReferralExample01.json
+Validate Bundle against http://hl7.org/fhir/StructureDefinition/Bundle|4.0.1..  Load jp-core.r4#1.1.1-rc - 198 resources (00:01.190)
+........20..........40..Validate Practitioner against http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Practitioner_eClinicalSummary|1.1.1-rc|
+Validate Practitioner against http://jpfhir.jp/fhir/core/StructureDefinition/JP_Practitioner|
+Validate Organization against http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Organization_eClinicalSummary|1.1.1-rc|
+Validate Organization against http://jpfhir.jp/fhir/core/StructureDefinition/JP_Organization|
+Validate Organization against http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Organization_eClinicalSummary_department|1.1.1-rc..........20..........40..........60..........80.........|
+Validate Organization against http://jpfhir.jp/fhir/core/StructureDefinition/JP_Organization|
+Validate Organization against http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Organization_eClinicalSummary|
+...Validate Organization against http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Organization_eClinicalSummary|1.1.1-rc..........20..........40..........60..........80.........|
+Validate Organization against http://jpfhir.jp/fhir/core/StructureDefinition/JP_Organization..........20..........40..........60..........80..........100|
+Validate Organization against http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Organization_eClinicalSummary|1.1.1-rc..........20..........40..........60..........80.........|
+Validate Organization against http://jpfhir.jp/fhir/core/StructureDefinition/JP_Organization..........20..........40..........60..........80..........100..|
+Validate Organization against http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Organization_eClinicalSummary_department..........20..........40..........60..........80..........100..|
+Validate Organization against http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Organization_eClinicalSummary_department|1.1.1-rc..........20..........40..........60..........80.........|
+Validate Organization against http://jpfhir.jp/fhir/core/StructureDefinition/JP_Organization|
+Validate Organization against http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Organization_eClinicalSummary|
+Validate Organization against http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Organization_eClinicalSummary_department|1.1.1-rc|
+Validate Organization against http://jpfhir.jp/fhir/core/StructureDefinition/JP_Organization|
+Validate Practitioner against http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Practitioner_eClinicalSummary|1.1.1-rc..........20..........40..........60..........80.........|
+Validate Practitioner against http://jpfhir.jp/fhir/core/StructureDefinition/JP_Practitioner..........20..........40..........60..........80..........100..|
+..Validate Organization against http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Organization_eClinicalSummary|1.1.1-rc|
+Validate Organization against http://jpfhir.jp/fhir/core/StructureDefinition/JP_Organization|
+Validate Organization against http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Organization_eClinicalSummary|1.1.1-rc..........20..........40..........60..........80.........|
+Validate Organization against http://jpfhir.jp/fhir/core/StructureDefinition/JP_Organization..........20..........40..........60..........80..........100..|
+Validate Organization against http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Organization_eClinicalSummary_department..........20..........40..........60..........80..........100..|
+Validate Organization against http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Organization_eClinicalSummary_department|1.1.1-rc|
+Validate Organization against http://jpfhir.jp/fhir/core/StructureDefinition/JP_Organization|
+Validate Organization against http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Organization_eClinicalSummary|
+Validate Organization against http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Organization_eClinicalSummary_department|1.1.1-rc|
+Validate Organization against http://jpfhir.jp/fhir/core/StructureDefinition/JP_Organization|
+Validate Practitioner against http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Practitioner_eClinicalSummary|1.1.1-rc|
+Validate Practitioner against http://jpfhir.jp/fhir/core/StructureDefinition/JP_Practitioner|
+...60..........80..........100..........120......|
+Validate Bundle against http://jpfhir.jp/fhir/eReferral/StructureDefinition/JP_Bundle_eReferralValidate Composition against http://jpfhir.jp/fhir/eReferral/StructureDefinition/JP_Composition_eReferral|1.1.1-rc|
+Validate Patient against http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Patient_eClinicalSummary|1.1.1-rc..........20..........40..........60..........80.........|
+Validate Patient against http://jpfhir.jp/fhir/core/StructureDefinition/JP_Patient|
+Validate Practitioner against http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Practitioner_eClinicalSummary|1.1.1-rc|
+Validate Practitioner against http://jpfhir.jp/fhir/core/StructureDefinition/JP_Practitioner|
+Validate Practitioner against http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Practitioner_eClinicalSummary|1.1.1-rc|
+Validate Practitioner against http://jpfhir.jp/fhir/core/StructureDefinition/JP_Practitioner|
+Validate Organization against http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Organization_eClinicalSummary|1.1.1-rc|
+Validate Organization against http://jpfhir.jp/fhir/core/StructureDefinition/JP_Organization|
+Validate Organization against http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Organization_eClinicalSummary|1.1.1-rc|
+Validate Organization against http://jpfhir.jp/fhir/core/StructureDefinition/JP_Organization|
+Validate Organization against http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Organization_eClinicalSummary|1.1.1-rc|
+Validate Organization against http://jpfhir.jp/fhir/core/StructureDefinition/JP_Organization|
+Validate Organization against http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Organization_eClinicalSummary_department|
+Validate Organization against http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Organization_eClinicalSummary|1.1.1-rc|
+Validate Organization against http://jpfhir.jp/fhir/core/StructureDefinition/JP_Organization|
+Validate Organization against http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Organization_eClinicalSummary_department|
+Validate Organization against http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Organization_eClinicalSummary_department|1.1.1-rc|
+Validate Organization against http://jpfhir.jp/fhir/core/StructureDefinition/JP_Organization|
+Validate Organization against http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Organization_eClinicalSummary|
+Validate Organization against http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Organization_eClinicalSummary_department|1.1.1-rc|
+Validate Organization against http://jpfhir.jp/fhir/core/StructureDefinition/JP_Organization|
+Validate Organization against http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Organization_eClinicalSummary|
+Validate Organization against http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Organization_eClinicalSummary_department|1.1.1-rc|
+Validate Organization against http://jpfhir.jp/fhir/core/StructureDefinition/JP_Organization|
+Validate Organization against http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Organization_eClinicalSummary_department|1.1.1-rc|
+Validate Organization against http://jpfhir.jp/fhir/core/StructureDefinition/JP_Organization|
+Validate Encounter against http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Encounter_eClinicalSummary|1.1.1-rc|
+Validate Encounter against http://jpfhir.jp/fhir/core/StructureDefinition/JP_Encounter|
+Validate Encounter against http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Encounter_eClinicalSummary|1.1.1-rc|
+Validate Encounter against http://jpfhir.jp/fhir/core/StructureDefinition/JP_Encounter|
+Validate Condition against http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Condition_eClinicalSummary|1.1.1-rc|
+Validate Condition against http://jpfhir.jp/fhir/core/StructureDefinition/JP_Condition|
+Validate Condition against http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Condition_eClinicalSummary|1.1.1-rc|
+Validate Condition against http://jpfhir.jp/fhir/core/StructureDefinition/JP_Condition|
+Validate Condition against http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Condition_eClinicalSummary|1.1.1-rc|
+Validate Condition against http://jpfhir.jp/fhir/core/StructureDefinition/JP_Condition|
+Validate Condition against http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Condition_eClinicalSummary|1.1.1-rc|
+Validate Condition against http://jpfhir.jp/fhir/core/StructureDefinition/JP_Condition|
+Validate Condition against http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Condition_eClinicalSummary|1.1.1-rc|
+Validate Condition against http://jpfhir.jp/fhir/core/StructureDefinition/JP_Condition|
+Validate AllergyIntolerance against http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_AllergyIntolerance_eClinicalSummary|1.1.1-rc|
+Validate AllergyIntolerance against http://jpfhir.jp/fhir/core/StructureDefinition/JP_AllergyIntolerance|
+Validate AllergyIntolerance against http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_AllergyIntolerance_eClinicalSummary|1.1.1-rc|
+Validate AllergyIntolerance against http://jpfhir.jp/fhir/core/StructureDefinition/JP_AllergyIntolerance|
+Validate Observation against http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Observation_Common_eClinicalSummary|1.1.1-rc..........20..........40..........60..........80.........|
+Validate Observation against http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_Common|
+Validate DocumentReference against http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_DocumentReference_eClinicalSummary|1.1.1-rc|
+Validate DocumentReference against http://jpfhir.jp/fhir/core/StructureDefinition/JP_DocumentReference|
+..|
+ 00:03.298
+Done. Times: Loading: 00:10.193, validation: 00:04.488. Memory = 389Mb
+
+Success: 0 errors, 6 warnings, 2 notes
+  Information @ Bundle.entry[0].resource.ofType(Composition).type (line 38, col22): None of the codings provided are in the value set 'FHIR Document Type Codes' (http://hl7.org/fhir/ValueSet/doc-typecodes|4.0.1), and a coding is recommended to come from this value set) (codes = http://jpfhir.jp/fhir/Common/CodeSystem/doc-typecodes#57133-1)
+  Information @ Bundle.entry[18].resource.ofType(DocumentReference).type.coding[0] (line 1197, col14): Code System URI 'http://loinc.org' is unknown so the code cannot be validated
+  Warning @ Bundle.entry[20] (line 1095, col6): Entry 'urn:uuid:2f4bcd8b-ec32-4f51-98e5-896f21b73218' isn't reachable by traversing forwards from first Bundle entry, and isn't a resource type that is typically used that way - check this is not missed somewhere
+  Warning @ Bundle.entry[2].resource.ofType(Encounter).class (line 474, col72): Display Name for http://terminology.hl7.org/CodeSystem/v3-ActCode#AMB should be one of 1 choices from 'ambulatory', not '外来' for 'http://terminology.hl7.org/CodeSystem/v3-ActCode#AMB'
+  Warning @ Bundle.entry[2].resource.ofType(Encounter).classHistory[0].class (line 481, col76): Display Name for http://terminology.hl7.org/CodeSystem/v3-ActCode#AMB should be one of 1 choices from 'ambulatory', not '外来' for 'http://terminology.hl7.org/CodeSystem/v3-ActCode#AMB'
+  Warning @ Bundle.entry[9].resource.ofType(Encounter).class (line 799, col72): Display Name for http://terminology.hl7.org/CodeSystem/v3-ActCode#AMB should be one of 1 choices from 'ambulatory', not '外来' for 'http://terminology.hl7.org/CodeSystem/v3-ActCode#AMB'
+  Warning @ Bundle.entry[17].resource.ofType(Observation).category[0] (line 1164, col12): Display Name for http://terminology.hl7.org/CodeSystem/observation-category#exam should be one of 1 choices from 'Exam', not '身体検査・観察'
+  Warning @ Bundle.entry[17].resource.category[0] (line 1164, col12): Display Name for http://terminology.hl7.org/CodeSystem/observation-category#exam should be one of 1 choices from 'Exam', not '身体検査・観察'

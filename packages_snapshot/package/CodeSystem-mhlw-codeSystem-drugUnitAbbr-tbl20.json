@@ -5,7 +5,7 @@
   "name": "MHLW_codeSystem_drugUnitAbbr_tbl20",
   "id": "mhlw-codeSystem-drugUnitAbbr-tbl20",
   "description": "厚労省電子処方CDA規格別表２０\t医薬品単位略号",
-  "version": "1.1.0-rc",
+  "version": "1.1.1-rc",
   "url": "urn:oid:1.2.392.100495.20.2.101",
   "concept": [
     {
@@ -265,6 +265,8 @@
       "display": "μＬ"
     }
   ],
+  "title": "厚労省電子処方CDA規格別表２０ 医薬品単位略号",
+  "experimental": false,
   "caseSensitive": false,
   "count": 64
 }

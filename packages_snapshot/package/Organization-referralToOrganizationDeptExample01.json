@@ -27,6 +27,6 @@
   ],
   "name": "循環器内科",
   "partOf": {
-    "reference": "referralToOrganizationDeptExample01"
+    "reference": "Organization/referralToOrganizationDeptExample01"
   }
 }

@@ -2,11 +2,11 @@
   "resourceType": "ImplementationGuide",
   "id": "eReferral",
   "url": "http://jpfhir.jp/fhir/eReferral/ImplementationGuide/eReferral",
-  "version": "1.1.0-rc",
+  "version": "1.1.1-rc",
   "name": "HL7Japan_JAMIeReferralImplementationGuide",
   "title": "HL7 Japan-JAMI eReferral ImplementationGuide",
   "status": "active",
-  "date": "2022-12-10",
+  "date": "2022-12-13",
   "publisher": "Kazuhiko Ohe@JAMI/HL7Japan and The University of Tokyo",
   "contact": [
     {
@@ -54,7 +54,7 @@
           "reference": "StructureDefinition/JP-AllergyIntolerance-eClinicalSummary"
         },
         "name": "JP_AllergyIntolerance_eClinicalSummary",
-        "description": "Dummy for JP-Core",
+        "description": "Derived Profile from JP-Core",
         "exampleBoolean": false
       },
       {
@@ -62,6 +62,7 @@
           "reference": "StructureDefinition/JP-Binary"
         },
         "name": "JP_Binary",
+        "description": "Derived Profile from JP-Core",
         "exampleBoolean": false
       },
       {
@@ -77,6 +78,7 @@
           "reference": "StructureDefinition/JP-CarePlan"
         },
         "name": "JP_CarePlan",
+        "description": "Derived Profile from JP-Core",
         "exampleBoolean": false
       },
       {
@@ -84,6 +86,7 @@
           "reference": "StructureDefinition/JP-CarePlan-eClinicalSummary"
         },
         "name": "JP_CarePlan_eClinicalSummary",
+        "description": "Derived Profile from JP-Core",
         "exampleBoolean": false
       },
       {
@@ -99,6 +102,7 @@
           "reference": "StructureDefinition/JP-Condition-eClinicalSummary"
         },
         "name": "JP_Condition_eClinicalSummary",
+        "description": "Derived Profile from JP-Core",
         "exampleBoolean": false
       },
       {
@@ -106,6 +110,7 @@
           "reference": "StructureDefinition/JP-Consent"
         },
         "name": "JP_Consent",
+        "description": "Derived Profile from JP-Core",
         "exampleBoolean": false
       },
       {
@@ -113,6 +118,7 @@
           "reference": "StructureDefinition/JP-Consent-eClinicalSummary"
         },
         "name": "JP_Consent_eClinicalSummary",
+        "description": "Derived Profile from JP-Core",
         "exampleBoolean": false
       },
       {
@@ -120,6 +126,7 @@
           "reference": "StructureDefinition/JP-Device"
         },
         "name": "JP_Device",
+        "description": "Derived Profile from JP-Core",
         "exampleBoolean": false
       },
       {
@@ -127,6 +134,7 @@
           "reference": "StructureDefinition/JP-DeviceUseStatement"
         },
         "name": "JP_DeviceUseStatement",
+        "description": "Derived Profile from JP-Core",
         "exampleBoolean": false
       },
       {
@@ -134,6 +142,7 @@
           "reference": "StructureDefinition/JP-DeviceUseStatement-eClinicalSummary"
         },
         "name": "JP_DeviceUseStatement_eClinicalSummary",
+        "description": "Derived Profile from JP-Core",
         "exampleBoolean": false
       },
       {
@@ -141,6 +150,7 @@
           "reference": "StructureDefinition/JP-Device-eClinicalSummary"
         },
         "name": "JP_Device_eClinicalSummary",
+        "description": "Derived Profile from JP-Core",
         "exampleBoolean": false
       },
       {
@@ -148,6 +158,7 @@
           "reference": "StructureDefinition/JP-DocumentReference"
         },
         "name": "JP_DocumentReference",
+        "description": "Derived Profile from JP-Core",
         "exampleBoolean": false
       },
       {
@@ -155,6 +166,7 @@
           "reference": "StructureDefinition/JP-DocumentReference-CDAdocument"
         },
         "name": "JP_DocumentReference_CDAdocument",
+        "description": "Derived Profile from JP-Core",
         "exampleBoolean": false
       },
       {
@@ -162,6 +174,7 @@
           "reference": "StructureDefinition/JP-DocumentReference-eClinicalSummary"
         },
         "name": "JP_DocumentReference_eClinicalSummary",
+        "description": "Derived Profile from JP-Core",
         "exampleBoolean": false
       },
       {
@@ -177,6 +190,7 @@
           "reference": "StructureDefinition/JP-FamilyMemberHistory-eClinicalSummary"
         },
         "name": "JP_FamilyMemberHistory",
+        "description": "Derived Profile from JP-Core",
         "exampleBoolean": false
       },
       {
@@ -184,6 +198,7 @@
           "reference": "StructureDefinition/JP-ImagingStudy-Radiology-eClinicalSummary"
         },
         "name": "JP_ImagingStudy_Radiology_eClinicalSummary",
+        "description": "Derived Profile from JP-Core",
         "exampleBoolean": false
       },
       {
@@ -191,6 +206,7 @@
           "reference": "StructureDefinition/JP-Immunization"
         },
         "name": "JP_Immunization",
+        "description": "Derived Profile from JP-Core",
         "exampleBoolean": false
       },
       {
@@ -198,6 +214,7 @@
           "reference": "StructureDefinition/JP-Immunization-eClinicalSummary"
         },
         "name": "JP_Immunization_eClinicalSummary",
+        "description": "Derived Profile from JP-Core",
         "exampleBoolean": false
       },
       {
@@ -213,6 +230,7 @@
           "reference": "StructureDefinition/JP-MedicationStatement"
         },
         "name": "JP_MedicationStatement",
+        "description": "Derived Profile from JP-Core",
         "exampleBoolean": false
       },
       {
@@ -220,6 +238,7 @@
           "reference": "StructureDefinition/JP-MedicationStatement-eClinicalSummary"
         },
         "name": "JP_MedicationStatement_eClinicalSummary",
+        "description": "Derived Profile from JP-Core",
         "exampleBoolean": false
       },
       {
@@ -227,6 +246,7 @@
           "reference": "StructureDefinition/JP-Observation-eClinicalSummary"
         },
         "name": "JP_Observation_Common_eClinicalSummary",
+        "description": "Derived Profile from JP-Core",
         "exampleBoolean": false
       },
       {
@@ -282,6 +302,7 @@
           "reference": "StructureDefinition/JP-Procedure-eClinicalSummary"
         },
         "name": "JP_Procedure_eClinicalSummary",
+        "description": "Derived Profile from JP-Core",
         "exampleBoolean": false
       },
       {
@@ -289,6 +310,7 @@
           "reference": "StructureDefinition/JP-RelatedPerson"
         },
         "name": "JP_RelatedPerson",
+        "description": "Derived Profile from JP-Core",
         "exampleBoolean": false
       },
       {
@@ -296,6 +318,7 @@
           "reference": "StructureDefinition/JP-RelatedPerson-eClinicalSummary"
         },
         "name": "JP_RelatedPerson_eClinicalSummary",
+        "description": "Derived Profile from JP-Core",
         "exampleBoolean": false
       },
       {
@@ -303,6 +326,7 @@
           "reference": "StructureDefinition/JP-ResearchStudy"
         },
         "name": "JP_ResearchStudy",
+        "description": "Derived Profile from JP-Core",
         "exampleBoolean": false
       },
       {
@@ -310,6 +334,7 @@
           "reference": "StructureDefinition/JP-ResearchStudy-"
         },
         "name": "JP_ResearchStudy_eClinicalSummary",
+        "description": "Derived Profile from JP-Core",
         "exampleBoolean": false
       },
       {
@@ -317,6 +342,7 @@
           "reference": "StructureDefinition/JP-ResearchSubject"
         },
         "name": "JP_ResearchSubject",
+        "description": "Derived Profile from JP-Core",
         "exampleBoolean": false
       },
       {
@@ -324,6 +350,7 @@
           "reference": "StructureDefinition/JP-ResearchSubject-eClinicalSummary"
         },
         "name": "JP_ResearchSubject_eClinicalSummary",
+        "description": "Derived Profile from JP-Core",
         "exampleBoolean": false
       },
       {
@@ -346,7 +373,7 @@
         "reference": {
           "reference": "ValueSet/jami-valueSet-ePreDispenseInstruction"
         },
-        "name": "JAMI_valueSet_ePreDispenseInstruction",
+        "name": "valueSet",
         "description": "調剤指示コード（備考欄）",
         "exampleBoolean": false
       },
@@ -354,7 +381,7 @@
         "reference": {
           "reference": "ValueSet/jami-valueSet-ePreOrderUsageCode-16digits"
         },
-        "name": "JAMI_valueSet_ePreOrderUsageCode_16digits",
+        "name": "valueSet",
         "description": "JAMI16桁用法コード",
         "exampleBoolean": false
       },
@@ -368,9 +395,17 @@
       },
       {
         "reference": {
+          "reference": "ValueSet/JP-valueSet-carePlanCategory"
+        },
+        "name": "valueSet",
+        "description": "CarePlan カテゴリー　hospital-plan または discharge-plan",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "ValueSet/jp-valueSet-documentTypeCode"
         },
-        "name": "doc-typecodes",
+        "name": "valueSet",
         "description": "FHIR文書の文書区分（医療文書全般）",
         "exampleBoolean": false
       },
@@ -378,7 +413,7 @@
         "reference": {
           "reference": "ValueSet/jp-valueSet-medicationCode-gs1-14"
         },
-        "name": "JP_valueSet_medicationCode_gs1_14",
+        "name": "valueSet",
         "description": "医薬品コードGTIN 14桁",
         "exampleBoolean": false
       },
@@ -386,7 +421,7 @@
         "reference": {
           "reference": "ValueSet/mhlw-valueSet-ePreCDA-insuranceCategory-tbl11"
         },
-        "name": "MHLW_valueSet_ePreCDA_insuranceCategory_tbl11",
+        "name": "valueSet",
         "description": "厚労省電子処方CDA規格別表11 保険種別コード",
         "exampleBoolean": false
       },
@@ -394,7 +429,7 @@
         "reference": {
           "reference": "CodeSystem/jami-codeSystem-ePreBasicUsageMethod-OneDigit"
         },
-        "name": "JAMI_codeSystem_ePreBasicUsageMethod_OneDigit",
+        "name": "JAMI標準基本用法区分コード1桁",
         "description": "JAMI標準基本用法区分コード1桁",
         "exampleBoolean": false
       },
@@ -402,7 +437,7 @@
         "reference": {
           "reference": "CodeSystem/jami-codeSystem-ePreDetailUsageMethod-TwoDigits"
         },
-        "name": "JAMI_codeSystem_ePreDetailUsageMethod_TwoDigits",
+        "name": "JAMI標準投与方法区分コード2桁",
         "description": "JAMI標準投与方法区分コード2桁",
         "exampleBoolean": false
       },
@@ -410,7 +445,7 @@
         "reference": {
           "reference": "CodeSystem/jami-codeSystem-ePreDispenseInstruction"
         },
-        "name": "JAMI_codeSystem_ePreDispenseInstruction",
+        "name": "調剤指示コード（備考欄）",
         "description": "調剤指示コード（備考欄）",
         "exampleBoolean": false
       },
@@ -418,7 +453,7 @@
         "reference": {
           "reference": "CodeSystem/jami-codeSystem-ePreOrderUsageAuxCode"
         },
-        "name": "JAMI_codeSystem_ePreOrderUsageAuxCode",
+        "name": "JAMI補足用法コード8桁",
         "description": "JAMI補足用法コード8桁",
         "exampleBoolean": false
       },
@@ -426,7 +461,7 @@
         "reference": {
           "reference": "CodeSystem/jami-codeSystem-ePreSiteCode"
         },
-        "name": "JAMI_codeSystem_ePreSiteCode",
+        "name": "JAMI標準用法部位コード（３桁）",
         "description": "JAMI標準用法部位コード（３桁）",
         "exampleBoolean": false
       },
@@ -434,15 +469,23 @@
         "reference": {
           "reference": "CodeSystem/jami-codeSystem-ePreUsageRoute"
         },
-        "name": "JAMI_codeSystem_ePreUsageRoute",
+        "name": "HL7医薬品投与経路コード（JAHIS 使用者定義表 0162 投薬経路）",
         "description": "HL7医薬品投与経路コード（JAHIS 使用者定義表 0162 投薬経路）",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/jp-codeSystem-carePlanCategory"
+        },
+        "name": "codeSystem CarePlane Category",
+        "description": "CarePlan カテゴリー　hospital-plan または discharge-plan",
         "exampleBoolean": false
       },
       {
         "reference": {
           "reference": "CodeSystem/jp-codeSystem-documentTypeCode"
         },
-        "name": "JP_codeSystem_documentTypeCode",
+        "name": "FHIR文書の文書区分（医療文書全般）",
         "description": "FHIR文書の文書区分（医療文書全般）",
         "exampleBoolean": false
       },
@@ -450,7 +493,7 @@
         "reference": {
           "reference": "CodeSystem/jp-codeSystem-ePreCommunication-category"
         },
-        "name": "JP_codeSystem_ePreCommunication_category",
+        "name": "処方箋備考区分",
         "description": "処方箋備考区分",
         "exampleBoolean": false
       },
@@ -458,7 +501,7 @@
         "reference": {
           "reference": "CodeSystem/jp-codeSystem-ePrescription-section"
         },
-        "name": "JP_codeSystem_ePrescription_section",
+        "name": "処方セクション区分コード",
         "description": "処方セクション区分コード",
         "exampleBoolean": false
       },
@@ -466,7 +509,7 @@
         "reference": {
           "reference": "CodeSystem/jp-codeSystem-eReferral-document-section"
         },
-        "name": "JP_codeSystem_eReferral_document_section",
+        "name": "処方セクション区分コード",
         "description": "処方セクション区分コード",
         "exampleBoolean": false
       },
@@ -474,7 +517,7 @@
         "reference": {
           "reference": "CodeSystem/jp-codeSystem-insurerNumber"
         },
-        "name": "JP_codeSystem_insurerNumber",
+        "name": "保険者番号",
         "description": "保険者番号",
         "exampleBoolean": false
       },
@@ -482,7 +525,7 @@
         "reference": {
           "reference": "CodeSystem/jp-codeSystem-eReferral-mimetype"
         },
-        "name": "JP_codeSystem_mimetype",
+        "name": "eReferral-mimetype",
         "description": "mime type",
         "exampleBoolean": false
       },
@@ -490,7 +533,7 @@
         "reference": {
           "reference": "CodeSystem/jp-codeSystem-practitioner-certificate-category"
         },
-        "name": "JP_codeSystem_practitioner_certificate_category",
+        "name": "医療従事者資格種別",
         "description": "医療従事者資格種別",
         "exampleBoolean": false
       },
@@ -498,7 +541,7 @@
         "reference": {
           "reference": "CodeSystem/jp-codeSystem-prefectureNumber"
         },
-        "name": "JP_codeSystem_prefectureNumber",
+        "name": "都道府県番号",
         "description": "都道府県番号",
         "exampleBoolean": false
       },
@@ -506,7 +549,7 @@
         "reference": {
           "reference": "CodeSystem/jp-codeSystem-prescription-category"
         },
-        "name": "JP_codeSystem_prescription_category",
+        "name": "処方箋区分コード　（01:一般処方箋、02:麻薬処方箋、03:分割一般処方）",
         "description": "処方箋区分コード　（01:一般処方箋、02:麻薬処方箋、03:分割一般処方）",
         "exampleBoolean": false
       },
@@ -514,7 +557,7 @@
         "reference": {
           "reference": "CodeSystem/jp-codeSystem-publicPyerNumber"
         },
-        "name": "JP_codeSystem_publicPyerNumber",
+        "name": "公費負担者番号",
         "description": "公費負担者番号",
         "exampleBoolean": false
       },
@@ -522,7 +565,7 @@
         "reference": {
           "reference": "CodeSystem/mhlw-codeSystem-claimOrganizationCategory-tbl22"
         },
-        "name": "MHLW_codeSystem_claimOrganizationCategory_tbl22",
+        "name": "厚労省電子処方CDA規格別別表２２ 点数表番号",
         "description": "厚労省電子処方CDA規格別別表２２ 点数表番号",
         "exampleBoolean": false
       },
@@ -530,7 +573,7 @@
         "reference": {
           "reference": "CodeSystem/mhlw-codeSystem-claimOrganizationNo7digits-tbl23"
         },
-        "name": "MHLW_codeSystem_claimOrganizationNo7digits_tbl23",
+        "name": "厚労省電子処方CDA規格別別表２３ 保険医療機関番号（7桁）",
         "description": "厚労省電子処方CDA規格別別表２３ 保険医療機関番号（7桁）",
         "exampleBoolean": false
       },
@@ -538,7 +581,7 @@
         "reference": {
           "reference": "CodeSystem/mhlw-codeSystem-drugUnitAbbr-tbl20"
         },
-        "name": "MHLW_codeSystem_drugUnitAbbr_tbl20",
+        "name": "厚労省電子処方CDA規格別表２０ 医薬品単位略号",
         "description": "厚労省電子処方CDA規格別表２０\t医薬品単位略号",
         "exampleBoolean": false
       },
@@ -546,7 +589,7 @@
         "reference": {
           "reference": "CodeSystem/mhlw-codeSystem-ePreCDA-clinicalDepartment-tbl10"
         },
-        "name": "MHLW_codeSystem_ePreCDA_clinicalDepartment_tbl10",
+        "name": "厚労省電子処方CDA規格別表10 診療科コード",
         "description": "厚労省電子処方CDA規格別表10 診療科コード",
         "exampleBoolean": false
       },
@@ -554,7 +597,7 @@
         "reference": {
           "reference": "CodeSystem/mhlw-codeSystem-ePreCDA-documentCategory-tbl011"
         },
-        "name": "MHLW_codeSystem_ePreCDA_documentCategory_tbl01",
+        "name": "厚労省電子処方CDA規格別表１",
         "description": "厚労省電子処方CDA規格別表１ 文書区分コード",
         "exampleBoolean": false
       },
@@ -562,7 +605,7 @@
         "reference": {
           "reference": "CodeSystem/mhlw-codeSystem-ePreCDA-drugDosageStrength-tbl04"
         },
-        "name": "MHLW_codeSystem_ePreCDA_drugDosageStrength_tbl04",
+        "name": "厚労省電子処方CDA規格別表4",
         "description": "厚労省電子処方CDA規格別表4 力価区分コード",
         "exampleBoolean": false
       },
@@ -570,7 +613,7 @@
         "reference": {
           "reference": "CodeSystem/mhlw-codeSystem-ePreCDA-drugUsageForm-tbl03"
         },
-        "name": "MHLW_codeSystem_ePreCDA_drugsageForm_tbl03",
+        "name": "厚労省電子処方CDA規格別表3",
         "description": "厚労省電子処方CDA規格別表3  剤形区分コード",
         "exampleBoolean": false
       },
@@ -578,7 +621,7 @@
         "reference": {
           "reference": "CodeSystem/mhlw-codeSystem-ePreCDA-instructionResidual-tbl09"
         },
-        "name": "MHLW_codeSystem_ePreCDA_instructionResidual_tbl09",
+        "name": "厚労省電子処方CDA規格別表9 残薬確認指示コード",
         "description": "厚労省電子処方CDA規格別表9 残薬確認指示コード",
         "exampleBoolean": false
       },
@@ -586,7 +629,7 @@
         "reference": {
           "reference": "CodeSystem/mhlw-codeSystem-ePreCDA-insuranceCategory-tbl11"
         },
-        "name": "MHLW_codeSystem_ePreCDA_insuranceCategory_tbl11",
+        "name": "厚労省電子処方CDA規格別表11 保険種別コード",
         "description": "厚労省電子処方CDA規格別表11 保険種別コード",
         "exampleBoolean": false
       },
@@ -594,7 +637,7 @@
         "reference": {
           "reference": "CodeSystem/mhlw-codeSystem-ePreCDA-insuredCoPayCategory-tbl13"
         },
-        "name": "MHLW_codeSystem_ePreCDA_insuredCoPayCategory_tbl13",
+        "name": "厚労省電子処方CDA規格別表13 患者一部負担コード",
         "description": "厚労省電子処方CDA規格別表13 患者一部負担コード",
         "exampleBoolean": false
       },
@@ -602,7 +645,7 @@
         "reference": {
           "reference": "CodeSystem/mhlw-codeSystem-ePreCDA-insuredRelationship-tbl12"
         },
-        "name": "MHLW_codeSystem_ePreCDA_insuredRelationship_tbl12",
+        "name": "厚労省電子処方CDA規格別表12 被保険者区分コード",
         "description": "厚労省電子処方CDA規格別表12 被保険者区分コード",
         "exampleBoolean": false
       },
@@ -610,7 +653,7 @@
         "reference": {
           "reference": "CodeSystem/mhlw-codeSystem-ePreCDA-sectionCategory-tbl02"
         },
-        "name": "MHLW_codeSystem_ePreCDA_sectionCategory_tbl02",
+        "name": "厚労省電子処方CDA規格別表2",
         "description": "厚労省電子処方CDA規格別表2 セクション区分コード",
         "exampleBoolean": false
       },
@@ -618,7 +661,7 @@
         "reference": {
           "reference": "CodeSystem/mhlw-codeSystem-ePreCDA-unable2Change2Generic-tbl08"
         },
-        "name": "MHLW_codeSystem_ePreCDA_unable2Change2Generic_tbl08",
+        "name": "厚労省電子処方CDA規格別表8 後発品変更不可コード",
         "description": "厚労省電子処方CDA規格別表8 後発品変更不可コード",
         "exampleBoolean": false
       },
@@ -667,7 +710,7 @@
           "reference": "Condition/cc1ReferralExample01"
         },
         "name": "cc1ReferralExample01",
-        "description": "conditionReferralExample01 診療情報提供書　主訴例　上腹部痛 ",
+        "description": "conditionReferralExample01 診療情報提供書　主訴例　上腹部痛",
         "exampleCanonical": "http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Condition_eClinicalSummary"
       },
       {
@@ -814,7 +857,7 @@
       "page": [
         {
           "nameUrl": "index.html",
-          "title": "診療情報提供書HL7&reg; FHIR&reg;記述仕様書 第1版",
+          "title": "診療情報提供書HL7 FHIR 記述仕様書 第1版",
           "generation": "markdown"
         },
         {
@@ -825,6 +868,11 @@
         {
           "nameUrl": "namespace.html",
           "title": "名前空間一覧",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "updateHistory.html",
+          "title": "履歴情報",
           "generation": "markdown"
         }
       ]
@@ -924,11 +972,19 @@
       },
       {
         "code": "special-url",
-        "value": "http://jpfhir.jp/fhir/CCLIX/StructureDefinition/JP_Bundle_CCLIX"
+        "value": "http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_AllergyIntolerance_eClinicalSummary"
+      },
+      {
+        "code": "special-url",
+        "value": "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Binary"
       },
       {
         "code": "special-url",
         "value": "http://jpfhir.jp/fhir/eReferral/StructureDefinition/JP_Bundle_eReferral"
+      },
+      {
+        "code": "special-url",
+        "value": "http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_CarePlan_eClinicalSummary"
       },
       {
         "code": "special-url",
@@ -940,7 +996,27 @@
       },
       {
         "code": "special-url",
+        "value": "http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Condition_eClinicalSummary"
+      },
+      {
+        "code": "special-url",
+        "value": "http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Consent_eClinicalSummary"
+      },
+      {
+        "code": "special-url",
         "value": "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Consent"
+      },
+      {
+        "code": "special-url",
+        "value": "http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Device_eClinicalSummary"
+      },
+      {
+        "code": "special-url",
+        "value": "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Device"
+      },
+      {
+        "code": "special-url",
+        "value": "http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_DeviceUseStatement_eClinicalSummary"
       },
       {
         "code": "special-url",
@@ -948,15 +1024,31 @@
       },
       {
         "code": "special-url",
+        "value": "http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_DocumentReference_CDAdocument"
+      },
+      {
+        "code": "special-url",
+        "value": "http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_DocumentReference_eClinicalSummary"
+      },
+      {
+        "code": "special-url",
         "value": "http://jpfhir.jp/fhir/core/StructureDefinition/JP_DocumentReference"
       },
       {
         "code": "special-url",
-        "value": "http://jpfhir.jp/fhir/eReferral/StructureDefinition/JP_Encounter_eReferral"
+        "value": "http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Encounter_eClinicalSummary"
       },
       {
         "code": "special-url",
-        "value": "http://jpfhir.jp/fhir/core/StructureDefinition/JP_FamilyMemberHistory"
+        "value": "http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_FamilyMemberHistory_eClinicalSummary"
+      },
+      {
+        "code": "special-url",
+        "value": "http://jpfhir.jp/fhir/core/StructureDefinition/JP_ImagingStudy_Radiology_eClinicalSummary"
+      },
+      {
+        "code": "special-url",
+        "value": "http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Immunization_eClinicalSummary"
       },
       {
         "code": "special-url",
@@ -964,39 +1056,71 @@
       },
       {
         "code": "special-url",
-        "value": "http://jpfhir.jp/fhir/eReferral/StructureDefinition/JP_MedicationRequest_eReferral"
+        "value": "http://jpfhir.jp/fhir/ePrescription/StructureDefinition/JP_MedicationRequest_ePrescriptionData"
       },
       {
         "code": "special-url",
-        "value": "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation"
+        "value": "http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_MedicationStatement_eClinicalSummary"
       },
       {
         "code": "special-url",
-        "value": "http://jpfhir.jp/fhir/eReferral/StructureDefinition/JP_Organization_eReferral_departmentOfIssuer"
+        "value": "http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationStatement"
       },
       {
         "code": "special-url",
-        "value": "http://jpfhir.jp/fhir/eReferral/StructureDefinition/JP_Organization_eReferral_issuer"
+        "value": "http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Observation_Common_eClinicalSummary"
       },
       {
         "code": "special-url",
-        "value": "http://jpfhir.jp/fhir/CCLIX/StructureDefinition/JP_Patient_CCLIX"
+        "value": "http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Organization_eClinicalSummary_department"
       },
       {
         "code": "special-url",
-        "value": "http://jpfhir.jp/fhir/eReferral/StructureDefinition/JP_Patient_eReferral"
+        "value": "http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Organization_eClinicalSummary"
       },
       {
         "code": "special-url",
-        "value": "http://jpfhir.jp/fhir/eReferral/StructureDefinition/JP_Practitioner_eReferral_author"
+        "value": "http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Patient_eClinicalSummary"
       },
       {
         "code": "special-url",
-        "value": "http://jpfhir.jp/fhir/eReferral/StructureDefinition/JP_PractitionerRole_eReferral_author"
+        "value": "http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Practitioner_eClinicalSummary_author"
       },
       {
         "code": "special-url",
-        "value": "http://jpfhir.jp/fhir/core/StructureDefinition/JP_JResearchSubject"
+        "value": "http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Practitioner_eClinicalSummary"
+      },
+      {
+        "code": "special-url",
+        "value": "http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_PractitionerRole_eClinicalSummary_author"
+      },
+      {
+        "code": "special-url",
+        "value": "http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Procedure_eClinicalSummary"
+      },
+      {
+        "code": "special-url",
+        "value": "http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_RelatedPerson_eClinicalSummary"
+      },
+      {
+        "code": "special-url",
+        "value": "http://jpfhir.jp/fhir/core/StructureDefinition/JP_RelatedPerson"
+      },
+      {
+        "code": "special-url",
+        "value": "http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_ResearchStudy_eClinicalSummary"
+      },
+      {
+        "code": "special-url",
+        "value": "http://jpfhir.jp/fhir/core/StructureDefinition/JP_ResearchStudy"
+      },
+      {
+        "code": "special-url",
+        "value": "http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_ResearchSubject_eClinicalSummary"
+      },
+      {
+        "code": "special-url",
+        "value": "http://jpfhir.jp/fhir/core/StructureDefinition/JP_ResearchSubject"
       },
       {
         "code": "special-url",
@@ -1005,6 +1129,154 @@
       {
         "code": "special-url",
         "value": "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DispenseRequest_InstructionForDispense"
+      },
+      {
+        "code": "special-url",
+        "value": "urn:oid:1.2.392.200250.2.2.20.30"
+      },
+      {
+        "code": "special-url",
+        "value": "urn:oid:1.2.392.200250.2.2.20.40"
+      },
+      {
+        "code": "special-url",
+        "value": "urn:oid:1.2.392.200250.2.2.30.10"
+      },
+      {
+        "code": "special-url",
+        "value": "urn:oid:1.2.392.200250.2.2.20.22"
+      },
+      {
+        "code": "special-url",
+        "value": "urn:oid:1.2.392.200250.2.2.20.32"
+      },
+      {
+        "code": "special-url",
+        "value": "http://jpfhir.jp/fhir/ePrescription/CodeSystem/route-codes"
+      },
+      {
+        "code": "special-url",
+        "value": "http://jpfhir.jp/fhir/CarePlan/CodeSystem/category"
+      },
+      {
+        "code": "special-url",
+        "value": "http://jpfhir.jp/fhir/Common/CodeSystem/doc-typecodes"
+      },
+      {
+        "code": "special-url",
+        "value": "http://jpfhir.jp/fhir/ePrescription/CodeSystem/communication-category"
+      },
+      {
+        "code": "special-url",
+        "value": "http://jpfhir.jp/fhir/ePrescription/CodeSystem/prescription-section"
+      },
+      {
+        "code": "special-url",
+        "value": "http://jpfhir.jp/fhir/eReferral/CodeSystem/document-section"
+      },
+      {
+        "code": "special-url",
+        "value": "urn:ietf:bcp:13"
+      },
+      {
+        "code": "special-url",
+        "value": "urn:oid:1.2.392.100495.20.3.61"
+      },
+      {
+        "code": "special-url",
+        "value": "http://jpfhir.jp/fhir/core/CodeSystem/practitioner-certificate-category"
+      },
+      {
+        "code": "special-url",
+        "value": "urn:oid:1.2.392.100495.20.3.21"
+      },
+      {
+        "code": "special-url",
+        "value": "http://jpfhir.jp/fhir/ePrescription/CodeSystem/prescription-category"
+      },
+      {
+        "code": "special-url",
+        "value": "urn:oid:1.2.392.100495.20.3.71"
+      },
+      {
+        "code": "special-url",
+        "value": "urn:oid:1.2.392.100495.20.3.22"
+      },
+      {
+        "code": "special-url",
+        "value": "urn:oid:1.2.392.100495.20.1.23"
+      },
+      {
+        "code": "special-url",
+        "value": "urn:oid:1.2.392.100495.20.2.101"
+      },
+      {
+        "code": "special-url",
+        "value": "urn:oid:1.2.392.100495.20.2.51"
+      },
+      {
+        "code": "special-url",
+        "value": "urn:oid:1.2.392.100495.20.2.11"
+      },
+      {
+        "code": "special-url",
+        "value": "urn:oid:1.2.392.100495.20.2.22"
+      },
+      {
+        "code": "special-url",
+        "value": "urn:oid:1.2.392.100495.20.2.21"
+      },
+      {
+        "code": "special-url",
+        "value": "urn:oid:1.2.392.100495.20.2.42"
+      },
+      {
+        "code": "special-url",
+        "value": "urn:oid:1.2.392.100495.20.2.61"
+      },
+      {
+        "code": "special-url",
+        "value": "urn:oid:1.2.392.100495.20.2.63"
+      },
+      {
+        "code": "special-url",
+        "value": "urn:oid:1.2.392.100495.20.2.62"
+      },
+      {
+        "code": "special-url",
+        "value": "urn:oid:1.2.392.100495.20.2.12"
+      },
+      {
+        "code": "special-url",
+        "value": "urn:oid:1.2.392.100495.20.2.41"
+      },
+      {
+        "code": "special-url",
+        "value": "http://jpfhir.jp/fhir/CarePlan/ValueSet/category"
+      },
+      {
+        "code": "special-url",
+        "value": "http://jpfhir.jp/fhir/ePrescription/ValueSet/jami-ePreDispenseInstruction"
+      },
+      {
+        "code": "special-url",
+        "value": "http://jpfhir.jp/fhir/ePrescription/ValueSet/jami-ePreOrderUsageCode"
+      },
+      {
+        "code": "special-url",
+        "value": "http://jpfhir.jp/fhir/ePrescription/ValueSet/jp-medicationcode"
+      },
+      {
+        "code": "special-url",
+        "value": "http://jpfhir.jp/fhir/Common/ValueSet/doc-typecodes"
+      },
+      {
+        "code": "special-url",
+        "value": "http://jpfhir.jp/fhir/ePrescription/ValueSet/jp-medicationcode-gs1-14"
+      },
+      {
+        "code": "special-url",
+        "value": "http://jpfhir.jp/fhir/Common/ValueSet/mhlw-ePreCDA-insuranceCategory"
       }
     ]
   }

@@ -35,7 +35,7 @@
     "text": "左前腕骨折"
   },
   "subject": {
-    "reference": "jppatientExample01"
+    "reference": "Patient/jppatientExample01"
   },
   "onsetDateTime": "2019",
   "note": [

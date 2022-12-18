@@ -1,0 +1,94 @@
+// DocumentReferenceリース
+// JP_DocumentReference
+// JP_DocumentReference_eClinicalSummary
+#function base64file Base64Encoding::encodeFile2Base64
+#function base64string Base64Encoding::encodeString2Base64
+
+
+#bigdef $000mn_ExampleJPDocumentReferencen_eCS(ARGinstancename)
+Instance: ARGinstancename
+InstanceOf: JP_DocumentReference
+Usage: #inline
+#endbigdef
+
+#ifndef $001mn_Description(ARGtxt)
+#bigdef $001mn_Description(ARGtxt)
+Description: "ARGtxt"
+#endbigdef
+#endif
+
+#ifndef $002or_ValidationProfile(ARGmetaprofile)
+#bigdef $002or_ValidationProfile(ARGmetaprofile) 
+* meta.profile[+] = "ARGmetaprofile"
+#endbigdef
+#endif
+
+#ifndef $002or_ValidationProfile_JPDocumentReference_eCS()
+#bigdef $002or_ValidationProfile_JPDocumentReference_eCS() 
+* meta.profile[+] = "http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_DocumentReference_eClinicalSummary"
+* status = #current
+#endbigdef
+#endif
+
+
+#bigdef  $010on_文書参照LOINCタイプ(ARGARGcode)
+* type.coding.system = "http://loinc.org"
+* type.coding.code = #ARGARGcode
+#endbigdef
+
+#bigdef  $010on_文書参照ProgressNote()
+* type.coding.system = "http://loinc.org"
+* type.coding.code = #11506-3
+* type.coding.display = "Progress note"
+#endbigdef
+
+#bigdef  $020on_文書参照記述名(ARGname)
+* description = "ARGname"
+#endbigdef
+
+#bigdef  $030mr_文書参照TextString(ARGstring)
+* content[+].attachment.contentType = #text/plain;charset=UTF-8
+* content[=].attachment.data = "base64string(ARGstring)"
+#endbigdef
+
+#bigdef  $030mr_文書参照HtmlString(ARGstring)
+* content[+].attachment.contentType = #text/html;charset=UTF-8
+* content[=].attachment.data = "base64string(ARGstring)"
+#endbigdef
+
+#bigdef  $030mr_文書参照TextStringSJIS(ARGstring)
+* content[+].attachment.contentType = #text/plain;charset=Shift_JIS
+* content[=].attachment.data = "base64string(ARGstring)"
+#endbigdef
+
+#bigdef  $030mr_文書参照HtmlStringSJIS(ARGstring)
+* content[+].attachment.contentType = #text/html;charset=Shift_JIS
+* content[=].attachment.data = "base64string(ARGstring)"
+#endbigdef
+
+#bigdef  $030mr_文書参照AnyString(ARGContenttype,ARGcharset, ARGstring)
+* content[+].attachment.contentType = #ARGContenttype;charset=ARGcharset
+* content[=].attachment.data = "base64string(ARGstring)"
+#endbigdef
+
+#bigdef  $030mr_文書参照TextFile(ARGcharset,ARGpath,ARGfilename)
+#comment カレントディレクトリにあるファイルを指定する場合には、ARGpath には　. を設定すること
+#comment カレントディレクトリ以外にあるファイルを指定する場合には、ARGpath には　末尾に/のないパス名 を設定すること
+* content[+].attachment.contentType = #text/plain;charset=ARGcharset
+* content[=].attachment.data = "base64file(__FILE__, ARGpath/ARGfilename)"
+#endbigdef
+
+#bigdef  $030mr_文書参照HtmlFile(ARGcharset,ARGpath,ARGfilename)
+* content[+].attachment.contentType = #text/html;charset=ARGcharset
+* content[=].attachment.data = "base64file(__FILE__, ARGpath/ARGfilename)"
+#endbigdef
+
+
+#bigdef  $030mr_文書参照AnyFile(ARGContenttype, ARGcharset, ARGpath,ARGfilename)
+* content[+].attachment.contentType = #tARGContenttype;charset=ARGcharset
+* content[=].attachment.data = "base64file(__FILE__, ARGpath/ARGfilename)"
+#endbigdef
+
+#bigdef  $030mr_文書参照URL(ARGurl)
+* content[+].attachment.url = "ARGurl"
+#endbigdef

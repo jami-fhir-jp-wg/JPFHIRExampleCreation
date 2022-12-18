@@ -1,0 +1,103 @@
+// ObservationCommonリソース
+
+#bigdef $000mn_ExampleJPObservationCommon(ARGinstancename)
+Instance: ARGinstancename
+InstanceOf: JP_Observation_Common
+Usage: #inline
+#endbigdef
+
+#ifndef $001mn_Description(ARGtxt)
+#bigdef $001mn_Description(ARGtxt)
+Description: "ARGtxt"
+#endbigdef
+#endif
+
+#ifndef $002or_ValidationProfile(ARGmetaprofile)
+#bigdef $002or_ValidationProfile(ARGmetaprofile) 
+* meta.profile[+] = "ARGmetaprofile"
+#endbigdef
+#endif
+
+#ifndef $002or_ValidationProfile_JPObservationCommon()
+#bigdef $002or_ValidationProfile_JPObservationCommon() 
+* meta.profile[+] = "JP_Observation_Common"
+#endbigdef
+#endif
+
+#ifndef $002or_ValidationProfile_JPObservationCommon()
+#bigdef $002or_ValidationProfile_JPObservationCommon() 
+* meta.profile[+] = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_Common"
+#endbigdef
+#endif
+
+
+#bigdef $010on_共通検査報告ID(ARGnumber)
+* identifier.system = "http://jpfhir.jp/fhir/core/IdSystem/resourceInstance-identifier"
+* identifier.value = "ARGnumber"
+* status = #final
+#endbigdef
+
+#bigdef $030or_共通検査区分(ARGkubun)
+* category[+] = http://terminology.hl7.org/CodeSystem/observation-category#ARGkubun
+// ARGkubun: ocial-history:社会生活歴
+// vital-signs：バイタルサイン
+// imaging：画像検査
+// laboratory：検査室検査
+// procedure：手術処置治療
+// survey：調査・評価
+// exam：身体検査・観察
+// therapy：非介入治療による観察結果
+// activity：身体活動記録
+#endbigdef
+
+#bigdef $030or_共通検査区分名称(ARGkubun,ARGname)
+* category[+] = http://terminology.hl7.org/CodeSystem/observation-category#ARGkubun "ARGname"
+#endbigdef
+
+#bigdef $040mn_共通検査コード(ARGsystem,ARGcode)
+* code.coding.system = "ARGsystem"
+* code.coding.value = "ARGcode"
+#endbigdef
+
+#bigdef $040mn_共通検査コードなしTEXT(ARGname)
+* code.text = "ARGname"
+#endbigdef
+
+#bigdef $040mn_共通検査コードTEXT(ARGsystem,ARGcode,ARGname)
+* code.coding.system = "ARGsystem"
+* code.coding.value = "ARGcode"
+* code.text = "ARGname"
+#endbigdef
+
+#bigdef $050mn_共通検査患者(ARGpatient)
+* subject.reference = "ARGpatient"
+#endbigdef
+
+#bigdef $060on_共通検査受診(ARGencounter)
+* encounter.reference = "ARGencounter"
+#endbigdef
+
+#bigdef $070on_共通検査日時(ARGdate,ARGtime)
+// ARGdate 2020-08-21
+// ATGtime 12:12:20
+* date = "ARGdateTARGtime+09:00"
+#endbigdef
+
+#bigdef $070on_共通検査日(ARGdate)
+// ARGdate 2020-08-21
+* date = "ARGdate"
+#endbigdef
+
+#bigdef $080or_共通検査実施責任者(ARGpersonetc)
+* performer[+].reference = "ARGpersonetc"
+#endbigdef
+
+#bigdef $090on_共通検査結果TEXT(ARGtext)
+* valueString = "ARGtext"
+#endbigdef
+
+#bigdef $100on_共通検査結果なし理由(ARGtext)
+* dataAbsentReason.text = "ARGtext"
+#endbigdef
+
+

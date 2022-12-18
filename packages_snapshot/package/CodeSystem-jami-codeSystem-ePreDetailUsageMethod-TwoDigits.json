@@ -5,7 +5,7 @@
   "name": "JAMI_codeSystem_ePreDetailUsageMethod_TwoDigits",
   "id": "jami-codeSystem-ePreDetailUsageMethod-TwoDigits",
   "description": "JAMI標準投与方法区分コード2桁",
-  "version": "1.1.0-rc",
+  "version": "1.1.1-rc",
   "url": "urn:oid:1.2.392.200250.2.2.20.40",
   "concept": [
     {
@@ -221,6 +221,8 @@
       "display": "病巣内注入"
     }
   ],
+  "title": "JAMI標準投与方法区分コード2桁",
+  "experimental": false,
   "caseSensitive": false,
   "count": 53
 }

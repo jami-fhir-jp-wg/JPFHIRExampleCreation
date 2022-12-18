@@ -5,7 +5,7 @@
   "name": "JP_codeSystem_prefectureNumber",
   "id": "jp-codeSystem-prefectureNumber",
   "description": "都道府県番号",
-  "version": "1.1.0-rc",
+  "version": "1.1.1-rc",
   "url": "urn:oid:1.2.392.100495.20.3.21",
   "concept": [
     {
@@ -197,6 +197,8 @@
       "display": "沖縄県"
     }
   ],
+  "title": "都道府県番号",
+  "experimental": false,
   "caseSensitive": false,
   "count": 47
 }

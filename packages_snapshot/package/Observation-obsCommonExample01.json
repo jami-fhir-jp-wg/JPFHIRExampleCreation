@@ -28,7 +28,7 @@
     "text": "腹部所見"
   },
   "subject": {
-    "reference": "jppatientExample01"
+    "reference": "Patient/jppatientExample01"
   },
   "valueString": "上腹部圧痛あり、その他特に所見なし。"
 }

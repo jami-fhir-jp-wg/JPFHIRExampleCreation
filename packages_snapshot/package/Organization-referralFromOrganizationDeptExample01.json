@@ -27,6 +27,6 @@
   ],
   "name": "眼科",
   "partOf": {
-    "reference": "referralFromOrganizationDeptExample01"
+    "reference": "Organization/referralFromOrganizationDeptExample01"
   }
 }

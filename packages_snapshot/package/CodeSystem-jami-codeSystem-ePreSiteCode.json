@@ -5,7 +5,7 @@
   "name": "JAMI_codeSystem_ePreSiteCode",
   "id": "jami-codeSystem-ePreSiteCode",
   "description": "JAMI標準用法部位コード（３桁）",
-  "version": "1.1.0-rc",
+  "version": "1.1.1-rc",
   "url": "urn:oid:1.2.392.200250.2.2.20.32",
   "concept": [
     {
@@ -1221,6 +1221,8 @@
       "display": "右患部"
     }
   ],
+  "title": "JAMI標準用法部位コード（３桁）",
+  "experimental": false,
   "caseSensitive": false,
   "count": 303
 }

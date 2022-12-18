@@ -1,4 +1,0 @@
-# JPFHIRExampleCreation
-JPFHIRベースのサンプルを作成するツールと生成されたサンプルを保管するレポジトリ
-
-member確認のため書き込み。

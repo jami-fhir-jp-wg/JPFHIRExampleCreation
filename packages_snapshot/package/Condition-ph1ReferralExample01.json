@@ -35,7 +35,7 @@
     "text": "狭心症"
   },
   "subject": {
-    "reference": "jppatientExample01"
+    "reference": "Patient/jppatientExample01"
   },
   "onsetDateTime": "2018",
   "note": [

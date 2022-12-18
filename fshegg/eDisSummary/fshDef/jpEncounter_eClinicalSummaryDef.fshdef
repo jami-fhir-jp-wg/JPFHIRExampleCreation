@@ -1,0 +1,85 @@
+// Encounter_eClinicalSummary
+
+#bigdef $000mn_ExampleJPEncounter_eClinicalSummary(ARGinstancename)
+Instance: ARGinstancename
+InstanceOf: JP_Encounter
+Usage: #inline
+#endbigdef
+
+#ifndef $001mn_Description(ARGtxt)
+#bigdef $001mn_Description(ARGtxt)
+Description: "ARGtxt"
+#endbigdef
+#endif
+
+#ifndef $002or_ValidationProfile(ARGmetaprofile)
+#bigdef $002or_ValidationProfile(ARGmetaprofile) 
+* meta.profile[+] = "ARGmetaprofile"
+#endbigdef
+#endif
+
+#ifndef $002or_ValidationProfile_JPEncounter_eClinicalSummary()
+#bigdef $002or_ValidationProfile_JPEncounter_eClinicalSummary() 
+* meta.profile[+] = "http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Encounter_eClinicalSummary"
+#endbigdef
+#endif
+
+#bigdef $010on_受診管理番号(ARGnumber)
+* identifier.system = "http://jpfhir.jp/fhir/core/IdSystem/resourceInstance-identifier"
+* identifier.value = "ARGnumber"
+* status = #finished
+#endbigdef
+
+#bigdef $030mn_受診入院()
+* class.system = "http://terminology.hl7.org/CodeSystem/v3-ActCode"
+* class.code = #IMP
+* class.display = "入院"
+#endbigdef
+
+#bigdef $030mn_受診外来()
+* class.system = "http://terminology.hl7.org/CodeSystem/v3-ActCode"
+* class.code = #AMB
+* class.display = "外来"
+#endbigdef
+
+#bigdef $040or_受診履歴入院(ARGstartDate, ARGendDate)
+* classHistory[+].class.system = "http://terminology.hl7.org/CodeSystem/v3-ActCode"
+* classHistory[=].class.code = #IMP
+* classHistory[=].class.display = "入院"
+* classHistory[=].period.start = "ARGstartDate"
+* classHistory[=].period.end = "ARGendDate"
+#endbigdef
+
+#bigdef $040or_受診履歴外来(ARGdate)
+* classHistory[+].class.system = "http://terminology.hl7.org/CodeSystem/v3-ActCode"
+* classHistory[=].class.code = #AMB
+* classHistory[=].class.display = "外来"
+* classHistory[=].period.start = "ARGdate"
+#endbigdef
+
+#bigdef $050on_受診入院期間(ARGstartDate, ARGendDate)
+* period.start = "ARGstartDate"
+* period.end = "ARGendDate"
+#endbigdef
+
+#bigdef $060on_受診入院日数(ARGdays)
+* length.value = ARGdays
+* length.unit = "日"
+* length.system = "http://unitsofmeasure.org"
+* length.code = "d"
+#endbigdef
+
+#bigdef $060mr_受診理由病名コード(ARGsystem,ARGcode,ARGname)
+* reasonCode[+].coding.system = ARGsystem#ARGcode (ARGname)
+#endbigdef
+
+#bigdef $060mr_受診理由病名コードTEXT(ARGsystem,ARGcode,ARGtext,ARGfree)
+* reasonCode[+].coding.system = ARGsystem#ARGcode (ARGtext)
+* reasonCode[=].text = "ARGfree"
+#endbigdef
+
+#bigdef $060mr_受診理由病名TEXT(ARGfree)
+* reasonCode[+].text = "ARGfree"
+#endbigdef
+
+//以下省略（退院時サマリー）

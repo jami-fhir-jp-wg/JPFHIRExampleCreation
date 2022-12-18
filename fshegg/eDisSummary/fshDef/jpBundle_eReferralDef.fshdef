@@ -1,0 +1,41 @@
+#function genUUID4 UUIDV4generator::genUUID4
+
+#bigdef $000mn_ExampleJPBundle_eDischargeSummary(ARGinstancename)
+Instance: ARGinstancename
+InstanceOf: Bundle
+Usage: #example
+#endbigdef
+
+#ifndef $001mn_Description(ARGtxt)
+#bigdef $001mn_Description(ARGtxt)
+Description: "ARGtxt"
+#endbigdef
+#endif
+
+#ifndef $002or_ValidationProfile(ARGmetaprofile)
+#bigdef $002or_ValidationProfile(ARGmetaprofile) 
+* meta.profile[+] = "ARGmetaprofile"
+* language = #ja
+#endbigdef
+#endif
+
+#ifndef $002or_ValidationProfile_JPBundle__eDischargeSummary
+#bigdef $002or_ValidationProfile_JPBundle__eDischargeSummary()
+* meta.profile[+] = "http://jpfhir.jp/fhir/eDischargeSummary/StructureDefinition/JP_Bundle_eDischargeSummary"
+#endbigdef
+#endif
+
+#bigdef  $010mn_文書ID(ARGcode)
+* identifier.system = "http://jpfhir.jp/fhir/core/IdSystem/documentInstance-identifier"
+* identifier.value = "ARGcode"
+* type = #document
+#endbigdef
+
+#bigdef  $020mn_文書日時(ARGdate,ARGtime)
+* timestamp = "ARGdateTARGtime+09:00"
+#endbigdef
+
+#bigdef  $030mn_文書entry(ARGurl,ARGresourceRef)
+* entry[+].fullUrl = "ARGurl"
+* entry[=].resource = ARGresourceRef
+#endbigdef

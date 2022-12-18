@@ -5,7 +5,7 @@
   "name": "MHLW_codeSystem_ePreCDA_insuredCoPayCategory_tbl13",
   "id": "mhlw-codeSystem-ePreCDA-insuredCoPayCategory-tbl13",
   "description": "厚労省電子処方CDA規格別表13 患者一部負担コード",
-  "version": "1.1.0-rc",
+  "version": "1.1.1-rc",
   "url": "urn:oid:1.2.392.100495.20.2.63",
   "concept": [
     {
@@ -21,6 +21,8 @@
       "display": "６歳未満（６歳）"
     }
   ],
+  "title": "厚労省電子処方CDA規格別表13 患者一部負担コード",
+  "experimental": false,
   "caseSensitive": false,
   "count": 3
 }

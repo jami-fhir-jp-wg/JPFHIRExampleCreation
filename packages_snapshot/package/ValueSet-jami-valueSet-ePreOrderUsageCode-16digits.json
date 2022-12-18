@@ -4,8 +4,10 @@
   "name": "JAMI_valueSet_ePreOrderUsageCode_16digits",
   "id": "jami-valueSet-ePreOrderUsageCode-16digits",
   "description": "JAMI16桁用法コード",
-  "version": "1.1.0-rc",
+  "version": "1.1.1-rc",
   "url": "http://jpfhir.jp/fhir/ePrescription/ValueSet/jami-ePreOrderUsageCode",
+  "title": "valueSet",
+  "experimental": false,
   "compose": {
     "include": [
       {
