@@ -29,7 +29,8 @@ resourceIDPattern = re.compile(
 # 指定フォルダだけの探索　recursive に False を指定して、 pathname の中に ** を含めない
 args = sys.argv
 print("プロジェクト名=" + args[1])
-dir_path = "./input/fsh/"+args[1]+"/"
+print("Exampleフォルダ名=" + args[2])
+dir_path = "./input/fsh/"+args[1]+"/"+args[2]+"/"
 search_path = dir_path + fsh_ext  # ワイルドカードを設定
 fsh_files = glob.glob(search_path, recursive=False)  # 拡張子がegg_extだけのファイルを返す
 bundleList = []

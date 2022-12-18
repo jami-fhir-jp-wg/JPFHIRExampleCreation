@@ -1,5 +1,5 @@
 // Compositionリース
-#include "fshDef/jpComposition_eReferralDef.fshdef"
+#include "../fshDef/jpComposition_eReferralDef.fshdef"
 
 
 #define $jppatientExample01Inline jppatientExample01Inline

@@ -1,4 +1,4 @@
-#include "fshDef/jpMedReq_ePreDef.fshdef"
+#include "../fshDef/jpMedReq_ePreDef.fshdef"
 
 //不均等投与1日用法の医薬品処方１件　
 //MedicationRequestリソースのインスタンス例

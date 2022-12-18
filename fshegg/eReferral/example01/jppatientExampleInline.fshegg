@@ -1,4 +1,4 @@
-#include "fshDef/jppatientDef.fshdef"
+#include "../fshDef/jppatientDef.fshdef"
 
 $000mn_ExampleJPPatient(jppatientExample01Inline)  
 $001mn_Description(JPPatient患者　例)

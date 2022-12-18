@@ -1,4 +1,4 @@
-#include "fshDef/jpCondition_eReferralDef.fshdef"
+#include "../fshDef/jpCondition_eReferralDef.fshdef"
 
 $000mn_ExampleJPCondition_eCS(cc1ReferralExample01Inline)  
 $001mn_Description(conditionReferralExample01CC1 診療情報提供書　主訴例　上腹部痛)

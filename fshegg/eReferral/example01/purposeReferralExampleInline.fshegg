@@ -1,4 +1,4 @@
-#include "fshDef/jpEncounter_eClinicalSummaryDef.fshdef"
+#include "../fshDef/jpEncounter_eClinicalSummaryDef.fshdef"
 
 $000mn_ExampleJPEncounter_eClinicalSummary(purposeReferralExample01Inline)  
 $001mn_Description(encounterReferralExample01 診療情報提供書での紹介目的　例　腹痛精査お願い)

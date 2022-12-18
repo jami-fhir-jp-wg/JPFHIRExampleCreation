@@ -1,4 +1,4 @@
-#include "fshDef/jpObsCommonDef.fshdef"
+#include "../fshDef/jpObsCommonDef.fshdef"
 
 $000mn_ExampleJPObservationCommon(psobsCommonExample01Inline)  
 $001mn_Description(ObservationCommon検査結果　現症例)

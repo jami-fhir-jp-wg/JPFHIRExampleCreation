@@ -36,7 +36,16 @@
     }
   ],
   "definition": {
-    "resource": [],
+    "resource": [
+      {
+        "reference": {
+          "reference": "Bundle/bundleReferralExample01"
+        },
+        "name": "bundleReferralExample01",
+        "description": "bundleReferralExample01 診療情報提供書Bundle",
+        "exampleBoolean": true
+      }
+    ],
     "page": {
       "nameUrl": "toc.html",
       "title": "Table of Contents",

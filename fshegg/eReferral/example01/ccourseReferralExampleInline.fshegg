@@ -1,4 +1,4 @@
-#include "fshDef/jpDocumentReference_eCSDef.fshdef"
+#include "../fshDef/jpDocumentReference_eCSDef.fshdef"
 
 $000mn_ExampleJPDocumentReferencen_eCS(ccourseReferralExample01Inline)  
 $001mn_Description(ccourseReferralExample01 診療情報提供書　臨床経過記録文書参照例)

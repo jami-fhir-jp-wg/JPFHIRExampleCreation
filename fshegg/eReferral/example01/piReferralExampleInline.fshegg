@@ -1,4 +1,4 @@
-#include "fshDef/jpCondition_eReferralDef.fshdef"
+#include "../fshDef/jpCondition_eReferralDef.fshdef"
 
 
 $000mn_ExampleJPCondition_eCS(piReferralExample01Inline)  

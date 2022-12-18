@@ -1,4 +1,4 @@
-#include "fshDef/jpBundle_eReferralDef.fshdef"
+#include "../fshDef/jpBundle_eReferralDef.fshdef"
 
 $000mn_ExampleJPBundle_eReferral(bundleReferralExample01)
 $001mn_Description(bundleReferralExample01 診療情報提供書Bundle)
