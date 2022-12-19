@@ -1,6 +1,8 @@
 targetProject=eReferral
-targetPackage=jp-ereferral#0.9.3-snap.tgz
+targetPackage=jp-ereferral#0.9.3-snap
+targetPackageTgz=$targetPackage.tgz
 targetFile=Bundle-bundleReferralExample01.json
+tarCommand=gtar
 cd ~/GitHub/JPFHIRExampleCreation
 rm -f ./input/fsh/$targetProject/*.fsh*
 while read -r f
@@ -20,11 +22,16 @@ done < <(find ./fshegg -name *.fshegg )
 python3 pyscripts/addFullUrl2Composition.py  $targetProject
 mkdir -p ./input/fsh/$targetProject/backup
 mv ./input/fsh/$targetProject/*.fsh_backup ./input/fsh/$targetProject/backup/
+mkdir -p ~/.fhir/packages/$targetPackage
+cp JPFHIRExampleCreation/packages_snapshot/$targetPackageTgz ~/.fhir/packages/$targetPackage
+cd ~/.fhir/packages/$targetPackage
+$tarCommand xzf $targetPackageTgz
+cp JPFHIRExampleCreation/
 sushi .  -o ./output-json/$targetProject
 cd ~/GitHub/
 java -jar work/validator_cli.jar \
     JPFHIRExampleCreation/output-json/$targetProject/fsh-generated/resources/$targetFile \
-    -ig JPFHIRExampleCreation/packages_snapshot/$targetPackage \
+    -ig JPFHIRExampleCreation/packages_snapshot/$targetPackageTgz \
     -tx https://tx.jpfhir.jp:8081 \
     >JPFHIRExampleCreation/output.txt
 cd ~/GitHub/JPFHIRExampleCreation

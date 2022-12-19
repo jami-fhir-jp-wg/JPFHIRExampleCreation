@@ -19,7 +19,7 @@
 #define $ph1ReferralExample01Inline   ph1ReferralExample01Inline
 #define $ph2ReferralExample01Inline   ph2ReferralExample01Inline
 #define $alg1ReferralExample01Inline  alg1ReferralExample01Inline
-#define $alg1ReferralExample01Inline  alg1ReferralExample01Inline
+#define $alg1ReferralExample02Inline  alg1ReferralExample02Inline
 #define $psobsCommonExample01Inline   psobsCommonExample01Inline
 #define $ccourseReferralExample01Inline   ccourseReferralExample01Inline
 
@@ -44,9 +44,10 @@ $070mn_紹介状目的Ecounter(腹痛精査お願いします。,$purposeReferra
 $070mn_紹介状傷病名Condition(上腹部痛、腰痛,$cc1ReferralExample01Inline,$cc2ReferralExample01Inline) 
 $070mn_紹介状現病歴Condition(２０２２年６月上旬から夜食後に時々上腹部痛があり、だんだんひどくなっている。他に目立った症状なし。,$piReferralExample01Inline) 
 $070mn_紹介状既往歴Condition(2018年　狭心症　２ヶ月治療で軽快。2019年　交通事故で左前腕骨折　３ヶ月ギプス固定。,$ph1ReferralExample01Inline,$ph2ReferralExample01Inline) 
-$070on_紹介状アレルギーAllergy(サバ　キーウイ,$alg1ReferralExample01Inline,$alg1ReferralExample01Inline) 
+$070on_紹介状アレルギーAllergy(サバ　キーウイ,$alg1ReferralExample01Inline,$alg1ReferralExample02Inline) 
 $070on_紹介状家族歴Family(母　胃がん) 
 $070on_紹介状身体所見ObsCommon(腹部所見：上腹部圧痛あり、その他特に所見なし。,$psobsCommonExample01Inline) 
+$070on_紹介状投薬指示MedicationRequestNoText(MedicationRequestExample01Inline,JP-MedReq-ePreData-Example-fukintouByDayInline)
 $070on_紹介状感染症ObsCommon(特になし)
 $070on_紹介状臨床経過DocRef(添付参照,$ccourseReferralExample01Inline)
 

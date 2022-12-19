@@ -107,13 +107,13 @@ Description: "ARGtxt"
 
 #bigdef $080on_処方開始日(ARGdate)
 #comment  // 例　$06on_処方開始日(2020-08-21)
-* dosageInstruction[=].extension[+].url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DosageInstruction_PeriodOfUse"
+* dosageInstruction[=].extension[+].url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDosage_PeriodOfUse"
 * dosageInstruction[=].extension[=].valuePeriod.start = "ARGdate"
 #endbigdef
 
 #bigdef $090on_処方実日数(ARGdays)
 #comment  // 例　$処方実日数(7) 実投与日数
-* dosageInstruction[=].extension[+].url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DosageInstruction_UsageDuration"
+* dosageInstruction[=].extension[+].url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDosage_UsageDuration"
 * dosageInstruction[=].extension[=].valueDuration = ARGdays 'd' "日"
 #endbigdef
 

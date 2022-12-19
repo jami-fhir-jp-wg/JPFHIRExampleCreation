@@ -228,7 +228,7 @@ $multiEntryRefSectionLevel2(感染症情報,Observation,ARGref)
 
 #bigdef  $070on_紹介状社会歴・生活習慣Family(ARGtext,ARGref...)
 * section[=].section[+].title = "社会歴・生活習慣"
-* section[=].section[=].code = $referral-section#642 "社会歴・生活習慣セクション"
+* section[=].section[=].code = $referral-section#640 "社会歴・生活習慣セクション"
 * section[=].section[=].text.status = #additional
 * section[=].section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">ARGtext</div>"
 $multiEntryRefSectionLevel2(社会歴・生活習慣,Observation,ARGref)
@@ -247,7 +247,7 @@ $multiEntryRefSectionLevel2(予防接種歴,Immunization,ARGref)
 
 #bigdef  $070on_紹介状手術Procedure(ARGtext,ARGref...)
 * section[=].section[+].title = "手術"
-* section[=].section[=].code = $referral-section#713 "手術セクション"
+* section[=].section[=].code = $referral-section#730 "手術セクション"
 * section[=].section[=].text.status = #additional
 * section[=].section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">ARGtext</div>"
 //  Reference(JP_Observation_Common) 手術
@@ -257,7 +257,7 @@ $multiEntryRefSectionLevel2(手術,Procedure,ARGref)
 
 #bigdef  $070on_紹介状輸血歴Procedure(ARGtext,ARGref...)
 * section[=].section[+].title = "輸血歴"
-* section[=].section[=].code = $referral-section#713 "輸血歴セクション"
+* section[=].section[=].code = $referral-section#740 "輸血歴セクション"
 * section[=].section[=].text.status = #additional
 * section[=].section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">ARGtext</div>"
 //  Reference(JP_Observation_Common) 輸血歴
@@ -267,7 +267,7 @@ $multiEntryRefSectionLevel2(輸血歴,Procedure,ARGref)
 
 #bigdef  $070on_紹介状処置Procedure(ARGtext,ARGref...)
 * section[=].section[+].title = "処置"
-* section[=].section[=].code = $referral-section#713 "処置セクション"
+* section[=].section[=].code = $referral-section#720 "処置セクション"
 * section[=].section[=].text.status = #additional
 * section[=].section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">ARGtext</div>"
 //  Reference(JP_Observation_Common) 処置
@@ -277,22 +277,36 @@ $multiEntryRefSectionLevel2(処置,Procedure,ARGref)
 
 #bigdef  $070on_紹介状投薬指示MedicationRequest(ARGtext,ARGref...)
 * section[=].section[+].title = "投薬指示"
-* section[=].section[=].code = $referral-section#444 "投薬指示セクション"
+* section[=].section[=].code = $referral-section#430 "投薬指示セクション"
 * section[=].section[=].text.status = #additional
 * section[=].section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">ARGtext</div>"
 $multiEntryRefSectionLevel2(投薬指示,MedicationRequest,ARGref)
 #endbigdef
 
+#bigdef  $070on_紹介状投薬指示MedicationRequestNoText(ARGref...)
+* section[=].section[+].title = "投薬指示"
+* section[=].section[=].code = $referral-section#430 "投薬指示セクション"
+$multiEntryRefSectionLevel2(投薬指示,MedicationRequest,ARGref)
+#endbigdef
+
+#bigdef  $070on_紹介状投薬指示MedicationRequestNoRef(ARGtext)
+* section[=].section[+].title = "投薬指示"
+* section[=].section[=].code = $referral-section#430 "投薬指示セクション"
+* section[=].section[=].text.status = #additional
+* section[=].section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">ARGtext</div>"
+#endbigdef
+
+
 #bigdef  $070on_紹介状投薬指示Bundle(ARGref...)
 * section[=].section[+].title = "投薬指示"
-* section[=].section[=].code = $referral-section#444 "投薬指示セクション"
+* section[=].section[=].code = $referral-section#430 "投薬指示セクション"
 * section[=].section[=].text.status = #additional
 $multiEntryRefSectionLevel2(投薬指示,Bundle,ARGref)
 #endbigdef
 
 #bigdef  $070on_紹介状検査結果Imaging_study(ARGtext,ARGref...)
 * section[=].section[+].title = "検査結果"
-* section[=].section[=].code = $referral-section#713 "検査結果セクション"
+* section[=].section[=].code = $referral-section#620 "検査結果セクション"
 * section[=].section[=].text.status = #additional
 * section[=].section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">ARGtext</div>"
 //  Reference(JP_Observation_Common) 検査結果
@@ -301,7 +315,7 @@ $multiEntryRefSectionLevel2(検査結果,Imaging_study,ARGref)
 
 #bigdef  $070on_紹介状検査結果DiagnosticReport(ARGtext,ARGref...)
 * section[=].section[+].title = "検査結果"
-* section[=].section[=].code = $referral-section#713 "検査結果セクション"
+* section[=].section[=].code = $referral-section#620 "検査結果セクション"
 * section[=].section[=].text.status = #additional
 * section[=].section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">ARGtext</div>"
 //  Reference(JP_Observation_Common) 検査結果
@@ -310,7 +324,7 @@ $multiEntryRefSectionLevel2(検査結果,DiagnosticReport,ARGref)
 
 #bigdef  $070on_紹介状検査結果Bundle(ARGtext,ARGref...)
 * section[=].section[+].title = "検査結果"
-* section[=].section[=].code = $referral-section#713 "検査結果セクション"
+* section[=].section[=].code = $referral-section#620 "検査結果セクション"
 * section[=].section[=].text.status = #additional
 * section[=].section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">ARGtext</div>"
 //  Reference(JP_Observation_Common) 検査結果
@@ -331,7 +345,7 @@ $multiEntryRefSectionLevel2(臨床経過,DocumentReference,ARGref)
 
 #bigdef  $070on_紹介状診療方針指示CarePlan(ARGtext,ARGref...)
 * section[=].section[+].title = "診療方針指示"
-* section[=].section[=].code = $referral-section#424 "診療方針指示セクション"
+* section[=].section[=].code = $referral-section#420 "診療方針指示セクション"
 * section[=].section[=].text.status = #additional
 * section[=].section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">ARGtext</div>"
 $multiEntryRefSectionLevel2(診療方針指示,JP_CarePlan,ARGref)
@@ -365,12 +379,6 @@ $multiEntryRefSectionLevel2(事前指示,Consent,ARGref)
 $multiEntryRefSectionLevel2(臨床研究参加,ResearchSubject,ARGref)
 #endbigdef
 
-
-
-
-
-
-
 #bigdef  $080on_添付情報DocumentReference(ARGorgref)
 * section[+].title = "添付情報"
 * section[=].code = $referral-section#210 "添付情報セクション"
@@ -402,14 +410,14 @@ $multiEntryRefSectionLevel1(備考・連絡情報, Binary, ARGorgref)
 
 #bigdef  $090on_PDFDocumentReference(ARGorgref)
 * section[+].title = "PDF"
-* section[=].code = $referral-section#210 "PDFセクション"
+* section[=].code = $referral-section#230 "PDFセクション"
 * section[=].text.status = #additional
 $multiEntryRefSectionLevel1(PDF, DocumentReference, ARGorgref)
 #endbigdef
 
 #bigdef  $090on_PDFBinary(ARGorgref)
 * section[+].title = "PDF"
-* section[=].code = $referral-section#210 "PDFセクション"
+* section[=].code = $referral-section#230 "PDFセクション"
 * section[=].text.status = #additional
 $multiEntryRefSectionLevel1(PDF, Binary, ARGorgref)
 #endbigdef

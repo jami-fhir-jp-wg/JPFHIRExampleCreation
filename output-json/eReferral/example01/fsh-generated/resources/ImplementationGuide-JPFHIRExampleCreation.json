@@ -24,13 +24,13 @@
   "dependsOn": [
     {
       "packageId": "jp-core.r4",
-      "uri": "http://jpfhir.jp/fhir/core/ImplementationGuide/jp-core.draft1",
+      "uri": "http://jpfhir.jp/fhir/core/ImplementationGuide/jp-core.r4",
       "version": "1.1.1-snap",
       "id": "jp_core_r4"
     },
     {
       "packageId": "jp-ereferral",
-      "uri": "http://jpfhir.jp/fhir/eReferral/ImplementationGuide/jp-ereferral",
+      "uri": "http://jpfhir.jp/fhir/eReferral",
       "version": "0.9.3-snap",
       "id": "jp_ereferral"
     }

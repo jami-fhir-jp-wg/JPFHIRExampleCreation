@@ -1,30 +1,31 @@
 FHIR Validation tool Version 5.6.80 (Git# 3ab720a6af40). Built 2022-11-22T14:29:01.401Z (26 days old)
-  Java:   17.0.2 from /Library/Java/JavaVirtualMachines/jdk-17.0.2.jdk/Contents/Home on x86_64 (64bit). 12288MB available
+  Java:   11.0.10 from /Library/Java/JavaVirtualMachines/jdk-11.0.10+9/Contents/Home on x86_64 (64bit). 30688MB available
   Paths:  Current = /Users/kohe/GitHub, Package Cache = /Users/kohe/.fhir/packages
-  Params: JPFHIRExampleCreation/output-json/eReferral/example01/fsh-generated/resources/Bundle-bundleReferralExample01.json -ig JPFHIRExampleCreation/packages_snapshot/jp-ereferral#0.9.3-snap.tgz -tx https://tx.jpfhir.jp:8081
+  Params: JPFHIRExampleCreation/output-json/eReferral/example01/fsh-generated/resources/ -ig JPFHIRExampleCreation/packages_snapshot/jp-ereferral#0.9.3-snap.tgz -tx https://tx.jpfhir.jp:8081
 Scanning for versions (no -version parameter):
   Package JPFHIRExampleCreation/packages_snapshot/jp-ereferral#0.9.3-snap.tgz: 4.0
+  fhirVersion in JPFHIRExampleCreation/output-json/eReferral/example01/fsh-generated/resources/ImplementationGuide-JPFHIRExampleCreation.json: 4.0
 -> use version 4.0
   Jurisdiction: Japan
 Loading
-  Load FHIR v4.0 from hl7.fhir.r4.core#4.0.1.: - 4576 resources (00:03.613)
-  Load hl7.terminology#4.0.0 - 4164 resources (00:01.972)
-  Load R5 Extensions - 123 resources (00:02.790)
-  Terminology server https://tx.jpfhir.jp:8081 - Version null (00:00.460)
-  Load JPFHIRExampleCreation/packages_snapshot/jp-ereferral#0.9.3-snap.tgz - 78 resources (00:00.925)
+  Load FHIR v4.0 from hl7.fhir.r4.core#4.0.1.: - 4576 resources (00:03.553)
+  Load hl7.terminology#4.0.0 - 4164 resources (00:02.955)
+  Load R5 Extensions - 56 resources (00:02.482)
+  Terminology server https://tx.jpfhir.jp:8081 - Version null (00:00.529)
+  Load JPFHIRExampleCreation/packages_snapshot/jp-ereferral#0.9.3-snap.tgz - 78 resources (00:00.975)
   Package Summary: [hl7.fhir.r4.core#4.0.1, hl7.fhir.xver-extensions#0.0.11, hl7.terminology#4.0.0]
   Get set...  go (00:00.003)
 Validating
   Validate JPFHIRExampleCreation/output-json/eReferral/example01/fsh-generated/resources/Bundle-bundleReferralExample01.json
-Validate Bundle against http://hl7.org/fhir/StructureDefinition/Bundle|4.0.1..  Load jp-core.r4#1.1.1-rc - 198 resources (00:01.260)
-........20..........40..Validate Practitioner against http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Practitioner_eClinicalSummary|1.1.1-rc|
+Validate Bundle against http://hl7.org/fhir/StructureDefinition/Bundle|4.0.1.  Load jp-core.r4#1.1.1-rc - 198 resources (00:01.145)
+.........20.......Validate Practitioner against http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Practitioner_eClinicalSummary|1.1.1-rc|
 Validate Practitioner against http://jpfhir.jp/fhir/core/StructureDefinition/JP_Practitioner|
 Validate Organization against http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Organization_eClinicalSummary|1.1.1-rc|
 Validate Organization against http://jpfhir.jp/fhir/core/StructureDefinition/JP_Organization|
 Validate Organization against http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Organization_eClinicalSummary_department|1.1.1-rc..........20..........40..........60..........80.........|
 Validate Organization against http://jpfhir.jp/fhir/core/StructureDefinition/JP_Organization|
 Validate Organization against http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Organization_eClinicalSummary|
-...Validate Organization against http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Organization_eClinicalSummary|1.1.1-rc..........20..........40..........60..........80.........|
+...40Validate Organization against http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Organization_eClinicalSummary|1.1.1-rc..........20..........40..........60..........80.........|
 Validate Organization against http://jpfhir.jp/fhir/core/StructureDefinition/JP_Organization..........20..........40..........60..........80..........100|
 Validate Organization against http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Organization_eClinicalSummary|1.1.1-rc..........20..........40..........60..........80.........|
 Validate Organization against http://jpfhir.jp/fhir/core/StructureDefinition/JP_Organization..........20..........40..........60..........80..........100..|
@@ -36,7 +37,7 @@ Validate Organization against http://jpfhir.jp/fhir/eClinicalSummary/StructureDe
 Validate Organization against http://jpfhir.jp/fhir/core/StructureDefinition/JP_Organization|
 Validate Practitioner against http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Practitioner_eClinicalSummary|1.1.1-rc..........20..........40..........60..........80.........|
 Validate Practitioner against http://jpfhir.jp/fhir/core/StructureDefinition/JP_Practitioner..........20..........40..........60..........80..........100..|
-..Validate Organization against http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Organization_eClinicalSummary|1.1.1-rc|
+.Validate Organization against http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Organization_eClinicalSummary|1.1.1-rc|
 Validate Organization against http://jpfhir.jp/fhir/core/StructureDefinition/JP_Organization|
 Validate Organization against http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Organization_eClinicalSummary|1.1.1-rc..........20..........40..........60..........80.........|
 Validate Organization against http://jpfhir.jp/fhir/core/StructureDefinition/JP_Organization..........20..........40..........60..........80..........100..|
@@ -48,7 +49,7 @@ Validate Organization against http://jpfhir.jp/fhir/eClinicalSummary/StructureDe
 Validate Organization against http://jpfhir.jp/fhir/core/StructureDefinition/JP_Organization|
 Validate Practitioner against http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Practitioner_eClinicalSummary|1.1.1-rc|
 Validate Practitioner against http://jpfhir.jp/fhir/core/StructureDefinition/JP_Practitioner|
-...60..........80..........100..........120......|
+.........60..........80..........100..........120...|
 Validate Bundle against http://jpfhir.jp/fhir/eReferral/StructureDefinition/JP_Bundle_eReferralValidate Composition against http://jpfhir.jp/fhir/eReferral/StructureDefinition/JP_Composition_eReferral|1.1.1-rc|
 Validate Patient against http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Patient_eClinicalSummary|1.1.1-rc..........20..........40..........60..........80.........|
 Validate Patient against http://jpfhir.jp/fhir/core/StructureDefinition/JP_Patient|
@@ -96,18 +97,40 @@ Validate AllergyIntolerance against http://jpfhir.jp/fhir/eClinicalSummary/Struc
 Validate AllergyIntolerance against http://jpfhir.jp/fhir/core/StructureDefinition/JP_AllergyIntolerance|
 Validate Observation against http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Observation_Common_eClinicalSummary|1.1.1-rc..........20..........40..........60..........80.........|
 Validate Observation against http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_Common|
+Validate MedicationRequest against http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationRequest|1.1.1|
+Validate MedicationRequest against http://jpfhir.jp/fhir/ePrescription/StructureDefinition/JP_MedicationRequest_ePrescriptionData|
+Validate MedicationRequest against http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationRequest|1.1.1|
+Validate MedicationRequest against http://jpfhir.jp/fhir/ePrescription/StructureDefinition/JP_MedicationRequest_ePrescriptionData|
 Validate DocumentReference against http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_DocumentReference_eClinicalSummary|1.1.1-rc|
 Validate DocumentReference against http://jpfhir.jp/fhir/core/StructureDefinition/JP_DocumentReference|
 ..|
- 00:03.263
-Done. Times: Loading: 00:10.752, validation: 00:04.524. Memory = 371Mb
+ 00:22.848
+  Validate JPFHIRExampleCreation/output-json/eReferral/example01/fsh-generated/resources/ImplementationGuide-JPFHIRExampleCreation.json
+Validate ImplementationGuide against http://hl7.org/fhir/StructureDefinition/ImplementationGuide|4.0.1..........20..........40..........60..........80.........|
+ 00:00.015
+Done. Times: Loading: 00:11.338, validation: 00:24.010 (#2). Memory = 385Mb
 
-Success: 0 errors, 6 warnings, 2 notes
+-- JPFHIRExampleCreation/output-json/eReferral/example01/fsh-generated/resources/Bundle-bundleReferralExample01.json -------------------------------------------------------------------------------------------------------------------------
+Success: 0 errors, 7 warnings, 4 notes
   Information @ Bundle.entry[0].resource.ofType(Composition).type (line 38, col22): None of the codings provided are in the value set 'FHIR Document Type Codes' (http://hl7.org/fhir/ValueSet/doc-typecodes|4.0.1), and a coding is recommended to come from this value set) (codes = http://jpfhir.jp/fhir/Common/CodeSystem/doc-typecodes#57133-1)
-  Information @ Bundle.entry[18].resource.ofType(DocumentReference).type.coding[0] (line 1197, col14): Code System URI 'http://loinc.org' is unknown so the code cannot be validated
-  Warning @ Bundle.entry[20] (line 1095, col6): Entry 'urn:uuid:5c751c19-4adf-4f98-bc62-2f81c3b143e1' isn't reachable by traversing forwards from first Bundle entry, and isn't a resource type that is typically used that way - check this is not missed somewhere
-  Warning @ Bundle.entry[2].resource.ofType(Encounter).class (line 474, col72): Display Name for http://terminology.hl7.org/CodeSystem/v3-ActCode#AMB should be one of 1 choices from 'ambulatory', not '外来' for 'http://terminology.hl7.org/CodeSystem/v3-ActCode#AMB'
-  Warning @ Bundle.entry[2].resource.ofType(Encounter).classHistory[0].class (line 481, col76): Display Name for http://terminology.hl7.org/CodeSystem/v3-ActCode#AMB should be one of 1 choices from 'ambulatory', not '外来' for 'http://terminology.hl7.org/CodeSystem/v3-ActCode#AMB'
-  Warning @ Bundle.entry[9].resource.ofType(Encounter).class (line 799, col72): Display Name for http://terminology.hl7.org/CodeSystem/v3-ActCode#AMB should be one of 1 choices from 'ambulatory', not '外来' for 'http://terminology.hl7.org/CodeSystem/v3-ActCode#AMB'
-  Warning @ Bundle.entry[17].resource.ofType(Observation).category[0] (line 1164, col12): Display Name for http://terminology.hl7.org/CodeSystem/observation-category#exam should be one of 1 choices from 'Exam', not '身体検査・観察'
-  Warning @ Bundle.entry[17].resource.category[0] (line 1164, col12): Display Name for http://terminology.hl7.org/CodeSystem/observation-category#exam should be one of 1 choices from 'Exam', not '身体検査・観察'
+  Information @ Bundle.entry[19].resource.ofType(MedicationRequest).dosageInstruction[0].timing.code (line 1305, col28): None of the codings provided are in the value set 'TimingAbbreviation' (http://hl7.org/fhir/ValueSet/timing-abbreviation|4.0.1), and a coding is recommended to come from this value set) (codes = urn:oid:1.2.392.200250.2.2.20#1013044400000000)
+  Information @ Bundle.entry[20].resource.ofType(MedicationRequest).dosageInstruction[0].timing.code (line 1487, col28): None of the codings provided are in the value set 'TimingAbbreviation' (http://hl7.org/fhir/ValueSet/timing-abbreviation|4.0.1), and a coding is recommended to come from this value set) (codes = urn:oid:1.2.392.200250.2.2.20#1013044400000000)
+  Information @ Bundle.entry[18].resource.ofType(DocumentReference).type.coding[0] (line 1221, col14): Code System URI 'http://loinc.org' is unknown so the code cannot be validated
+  Warning @ Bundle.entry[2].resource.ofType(Encounter).class (line 498, col72): Display Name for http://terminology.hl7.org/CodeSystem/v3-ActCode#AMB should be one of 1 choices from 'ambulatory', not '外来' for 'http://terminology.hl7.org/CodeSystem/v3-ActCode#AMB'
+  Warning @ Bundle.entry[2].resource.ofType(Encounter).classHistory[0].class (line 505, col76): Display Name for http://terminology.hl7.org/CodeSystem/v3-ActCode#AMB should be one of 1 choices from 'ambulatory', not '外来' for 'http://terminology.hl7.org/CodeSystem/v3-ActCode#AMB'
+  Warning @ Bundle.entry[9].resource.ofType(Encounter).class (line 823, col72): Display Name for http://terminology.hl7.org/CodeSystem/v3-ActCode#AMB should be one of 1 choices from 'ambulatory', not '外来' for 'http://terminology.hl7.org/CodeSystem/v3-ActCode#AMB'
+  Warning @ Bundle.entry[17].resource.ofType(Observation).category[0] (line 1188, col12): Display Name for http://terminology.hl7.org/CodeSystem/observation-category#exam should be one of 1 choices from 'Exam', not '身体検査・観察'
+  Warning @ Bundle.entry[17].resource.category[0] (line 1188, col12): Display Name for http://terminology.hl7.org/CodeSystem/observation-category#exam should be one of 1 choices from 'Exam', not '身体検査・観察'
+  Warning @ Bundle.entry[19].resource.ofType(MedicationRequest).dosageInstruction[0].route.coding[0].system (line 1318, col81): URL value 'http://jpfhir.jp/fhir/core/CodeSystem/route-codes' does not resolve
+  Warning @ Bundle.entry[20].resource.ofType(MedicationRequest).dosageInstruction[0].route.coding[0].system (line 1500, col81): URL value 'http://jpfhir.jp/fhir/core/CodeSystem/route-codes' does not resolve
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+-- JPFHIRExampleCreation/output-json/eReferral/example01/fsh-generated/resources/ImplementationGuide-JPFHIRExampleCreation.json ------------------------------------------------------------------------------------------------------------------------------------
+*FAILURE*: 3 errors, 1 warnings, 1 notes
+  Error @ ImplementationGuide.definition.parameter[0].code (line 57, col33): The value provided ('copyrightyear') is not in the value set 'GuideParameterCode' (http://hl7.org/fhir/ValueSet/guide-parameter-code|4.0.1), and a code is required from this value set) (error message = Unknown Code http://hl7.org/fhir/guide-parameter-code#copyrightyear in http://hl7.org/fhir/guide-parameter-code)
+  Error @ ImplementationGuide.definition.parameter[1].code (line 61, col32): The value provided ('releaselabel') is not in the value set 'GuideParameterCode' (http://hl7.org/fhir/ValueSet/guide-parameter-code|4.0.1), and a code is required from this value set) (error message = Unknown Code http://hl7.org/fhir/guide-parameter-code#releaselabel in http://hl7.org/fhir/guide-parameter-code)
+  Error @ ImplementationGuide.definition.page.page (line 53, col16): Array cannot be empty - the property should not be present if it has no values
+  Information @ ImplementationGuide.dependsOn[0].uri (line 27, col74): Canonical URL 'http://jpfhir.jp/fhir/core/ImplementationGuide/jp-core.r4' does not resolve
+  Warning @ ImplementationGuide (line 1, col2): Rule ig-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Failed
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+

@@ -107,13 +107,13 @@ Description: "ARGtxt"
 
 #bigdef $080on_処方開始日(ARGdate)
 #comment  // 例　$06on_処方開始日(2020-08-21)
-* dosageInstruction[=].extension[+].url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DosageInstruction_PeriodOfUse"
+* dosageInstruction[=].extension[+].url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDosage_PeriodOfUse"
 * dosageInstruction[=].extension[=].valuePeriod.start = "ARGdate"
 #endbigdef
 
 #bigdef $090on_処方実日数(ARGdays)
 #comment  // 例　$処方実日数(7) 実投与日数
-* dosageInstruction[=].extension[+].url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DosageInstruction_UsageDuration"
+* dosageInstruction[=].extension[+].url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDosage_UsageDuration"
 * dosageInstruction[=].extension[=].valueDuration = ARGdays 'd' "日"
 #endbigdef
 
@@ -128,7 +128,7 @@ Description: "ARGtxt"
 
 #bigdef $120mn_処方用法メイン(ARGtimingusagecode,ARGtimingusagename)
 #comment  // 例　$処方用法メイン(2H73000000000000,外用・点眼・１日３回)
-* dosageInstruction[=].timing.code = urn:oid:1.2.392.200250.2.2.20.20#ARGtimingusagecode "ARGtimingusagename"
+* dosageInstruction[=].timing.code = urn:oid:1.2.392.200250.2.2.20#ARGtimingusagecode "ARGtimingusagename"
 #endbigdef
 
 #bigdef $130on_処方用法部位(ARGsitecode,ARGsite)
@@ -138,7 +138,7 @@ Description: "ARGtxt"
 
 #bigdef $140on_処方内服用法()
 #comment  // 例　$処方内服用法()
-#define $route-codes    http://jpfhir.jp/fhir/ePrescription/CodeSystem/route-codes
+#define $route-codes    http://jpfhir.jp/fhir/core/CodeSystem/route-codes
 * dosageInstruction[=].route = $route-codes#PO "口"
 * dosageInstruction[=].method = urn:oid:1.2.392.200250.2.2.20.30#1 "内服"
 #endbigdef

@@ -24,3 +24,6 @@ $030mn_文書entry(genUUID4(),alg1ReferralExample01Inline)
 $030mn_文書entry(genUUID4(),alg1ReferralExample02Inline)
 $030mn_文書entry(genUUID4(),psobsCommonExample01Inline)
 $030mn_文書entry(genUUID4(),ccourseReferralExample01Inline)
+$030mn_文書entry(genUUID4(),MedicationRequestExample01Inline)
+$030mn_文書entry(genUUID4(),JP-MedReq-ePreData-Example-fukintouByDayInline)
+

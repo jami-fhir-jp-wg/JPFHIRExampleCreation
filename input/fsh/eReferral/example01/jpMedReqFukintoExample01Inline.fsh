@@ -40,7 +40,7 @@ Usage: #inline
 
 Description: "不均等投与1日用法の医薬品処方１件　MedicationRequestリソースのインスタンス例（プレドニン錠５ｍｇ１日３回　毎食後　７錠（４錠－２錠－１錠））"
 
-* meta.profile[+] = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationRequest"
+* meta.profile[+] = "http://jpfhir.jp/fhir/ePrescription/StructureDefinition/JP_MedicationRequest_ePrescriptionData"
 
 
 * identifier[rpNumber].system = "urn:oid:1.2.392.100495.20.3.81"
@@ -55,7 +55,7 @@ Description: "不均等投与1日用法の医薬品処方１件　MedicationRequ
 * medicationCodeableConcept.text = "プレドニン錠５ｍｇ"
 
 // * subject.reference = "jppatientExample01Inline"
-* subject.reference = "urn:uuid:719bf777-471d-4800-a807-8309b921e737"
+* subject.reference = "urn:uuid:210d26b2-1216-4219-b70c-bfcbe7edf664"
 
 
 * authoredOn = "2020-08-21T12:28:17+09:00"
@@ -65,22 +65,22 @@ Description: "不均等投与1日用法の医薬品処方１件　MedicationRequ
 * dosageInstruction[+].text = "１日３回　毎食後　７錠（４錠－２錠－１錠）"
 
 //080on_処方開始日(ARGdate) // extension
-* dosageInstruction[=].extension[+].url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DosageInstruction_UsageDuration"
+* dosageInstruction[=].extension[+].url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDosage_UsageDuration"
 * dosageInstruction[=].extension[=].valueDuration = 7 'd' "日"
  // extension
-* dosageInstruction[=].additionalInstruction[+] = urn:oid:1.2.392.200250.2.2.20.22#V14NNNNN "不均等・１回目・４錠"
+* dosageInstruction[=].additionalInstruction[+] = urn:oid:1.2.392.200250.2.2.20.22#V14NNNNN "不均等・１回目・４単位量"
 
-* dosageInstruction[=].additionalInstruction[+] = urn:oid:1.2.392.200250.2.2.20.22#V22NNNNN "不均等・２回目・２錠"
+* dosageInstruction[=].additionalInstruction[+] = urn:oid:1.2.392.200250.2.2.20.22#V22NNNNN "不均等・１回目・２単位量"
 
-* dosageInstruction[=].additionalInstruction[+] = urn:oid:1.2.392.200250.2.2.20.22#V31NNNNN "不均等・３回目・１錠"
+* dosageInstruction[=].additionalInstruction[+] = urn:oid:1.2.392.200250.2.2.20.22#V31NNNNN "不均等・１回目・１単位量"
 
 * dosageInstruction[=].timing.repeat.boundsDuration = 7 'd' "日"
 
-* dosageInstruction[=].timing.code = urn:oid:1.2.392.200250.2.2.20.20#1013044400000000 "内服・経口・１日３回毎食後"
+* dosageInstruction[=].timing.code = urn:oid:1.2.392.200250.2.2.20#1013044400000000 "内服・経口・１日３回毎食後"
 
 
 //130on_処方用法部位(ARGsitecode,ARGsite)
-* dosageInstruction[=].route = http://jpfhir.jp/fhir/ePrescription/CodeSystem/route-codes#PO "口"
+* dosageInstruction[=].route = http://jpfhir.jp/fhir/core/CodeSystem/route-codes#PO "口"
 * dosageInstruction[=].method = urn:oid:1.2.392.200250.2.2.20.30#1 "内服"
 
 
@@ -94,7 +94,7 @@ Description: "不均等投与1日用法の医薬品処方１件　MedicationRequ
 * dosageInstruction[=].doseAndRate.rateRatio.numerator = 7 urn:oid:1.2.392.100495.20.2.101#TAB "錠"
 * dosageInstruction[=].doseAndRate.rateRatio.denominator = 1 'd' "日"
 
-* dispenseRequest.quantity = 49 urn:oid:1.2.392.100495.20.2.101#49code "49name"
+* dispenseRequest.quantity = 49 urn:oid:1.2.392.100495.20.2.101#TAB "錠"
 
 * dispenseRequest.expectedSupplyDuration = 7 'd' "日"
 

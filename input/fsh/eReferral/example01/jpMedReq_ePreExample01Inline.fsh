@@ -38,7 +38,7 @@ Usage: #inline
 
 Description: "内服　処方例１件　MedicationRequestリソースのインスタンス例"
 
-* meta.profile[+] = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationRequest"
+* meta.profile[+] = "http://jpfhir.jp/fhir/ePrescription/StructureDefinition/JP_MedicationRequest_ePrescriptionData"
 
 
 * identifier[rpNumber].system = "urn:oid:1.2.392.100495.20.3.81"
@@ -57,7 +57,7 @@ Description: "内服　処方例１件　MedicationRequestリソースのイン�
 * medicationCodeableConcept.text = "カルボシステイン２５０ｍｇ錠"
 
 // * subject.reference = "jppatientExample01Inline"
-* subject.reference = "urn:uuid:719bf777-471d-4800-a807-8309b921e737"
+* subject.reference = "urn:uuid:210d26b2-1216-4219-b70c-bfcbe7edf664"
 
 * authoredOn = "2020-08-21T12:28:17+09:00"
 
@@ -65,16 +65,16 @@ Description: "内服　処方例１件　MedicationRequestリソースのイン�
 * dosageInstruction[+].text = "内服・経口・１日３回朝昼夕食後"
 
 //080on_処方開始日(ARGdate)
-* dosageInstruction[=].extension[+].url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DosageInstruction_UsageDuration"
+* dosageInstruction[=].extension[+].url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDosage_UsageDuration"
 * dosageInstruction[=].extension[=].valueDuration = 7 'd' "日"
 
 //100or_処方補足用法(ARGusageauxcode,ARGusageauxname)
 * dosageInstruction[=].timing.repeat.boundsDuration = 7 'd' "日"
 
-* dosageInstruction[=].timing.code = urn:oid:1.2.392.200250.2.2.20.20#1013044400000000 "内服・経口・１日３回朝昼夕食後"
+* dosageInstruction[=].timing.code = urn:oid:1.2.392.200250.2.2.20#1013044400000000 "内服・経口・１日３回朝昼夕食後"
 
 //130on_処方用法部位(ARGsitecode,ARGsite)
-* dosageInstruction[=].route = http://jpfhir.jp/fhir/ePrescription/CodeSystem/route-codes#PO "口"
+* dosageInstruction[=].route = http://jpfhir.jp/fhir/core/CodeSystem/route-codes#PO "口"
 * dosageInstruction[=].method = urn:oid:1.2.392.200250.2.2.20.30#1 "内服"
 
 //150on_処方外用用法(ARGmethodcode,ARGmethodname)
@@ -85,12 +85,12 @@ Description: "内服　処方例１件　MedicationRequestリソースのイン�
 * dosageInstruction[=].doseAndRate.rateRatio.numerator = 3 urn:oid:1.2.392.100495.20.2.101#TAB "錠"
 * dosageInstruction[=].doseAndRate.rateRatio.denominator = 1 'd' "日"
 
-* dispenseRequest.quantity = 21 urn:oid:1.2.392.100495.20.2.101#21code "21name"
+* dispenseRequest.quantity = 21 urn:oid:1.2.392.100495.20.2.101#TAB "錠"
 
 * dispenseRequest.expectedSupplyDuration = 7 'd' "日"
 
 //300on_処方後発変更可()
 * substitution.allowedCodeableConcept = urn:oid:1.2.392.100495.20.2.41#1 "変更不可"
-* substitution.reason.text = ""
+* substitution.reason.text = "患者希望"
 
 
