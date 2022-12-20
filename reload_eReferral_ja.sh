@@ -39,7 +39,7 @@ sushi .  -o ./output-json/$targetProject/$targetExample
 # validationを行う
 cd ~/GitHub/
 mkdir -p $selfDir/output/$targetProject/$targetExample
-java -jar work/validator_cli.jar \
+java -jar work/validator_cli.jar -language ja \
     $selfDir/output-json/$targetProject/$targetExample/fsh-generated/resources/$targetFile \
     -ig $selfDir/packages_snapshot/$targetPackageTgz \
     -tx https://tx.jpfhir.jp:8081 \

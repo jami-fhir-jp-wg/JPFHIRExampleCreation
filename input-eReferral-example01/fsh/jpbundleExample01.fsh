@@ -13,67 +13,67 @@ Description: "bundleReferralExample01 診療情報提供書Bundle"
 
 * timestamp = "2021-11-26T10:00:00+09:00"
 
-* entry[+].fullUrl = "urn:uuid:811865db-fbf4-4064-857d-7b19edffe6a2"
+* entry[+].fullUrl = "urn:uuid:e9d13e2d-8123-4564-8cb7-9bdbec5f07d9"
 * entry[=].resource = compositionReferralExample01Inline
 
-* entry[+].fullUrl = "urn:uuid:210d26b2-1216-4219-b70c-bfcbe7edf664"
+* entry[+].fullUrl = "urn:uuid:77cb7a86-210e-4409-a79a-a236da910bc0"
 * entry[=].resource = jppatientExample01Inline
 
-* entry[+].fullUrl = "urn:uuid:dbe94af4-af22-4b3c-a33a-a984cba25acb"
+* entry[+].fullUrl = "urn:uuid:b5101833-f1fe-41b8-8226-a9184844890c"
 * entry[=].resource = encounterReferralExample01Inline
 
-* entry[+].fullUrl = "urn:uuid:f8636e7e-1942-4f98-9138-03376ce02c51"
+* entry[+].fullUrl = "urn:uuid:547c0461-b6b3-44ab-9d4e-35fc13e77604"
 * entry[=].resource = referralFromPractitionerExample01Inline
 
-* entry[+].fullUrl = "urn:uuid:1a98c344-c4db-4344-9d79-c0664835e0b1"
+* entry[+].fullUrl = "urn:uuid:76e10dc1-f949-4383-96d4-3bbd523ff2be"
 * entry[=].resource = referralToPractitionerExample01Inline
 
-* entry[+].fullUrl = "urn:uuid:56223613-17c6-4165-af7a-b71c8d9ff908"
+* entry[+].fullUrl = "urn:uuid:b9350e61-bdcf-4ac2-aa4e-ec465a8cf78d"
 * entry[=].resource = referralFromOrganizationExample01Inline
 
-* entry[+].fullUrl = "urn:uuid:8751c367-f89f-40ae-b565-760386ebd30e"
+* entry[+].fullUrl = "urn:uuid:991643e0-193f-4430-ac2e-7caa30a82ec5"
 * entry[=].resource = referralToOrganizationExample01Inline
 
-* entry[+].fullUrl = "urn:uuid:726d067d-f246-4c5f-ac2d-aee85bd9c6e8"
+* entry[+].fullUrl = "urn:uuid:83a1d413-5cd6-4e01-8e9e-91da442f0954"
 * entry[=].resource = referralToOrganizationDeptExample01Inline
 
-* entry[+].fullUrl = "urn:uuid:45c31ba0-f611-4a29-8833-1cf83bf0eedd"
+* entry[+].fullUrl = "urn:uuid:6552be36-c474-4029-880b-30609d958e84"
 * entry[=].resource = referralFromOrganizationDeptExample01Inline
 
-* entry[+].fullUrl = "urn:uuid:8f30745a-ecb6-4bc4-9176-06065cc75845"
+* entry[+].fullUrl = "urn:uuid:98a0a12d-1ae2-4f94-b490-355fdaf18733"
 * entry[=].resource = purposeReferralExample01Inline
 
-* entry[+].fullUrl = "urn:uuid:b7303acd-a487-41db-811d-ac286b777c2d"
+* entry[+].fullUrl = "urn:uuid:615e243c-9fad-4d07-b5ea-c529a130f201"
 * entry[=].resource = cc1ReferralExample01Inline
 
-* entry[+].fullUrl = "urn:uuid:87054dd9-e100-49b9-80c9-3cb156d91a90"
+* entry[+].fullUrl = "urn:uuid:7573f5c6-189f-4cec-a585-46736755ed52"
 * entry[=].resource = cc2ReferralExample01Inline
 
-* entry[+].fullUrl = "urn:uuid:696f0854-887c-4837-858b-2d4e86310461"
+* entry[+].fullUrl = "urn:uuid:3c678e62-f98a-40b1-bf5a-b6ecaf677464"
 * entry[=].resource = piReferralExample01Inline
 
-* entry[+].fullUrl = "urn:uuid:508e5796-2636-4d92-af5f-19c2fce86169"
+* entry[+].fullUrl = "urn:uuid:b6534b7c-eeb8-4f45-b7a3-84b522aea674"
 * entry[=].resource = ph1ReferralExample01Inline
 
-* entry[+].fullUrl = "urn:uuid:7df0ca28-5fb7-4733-b21f-6823e4ff63ac"
+* entry[+].fullUrl = "urn:uuid:3e467860-4ff2-46cc-a640-419524e383b0"
 * entry[=].resource = ph2ReferralExample01Inline
 
-* entry[+].fullUrl = "urn:uuid:9088a52c-0630-49df-9c8e-750a84f79e05"
+* entry[+].fullUrl = "urn:uuid:a3c7683d-2dbc-4ff6-8f71-bb63c420379c"
 * entry[=].resource = alg1ReferralExample01Inline
 
-* entry[+].fullUrl = "urn:uuid:9d402467-cd33-4487-9292-f56cb10b57cc"
+* entry[+].fullUrl = "urn:uuid:3541b708-0b37-493c-9a00-705e2f5c74c0"
 * entry[=].resource = alg1ReferralExample02Inline
 
-* entry[+].fullUrl = "urn:uuid:2f247a81-efd5-409d-8a0a-cb261cb68c8a"
+* entry[+].fullUrl = "urn:uuid:cb3845d9-859c-43de-9350-5a6b006b70ab"
 * entry[=].resource = psobsCommonExample01Inline
 
-* entry[+].fullUrl = "urn:uuid:73a72925-3621-44f3-9fb1-975930a08941"
+* entry[+].fullUrl = "urn:uuid:ede9935d-5459-42ab-b8ad-7e7218b783bf"
 * entry[=].resource = ccourseReferralExample01Inline
 
-* entry[+].fullUrl = "urn:uuid:f165cd19-3679-4e1c-856d-a1dd465a4a49"
+* entry[+].fullUrl = "urn:uuid:92968c93-9050-4b8d-b34d-da08daf783dc"
 * entry[=].resource = MedicationRequestExample01Inline
 
-* entry[+].fullUrl = "urn:uuid:9dcf7f6e-b887-4dbb-81df-f4f76c690093"
+* entry[+].fullUrl = "urn:uuid:2906e8cb-0eeb-4b42-8dd4-80a0ee814aac"
 * entry[=].resource = JP-MedReq-ePreData-Example-fukintouByDayInline
 
 
