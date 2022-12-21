@@ -67,20 +67,3 @@ $090mn_PDFDocumentReference(ARGorgref)
 $091mn_PDFBinary(ARGorgref)
 
 
-
-
-
-/*
-$070on_退院時サマリー目的Encounter(腹痛精査お願いします。,$purposeDischargeSummaryExample01Inline) 
-$070on_退院時サマリー傷病名Condition(上腹部痛、腰痛,$cc1ReferralExample01Inline,$cc2ReferralExample01Inline) 
-$070mn_退院時サマリー入院時現病歴Condition(２０２２年６月上旬から夜食後に時々上腹部痛があり、だんだんひどくなっている。他に目立った症状なし。,$piReferralExample01Inline) 
-$070on_退院時サマリー既往歴Condition(2018年　狭心症　２ヶ月治療で軽快。2019年　交通事故で左前腕骨折　３ヶ月ギプス固定。,$ph1ReferralExample01Inline,$ph2ReferralExample01Inline) 
-$070on_退院時サマリーアレルギーAllergy(サバ　キーウイ,$alg1ReferralExample01Inline,$alg1ReferralExample01Inline) 
-$070on_退院時サマリー家族歴Family(母　胃がん) 
-$070on_退院時サマリー身体所見ObsCommon(腹部所見：上腹部圧痛あり、その他特に所見なし。,$psobsCommonExample01Inline) 
-$070on_退院時サマリー感染症ObsCommon(特になし)
-$070on_退院時サマリー臨床経過DocRef(添付参照,$ccourseDischargeSummaryExample01Inline)
-
-
-*/
-
