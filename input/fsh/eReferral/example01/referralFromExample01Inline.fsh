@@ -97,7 +97,7 @@ Description: "紹介元医療機関の診療科情報　例"
 * name = "眼科"
 
 // * partOf.reference = "referralFromOrganizationDeptExample01Inline"
-* partOf.reference = "urn:uuid:6552be36-c474-4029-880b-30609d958e84"
+* partOf.reference = "urn:uuid:4732cd90-71ef-4f8a-8549-7027fe0b4236"
 
 //--------------
 Instance: referralFromPractitionerExample01Inline

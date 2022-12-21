@@ -30,10 +30,10 @@ Description: "allergyeferralExample01 診療情報提供書　アレルギー例
 * code.text = "サバ"
 
 // * patient.reference = "jppatientExample01Inline"
-* patient.reference = "urn:uuid:77cb7a86-210e-4409-a79a-a236da910bc0"
+* patient.reference = "urn:uuid:714d7ead-c92b-4342-87ba-57cd89a0c363"
 
 // * encounter.reference = "encounterReferralExample01Inline"
-* encounter.reference = "urn:uuid:b5101833-f1fe-41b8-8226-a9184844890c"
+* encounter.reference = "urn:uuid:666cacd1-c1d4-4fdd-bea4-0409629f8027"
 
 //100on_アレルギ時期日時(ARGdate,ARGtime)
 //100on_アレルギ時期日(ARGdate)
@@ -72,10 +72,10 @@ Description: "allergyeferralExample01 診療情報提供書　アレルギー例
 * code.text = "キーウイ"
 
 // * patient.reference = "jppatientExample01Inline"
-* patient.reference = "urn:uuid:77cb7a86-210e-4409-a79a-a236da910bc0"
+* patient.reference = "urn:uuid:714d7ead-c92b-4342-87ba-57cd89a0c363"
 
 // * encounter.reference = "encounterReferralExample01Inline"
-* encounter.reference = "urn:uuid:b5101833-f1fe-41b8-8226-a9184844890c"
+* encounter.reference = "urn:uuid:666cacd1-c1d4-4fdd-bea4-0409629f8027"
 
 //100on_アレルギ時期日時(ARGdate,ARGtime)
 //100on_アレルギ時期日(ARGdate)

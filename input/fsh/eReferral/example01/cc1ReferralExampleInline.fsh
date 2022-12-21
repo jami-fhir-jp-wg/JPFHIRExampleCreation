@@ -19,7 +19,7 @@ Description: "conditionReferralExample01CC1 診療情報提供書　主訴例　
 * code[+].text = "上腹部痛"
 
 // * subject.reference = "jppatientExample01Inline"
-* subject.reference = "urn:uuid:77cb7a86-210e-4409-a79a-a236da910bc0"
+* subject.reference = "urn:uuid:714d7ead-c92b-4342-87ba-57cd89a0c363"
 
 // 2022-06-09 2020-08-21
 // ATGtime 12:12:20
@@ -43,7 +43,7 @@ Description: "conditionReferralExample01CC2 診療情報提供書　主訴例　
 * code[+].text = "腰痛"
 
 // * subject.reference = "jppatientExample01Inline"
-* subject.reference = "urn:uuid:77cb7a86-210e-4409-a79a-a236da910bc0"
+* subject.reference = "urn:uuid:714d7ead-c92b-4342-87ba-57cd89a0c363"
 
 // 2022-05 2020-08-21
 // ATGtime 12:12:20
