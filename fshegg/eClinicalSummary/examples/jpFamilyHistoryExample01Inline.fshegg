@@ -1,5 +1,5 @@
 // FamilyHistory_eClinicalSummary
-#include "../fshDef/jpFamilyHistory_eCSDef.fshdef"
+#include "jpFamilyHistory_eCSDef.fshdef"
 
 $000mn_ExampleJPFamilyHistory_eCS(jpFamilyHistoryExample01Inline)  
 $001mn_Description(退院時サマリー　家族歴)

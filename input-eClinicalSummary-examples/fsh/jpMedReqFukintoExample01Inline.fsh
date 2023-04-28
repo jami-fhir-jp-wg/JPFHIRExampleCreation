@@ -1,9 +1,8 @@
 // MedicationResourceリース
-// JP_JPMedicationRequest
-// ePrescriptionData 派生
-//000mn_ExampleJPMedicationRequest_ePrescriptionData(ARGinstancename)
-//001mn_Description(ARGtxt)
-//002or_ValidationProfile_JPMedicationRequest_ePrescriptionData()
+// JP_MedicationRequest
+//000mn_ExampleJPMedicationRequest(ARGinstancename) 
+//001mn_Description(ARGtxt) 
+//002or_ValidationProfile_JPMedicationRequest_ePrescriptionData() 
 //010mn_処方番号(ARGshohono,ARGrpno)
 //020mr_処方薬HOT9(ARGcode,ARGname)
 //020mr_処方薬YJ(ARGcode,ARGname)
@@ -30,18 +29,14 @@
 //300on_処方後発変更可()
 //300on_処方後発変更不可(ARGnote)
 
-//不均等投与1日用法の医薬品処方１件
+//不均等投与1日用法の医薬品処方１件　
 //MedicationRequestリソースのインスタンス例
 //プレドニン錠５ｍｇ１日３回　毎食後　７錠（４錠－２錠－１錠）
 
-Instance: JP-MedReq-ePreData-Example-fukintouByDayInline
-InstanceOf: JP_MedicationRequest
-Usage: #inline
-
+$000mn_ExampleJPMedicationRequest_ePrescriptionData(JP-MedReq-ePreData-Example-fukintouByDayInline)
 Description: "不均等投与1日用法の医薬品処方１件　MedicationRequestリソースのインスタンス例（プレドニン錠５ｍｇ１日３回　毎食後　７錠（４錠－２錠－１錠））"
-
-* meta.profile[+] = "http://jpfhir.jp/fhir/ePrescription/StructureDefinition/JP_MedicationRequest_ePrescriptionData"
-
+  
+$002or_ValidationProfile_JPMedicationRequest_ePrescriptionData() 
 
 * identifier[rpNumber].system = "urn:oid:1.2.392.100495.20.3.81"
 * identifier[rpNumber].value = "9"
@@ -54,8 +49,7 @@ Description: "不均等投与1日用法の医薬品処方１件　MedicationRequ
 
 * medicationCodeableConcept.text = "プレドニン錠５ｍｇ"
 
-// * subject.reference = "jppatientExample01Inline"
-* subject.reference = "urn:uuid:714d7ead-c92b-4342-87ba-57cd89a0c363"
+* subject.reference = "jppatientExample01Inline"
 
 
 * authoredOn = "2020-08-21T12:28:17+09:00"
@@ -91,10 +85,10 @@ Description: "不均等投与1日用法の医薬品処方１件　MedicationRequ
 //160mn_処方原薬量指定()
 //170on_処方用法1回量(ARGdoseqty,ARGdoseunitcode,ARGdoseunitname)
 
-* dosageInstruction[=].doseAndRate.rateRatio.numerator = 7 urn:oid:1.2.392.100495.20.2.101#TAB "錠"
+* dosageInstruction[=].doseAndRate.rateRatio.numerator = 7 urn:oid:1.2.392.100495.20.2.101#KO "個"
 * dosageInstruction[=].doseAndRate.rateRatio.denominator = 1 'd' "日"
 
-* dispenseRequest.quantity = 49 urn:oid:1.2.392.100495.20.2.101#TAB "錠"
+* dispenseRequest.quantity = 49 urn:oid:1.2.392.100495.20.2.101#49code "49name"
 
 * dispenseRequest.expectedSupplyDuration = 7 'd' "日"
 

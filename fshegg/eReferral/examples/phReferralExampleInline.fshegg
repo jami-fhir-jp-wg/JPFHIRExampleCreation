@@ -1,4 +1,4 @@
-#include "../fshDef/jpCondition_eReferralDef.fshdef"
+#include "jpCondition_eCSDef.fshdef"
 
 $000mn_ExampleJPCondition_eCS(ph1ReferralExample01Inline)  
 $001mn_Description(conditionReferralExample01 診療情報提供書　既往歴例1　狭心症)

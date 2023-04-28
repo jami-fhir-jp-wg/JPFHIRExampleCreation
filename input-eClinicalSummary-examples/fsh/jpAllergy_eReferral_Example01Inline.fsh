@@ -6,7 +6,7 @@ Instance: alg1ReferralExample01Inline
 InstanceOf: JP_AllergyIntolerance
 Usage: #inline
 
-Description: "allergyeferralExample01 診療情報提供書　アレルギー例1　サバ"
+Description: "allergyeferralExample01 退院時サマリー　アレルギー例1　サバ"
 
 * meta.profile[+] = "http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_AllergyIntolerance_eClinicalSummary"
 
@@ -46,7 +46,7 @@ Instance: alg1ReferralExample02Inline
 InstanceOf: JP_AllergyIntolerance
 Usage: #inline
 
-Description: "allergyeferralExample01 診療情報提供書　アレルギー例1　キーウイ"
+Description: "allergyeferralExample01 退院時サマリー　アレルギー例1　キーウイ"
 
 * meta.profile[+] = "http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_AllergyIntolerance_eClinicalSummary"
 

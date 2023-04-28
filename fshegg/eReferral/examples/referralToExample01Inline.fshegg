@@ -1,6 +1,6 @@
-#include "../fshDef/jpOrganization_eCSDef.fshdef"
-#include "../fshDef/jpOrganizationDept_eCSDef.fshdef"
-#include "../fshDef/jpPractitioner_eCSDef.fshdef"
+#include "jpOrganization_issuer_eCSDef.fshdef"
+#include "jpOrganizationDept_eCSDef.fshdef"
+#include "jpPractitioner_eCSDef.fshdef"
 
 $000mn_ExampleJPOrganization_eCS(referralToOrganizationExample01Inline)
 $001mn_Description(紹介先医療機関情報　例)

@@ -7,8 +7,8 @@
 // 000mn_ExampleJPOrganization_eCS(ARGinstancename)
 // 001mn_Description(ARGtxt)
 // 002or_ValidationProfile(ARGmetaprofile)
-// 002or_ValidationProfile_JPOrganization_eCS()
-//
+// 002or_ValidationProfile_JPOrganization_eCS() 
+// 
 // 010mn_機関医療機関番号(ARGorgno)
 // 040mn_機関名(ARGorgname)
 // 040or_機関電話番号(ARG)
@@ -19,8 +19,8 @@
 // 000mn_ExampleJPOrganizationDept_eCS(ARGinstancename)
 // 001mn_Description(ARGtxt)
 // 002or_ValidationProfile(ARGmetaprofile)
-// 002or_ValidationProfile_JPOrganizationDept_eCS()
-//
+// 002or_ValidationProfile_JPOrganizationDept_eCS() 
+// 
 // 030mn_診療科コード名称(ARGcodesystem, ARGdeptcode)
 // 040mn_診療科名称(ARGorgname)
 // 040or_診療科所属医療機関参照(ARGrefresource)
@@ -29,8 +29,8 @@
 // JP_Practitioner_eClinicalSummary_author
 // 000mn_ExampleJPPractitioner_eCS(ARGinstancename)
 // 001mn_Description(ARGtxt)
-// 002or_ValidationProfile(ARGmetaprofile)
-// 002or_ValidationProfile_JPPractitioner_eCS()
+// 002or_ValidationProfile(ARGmetaprofile) 
+// 002or_ValidationProfile_JPPractitioner_eCS() 
 // 030mn_医療者漢字氏名(ARGfirstname,ARGgivenname)
 // 030on_医療者カナ氏名(ARGfirstnamekana,ARGgivennamekana)
 
@@ -38,12 +38,12 @@ Instance: referralToOrganizationExample01Inline
 InstanceOf: JP_Organization
 Usage: #inline
 
-Description: "紹介先医療機関情報　例"
+Description: "退院時サマリー作成先医療機関情報　例"
 
 // 002or_ValidationProfile(ARGmetaprofile)
 * meta.profile[+] = "http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Organization_eClinicalSummary"
-
-//
+ 
+// 
 //--------------
 // 機関都道府県番号：2桁数字　北海道は01
 * extension[+].url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Organization_PrefectureNo" (exactly)
@@ -81,12 +81,12 @@ Instance: referralToOrganizationDeptExample01Inline
 InstanceOf: JP_Organization
 Usage: #inline
 
-Description: "紹介先医療機関の診療科情報　例"
+Description: "退院時サマリー作成先医療機関の診療科情報　例"
 
 //002or_ValidationProfile(ARGmetaprofile)
 * meta.profile[+] = "http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Organization_eClinicalSummary_department"
-
-//
+ 
+// 
 * type[+].coding.system = "http://terminology.hl7.org/CodeSystem/organization-type"
 * type[=].coding.code = #dept
 //
@@ -95,19 +95,18 @@ Description: "紹介先医療機関の診療科情報　例"
 
 * name = "循環器内科"
 
-// * partOf.reference = "referralToOrganizationDeptExample01Inline"
-* partOf.reference = "urn:uuid:595a7cae-3894-449f-94ff-6ee989825c41"
+* partOf.reference = "referralToOrganizationDeptExample01Inline"
 
 //--------------
 Instance: referralToPractitionerExample01Inline
 InstanceOf: JP_Practitioner
 Usage: #inline
 
-Description: "紹介先医療機関の医師情報　例"
+Description: "退院時サマリー作成先医療機関の医師情報　例"
 
-// 002or_ValidationProfile(ARGmetaprofile)
+// 002or_ValidationProfile(ARGmetaprofile) 
 * meta.profile[+] = "http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Practitioner_eClinicalSummary"
-
+ 
 * name[+].extension.url = "http://hl7.org/fhir/StructureDefinition/iso21090-EN-representation"
 * name[=].extension.valueCode = #IDE
 * name[=].use = #official

@@ -1,6 +1,5 @@
 //MedicationRequestExample01
-
-#include "fshDef/jpMedReq_eCSDef.fshdef"
+#include "jpMedReq_eCSDef.fshdef"
 
 $000mn_ExampleJPMedicationRequest_ePrescriptionData(MedicationRequestExample01Inline)  
 $001mn_Description(内服　退院時処方例　MedicationRequestリソースのインスタンス例) 

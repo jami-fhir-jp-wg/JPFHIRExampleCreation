@@ -1,6 +1,6 @@
-#include "../fshDef/jpOrganization_eCS_issuerDef.fshdef"
-#include "../fshDef/jpOrganizationDept_eCSDef.fshdef"
-#include "../fshDef/jpPractitioner_eCSDef.fshdef"
+#include "jpOrganization_issuer_eCSDef.fshdef"
+#include "jpOrganizationDept_eCSDef.fshdef"
+#include "jpPractitioner_eCSDef.fshdef"
 
 //--------------
 $000mn_ExampleJPOrganization_eCS_issuer(referralFromOrganizationExample01Inline)

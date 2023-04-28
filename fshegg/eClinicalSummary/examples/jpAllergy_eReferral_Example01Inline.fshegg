@@ -1,4 +1,4 @@
-#include "../fshDef/jpAllergy_eCSDef.fshdef"
+#include "jpAllergy_eCSDef.fshdef"
 
 $000mn_ExampleJPAllergy_eCS(alg1ReferralExample01Inline)
 $001mn_Description(allergyeferralExample01 退院時サマリー　アレルギー例1　サバ)

@@ -34,13 +34,11 @@
 // 030mn_医療者漢字氏名(ARGfirstname,ARGgivenname)
 // 030on_医療者カナ氏名(ARGfirstnamekana,ARGgivennamekana)
 
-Instance: referralToOrganizationExample01Inline
-InstanceOf: JP_Organization
-Usage: #inline
-
+$000mn_ExampleJPOrganization_eCS(referralToOrganizationExample01Inline)
 Description: "紹介先医療機関情報　例"
 
 // 002or_ValidationProfile(ARGmetaprofile)
+//* meta.profile[+] = "http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Organization_eClinicalSummary_issuer"
 * meta.profile[+] = "http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Organization_eClinicalSummary"
  
 // 
