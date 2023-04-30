@@ -1,8 +1,10 @@
 //MedicationRequestExample01
-#include "jpMedReq_eCSDef.fshdef"
+//#include "jpMedReq_eCSDef.fshdef"
+#include "jpMedReq_ePreDef.fshdef"
 
 $000mn_ExampleJPMedicationRequest_ePrescriptionData(MedicationRequestExample01Inline)  
 $001mn_Description(内服　退院時処方例　MedicationRequestリソースのインスタンス例) 
+$001mn_LastUpdated()
 $002or_ValidationProfile_JPMedicationRequest_ePrescriptionData() 
 $010mn_処方番号(1,1)
 $020mr_処方薬HOT9(116755901,アスピリン腸溶錠 100mg)
@@ -31,6 +33,7 @@ $300on_処方後発変更不可(患者希望)
 
 $000mn_ExampleJPMedicationRequest_ePrescriptionData(MedicationRequestExample01Inline)  
 $001mn_Description(内服　退院時処方例　MedicationRequestリソースのインスタンス例) 
+$001mn_LastUpdated()
 $002or_ValidationProfile_JPMedicationRequest_ePrescriptionData() 
 $010mn_処方番号(1,1)
 $020mr_処方薬YJ(2139005F2385,フロセミド錠40mg｢NP｣)

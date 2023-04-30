@@ -6,6 +6,7 @@
 $000mn_ExampleJPOrganization_eCS_issuer(docOrgExample01Inline)
 $001mn_Description(退院時サマリー作成元医療機関情報　例)
 // 002r_ValidationProfile(ARGmetaprofile)
+$001mn_LastUpdated()
 $002or_ValidationProfile_JPOrganization_eCS() 
 // 
 $0E1mr_機関都道府県番号(13)
@@ -21,6 +22,7 @@ $080or_機関住所(106-9900,東京都港区新橋１−２−３)
 $000mn_ExampleJPOrganizationDept_eCS(docOrgDeptExample01Inline)
 $001mn_Description(退院時サマリー作成医療機関の診療科情報　例)
 //002or_ValidationProfile(ARGmetaprofile)
+$001mn_LastUpdated()
 $002or_ValidationProfile_JPOrganizationDept_eCS() 
 // 
 $030on_診療科コード(urn:oid:1.2.392.100495.20.2.51, 081)

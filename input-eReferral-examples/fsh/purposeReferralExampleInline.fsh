@@ -1,4 +1,6 @@
 // Encounter_eClinicalSummary
+// Description　meta.lastUpdated設定　必須　１回のみ
+// パラメータ：なし（固定値が設定される）
 //以下省略（診療情報提供書）
 Instance: purposeReferralExample01Inline
 InstanceOf: JP_Encounter

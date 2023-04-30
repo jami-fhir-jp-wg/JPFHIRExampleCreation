@@ -24,6 +24,7 @@
 
 $000mn_ExampleJPComposition_eDischargeSummary(compositionReferralExample01Inline)
 $001mn_Description(構成情報サンプル　composition)
+$001mn_LastUpdated()
 $002or_ValidationProfile_JPComposition_eCS()
 $0E1mn_退院時サマリー文書バージョン(1) 
 $010mn_退院時サマリー文書ID(34875506) 

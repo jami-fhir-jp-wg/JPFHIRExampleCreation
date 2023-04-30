@@ -1,3 +1,5 @@
+#include "constant_eCSDef.fshdef"
+
 // Allergy_eClinicalSummary
 
 #bigdef $000mn_ExampleJPAllergy_eCS(ARGinstancename)
@@ -9,6 +11,14 @@ Usage: #inline
 #ifndef $001mn_Description(ARGtxt)
 #bigdef $001mn_Description(ARGtxt)
 Description: "ARGtxt"
+#endbigdef
+#endif
+
+// Description　meta.lastUpdated設定　必須　１回のみ
+// パラメータ：なし（固定値が設定される）
+#ifndef $001mn_LastUpdated
+#bigdef $001mn_LastUpdated()
+* meta.lastUpdated = $Common_LastUpdated
 #endbigdef
 #endif
 

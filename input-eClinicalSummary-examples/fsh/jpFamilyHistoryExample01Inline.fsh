@@ -1,5 +1,9 @@
 // FamilyHistory_eClinicalSummary
 // FamilyHistory_eClinicalSummary
+// Description　meta.lastUpdated設定　必須　１回のみ
+// パラメータ：なし（固定値が設定される）
+// Description　meta.lastUpdated設定　必須　１回のみ
+// パラメータ：なし（固定値が設定される）
 // 030 verificationStatus
 
 Instance: jpFamilyHistoryExample01Inline
@@ -7,6 +11,8 @@ InstanceOf: JP_FamilyMemberHistory
 Usage: #inline
   
 Description: "退院時サマリー　家族歴"
+
+* meta.lastUpdated = "2023-04-01T10:00:00+09:00"
 
 * meta.profile[+] = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_FamilyMemberHistory"
 
@@ -17,7 +23,8 @@ Description: "退院時サマリー　家族歴"
 
 * patient.reference = "jppatientExample01Inline"
 
-$110mn_家族名TEXT(父)
+* relationship.text = "父"
+
 * condition[+].code.text = "胃がん"
 
 
@@ -26,6 +33,8 @@ InstanceOf: JP_FamilyMemberHistory
 Usage: #inline
   
 Description: "退院時サマリー　家族歴"
+
+* meta.lastUpdated = "2023-04-01T10:00:00+09:00"
 
 * meta.profile[+] = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_FamilyMemberHistory"
 
@@ -36,7 +45,8 @@ Description: "退院時サマリー　家族歴"
 
 * patient.reference = "jppatientExample01Inline"
 
-$110mn_家族名TEXT()
+* relationship.text = ""
+
 // note.textはmarkdown
 * note.text = "家族に心疾患の既往なし"
 

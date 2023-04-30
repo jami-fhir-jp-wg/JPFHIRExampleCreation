@@ -1,41 +1,86 @@
+#include "constant_eCSDef.fshdef"
+
 #function genUUID4 UUIDV4generator::genUUID4
 
+// -------------------------------
+// 診療情報提供書Bundle の定義
+// -------------------------------
+
+// Instance　ヘッダー設定　必須　１回のみ
+// パラメータ：Instance名
+#ifndef $000mn_ExampleJPBundle_eReferral
 #bigdef $000mn_ExampleJPBundle_eReferral(ARGinstancename)
 Instance: ARGinstancename
 InstanceOf: Bundle
 Usage: #example
 #endbigdef
+#endif
 
-#ifndef $001mn_Description(ARGtxt)
-#bigdef $001mn_Description(ARGtxt)
+// Description　Description設定　任意　１回のみ
+// パラメータ：Description文字列
+#ifndef $001on_Description
+#bigdef $001on_Description(ARGtxt)
 Description: "ARGtxt"
 #endbigdef
 #endif
 
-#ifndef $002or_ValidationProfile(ARGmetaprofile)
+// Description　meta.lastUpdated設定　必須　１回のみ
+// パラメータ：なし（固定値が設定される）
+#ifndef $001mn_LastUpdated
+#bigdef $001mn_LastUpdated()
+* meta.lastUpdated = "2023-04-01T10:00:00+09:00"
+#endbigdef
+#endif
+
+// Description　診療情報固有meta.profile設定　必須　１回のみ
+// パラメータ：Profile文字列
+#ifndef $002mn_ValidationProfile_JPBundle__eReferral
+#bigdef $002mn_ValidationProfile_JPBundle__eReferral()
+* meta.profile[+] = "http://jpfhir.jp/fhir/eReferral/StructureDefinition/JP_Bundle_eReferral"
+#endbigdef
+#endif
+
+// Description　meta.profile設定　任意　繰り返し
+// パラメータ：Profile文字列
+#ifndef $002or_ValidationProfile
 #bigdef $002or_ValidationProfile(ARGmetaprofile) 
 * meta.profile[+] = "ARGmetaprofile"
 * language = #ja
 #endbigdef
 #endif
 
-#ifndef $002or_ValidationProfile_JPBundle__eReferral
-#bigdef $002or_ValidationProfile_JPBundle__eReferral()
-* meta.profile[+] = "http://jpfhir.jp/fhir/eReferral/StructureDefinition/JP_Bundle_eReferral"
-#endbigdef
-#endif
-
+// Description　文書IDを表すIdentifier設定　必須　１回のみ
+// パラメータ：文書ID文字列
+#ifndef $010mn_文書ID
 #bigdef  $010mn_文書ID(ARGcode)
 * identifier.system = "http://jpfhir.jp/fhir/core/IdSystem/documentInstance-identifier"
 * identifier.value = "ARGcode"
 * type = #document
 #endbigdef
+#endif
 
+// Description　文書日時設定　必須　１回のみ
+// パラメータ：文書日付文字列（例：2023-04-01）、文書時刻文字列（例：12:23:00）
+#ifndef $020mn_文書日時
 #bigdef  $020mn_文書日時(ARGdate,ARGtime)
 * timestamp = "ARGdateTARGtime+09:00"
 #endbigdef
+#endif
 
-#bigdef  $030mn_文書entry(ARGurl,ARGresourceRef)
+// Description　文書entry設定　必須　繰り返し
+// パラメータ：URL、リソースインスタンス名
+#ifndef $030mr_文書entry
+#bigdef  $030mr_文書entry(ARGurl,ARGresourceRef)
 * entry[+].fullUrl = "ARGurl"
 * entry[=].resource = ARGresourceRef
 #endbigdef
+#endif
+
+// Description　文書entry設定　必須　繰り返し
+// パラメータ：URL、リソースインスタンス名
+#ifndef $030mr_文書autoEntry
+#bigdef  $030mr_文書autoEntry(ARGresourceRef)
+* entry[+].fullUrl = "genUUID4()"
+* entry[=].resource = ARGresourceRef
+#endbigdef
+#endif

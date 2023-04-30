@@ -1,7 +1,9 @@
 //MedicationRequestExample01
+//#include "jpMedReq_eCSDef.fshdef"
 // MedicationResourceリース
-// JP_MedicationRequest
-//000mn_ExampleJPMedicationRequest(ARGinstancename) 
+// JP_JPMedicationRequest
+// ePrescriptionData 派生
+//000mn_ExampleJPMedicationRequest_ePrescriptionData(ARGinstancename) 
 //001mn_Description(ARGtxt) 
 //002or_ValidationProfile_JPMedicationRequest_ePrescriptionData() 
 //010mn_処方番号(ARGshohono,ARGrpno)
@@ -29,11 +31,19 @@
 //210on_処方調剤全日数(ARGdays)
 //300on_処方後発変更可()
 //300on_処方後発変更不可(ARGnote)
+// Description　meta.lastUpdated設定　必須　１回のみ
+// パラメータ：なし（固定値が設定される）
 
-$000mn_ExampleJPMedicationRequest_ePrescriptionData(MedicationRequestExample01Inline)  
+Instance: MedicationRequestExample01Inline
+InstanceOf: JP_MedicationRequest
+Usage: #inline
+  
 Description: "内服　退院時処方例　MedicationRequestリソースのインスタンス例"
  
-$002or_ValidationProfile_JPMedicationRequest_ePrescriptionData() 
+* meta.lastUpdated = "2023-04-01T10:00:00+09:00"
+
+* meta.profile[+] = "http://jpfhir.jp/fhir/ePrescription/StructureDefinition/JP_MedicationRequest_ePrescriptionData"
+ 
 * identifier[rpNumber].system = "urn:oid:1.2.392.100495.20.3.81"
 * identifier[rpNumber].value = "1"
 * identifier[orderInRp].system = "urn:oid:1.2.392.100495.20.3.82"
@@ -74,10 +84,10 @@ $002or_ValidationProfile_JPMedicationRequest_ePrescriptionData()
 
 * dosageInstruction[=].doseAndRate.doseQuantity = 1 urn:oid:1.2.392.100495.20.2.101#TAB "錠"
 
-* dosageInstruction[=].doseAndRate.rateRatio.numerator = 1 urn:oid:1.2.392.100495.20.2.101#KO "個"
+* dosageInstruction[=].doseAndRate.rateRatio.numerator = 1 urn:oid:1.2.392.100495.20.2.101#TAB "錠"
 * dosageInstruction[=].doseAndRate.rateRatio.denominator = 1 'd' "日"
 
-* dispenseRequest.quantity = 90 urn:oid:1.2.392.100495.20.2.101#90code "90name"
+* dispenseRequest.quantity = 90 urn:oid:1.2.392.100495.20.2.101#TAB "錠"
 
 * dispenseRequest.expectedSupplyDuration = 90 'd' "日"
 
@@ -86,10 +96,16 @@ $002or_ValidationProfile_JPMedicationRequest_ePrescriptionData()
 * substitution.reason.text = "患者希望"
 
 
-$000mn_ExampleJPMedicationRequest_ePrescriptionData(MedicationRequestExample01Inline)  
+Instance: MedicationRequestExample01Inline
+InstanceOf: JP_MedicationRequest
+Usage: #inline
+  
 Description: "内服　退院時処方例　MedicationRequestリソースのインスタンス例"
  
-$002or_ValidationProfile_JPMedicationRequest_ePrescriptionData() 
+* meta.lastUpdated = "2023-04-01T10:00:00+09:00"
+
+* meta.profile[+] = "http://jpfhir.jp/fhir/ePrescription/StructureDefinition/JP_MedicationRequest_ePrescriptionData"
+ 
 * identifier[rpNumber].system = "urn:oid:1.2.392.100495.20.3.81"
 * identifier[rpNumber].value = "1"
 * identifier[orderInRp].system = "urn:oid:1.2.392.100495.20.3.82"
@@ -128,10 +144,10 @@ $002or_ValidationProfile_JPMedicationRequest_ePrescriptionData()
 
 * dosageInstruction[=].doseAndRate.doseQuantity = 1 urn:oid:1.2.392.100495.20.2.101#TAB "錠"
 
-* dosageInstruction[=].doseAndRate.rateRatio.numerator = 1 urn:oid:1.2.392.100495.20.2.101#KO "個"
+* dosageInstruction[=].doseAndRate.rateRatio.numerator = 1 urn:oid:1.2.392.100495.20.2.101#TAB "錠"
 * dosageInstruction[=].doseAndRate.rateRatio.denominator = 1 'd' "日"
 
-* dispenseRequest.quantity = 90 urn:oid:1.2.392.100495.20.2.101#90code "90name"
+* dispenseRequest.quantity = 90 urn:oid:1.2.392.100495.20.2.101#TAB "錠"
 
 * dispenseRequest.expectedSupplyDuration = 90 'd' "日"
 

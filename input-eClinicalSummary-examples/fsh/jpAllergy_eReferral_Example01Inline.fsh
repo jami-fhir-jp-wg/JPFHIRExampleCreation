@@ -1,4 +1,6 @@
 // Allergy_eClinicalSummary
+// Description　meta.lastUpdated設定　必須　１回のみ
+// パラメータ：なし（固定値が設定される）
 // 030 verificationStatus
 //当面中略（診療情報提供書）
 
@@ -7,6 +9,8 @@ InstanceOf: JP_AllergyIntolerance
 Usage: #inline
 
 Description: "allergyeferralExample01 退院時サマリー　アレルギー例1　サバ"
+
+* meta.lastUpdated = "2023-04-01T10:00:00+09:00"
 
 * meta.profile[+] = "http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_AllergyIntolerance_eClinicalSummary"
 
@@ -47,6 +51,8 @@ InstanceOf: JP_AllergyIntolerance
 Usage: #inline
 
 Description: "allergyeferralExample01 退院時サマリー　アレルギー例1　キーウイ"
+
+* meta.lastUpdated = "2023-04-01T10:00:00+09:00"
 
 * meta.profile[+] = "http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_AllergyIntolerance_eClinicalSummary"
 

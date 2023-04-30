@@ -1,4 +1,5 @@
-#include "jpMedReq_eCSDef.fshdef"
+//#include "jpMedReq_eCSDef.fshdef"
+#include "jpMedReq_ePreDef.fshdef"
 
 //不均等投与1日用法の医薬品処方１件　
 //MedicationRequestリソースのインスタンス例
@@ -6,6 +7,7 @@
 
 $000mn_ExampleJPMedicationRequest_ePrescriptionData(JP-MedReq-ePreData-Example-fukintouByDayInline)
 $001mn_Description(不均等投与1日用法の医薬品処方１件　MedicationRequestリソースのインスタンス例（プレドニン錠５ｍｇ１日３回　毎食後　７錠（４錠－２錠－１錠））)  
+$001mn_LastUpdated()
 $002or_ValidationProfile_JPMedicationRequest_ePrescriptionData() 
 
 $010mn_処方番号(9,1)

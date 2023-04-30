@@ -2,6 +2,7 @@
 
 $000mn_ExampleJPAllergy_eCS(alg1ReferralExample01Inline)
 $001mn_Description(allergyeferralExample01 退院時サマリー　アレルギー例1　サバ)
+$001mn_LastUpdated()
 $002or_ValidationProfile_JPAllergy_eCS()
 $010on_アレルギ管理番号(102934701)
 $040on_アレルギタイプ()
@@ -21,6 +22,7 @@ $150or_アレルギ追加TEXT(サバ食後３時間ほどで全身に発疹と�
 
 $000mn_ExampleJPAllergy_eCS(alg1ReferralExample02Inline)
 $001mn_Description(allergyeferralExample01 退院時サマリー　アレルギー例1　キーウイ)
+$001mn_LastUpdated()
 $002or_ValidationProfile_JPAllergy_eCS()
 $010on_アレルギ管理番号(102934701)
 $040on_アレルギタイプ()

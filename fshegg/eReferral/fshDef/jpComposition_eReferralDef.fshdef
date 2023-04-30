@@ -1,3 +1,5 @@
+#include "constant_eCSDef.fshdef"
+
 // Compositionリース
 Alias: $doc-typecodes = http://jpfhir.jp/fhir/Common/CodeSystem/doc-typecodes
 Alias: $referral-section = http://jpfhir.jp/fhir/eReferral/CodeSystem/document-section
@@ -34,6 +36,15 @@ Usage: #inline
 Description: "ARGtxt"
 #endbigdef
 #endif
+
+// Description　meta.lastUpdated設定　必須　１回のみ
+// パラメータ：なし（固定値が設定される）
+#ifndef $001mn_LastUpdated
+#bigdef $001mn_LastUpdated()
+* meta.lastUpdated = $Common_LastUpdated
+#endbigdef
+#endif
+
 
 #ifndef $002or_ValidationProfile(ARGmetaprofile)
 #bigdef $002or_ValidationProfile(ARGmetaprofile) 

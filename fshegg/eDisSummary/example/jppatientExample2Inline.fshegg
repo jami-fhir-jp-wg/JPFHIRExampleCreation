@@ -2,6 +2,7 @@
 
 $000mn_ExampleJPPatient(jppatientExample02Inline)  
 $001mn_Description(JPPatient患者情報（田中,太郎）　例)
+$001mn_LastUpdated()
 $002or_ValidationProfile_JPPatient()
 $010mn_患者ID(12345778)
 $020on_患者アクティブ()

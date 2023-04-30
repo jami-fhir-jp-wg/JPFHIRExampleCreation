@@ -1,3 +1,4 @@
+#include "jpOrganization_eCSDef.fshdef"
 #include "jpOrganization_issuer_eCSDef.fshdef"
 #include "jpOrganizationDept_eCSDef.fshdef"
 #include "jpPractitioner_eCSDef.fshdef"
@@ -5,6 +6,15 @@
 $000mn_ExampleJPOrganization_eCS(referralToOrganizationExample01Inline)
 $001mn_Description(紹介先医療機関情報　例)
 // 002or_ValidationProfile(ARGmetaprofile)
+
+// Description　meta.lastUpdated設定　必須　１回のみ
+// パラメータ：なし（固定値が設定される）
+#ifndef $001mn_LastUpdated
+#bigdef $001mn_LastUpdated()
+* meta.lastUpdated = $Common_LastUpdated
+#endbigdef
+#endif
+
 $002or_ValidationProfile_JPOrganization_eCS() 
 // 
 //--------------
@@ -21,6 +31,15 @@ $080or_機関住所(113-0001,東京都文京区文京町１−２−３)
 $000mn_ExampleJPOrganizationDept_eCS(referralToOrganizationDeptExample01Inline)
 $001mn_Description(紹介先医療機関の診療科情報　例)
 //002or_ValidationProfile(ARGmetaprofile)
+
+// Description　meta.lastUpdated設定　必須　１回のみ
+// パラメータ：なし（固定値が設定される）
+#ifndef $001mn_LastUpdated
+#bigdef $001mn_LastUpdated()
+* meta.lastUpdated = $Common_LastUpdated
+#endbigdef
+#endif
+
 $002or_ValidationProfile_JPOrganizationDept_eCS() 
 // 
 $030on_診療科コード(urn:oid:1.2.392.100495.20.2.51, 03)
@@ -30,6 +49,15 @@ $040mr_診療科所属医療機関参照(referralToOrganizationDeptExample01Inli
 $000mn_ExampleJPPractitioner_eCS(referralToPractitionerExample01Inline)
 $001mn_Description(紹介先医療機関の医師情報　例)
 // 002or_ValidationProfile(ARGmetaprofile) 
+
+// Description　meta.lastUpdated設定　必須　１回のみ
+// パラメータ：なし（固定値が設定される）
+#ifndef $001mn_LastUpdated
+#bigdef $001mn_LastUpdated()
+* meta.lastUpdated = $Common_LastUpdated
+#endbigdef
+#endif
+
 $002or_ValidationProfile_JPPractitioner_eCS() 
 $030mn_医療者漢字氏名(野口,英世丸)
 $030on_医療者カナ氏名(ノグチ,ヒデヨマル)

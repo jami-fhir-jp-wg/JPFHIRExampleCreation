@@ -13,6 +13,25 @@
 // 040mn_機関名(ARGorgname)
 // 040or_機関電話番号(ARG)
 // 080or_機関住所(ARGpostal,ARGtext)
+// Description　meta.lastUpdated設定　必須　１回のみ
+// パラメータ：なし（固定値が設定される）
+// Organizaionリース
+// JP_Organizaion
+// JP_Organization_eClinicalSummary_issuer
+// 0E1mr_機関都道府県番号(ARGcode)
+// 0E2mr_機関区分(ARGcode)
+// 0E3mr_機関保険医療機関番号(ARGcode)
+// 000mn_ExampleJPOrganization_eCS(ARGinstancename)
+// 001mn_Description(ARGtxt)
+// 002or_ValidationProfile(ARGmetaprofile)
+// 002or_ValidationProfile_JPOrganization_eCS() 
+// 
+// 010mn_機関医療機関番号(ARGorgno)
+// 040mn_機関名(ARGorgname)
+// 040or_機関電話番号(ARG)
+// 080or_機関住所(ARGpostal,ARGtext)
+// Description　meta.lastUpdated設定　必須　１回のみ
+// パラメータ：なし（固定値が設定される）
 // Organizaionリース
 // JP_Organizaion
 // JP_Organization_eClinicalSummary_departmentOfIssuer
@@ -24,6 +43,8 @@
 // 030mn_診療科コード名称(ARGcodesystem, ARGdeptcode)
 // 040mn_診療科名称(ARGorgname)
 // 040or_診療科所属医療機関参照(ARGrefresource)
+// Description　meta.lastUpdated設定　必須　１回のみ
+// パラメータ：なし（固定値が設定される）
 // Practitionerリース
 // JP_Practitioner
 // JP_Practitioner_eClinicalSummary_author
@@ -33,11 +54,20 @@
 // 002or_ValidationProfile_JPPractitioner_eCS() 
 // 030mn_医療者漢字氏名(ARGfirstname,ARGgivenname)
 // 030on_医療者カナ氏名(ARGfirstnamekana,ARGgivennamekana)
+// Description　meta.lastUpdated設定　必須　１回のみ
+// パラメータ：なし（固定値が設定される）
 
-$000mn_ExampleJPOrganization_eCS(referralToOrganizationExample01Inline)
+Instance: referralToOrganizationExample01Inline
+InstanceOf: JP_Organization
+Usage: #inline
+
 Description: "紹介先医療機関情報　例"
 
 // 002or_ValidationProfile(ARGmetaprofile)
+
+// Description　meta.lastUpdated設定　必須　１回のみ
+// パラメータ：なし（固定値が設定される）
+
 //* meta.profile[+] = "http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Organization_eClinicalSummary_issuer"
 * meta.profile[+] = "http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Organization_eClinicalSummary"
  
@@ -82,6 +112,10 @@ Usage: #inline
 Description: "紹介先医療機関の診療科情報　例"
 
 //002or_ValidationProfile(ARGmetaprofile)
+
+// Description　meta.lastUpdated設定　必須　１回のみ
+// パラメータ：なし（固定値が設定される）
+
 * meta.profile[+] = "http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Organization_eClinicalSummary_department"
  
 // 
@@ -103,6 +137,10 @@ Usage: #inline
 Description: "紹介先医療機関の医師情報　例"
 
 // 002or_ValidationProfile(ARGmetaprofile) 
+
+// Description　meta.lastUpdated設定　必須　１回のみ
+// パラメータ：なし（固定値が設定される）
+
 * meta.profile[+] = "http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Practitioner_eClinicalSummary"
  
 * name[+].extension.url = "http://hl7.org/fhir/StructureDefinition/iso21090-EN-representation"

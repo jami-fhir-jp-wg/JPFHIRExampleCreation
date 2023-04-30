@@ -2,6 +2,7 @@
 
 $000mn_ExampleJPCondition_eCS(ph1DisExample01Inline)  
 $001mn_Description(conditionDisExample01 退院時サマリー　既往歴例1　30歳：胃潰瘍)
+$001mn_LastUpdated()
 $002or_ValidationProfile_JPCondition_eCS()
 $010on_症病管理番号(192839-01)
 $040mn_症病状態TEXT(胃潰瘍)

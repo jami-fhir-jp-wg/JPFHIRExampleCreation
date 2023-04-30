@@ -2,6 +2,7 @@
 
 $000mn_ExampleJPEncounter_eClinicalSummary(purposeDischargeSummaryExample01Inline)  
 $001mn_Description(encounterReferralExample01 退院時サマリーでの退院時サマリー作成目的　例　腹痛精査お願い)
+$001mn_LastUpdated()
 $002or_ValidationProfile_JPEncounter_eClinicalSummary()
 $010on_受診管理番号(192837)
 $030mn_受診外来()
@@ -11,6 +12,7 @@ $060mr_受診理由病名TEXT(腹痛精査お願いします。)
 
 $000mn_ExampleJPEncounter_eClinicalSummary(encounterReferralExample01Inline)  
 $001mn_Description(encounterReferralExample01 外来受診歴　例)
+$001mn_LastUpdated()
 $002or_ValidationProfile_JPEncounter_eClinicalSummary()
 $010on_受診管理番号(192844)
 $030mn_受診外来()

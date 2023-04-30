@@ -2,6 +2,8 @@
 // Compositionリース
 Alias: $doc-typecodes = http://jpfhir.jp/fhir/Common/CodeSystem/doc-typecodes
 Alias: $referral-section = http://jpfhir.jp/fhir/eReferral/CodeSystem/document-section
+// Description　meta.lastUpdated設定　必須　１回のみ
+// パラメータ：なし（固定値が設定される）
 
 
 

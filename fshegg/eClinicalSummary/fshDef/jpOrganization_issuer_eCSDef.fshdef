@@ -1,3 +1,5 @@
+#include "constant_eCSDef.fshdef"
+
 // Organizaionリース
 // JP_Organizaion
 // JP_Organization_eClinicalSummary_issuer
@@ -15,7 +17,7 @@
 // 040or_機関電話番号(ARG)
 // 080or_機関住所(ARGpostal,ARGtext)
 
-
+        
 #bigdef $000mn_ExampleJPOrganization_eCS_issuer(ARGinstancename)
 Instance: ARGinstancename
 InstanceOf: JP_Organization
@@ -27,6 +29,15 @@ Usage: #inline
 Description: "ARGtxt"
 #endbigdef
 #endif
+
+// Description　meta.lastUpdated設定　必須　１回のみ
+// パラメータ：なし（固定値が設定される）
+#ifndef $001mn_LastUpdated
+#bigdef $001mn_LastUpdated()
+* meta.lastUpdated = $Common_LastUpdated
+#endbigdef
+#endif
+
 
 #ifndef $002or_ValidationProfile(ARGmetaprofile)
 #bigdef $002or_ValidationProfile(ARGmetaprofile) 

@@ -1,6 +1,8 @@
+//#include "jpMedReq_eCSDef.fshdef"
 // MedicationResourceリース
-// JP_MedicationRequest
-//000mn_ExampleJPMedicationRequest(ARGinstancename) 
+// JP_JPMedicationRequest
+// ePrescriptionData 派生
+//000mn_ExampleJPMedicationRequest_ePrescriptionData(ARGinstancename) 
 //001mn_Description(ARGtxt) 
 //002or_ValidationProfile_JPMedicationRequest_ePrescriptionData() 
 //010mn_処方番号(ARGshohono,ARGrpno)
@@ -28,15 +30,23 @@
 //210on_処方調剤全日数(ARGdays)
 //300on_処方後発変更可()
 //300on_処方後発変更不可(ARGnote)
+// Description　meta.lastUpdated設定　必須　１回のみ
+// パラメータ：なし（固定値が設定される）
 
 //不均等投与1日用法の医薬品処方１件　
 //MedicationRequestリソースのインスタンス例
 //プレドニン錠５ｍｇ１日３回　毎食後　７錠（４錠－２錠－１錠）
 
-$000mn_ExampleJPMedicationRequest_ePrescriptionData(JP-MedReq-ePreData-Example-fukintouByDayInline)
+Instance: JP-MedReq-ePreData-Example-fukintouByDayInline
+InstanceOf: JP_MedicationRequest
+Usage: #inline
+
 Description: "不均等投与1日用法の医薬品処方１件　MedicationRequestリソースのインスタンス例（プレドニン錠５ｍｇ１日３回　毎食後　７錠（４錠－２錠－１錠））"
   
-$002or_ValidationProfile_JPMedicationRequest_ePrescriptionData() 
+* meta.lastUpdated = "2023-04-01T10:00:00+09:00"
+
+* meta.profile[+] = "http://jpfhir.jp/fhir/ePrescription/StructureDefinition/JP_MedicationRequest_ePrescriptionData"
+ 
 
 * identifier[rpNumber].system = "urn:oid:1.2.392.100495.20.3.81"
 * identifier[rpNumber].value = "9"
@@ -85,10 +95,10 @@ $002or_ValidationProfile_JPMedicationRequest_ePrescriptionData()
 //160mn_処方原薬量指定()
 //170on_処方用法1回量(ARGdoseqty,ARGdoseunitcode,ARGdoseunitname)
 
-* dosageInstruction[=].doseAndRate.rateRatio.numerator = 7 urn:oid:1.2.392.100495.20.2.101#KO "個"
+* dosageInstruction[=].doseAndRate.rateRatio.numerator = 7 urn:oid:1.2.392.100495.20.2.101#TAB "錠"
 * dosageInstruction[=].doseAndRate.rateRatio.denominator = 1 'd' "日"
 
-* dispenseRequest.quantity = 49 urn:oid:1.2.392.100495.20.2.101#49code "49name"
+* dispenseRequest.quantity = 49 urn:oid:1.2.392.100495.20.2.101#TAB "錠"
 
 * dispenseRequest.expectedSupplyDuration = 7 'd' "日"
 

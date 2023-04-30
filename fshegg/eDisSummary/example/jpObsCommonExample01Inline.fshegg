@@ -2,6 +2,7 @@
 
 $000mn_ExampleJPObservationCommon(psobsCommonExample01Inline)  
 $001mn_Description(ObservationCommon検査結果　現症例)
+$001mn_LastUpdated()
 $002or_ValidationProfile_JPObservationCommon()
 $010on_共通検査報告ID(192837)
 $030or_共通検査区分名称(exam,身体検査・観察)
@@ -11,6 +12,7 @@ $090on_共通検査結果TEXT(上腹部圧痛あり、その他特に所見な�
 
 $000mn_ExampleJPObservationCommon(obsCommonExample01Inline)  
 $001mn_Description(ObservationCommon検査結果　例)
+$001mn_LastUpdated()
 $002or_ValidationProfile_JPObservationCommon()
 $010on_共通検査報告ID(192837)
 $030or_共通検査区分名称(exam,身体検査・観察)

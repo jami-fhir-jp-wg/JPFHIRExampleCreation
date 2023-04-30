@@ -1,3 +1,5 @@
+#include "constant_eCSDef.fshdef"
+
 // Organizaionリース
 // JP_Organizaion
 // JP_Organization_eClinicalSummary_issuer
@@ -33,6 +35,15 @@ Description: "ARGtxt"
 * meta.profile[+] = "ARGmetaprofile"
 #endbigdef
 #endif
+
+// Description　meta.lastUpdated設定　必須　１回のみ
+// パラメータ：なし（固定値が設定される）
+#ifndef $001mn_LastUpdated
+#bigdef $001mn_LastUpdated()
+* meta.lastUpdated = $Common_LastUpdated
+#endbigdef
+#endif
+
 
 #ifndef $002or_ValidationProfile_JPOrganization_eCS()
 #bigdef $002or_ValidationProfile_JPOrganization_eCS() 

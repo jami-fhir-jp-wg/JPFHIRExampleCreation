@@ -1,6 +1,8 @@
 // DocumentReferenceリース
 // JP_DocumentReference
 // JP_DocumentReference_eClinicalSummary
+// Description　meta.lastUpdated設定　必須　１回のみ
+// パラメータ：なし（固定値が設定される）
 
 Instance: ccourseReferralExample01Inline
 InstanceOf: JP_DocumentReference

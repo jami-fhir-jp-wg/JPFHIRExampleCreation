@@ -1,3 +1,5 @@
+#include "constant_eCSDef.fshdef"
+
 // ObservationCommonリソース
 
 #bigdef $000mn_ExampleJPObservationCommon(ARGinstancename)
@@ -11,6 +13,15 @@ Usage: #inline
 Description: "ARGtxt"
 #endbigdef
 #endif
+
+// Description　meta.lastUpdated設定　必須　１回のみ
+// パラメータ：なし（固定値が設定される）
+#ifndef $001mn_LastUpdated
+#bigdef $001mn_LastUpdated()
+* meta.lastUpdated = $Common_LastUpdated
+#endbigdef
+#endif
+
 
 #ifndef $002or_ValidationProfile(ARGmetaprofile)
 #bigdef $002or_ValidationProfile(ARGmetaprofile) 
