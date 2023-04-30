@@ -1,12 +1,12 @@
 #include "jpBundle_eReferralDef.fshdef"
 
 $000mn_ExampleJPBundle_eReferral(bundleReferralExample01)
-$001on_Description(bundleReferralExample01 診療情報提供書Bundle)
+$001on_Description(■ 診療情報提供書　全体 Bundleリソース)
 $001mn_LastUpdated()
 $002mn_ValidationProfile_JPBundle__eReferral()
 $010mn_文書ID(123456)
 $020mn_文書日時(2021-11-26,10:00:00)
-$030mr_文書autoEntry(compositionDisSummaryExample01Inline)
+$030mr_文書autoEntry(compositionReferralExample01Inline)
 $030mr_文書autoEntry(jppatientExample01Inline)
 $030mr_文書autoEntry(encounterReferralExample01Inline)
 $030mr_文書autoEntry(referralFromPractitionerExample01Inline)

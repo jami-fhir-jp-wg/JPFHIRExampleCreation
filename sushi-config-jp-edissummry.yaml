@@ -25,8 +25,8 @@ dependencies:
 # to avoid  warning message "The canonical URL for an Implementation Guide must point directly to the implementation guide resource, not to the Implementation Guide as a whole"
     uri: http://jpfhir.jp/fhir/core/ImplementationGuide/jp-core.r4
     version: 1.1.1-snap
-  jp-ereferral:
-    uri: http://jpfhir.jp/fhir/eReferral
+  jp-edissummary:
+    uri: http://jpfhir.jp/fhir/eDisSummary
     version: 0.9.6-snap
 
 # The dependencies property corresponds to IG.dependsOn. The key is the

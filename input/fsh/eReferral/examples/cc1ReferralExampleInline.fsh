@@ -17,7 +17,7 @@
 Instance: cc1ReferralExample01Inline
 InstanceOf: JP_Condition
 Usage: #inline
-  
+
 Description: "Conditionリソース　（診療情報提供書　主訴テキスト　上腹部痛）"
 
 * meta.lastUpdated = "2023-04-01T10:00:00+09:00"
@@ -32,7 +32,8 @@ Description: "Conditionリソース　（診療情報提供書　主訴テキス
 
 * code[+].text = "上腹部痛"
 
-* subject.reference = "jppatientExample01Inline"
+// * subject.reference = "jppatientExample01Inline"
+* subject.reference = "urn:uuid:85a51292-1089-4641-bac7-d453a0bdc311"
 
 // 2022-06-09 2020-08-21
 // ATGtime 12:12:20
@@ -42,7 +43,7 @@ Description: "Conditionリソース　（診療情報提供書　主訴テキス
 Instance: cc2ReferralExample01Inline
 InstanceOf: JP_Condition
 Usage: #inline
-  
+
 Description: "Conditionリソース　（診療情報提供書　主訴テキスト　腰痛）"
 
 * meta.lastUpdated = "2023-04-01T10:00:00+09:00"
@@ -57,7 +58,8 @@ Description: "Conditionリソース　（診療情報提供書　主訴テキス
 
 * code[+].text = "腰痛"
 
-* subject.reference = "jppatientExample01Inline"
+// * subject.reference = "jppatientExample01Inline"
+* subject.reference = "urn:uuid:85a51292-1089-4641-bac7-d453a0bdc311"
 
 // 2022-05 2020-08-21
 // ATGtime 12:12:20

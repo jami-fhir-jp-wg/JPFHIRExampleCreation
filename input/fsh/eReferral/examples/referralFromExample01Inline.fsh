@@ -7,8 +7,8 @@
 // 000mn_ExampleJPOrganization_eCS(ARGinstancename)
 // 001mn_Description(ARGtxt)
 // 002or_ValidationProfile(ARGmetaprofile)
-// 002or_ValidationProfile_JPOrganization_eCS() 
-// 
+// 002or_ValidationProfile_JPOrganization_eCS()
+//
 // 010mn_機関医療機関番号(ARGorgno)
 // 040mn_機関名(ARGorgname)
 // 040or_機関電話番号(ARG)
@@ -24,8 +24,8 @@
 // 000mn_ExampleJPOrganization_eCS(ARGinstancename)
 // 001mn_Description(ARGtxt)
 // 002or_ValidationProfile(ARGmetaprofile)
-// 002or_ValidationProfile_JPOrganization_eCS() 
-// 
+// 002or_ValidationProfile_JPOrganization_eCS()
+//
 // 010mn_機関医療機関番号(ARGorgno)
 // 040mn_機関名(ARGorgname)
 // 040or_機関電話番号(ARG)
@@ -38,8 +38,8 @@
 // 000mn_ExampleJPOrganizationDept_eCS(ARGinstancename)
 // 001mn_Description(ARGtxt)
 // 002or_ValidationProfile(ARGmetaprofile)
-// 002or_ValidationProfile_JPOrganizationDept_eCS() 
-// 
+// 002or_ValidationProfile_JPOrganizationDept_eCS()
+//
 // 030mn_診療科コード名称(ARGcodesystem, ARGdeptcode)
 // 040mn_診療科名称(ARGorgname)
 // 040or_診療科所属医療機関参照(ARGrefresource)
@@ -50,27 +50,28 @@
 // JP_Practitioner_eClinicalSummary_author
 // 000mn_ExampleJPPractitioner_eCS(ARGinstancename)
 // 001mn_Description(ARGtxt)
-// 002or_ValidationProfile(ARGmetaprofile) 
-// 002or_ValidationProfile_JPPractitioner_eCS() 
+// 002or_ValidationProfile(ARGmetaprofile)
+// 002or_ValidationProfile_JPPractitioner_eCS()
 // 030mn_医療者漢字氏名(ARGfirstname,ARGgivenname)
 // 030on_医療者カナ氏名(ARGfirstnamekana,ARGgivennamekana)
 // Description　meta.lastUpdated設定　必須　１回のみ
 // パラメータ：なし（固定値が設定される）
 
-Instance: referralToOrganizationExample01Inline
+//--------------
+Instance: referralFromOrganizationExample01Inline
 InstanceOf: JP_Organization
 Usage: #inline
 
-Description: "紹介先医療機関情報　例"
+Description: "紹介元医療機関情報　例"
 
-// 002or_ValidationProfile(ARGmetaprofile)
+// 002r_ValidationProfile(ARGmetaprofile)
+
 * meta.lastUpdated = "2023-04-01T10:00:00+09:00"
 
 //* meta.profile[+] = "http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Organization_eClinicalSummary_issuer"
 * meta.profile[+] = "http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Organization_eClinicalSummary"
- 
-// 
-//--------------
+
+//
 // 機関都道府県番号：2桁数字　北海道は01
 * extension[+].url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Organization_PrefectureNo" (exactly)
 * extension[=].valueCoding.system = "urn:oid:1.2.392.100495.20.3.21"
@@ -84,75 +85,76 @@ Description: "紹介先医療機関情報　例"
 // 保険医療機関番号７桁
 * extension[+].url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Organization_InsuranceOrganizationNo" (exactly)
 * extension[=].valueIdentifier.system = "urn:oid:1.2.392.100495.20.3.23"
-* extension[=].valueIdentifier.value = "1234567"
+* extension[=].valueIdentifier.value = "9876543"
 
 //
 * identifier[+].system = "http://jpfhir.jp/fhir/core/IdSystem/insurance-medical-institution-no"
-* identifier[=].value = "1311234567"
+* identifier[=].value = "1319876543"
 * type[+].coding.system = "http://terminology.hl7.org/CodeSystem/organization-type"
 * type[=].coding.code = #prov
 
-* name = "東京第一テスト病院"
+* name = "港診療所"
 
 * telecom[+].system = #phone
-* telecom[=].value = "03-1234-5678"
+* telecom[=].value = "03-9876-5432"
 
-* address[+].text = "東京都文京区文京町１−２−３"
-* address[=].postalCode = "113-0001"
+* address[+].text = "東京都港区新橋１−２−３"
+* address[=].postalCode = "106-9900"
 * address[=].country = "JP"
 
 //--------------
 
-Instance: referralToOrganizationDeptExample01Inline
+Instance: referralFromOrganizationDeptExample01Inline
 InstanceOf: JP_Organization
 Usage: #inline
 
-Description: "紹介先医療機関の診療科情報　例"
+Description: "紹介元医療機関の診療科情報　例"
 
 //002or_ValidationProfile(ARGmetaprofile)
 * meta.lastUpdated = "2023-04-01T10:00:00+09:00"
 
 * meta.profile[+] = "http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Organization_eClinicalSummary_department"
- 
-// 
+
+//
 * type[+].coding.system = "http://terminology.hl7.org/CodeSystem/organization-type"
 * type[=].coding.code = #dept
 //
 * type[+].coding.system = "urn:oid:1.2.392.100495.20.2.51"
-* type[=].coding.code = #03
+* type[=].coding.code = #11
 
-* name = "循環器内科"
+* name = "眼科"
 
-* partOf.reference = "referralToOrganizationDeptExample01Inline"
+// * partOf.reference = "referralFromOrganizationDeptExample01Inline"
+* partOf.reference = "urn:uuid:5b99a745-f588-41b6-afdf-55698b41f2a6"
 
 
 
+* meta.lastUpdated = "2023-04-01T10:00:00+09:00"
 //--------------
-Instance: referralToPractitionerExample01Inline
+Instance: referralFromPractitionerExample01Inline
 InstanceOf: JP_Practitioner
 Usage: #inline
 
-Description: "紹介先医療機関の医師情報　例"
+Description: "紹介元医療機関の医師情報　例"
 
-// 002or_ValidationProfile(ARGmetaprofile) 
+// 002or_ValidationProfile(ARGmetaprofile)
 * meta.lastUpdated = "2023-04-01T10:00:00+09:00"
 
-
 * meta.profile[+] = "http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Practitioner_eClinicalSummary"
- 
+
 * name[+].extension.url = "http://hl7.org/fhir/StructureDefinition/iso21090-EN-representation"
 * name[=].extension.valueCode = #IDE
 * name[=].use = #official
-* name[=].text = "野口 英世丸"
-* name[=].family = "野口"
-* name[=].given = "英世丸"
+* name[=].text = "大河内 勘三郎"
+* name[=].family = "大河内"
+* name[=].given = "勘三郎"
 
 * name[+].extension.url = "http://hl7.org/fhir/StructureDefinition/iso21090-EN-representation"
 * name[=].extension.valueCode = #SYL
 * name[=].use = #official
-* name[=].text = "ノグチ ヒデヨマル"
-* name[=].family = "ノグチ"
-* name[=].given = "ヒデヨマル"
+* name[=].text = "オオコウチ カンザブロウ"
+* name[=].family = "オオコウチ"
+* name[=].given = "カンザブロウ"
 
 //--------------
 

@@ -14,53 +14,28 @@
 // urn:oid:1.2.392.200119.4.201.２: MEDIS修飾語管理番号
 //当面中略（診療情報提供書）
 
-Instance: cc1ReferralExample01Inline
+
+Instance: piReferralExample01Inline
 InstanceOf: JP_Condition
 Usage: #inline
-  
-Description: "Conditionリソース　（診療情報提供書　主訴テキスト　上腹部痛）"
+
+Description: "conditionReferralExample01 診療情報提供書　現病歴例　上腹部痛"
 
 * meta.lastUpdated = "2023-04-01T10:00:00+09:00"
 
 * meta.profile[+] = "http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Condition_eClinicalSummary"
 
 * identifier.system = "http://jpfhir.jp/fhir/core/IdSystem/resourceInstance-identifier"
-* identifier.value = "192837-01"
+* identifier.value = "192838"
 * clinicalStatus = http://terminology.hl7.org/CodeSystem/condition-clinical#active
  // active | recurrence | relapse | inactive | remission | resolved
 * category = http://terminology.hl7.org/CodeSystem/condition-category#problem-list-item
 
 * code[+].text = "上腹部痛"
 
-* subject.reference = "jppatientExample01Inline"
+// * subject.reference = "jppatientExample01Inline"
+* subject.reference = "urn:uuid:85a51292-1089-4641-bac7-d453a0bdc311"
 
-// 2022-06-09 2020-08-21
-// ATGtime 12:12:20
-* onsetDateTime = "2022-06-09"
-
-
-Instance: cc2ReferralExample01Inline
-InstanceOf: JP_Condition
-Usage: #inline
-  
-Description: "Conditionリソース　（診療情報提供書　主訴テキスト　腰痛）"
-
-* meta.lastUpdated = "2023-04-01T10:00:00+09:00"
-
-* meta.profile[+] = "http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Condition_eClinicalSummary"
-
-* identifier.system = "http://jpfhir.jp/fhir/core/IdSystem/resourceInstance-identifier"
-* identifier.value = "192837-02"
-* clinicalStatus = http://terminology.hl7.org/CodeSystem/condition-clinical#active
- // active | recurrence | relapse | inactive | remission | resolved
-* category = http://terminology.hl7.org/CodeSystem/condition-category#problem-list-item
-
-* code[+].text = "腰痛"
-
-* subject.reference = "jppatientExample01Inline"
-
-// 2022-05 2020-08-21
-// ATGtime 12:12:20
-* onsetDateTime = "2022-05"
+* note.text = "２０２２年６月上旬から夜食後に時々上腹部痛があり、だんだんひどくなっている。他に目立った症状なし。"
 
 

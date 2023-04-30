@@ -7,7 +7,7 @@
 Instance: ccourseReferralExample01Inline
 InstanceOf: JP_DocumentReference
 Usage: #inline
-  
+
 Description: "DocumentReferenceリソース　（診療情報提供書　臨床経過）"
 
 * meta.lastUpdated = "2023-04-01T10:00:00+09:00"

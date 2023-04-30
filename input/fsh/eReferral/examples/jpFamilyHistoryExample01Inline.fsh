@@ -9,7 +9,7 @@
 Instance: jpFamilyHistoryExample01Inline
 InstanceOf: JP_FamilyMemberHistory
 Usage: #inline
-  
+
 Description: "退院時サマリー　家族歴"
 
 * meta.lastUpdated = "2023-04-01T10:00:00+09:00"
@@ -19,9 +19,10 @@ Description: "退院時サマリー　家族歴"
 * identifier.system = "http://jpfhir.jp/fhir/core/IdSystem/resourceInstance-identifier"
 * identifier.value = "192837-01"
 * status = #completed
- // partial | completed | entered-in-error | health-unknown 
+ // partial | completed | entered-in-error | health-unknown
 
-* patient.reference = "jppatientExample01Inline"
+// * patient.reference = "jppatientExample01Inline"
+* patient.reference = "urn:uuid:85a51292-1089-4641-bac7-d453a0bdc311"
 
 * relationship.text = "父"
 
@@ -31,7 +32,7 @@ Description: "退院時サマリー　家族歴"
 Instance: jpFamilyHistoryExample02Inline
 InstanceOf: JP_FamilyMemberHistory
 Usage: #inline
-  
+
 Description: "退院時サマリー　家族歴"
 
 * meta.lastUpdated = "2023-04-01T10:00:00+09:00"
@@ -41,9 +42,10 @@ Description: "退院時サマリー　家族歴"
 * identifier.system = "http://jpfhir.jp/fhir/core/IdSystem/resourceInstance-identifier"
 * identifier.value = "192837-02"
 * status = #completed
- // partial | completed | entered-in-error | health-unknown 
+ // partial | completed | entered-in-error | health-unknown
 
-* patient.reference = "jppatientExample01Inline"
+// * patient.reference = "jppatientExample01Inline"
+* patient.reference = "urn:uuid:85a51292-1089-4641-bac7-d453a0bdc311"
 
 * relationship.text = ""
 

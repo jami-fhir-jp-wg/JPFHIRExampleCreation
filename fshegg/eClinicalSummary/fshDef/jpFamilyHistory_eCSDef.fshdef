@@ -47,7 +47,7 @@ Description: "ARGtxt"
 #bigdef $010on_管理番号(ARGnumber)
 * identifier.system = "http://jpfhir.jp/fhir/core/IdSystem/resourceInstance-identifier"
 * identifier.value = "ARGnumber"
-* clinicalStatus = http://hl7.org/fhir/ValueSet/history-status#completed
+* status = #completed
  // partial | completed | entered-in-error | health-unknown 
 #endbigdef
 

@@ -1,0 +1,12 @@
+FHIR Validation tool Version 5.6.117 (Git# 3c04b80fdb35). Built 2023-03-29T14:03:46.971Z (31 days old)
+  Java:   17.0.5 from /Library/Java/JavaVirtualMachines/jdk-17.0.5.jdk/Contents/Home on aarch64 (64bit). 4096MB available
+  Paths:  Current = /Users/kohe/GitHub, Package Cache = /Users/kohe/.fhir/packages
+  Params: JPFHIRExampleCreation/output-json/eReferral//fsh-generated/resources/jpbundleExample01.json -ig JPFHIRExampleCreation/packages_snapshot/jp-ereferral#0.9.6-snap.tgz -tx https://tx.jpfhir.jp:8081
+Scanning for versions (no -version parameter):
+
+********************
+* The file name you passed in, 'JPFHIRExampleCreation/output-json/eReferral//fsh-generated/resources/jpbundleExample01.json', doesn't exist on the local filesystem.
+* Please verify that this is valid file location.
+********************
+
+

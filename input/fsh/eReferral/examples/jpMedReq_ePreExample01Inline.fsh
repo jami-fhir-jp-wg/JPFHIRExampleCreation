@@ -3,9 +3,9 @@
 // MedicationResourceリース
 // JP_JPMedicationRequest
 // ePrescriptionData 派生
-//000mn_ExampleJPMedicationRequest_ePrescriptionData(ARGinstancename) 
-//001mn_Description(ARGtxt) 
-//002or_ValidationProfile_JPMedicationRequest_ePrescriptionData() 
+//000mn_ExampleJPMedicationRequest_ePrescriptionData(ARGinstancename)
+//001mn_Description(ARGtxt)
+//002or_ValidationProfile_JPMedicationRequest_ePrescriptionData()
 //010mn_処方番号(ARGshohono,ARGrpno)
 //020mr_処方薬HOT9(ARGcode,ARGname)
 //020mr_処方薬YJ(ARGcode,ARGname)
@@ -37,13 +37,13 @@
 Instance: MedicationRequestExample01Inline
 InstanceOf: JP_MedicationRequest
 Usage: #inline
-  
+
 Description: "内服　退院時処方例　MedicationRequestリソースのインスタンス例"
- 
+
 * meta.lastUpdated = "2023-04-01T10:00:00+09:00"
 
 * meta.profile[+] = "http://jpfhir.jp/fhir/ePrescription/StructureDefinition/JP_MedicationRequest_ePrescriptionData"
- 
+
 * identifier[rpNumber].system = "urn:oid:1.2.392.100495.20.3.81"
 * identifier[rpNumber].value = "1"
 * identifier[orderInRp].system = "urn:oid:1.2.392.100495.20.3.82"
@@ -59,7 +59,8 @@ Description: "内服　退院時処方例　MedicationRequestリソースのイ�
 
 * medicationCodeableConcept.text = "カルボシステイン２５０ｍｇ錠"
 
-* subject.reference = "jppatientExample01Inline"
+// * subject.reference = "jppatientExample01Inline"
+* subject.reference = "urn:uuid:85a51292-1089-4641-bac7-d453a0bdc311"
 
 * authoredOn = "2016-07-22T12:28:17+09:00"
 
@@ -99,13 +100,13 @@ Description: "内服　退院時処方例　MedicationRequestリソースのイ�
 Instance: MedicationRequestExample02Inline
 InstanceOf: JP_MedicationRequest
 Usage: #inline
-  
+
 Description: "内服　退院時処方例　MedicationRequestリソースのインスタンス例"
- 
+
 * meta.lastUpdated = "2023-04-01T10:00:00+09:00"
 
 * meta.profile[+] = "http://jpfhir.jp/fhir/ePrescription/StructureDefinition/JP_MedicationRequest_ePrescriptionData"
- 
+
 * identifier[rpNumber].system = "urn:oid:1.2.392.100495.20.3.81"
 * identifier[rpNumber].value = "1"
 * identifier[orderInRp].system = "urn:oid:1.2.392.100495.20.3.82"
@@ -119,7 +120,8 @@ Description: "内服　退院時処方例　MedicationRequestリソースのイ�
 
 * medicationCodeableConcept.text = "フロセミド錠40mg｢NP｣"
 
-* subject.reference = "jppatientExample01Inline"
+// * subject.reference = "jppatientExample01Inline"
+* subject.reference = "urn:uuid:85a51292-1089-4641-bac7-d453a0bdc311"
 
 * authoredOn = "2016-07-22T12:28:17+09:00"
 
