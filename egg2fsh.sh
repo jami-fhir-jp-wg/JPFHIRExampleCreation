@@ -1,13 +1,18 @@
 #!/bin/bash
 
-#つくりかけ　2023.4.23
-#fsheggファイルからfshファイル一式を生成する
+# fsheggファイルからfshファイル一式を生成する
+# 使用法：　./egg2fs プロジェクト名
+# 使用例：　./egg2fs  eReferral
+# $rootDir/$selfDir/fshegg/$targetProject/$targetExampleName/*.fshegggファイルをすべて
+# filecppコマンドにより　fshファイルに変換する。
+# 変換時に　$rootDir/$selfDir/fshegg/$targetProject/$targetExampleName/fshDef/ にある
+#  定義ファイルをインクルードして使用する。
+# 変換結果のfshファイルは./input-$targetProject-$targetExampleName/fsh　の下に出力される。
+# 
+targetProject=$1
 selfDir=JPFHIRExampleCreation
 rootDir=~/GitHub
-targetProject=$1
 targetExampleName=examples
-#tarCommand=gtar
-#validateFile=Bundle-bundleReferralExample01.json
 #
 cd $rootDir/$selfDir
 rm -f ./input-$targetProject-$targetExampleName/fsh/*.fsh*
