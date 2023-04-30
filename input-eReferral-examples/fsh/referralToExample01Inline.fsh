@@ -137,9 +137,8 @@ Usage: #inline
 Description: "紹介先医療機関の医師情報　例"
 
 // 002or_ValidationProfile(ARGmetaprofile) 
+* meta.lastUpdated = "2023-04-01T10:00:00+09:00"
 
-// Description　meta.lastUpdated設定　必須　１回のみ
-// パラメータ：なし（固定値が設定される）
 
 * meta.profile[+] = "http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Practitioner_eClinicalSummary"
  

@@ -49,14 +49,7 @@ $040mr_診療科所属医療機関参照(referralToOrganizationDeptExample01Inli
 $000mn_ExampleJPPractitioner_eCS(referralToPractitionerExample01Inline)
 $001mn_Description(紹介先医療機関の医師情報　例)
 // 002or_ValidationProfile(ARGmetaprofile) 
-
-// Description　meta.lastUpdated設定　必須　１回のみ
-// パラメータ：なし（固定値が設定される）
-#ifndef $001mn_LastUpdated
-#bigdef $001mn_LastUpdated()
-* meta.lastUpdated = $Common_LastUpdated
-#endbigdef
-#endif
+$001mn_LastUpdated()
 
 $002or_ValidationProfile_JPPractitioner_eCS() 
 $030mn_医療者漢字氏名(野口,英世丸)

@@ -1,5 +1,7 @@
 #include "fshDef/jpDocumentReference_eCSDef.fshdef"
 
+// 入院中の臨床経過
+//  臨床経過文章は”ccourseExampleDoc.txt”ファイルをbase64エンコードして参照する形式。
 $000mn_ExampleJPDocumentReferencen_eCS(ccourseDischargeSummaryExample01Inline)  
 $001mn_Description(ccourseDischargeSummaryExample01 退院時サマリー　臨床経過記録文書参照例)
 $001mn_LastUpdated()

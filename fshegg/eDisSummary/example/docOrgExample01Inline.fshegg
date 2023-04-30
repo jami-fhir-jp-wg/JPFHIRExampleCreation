@@ -2,6 +2,10 @@
 #include "fshDef/jpOrganizationDept_eCSDef.fshdef"
 #include "fshDef/jpPractitioner_eCSDef.fshdef"
 
+// 退院時サマリー作成元医療機関情報
+// 同じく診療科情報
+// 同じく医師情報
+
 //--------------
 $000mn_ExampleJPOrganization_eCS_issuer(docOrgExample01Inline)
 $001mn_Description(退院時サマリー作成元医療機関情報　例)
@@ -26,7 +30,7 @@ $001mn_LastUpdated()
 $002or_ValidationProfile_JPOrganizationDept_eCS() 
 // 
 $030on_診療科コード(urn:oid:1.2.392.100495.20.2.51, 081)
-$040mn_診療科名称(循環器内科)
+$040mn_診療科名称(老年内科)
 $040mr_診療科所属医療機関参照(docOrgDeptExample01Inline)
 //--------------
 $000mn_ExampleJPPractitioner_eCS(docPractitionerExample01Inline)

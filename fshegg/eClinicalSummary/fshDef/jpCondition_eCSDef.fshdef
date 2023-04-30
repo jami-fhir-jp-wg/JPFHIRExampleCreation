@@ -48,10 +48,16 @@ Description: "ARGtxt"
 * code[+] = ARGsystem#ARGcode "ARGname"
 #endbigdef
 
+//MEDISコード
+// urn:oid:1.2.392.200119.4.101.6: MEDIS病名交換用コード
+// urn:oid:1.2.392.200119.4.101.2: MEDIS病名管理番号
 #bigdef $040mn_症病状態MEDISコード名称(ARGcode,ARGname)
-* code[+] = urn:oid:1.2.392.200119.4.201.5#ARGcode "ARGname"
+* code[+] = urn:oid:1.2.392.200119.4.101.6#ARGcode "ARGname"
 #endbigdef
 
+//病名コードシステムとコード
+// urn:oid:1.2.392.200119.4.101.6: MEDIS病名交換用コード
+// urn:oid:1.2.392.200119.4.101.2: MEDIS病名管理番号
 #bigdef $040mn_症病状態コード名称TEXT(ARGsystem,ARGcode,ARGname,ARGtext)
 * code[+] = ARGsystem#ARGcode "ARGname"
 * code[=].text = "ARGtext"
@@ -65,10 +71,14 @@ Description: "ARGtxt"
 * bodySite[+] = ARGsystem#ARGcode "ARGname"
 #endbigdef
 
+// urn:oid:1.2.392.200119.4.201.５: MEDIS修飾語交換用コード
+// urn:oid:1.2.392.200119.4.201.２: MEDIS修飾語管理番号
 #bigdef $040or_症病部位MEDISコード名称(ARGcode,ARGname)
 * bodySite[+] = urn:oid:1.2.392.200119.4.201.5#ARGcode "ARGname"
 #endbigdef
 
+// urn:oid:1.2.392.200119.4.201.５: MEDIS修飾語交換用コード
+// urn:oid:1.2.392.200119.4.201.２: MEDIS修飾語管理番号
 #bigdef $040or_症病部位コード名称TEXT(ARGsystem,ARGcode,ARGname,ARGtext)
 * bodySite[+] = ARGsystem#ARGcode "ARGname"
 * bodySite[=].text = "ARGtext"

@@ -2,6 +2,16 @@
 // Description　meta.lastUpdated設定　必須　１回のみ
 // パラメータ：なし（固定値が設定される）
 // 030 verificationStatus
+//MEDISコード
+// urn:oid:1.2.392.200119.4.101.6: MEDIS病名交換用コード
+// urn:oid:1.2.392.200119.4.101.2: MEDIS病名管理番号
+//病名コードシステムとコード
+// urn:oid:1.2.392.200119.4.101.6: MEDIS病名交換用コード
+// urn:oid:1.2.392.200119.4.101.2: MEDIS病名管理番号
+// urn:oid:1.2.392.200119.4.201.５: MEDIS修飾語交換用コード
+// urn:oid:1.2.392.200119.4.201.２: MEDIS修飾語管理番号
+// urn:oid:1.2.392.200119.4.201.５: MEDIS修飾語交換用コード
+// urn:oid:1.2.392.200119.4.201.２: MEDIS修飾語管理番号
 //当面中略（診療情報提供書）
 
 Instance: ph1ReferralExample01Inline
@@ -9,6 +19,8 @@ InstanceOf: JP_Condition
 Usage: #inline
   
 Description: "conditionReferralExample01 診療情報提供書　既往歴例1　狭心症"
+
+* meta.lastUpdated = "2023-04-01T10:00:00+09:00"
 
 * meta.profile[+] = "http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Condition_eClinicalSummary"
 
@@ -34,6 +46,8 @@ InstanceOf: JP_Condition
 Usage: #inline
   
 Description: "conditionReferralExample01 診療情報提供書　既往歴例2　左前腕骨折"
+
+* meta.lastUpdated = "2023-04-01T10:00:00+09:00"
 
 * meta.profile[+] = "http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Condition_eClinicalSummary"
 

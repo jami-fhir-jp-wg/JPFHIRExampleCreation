@@ -11,8 +11,8 @@
 #define $docOrgDeptExample01Inline docOrgDeptExample01Inline
 
 #define $admissionEncounterExample01Inline   admissionEncounterExample01Inline
-#define $cc1ReferralExample01Inline   cc1ReferralExample01Inline
-#define $cc2ReferralExample01Inline   cc2ReferralExample01Inline
+#define $ccExample01Inline   ccExample01Inline
+#define $ccExample02Inline   ccExample02Inline
 #define $piReferralExample01Inline    piReferralExample01Inline
 #define $ph1ReferralExample01Inline   ph1ReferralExample01Inline
 #define $ph2ReferralExample01Inline   ph2ReferralExample01Inline
@@ -39,7 +39,7 @@ $060mn_退院時サマリー期間(2020-08-01, 2020-08-21)
 $070mn_退院時サマリー入院詳細Encounter(,$admissionEncounterExample01Inline)
 $070mn_退院時サマリー入院時診断セクションCondition(ARGtext,ARGref...))
 $070on_退院時サマリーアレルギーAllergy(ARGtext,ARGref...)
-$070mn_退院時サマリー入院時主訴Condition(ARGtext,ARGref...)
+$070mn_退院時サマリー入院時主訴Condition(体動時の息切れ、疲労感,$ccExample01Inline,$ccExample01Inline)
 $070mn_退院時サマリー入院理由Encounter(ARGtext,ARGref)
 $070mn_退院時サマリー入院時現病歴Condition(ARGtext,ARGref...)
 $070on_退院時サマリー既往歴Condition(ARGtext,ARGref...)

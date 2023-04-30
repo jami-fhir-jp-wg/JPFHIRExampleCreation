@@ -2,6 +2,7 @@
 
 $000mn_ExampleJPDocumentReferencen_eCS(ccourseReferralExample01Inline)  
 $001mn_Description(ccourseReferralExample01 診療情報提供書　臨床経過記録文書参照例)
+$001mn_LastUpdated()
 $002or_ValidationProfile_JPDocumentReference_eCS()
 $010on_文書参照ProgressNote()
 $020on_文書参照記述名(臨床経過)

@@ -8,6 +8,8 @@ Usage: #inline
   
 Description: "encounterReferralExample01 診療情報提供書での紹介目的　例　腹痛精査お願い"
 
+* meta.lastUpdated = "2023-04-01T10:00:00+09:00"
+
 * meta.profile[+] = "http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Encounter_eClinicalSummary"
 
 * identifier.system = "http://jpfhir.jp/fhir/core/IdSystem/resourceInstance-identifier"
@@ -21,13 +23,13 @@ Description: "encounterReferralExample01 診療情報提供書での紹介目的
 * reasonCode[+].text = "腹痛精査お願いします。"
 
 
-
-
 Instance: encounterReferralExample01Inline
 InstanceOf: JP_Encounter
 Usage: #inline
   
 Description: "encounterReferralExample01 外来受診歴　例"
+
+* meta.lastUpdated = "2023-04-01T10:00:00+09:00"
 
 * meta.profile[+] = "http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Encounter_eClinicalSummary"
 

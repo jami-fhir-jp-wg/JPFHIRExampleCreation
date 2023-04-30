@@ -1,0 +1,29 @@
+#include "jpCondition_eCSDef.fshdef"
+
+#define 病名管理番号システム urn:oid:1.2.392.200119.4.101.2
+#define 病名交換コードシステム urn:oid:1.2.392.200119.4.101.5
+#define 病名修飾語管理番号システム urn:oid:1.2.392.200119.4.201.2
+#define 病名修飾語交換コードシステム urn:oid:1.2.392.200119.4.201.5
+
+// 主訴１　体動時の息切れ
+// 病名管理番号あり、発症日なし、Idenfierなし
+$000mn_ExampleJPCondition_eCS(ccExample01Inline)  
+$001mn_Description(Conditionリソース　主訴例　体動時の息切れ)
+$001mn_LastUpdated()
+$002or_ValidationProfile_JPCondition_eCS()
+//$010on_症病管理番号(1928378-01)
+$040mn_症病状態コード名称TEXT(病名管理番号システム,20068670,息切れ,体動時の息切れ)
+$050mn_症病患者(jpPatientExample01Inline)
+//$070on_症病時期日(2022-06-09)
+
+// 主訴２　疲労感
+// 病名管理番号あり、発症日なし、Idenfierなし
+$000mn_ExampleJPCondition_eCS(ccExample02Inline)  
+$001mn_Description(Conditionリソース　主訴例　疲労感)
+$001mn_LastUpdated()
+$002or_ValidationProfile_JPCondition_eCS()
+//$010on_症病管理番号(192838-02)
+$040mn_症病状態コード名称TEXT(病名管理番号システム,20074130,疲労感,疲労感)
+$050mn_症病患者(jpPatientExample01Inline)
+//$070on_症病時期日(2022-05)
+
