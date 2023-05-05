@@ -1,4 +1,4 @@
-FHIR Validation tool Version 5.6.117 (Git# 3c04b80fdb35). Built 2023-03-29T14:03:46.971Z (31 days old)
+FHIR Validation tool Version 5.6.117 (Git# 3c04b80fdb35). Built 2023-03-29T14:03:46.971Z (32 days old)
   Java:   17.0.5 from /Library/Java/JavaVirtualMachines/jdk-17.0.5.jdk/Contents/Home on aarch64 (64bit). 4096MB available
   Paths:  Current = /Users/kohe/GitHub, Package Cache = /Users/kohe/.fhir/packages
   Params: JPFHIRExampleCreation/output-json/eReferral/examples/fsh-generated/resources/Bundle-bundleReferralExample01.json -ig JPFHIRExampleCreation/packages_snapshot/jp-ereferral#0.9.6-snap.tgz -tx https://tx.jpfhir.jp:8081
@@ -7,8 +7,8 @@ Scanning for versions (no -version parameter):
 -> use version 4.0
   Jurisdiction: Japan
 Loading
-  Load FHIR v4.0 from hl7.fhir.r4.core#4.0.1.: - 4576 resources (00:02.979)
-  Load hl7.terminology#5.1.0 - 4180 resources (00:01.551)
+  Load FHIR v4.0 from hl7.fhir.r4.core#4.0.1.: - 4576 resources (00:02.898)
+  Load hl7.terminology#5.1.0 - 4180 resources (00:01.615)
   Load R5 Extensions!
 !
 !
@@ -160,17 +160,17 @@ Loading
 !
 !
 !
- - 151 resources (00:02.967)
-  Terminology server https://tx.jpfhir.jp:8081 - Version null (00:00.496)
+ - 151 resources (00:02.832)
+  Terminology server https://tx.jpfhir.jp:8081 - Version null (00:00.807)
   Load JPFHIRExampleCreation/packages_snapshot/jp-ereferral#0.9.6-snap.tgz+  .. load IG from jp-core.r4#1.1.1
-2023-04-30 20:32:09.426 [main] INFO  o.h.f.u.npm.BasePackageCacheManager [BasePackageCacheManager.java:84] Failed to resolve package jp-core.r4#1.1.1 from server: http://packages.fhir.org (Invalid HTTP response 404 from http://packages.fhir.org/jp-core.r4/1.1.1 (Not Found) (content in /var/folders/pp/vf6q56nn2z10zv29ys27pkhm0000gn/T/fhir-http-2.log))
-2023-04-30 20:32:10.134 [main] INFO  o.h.f.u.npm.BasePackageCacheManager [BasePackageCacheManager.java:84] Failed to resolve package jp-core.r4#1.1.1 from server: https://packages2.fhir.org/packages (Invalid HTTP response 404 from https://packages2.fhir.org/packages/jp-core.r4/1.1.1 (Not found) (content in /var/folders/pp/vf6q56nn2z10zv29ys27pkhm0000gn/T/fhir-http-3.log))
+2023-05-01 04:46:36.025 [main] INFO  o.h.f.u.npm.BasePackageCacheManager [BasePackageCacheManager.java:84] Failed to resolve package jp-core.r4#1.1.1 from server: http://packages.fhir.org (Invalid HTTP response 404 from http://packages.fhir.org/jp-core.r4/1.1.1 (Not Found) (content in /var/folders/pp/vf6q56nn2z10zv29ys27pkhm0000gn/T/fhir-http-2.log))
+2023-05-01 04:46:36.986 [main] INFO  o.h.f.u.npm.BasePackageCacheManager [BasePackageCacheManager.java:84] Failed to resolve package jp-core.r4#1.1.1 from server: https://packages2.fhir.org/packages (Invalid HTTP response 404 from https://packages2.fhir.org/packages/jp-core.r4/1.1.1 (Not found) (content in /var/folders/pp/vf6q56nn2z10zv29ys27pkhm0000gn/T/fhir-http-3.log))
 Installing jp-core.r4#1.1.1-rc to the package cache
   Fetching:
 ....
-  Installing:  - 230 resources (00:03.419)
+  Installing:  - 230 resources (00:03.635)
   Package Summary: [hl7.fhir.r4.core#4.0.1, hl7.fhir.xver-extensions#0.0.12, hl7.terminology#5.1.0]
-  Get set...  go (00:00.424)
+  Get set...  go (00:00.432)
 Validating
   Validate JPFHIRExampleCreation/output-json/eReferral/examples/fsh-generated/resources/Bundle-bundleReferralExample01.json
 Validate Bundle against http://hl7.org/fhir/StructureDefinition/Bundle|4.0.1..........20.......Validate Practitioner against http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Practitioner_eClinicalSummary|1.1.4|
@@ -204,7 +204,7 @@ Validate Organization against http://jpfhir.jp/fhir/eClinicalSummary/StructureDe
 Validate Organization against http://jpfhir.jp/fhir/core/StructureDefinition/JP_Organization|
 Validate Practitioner against http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Practitioner_eClinicalSummary|1.1.4|
 Validate Practitioner against http://jpfhir.jp/fhir/core/StructureDefinition/JP_Practitioner|
-.........60..........80....  Load jp-core.r4#1.1.1-rc - 198 resources (00:16.130)
+.........60..........80....  Load jp-core.r4#1.1.1-rc - 198 resources (00:15.691)
 ......100..........120..|
 Validate Bundle against http://jpfhir.jp/fhir/eReferral/StructureDefinition/JP_Bundle_eReferralValidate Composition against http://jpfhir.jp/fhir/eReferral/StructureDefinition/JP_Composition_eReferral|1.1.4|
 Validate Patient against http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_Patient_eClinicalSummary|1.1.4..........20..........40..........60..........80.........|
@@ -260,20 +260,18 @@ Validate MedicationRequest against http://jpfhir.jp/fhir/ePrescription/Structure
 Validate DocumentReference against http://jpfhir.jp/fhir/eClinicalSummary/StructureDefinition/JP_DocumentReference_eClinicalSummary|1.1.4|
 Validate DocumentReference against http://jpfhir.jp/fhir/core/StructureDefinition/JP_DocumentReference|
 ..|
- 00:22.595
-Done. Times: Loading: 00:12.442, validation: 00:38.726. Memory = 475Mb
+ 00:22.667
+Done. Times: Loading: 00:12.940, validation: 00:38.359. Memory = 575Mb
 
 Success: 0 errors, 7 warnings, 4 notes
   Information @ Bundle.entry[0].resource/*Composition/compositionReferralExample01Inline*/.type (line 39, col10): None of the codings provided are in the value set 'FHIR Document Type Codes' (http://hl7.org/fhir/ValueSet/doc-typecodes|4.0.1), and a coding is recommended to come from this value set) (codes = http://jpfhir.jp/fhir/Common/CodeSystem/doc-typecodes#57133-1)
   Information @ Bundle.entry[19].resource/*MedicationRequest/MedicationRequestExample01Inline*/.dosageInstruction[0].timing.code (line 1325, col16): None of the codings provided are in the value set 'TimingAbbreviation' (http://hl7.org/fhir/ValueSet/timing-abbreviation|4.0.1), and a coding is recommended to come from this value set) (codes = urn:oid:1.2.392.200250.2.2.20#1013044400000000)
   Information @ Bundle.entry[20].resource/*MedicationRequest/JP-MedReq-ePreData-Example-fukintouByDayInline*/.dosageInstruction[0].timing.code (line 1508, col16): None of the codings provided are in the value set 'TimingAbbreviation' (http://hl7.org/fhir/ValueSet/timing-abbreviation|4.0.1), and a coding is recommended to come from this value set) (codes = urn:oid:1.2.392.200250.2.2.20#1013044400000000)
   Information @ Bundle.entry[18].resource/*DocumentReference/ccourseReferralExample01Inline*/.type.coding[0] (line 1241, col14): Code System URI 'http://loinc.org' is unknown so the code cannot be validated
-  
   Warning @ Bundle.entry[2].resource/*Encounter/encounterReferralExample01Inline*/.class (line 501, col10): Display Name for http://terminology.hl7.org/CodeSystem/v3-ActCode#AMB should be one of 1 choices from 'ambulatory', not '外来' for 'http://terminology.hl7.org/CodeSystem/v3-ActCode#AMB'
   Warning @ Bundle.entry[2].resource/*Encounter/encounterReferralExample01Inline*/.classHistory[0].class (line 508, col14): Display Name for http://terminology.hl7.org/CodeSystem/v3-ActCode#AMB should be one of 1 choices from 'ambulatory', not '外来' for 'http://terminology.hl7.org/CodeSystem/v3-ActCode#AMB'
   Warning @ Bundle.entry[9].resource/*Encounter/purposeReferralExample01Inline*/.class (line 833, col10): Display Name for http://terminology.hl7.org/CodeSystem/v3-ActCode#AMB should be one of 1 choices from 'ambulatory', not '外来' for 'http://terminology.hl7.org/CodeSystem/v3-ActCode#AMB'
   Warning @ Bundle.entry[17].resource/*Observation/psobsCommonExample01Inline*/.category[0] (line 1207, col12): Display Name for http://terminology.hl7.org/CodeSystem/observation-category#exam should be one of 1 choices from 'Exam', not '身体検査・観察'
   Warning @ Bundle.entry[17].resource.category[0] (line 1207, col12): Display Name for http://terminology.hl7.org/CodeSystem/observation-category#exam should be one of 1 choices from 'Exam', not '身体検査・観察'
-  
   Warning @ Bundle.entry[19].resource/*MedicationRequest/MedicationRequestExample01Inline*/.dosageInstruction[0].route.coding[0].system (line 1339, col80): URL value 'http://jpfhir.jp/fhir/core/CodeSystem/route-codes' does not resolve
   Warning @ Bundle.entry[20].resource/*MedicationRequest/JP-MedReq-ePreData-Example-fukintouByDayInline*/.dosageInstruction[0].route.coding[0].system (line 1522, col80): URL value 'http://jpfhir.jp/fhir/core/CodeSystem/route-codes' does not resolve
