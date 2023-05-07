@@ -1,28 +1,32 @@
-#include "fshDef/jpBundle_eDischargeSummaryDef.fshdef"
+#include "jpBundle_eDischargeSummaryDef.fshdef"
 
 // 退院時サマリーBundle例０１
 $000mn_ExampleJPBundle_eDischargeSummary(bundleDischargeSummaryExample01)
-$001mn_Description(bundleDischargeSummaryExample01 退院時サマリーBundle例０１)
+$001mn_Description(■ 退院時サマリー　全体　Bundleリソース　例０１)
 $001mn_LastUpdated()
 $002or_ValidationProfile_JPBundle__eDischargeSummary()
 $010mn_文書ID(123456)
 $020mn_文書日時(2022-12-26,10:00:00)
-$030mn_文書autoEntry(compositionDischargeExample01Inline)   //　Comspotion
-$030mn_文書autoEntry(jppatientExample01Inline)  //  
-$030mn_文書autoEntry(encounterReferralExample01Inline)
-$030mn_文書autoEntry(docPractitionerExample01Inline)
-$030mn_文書autoEntry(referralToPractitionerExample01Inline)
-$030mn_文書autoEntry(docOrgExample01Inline)
-$030mn_文書autoEntry(referralToOrganizationExample01Inline)
-$030mn_文書autoEntry(referralToOrganizationDeptExample01Inline)
-$030mn_文書autoEntry(docOrgDeptExample01Inline)
-$030mn_文書autoEntry(purposeDischargeSummaryExample01Inline)
-$030mn_文書autoEntry(cc1ReferralExample01Inline)
-$030mn_文書autoEntry(cc2ReferralExample01Inline)
-$030mn_文書autoEntry(piReferralExample01Inline)
-$030mn_文書autoEntry(ph1ReferralExample01Inline)
-$030mn_文書autoEntry(ph2ReferralExample01Inline)
-$030mn_文書autoEntry(alg1ReferralExample01Inline)
-$030mn_文書autoEntry(alg1ReferralExample02Inline)
-$030mn_文書autoEntry(psobsCommonExample01Inline)
-$030mn_文書autoEntry(ccourseDischargeSummaryExample01Inline)
+$030mr_文書autoEntry(compositionDischargeExample01Inline)   //　Comspotion
+$030mr_文書autoEntry(jppatientExample01Inline)  //  
+$030mr_文書autoEntry(docPractitionerExample01Inline)
+$030mr_文書autoEntry(docOrgDeptExample01Inline)
+$030mr_文書autoEntry(docOrgExample01Inline)
+// 主訴
+$030mr_文書autoEntry(admissionCCDiagnosisExample01Inline)
+$030mr_文書autoEntry(admissionCCDiagnosisExample02Inline)
+$030mr_文書autoEntry(admissionCCDiagnosisExample03Inline)
+$030mr_文書autoEntry(admissionCCDiagnosisExample04Inline)
+
+$030mr_文書autoEntry(referralToOrganizationExample01Inline)
+$030mr_文書autoEntry(referralToOrganizationDeptExample01Inline)
+$030mr_文書autoEntry(purposeDischargeSummaryExample01Inline)
+$030mr_文書autoEntry(cc1ReferralExample01Inline)
+$030mr_文書autoEntry(cc2ReferralExample01Inline)
+$030mr_文書autoEntry(piReferralExample01Inline)
+$030mr_文書autoEntry(ph1ReferralExample01Inline)
+$030mr_文書autoEntry(ph2ReferralExample01Inline)
+$030mr_文書autoEntry(alg1ReferralExample01Inline)
+$030mr_文書autoEntry(alg1ReferralExample02Inline)
+$030mr_文書autoEntry(psobsCommonExample01Inline)
+$030mr_文書autoEntry(ccourseDischargeSummaryExample01Inline)

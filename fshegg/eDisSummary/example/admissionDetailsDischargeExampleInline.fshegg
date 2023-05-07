@@ -1,0 +1,24 @@
+#include "jpEncounter_eClinicalSummaryDef.fshdef"
+
+// 入院時詳細情報
+$000mn_ExampleJPEncounter_eClinicalSummary(admDetailDischargeSummaryExample01Inline)  
+$001mn_Description(退院時サマリー　入院時詳細情報)
+$001mn_LastUpdated()
+$002or_ValidationProfile_JPEncounter_eClinicalSummary()
+$010on_受診管理番号(192820)
+// $030mn_受診入院()
+$040or_受診履歴入院(2021-07-05, 2021-09-29)
+// $050on_受診入院期間(ARGstartDate, ARGendDate)
+// $060on_受診入院日数(ARGdays)
+// $060mr_受診理由病名コード(ARGsystem,ARGcode,ARGname)
+// $060mr_受診理由病名コードTEXT(ARGsystem,ARGcode,ARGtext,ARGfree)
+$060mr_受診理由病名TEXT(貧血精査)   // 入院目的
+
+// 入院目的
+$000mn_ExampleJPEncounter_eClinicalSummary(admPurposeDischargeSummaryExample01Inline)  
+$001mn_Description(encounterReferralExample01 外来受診歴　例)
+$001mn_LastUpdated()
+$002or_ValidationProfile_JPEncounter_eClinicalSummary()
+$010on_受診管理番号(192844)
+$030mn_受診外来()
+$040or_受診履歴外来(2020-08-20)

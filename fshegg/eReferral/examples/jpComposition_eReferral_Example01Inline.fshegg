@@ -25,7 +25,7 @@
 
 
 $000mn_ExampleJPComposition_eReferral(compositionReferralExample01Inline)
-$001mn_Description(構成情報サンプル　composition)
+$001mn_Description(診療情報提供書　構成情報サンプル　composition)
 $001mn_LastUpdated()
 $002or_ValidationProfile_JPComposition_eCS()
 $0E1mn_紹介状文書バージョン(1) 
