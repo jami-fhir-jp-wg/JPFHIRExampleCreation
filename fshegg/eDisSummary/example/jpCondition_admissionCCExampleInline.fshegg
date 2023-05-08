@@ -1,0 +1,17 @@
+#include "jpCondition_eCSDef.fshdef"
+
+// 入院時主訴情報
+$000mn_ExampleJPCondition_eCS(admissionCCDiagnosisExample01Inline)  
+$001mn_Description(退院時サマリー　入院時主訴　体動時の息切れ)
+$001mn_LastUpdated()
+$002or_ValidationProfile_JPCondition_eCS()
+$040mn_$040mn_症病状態MEDIS病名交換コード名称(PBHP,息切れ)
+$040mn_症病状態TEXT補足(体動時の息切れ)
+$050mn_症病患者(jppatientExample01Inline)
+
+$000mn_ExampleJPCondition_eCS(admissionCCDiagnosisExample02Inline)  
+$001mn_Description(退院時サマリー　入院時主訴　疲労感)
+$001mn_LastUpdated()
+$002or_ValidationProfile_JPCondition_eCS()
+$040mn_$040mn_症病状態MEDIS病名交換コード名称(AB04,疲労感)
+$050mn_症病患者(jppatientExample01Inline)

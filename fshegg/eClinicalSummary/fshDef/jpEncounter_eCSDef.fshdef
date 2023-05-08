@@ -115,6 +115,16 @@ Description: "ARGtxt"
 * disgnosis[=].use.coding.code = #ARGcode
 #endbigdef
 
+// 入院時の診断情報
+// ARGcodeの用例:
+//   AD:入院時診断
+#bigdef $070or_入院期間中診断参照(ARGRefCondition)
+* disgnosis[+].condition = "ARGRefCondition"
+* disgnosis[=].use.coding.system = "“http://terminology.hl7.org/CodeSystem/diagnosis-role”
+* disgnosis[=].use.coding.code = #AD
+#endbigdef
+
+
 // 入院情報
 // 入院期間中の所在等の情報　期間開始日と終了日指定
 // ARGRefLocation: Locationリソースへの参照
@@ -155,3 +165,7 @@ Description: "ARGtxt"
 * location[=].preiod.start = "ARGstartDate"
 * location[=].preiod.end = "ARGendDate"
 #endbigdef
+
+// 入院外来共通情報
+// このEncounter(入退院・外来受診)記録に責任をもつ組織・診療科Organizationへの参照
+// 

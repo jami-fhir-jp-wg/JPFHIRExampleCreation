@@ -51,7 +51,7 @@ Description: "ARGtxt"
 //MEDISコード
 // urn:oid:1.2.392.200119.4.101.6: MEDIS病名交換用コード
 // urn:oid:1.2.392.200119.4.101.2: MEDIS病名管理番号
-#bigdef $040mn_症病状態MEDISコード名称(ARGcode,ARGname)
+#bigdef $040mn_症病状態MEDIS病名交換コード名称(ARGcode,ARGname)
 * code[+] = urn:oid:1.2.392.200119.4.101.6#ARGcode "ARGname"
 #endbigdef
 
@@ -60,6 +60,10 @@ Description: "ARGtxt"
 // urn:oid:1.2.392.200119.4.101.2: MEDIS病名管理番号
 #bigdef $040mn_症病状態コード名称TEXT(ARGsystem,ARGcode,ARGname,ARGtext)
 * code[+] = ARGsystem#ARGcode "ARGname"
+* code[=].text = "ARGtext"
+#endbigdef
+
+#bigdef $040mn_症病状態TEXT補足(ARGtext)
 * code[=].text = "ARGtext"
 #endbigdef
 
