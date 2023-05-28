@@ -75,14 +75,14 @@ Description: "ARGtxt"
 * bodySite[+] = ARGsystem#ARGcode "ARGname"
 #endbigdef
 
-// urn:oid:1.2.392.200119.4.201.５: MEDIS修飾語交換用コード
-// urn:oid:1.2.392.200119.4.201.２: MEDIS修飾語管理番号
+// urn:oid:1.2.392.200119.4.201.5: MEDIS修飾語交換用コード
+// urn:oid:1.2.392.200119.4.201.2: MEDIS修飾語管理番号
 #bigdef $040or_症病部位MEDISコード名称(ARGcode,ARGname)
 * bodySite[+] = urn:oid:1.2.392.200119.4.201.5#ARGcode "ARGname"
 #endbigdef
 
-// urn:oid:1.2.392.200119.4.201.５: MEDIS修飾語交換用コード
-// urn:oid:1.2.392.200119.4.201.２: MEDIS修飾語管理番号
+// urn:oid:1.2.392.200119.4.201.3: MEDIS修飾語交換用コード
+// urn:oid:1.2.392.200119.4.201.2: MEDIS修飾語管理番号
 #bigdef $040or_症病部位コード名称TEXT(ARGsystem,ARGcode,ARGname,ARGtext)
 * bodySite[+] = ARGsystem#ARGcode "ARGname"
 * bodySite[=].text = "ARGtext"
